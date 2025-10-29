@@ -12,17 +12,31 @@ Drawing inspiration from premium automotive brands (Porsche, BMW configurators),
 
 ## Typography System
 
-**Hierarchy Structure:**
-- Hero Headlines: Large display typography (60-80px desktop, 36-48px mobile), tight letter-spacing (-0.02em), heavy weight (700-900)
-- Section Headers: Medium-large (36-48px desktop, 28-32px mobile), semi-bold (600)
-- Service Titles: 24-32px, medium weight (500-600)
-- Body Copy: 16-18px for readability, regular weight (400), generous line-height (1.6-1.8)
-- Small Print/Captions: 12-14px, light weight (300-400)
+**Bold Condensed Approach** - Aggressive Premium Automotive Feel
 
-**Font Pairing:**
-- Primary (Display/Headers): Modern geometric sans-serif with sharp precision (e.g., "Syne", "Space Grotesk", or "Outfit")
-- Secondary (Body): Clean, highly readable sans-serif (e.g., "Inter", "DM Sans", or "Poppins")
-- Use uppercase sparingly for labels and category tags with increased letter-spacing (+0.1em)
+Inspired by high-performance automotive branding (similar to Instagram's "WHAT WE DO" graphic style), this typography system emphasizes:
+- Maximum visual impact with bold, condensed letterforms
+- Uppercase headings for commanding presence
+- Clean, condensed body text for premium readability
+
+**Font Stack:**
+- **Display/Headings:** Bebas Neue - Ultra-bold, highly condensed display font for maximum impact
+- **Body Text:** Barlow Condensed - Bold condensed sans-serif for clean, professional readability
+- All headings are uppercase by default with tight letter-spacing (0.02em)
+
+**Hierarchy Structure:**
+- Hero Headlines (H1): 60-80px desktop (text-5xl to text-7xl), 36-48px mobile - Ultra-bold, uppercase, commanding
+- Section Headers (H2): 48-60px desktop (text-4xl to text-6xl), 32-40px mobile - Bold, uppercase, authoritative  
+- Subsection Titles (H3): 36-48px desktop (text-3xl to text-5xl), 24-32px mobile - Bold, uppercase, impactful
+- Service Titles: 24-32px, weight 700-800, uppercase for consistency
+- Body Copy: 16-18px, weight 500-600 (Barlow Condensed), generous line-height (1.6-1.8)
+- Small Print/Captions: 12-14px, weight 400-500
+
+**Typography Rules:**
+- All headings use font-display (Bebas Neue) and are automatically uppercase
+- Body text uses font-sans (Barlow Condensed) with medium-bold weights (500-700)
+- Letter-spacing: Tight on headings (0.02em), normal on body
+- Line-height: Tight on headings (1.1-1.2), generous on body (1.6-1.8)
 
 ## Layout & Spacing System
 
