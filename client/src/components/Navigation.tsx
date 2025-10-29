@@ -30,7 +30,7 @@ export default function Navigation() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-background/95 backdrop-blur-md border-b border-border' : 'bg-transparent'
+        isScrolled ? 'bg-black/90 backdrop-blur-md border-b border-white/10' : 'bg-transparent'
       }`}
       data-testid="navigation-header"
     >
@@ -45,7 +45,7 @@ export default function Navigation() {
               <Link key={link.path} href={link.path}>
                 <span
                   className={`text-sm font-medium transition-colors hover:text-primary cursor-pointer ${
-                    location === link.path ? 'text-primary' : 'text-foreground/80'
+                    location === link.path ? 'text-primary' : isScrolled ? 'text-white/90' : 'text-white/80'
                   }`}
                   data-testid={`link-nav-${link.label.toLowerCase().replace(' ', '-')}`}
                 >
@@ -80,13 +80,13 @@ export default function Navigation() {
       </div>
 
       {isMobileMenuOpen && (
-        <div className="lg:hidden bg-background border-b border-border" data-testid="mobile-menu">
+        <div className="lg:hidden bg-black/95 backdrop-blur-md border-b border-white/10" data-testid="mobile-menu">
           <div className="px-4 py-4 space-y-3">
             {navLinks.map((link) => (
               <Link key={link.path} href={link.path}>
                 <span
                   className={`block py-2 text-base font-medium cursor-pointer ${
-                    location === link.path ? 'text-primary' : 'text-foreground/80'
+                    location === link.path ? 'text-primary' : 'text-white/90'
                   }`}
                   onClick={() => setIsMobileMenuOpen(false)}
                   data-testid={`link-mobile-${link.label.toLowerCase().replace(' ', '-')}`}

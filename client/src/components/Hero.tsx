@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Play } from 'lucide-react';
+import logoImage from '@assets/Protekt Logo_1761708306237.webp';
 
 interface HeroProps {
   title: string;
@@ -11,6 +12,7 @@ interface HeroProps {
   secondaryCtaText?: string;
   height?: 'full' | 'large' | 'medium';
   showPlayButton?: boolean;
+  showLogo?: boolean;
 }
 
 export default function Hero({
@@ -23,6 +25,7 @@ export default function Hero({
   secondaryCtaText,
   height = 'full',
   showPlayButton = false,
+  showLogo = false,
 }: HeroProps) {
   const heightClasses = {
     full: 'h-screen',
@@ -46,6 +49,15 @@ export default function Hero({
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        {showLogo && (
+          <div className="mb-8 flex justify-center" data-testid="hero-logo">
+            <img 
+              src={logoImage} 
+              alt="Protekt Auto" 
+              className="w-64 sm:w-80 md:w-96 lg:w-[28rem] h-auto drop-shadow-2xl"
+            />
+          </div>
+        )}
         {subtitle && (
           <p
             className="text-primary text-sm sm:text-base font-semibold tracking-wider uppercase mb-4"

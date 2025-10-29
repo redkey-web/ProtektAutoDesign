@@ -66,6 +66,7 @@ export default function Home() {
         ctaLink="#services"
         secondaryCtaText="Contact Us"
         showPlayButton={true}
+        showLogo={true}
       />
 
       <section id="services" className="py-20 bg-background">
