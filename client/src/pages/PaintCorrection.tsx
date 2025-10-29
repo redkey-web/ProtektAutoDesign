@@ -1,8 +1,10 @@
 import Hero from '@/components/Hero';
 import ProcessTimeline from '@/components/ProcessTimeline';
 import ContactSection from '@/components/ContactSection';
+import BeforeAfterSlider from '@/components/BeforeAfterSlider';
 import { Card } from '@/components/ui/card';
 import heroImage from '@assets/generated_images/Paint_correction_process_image_4d6495fd.png';
+import ceramicImage from '@assets/generated_images/Ceramic_coating_hero_image_2e9cd7e0.png';
 
 export default function PaintCorrection() {
   const stages = [
@@ -103,6 +105,16 @@ export default function PaintCorrection() {
               required prior to providing a quotation.
             </p>
           </Card>
+        </div>
+      </section>
+
+      <section className="py-20 bg-card">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <BeforeAfterSlider
+            beforeImage={heroImage}
+            afterImage={ceramicImage}
+            title="See The Difference - Paint Correction Results"
+          />
         </div>
       </section>
 

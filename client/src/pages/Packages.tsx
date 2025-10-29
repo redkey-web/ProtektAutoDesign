@@ -1,6 +1,7 @@
 import Hero from '@/components/Hero';
 import PricingCard from '@/components/PricingCard';
 import ContactSection from '@/components/ContactSection';
+import QuoteCalculator from '@/components/QuoteCalculator';
 import heroImage from '@assets/generated_images/Full_packages_hero_image_d6723e08.png';
 
 export default function Packages() {
@@ -102,7 +103,7 @@ export default function Packages() {
             />
           </div>
 
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-4xl mx-auto mb-16">
             <div className="bg-card p-8 rounded-lg">
               <h3 className="font-display text-2xl font-bold text-foreground mb-6 text-center">
                 Custom Packages Available
@@ -119,6 +120,8 @@ export default function Packages() {
               </p>
             </div>
           </div>
+
+          <QuoteCalculator />
         </div>
       </section>
 
