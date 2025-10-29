@@ -1,0 +1,148 @@
+import Hero from '@/components/Hero';
+import ContactSection from '@/components/ContactSection';
+import { Card, CardContent } from '@/components/ui/card';
+import { Shield, Zap, Droplets, RefreshCw } from 'lucide-react';
+import heroImage from '@assets/generated_images/PPF_installation_hero_image_7d912c0a.png';
+
+export default function StonechipProtection() {
+  const benefits = [
+    {
+      icon: Shield,
+      title: 'Stone Chip Protection',
+      description: 'Advanced protection against rock chips, road debris, and impact damage',
+    },
+    {
+      icon: RefreshCw,
+      title: 'Self-Healing',
+      description: 'Heat-activated self-healing technology removes minor scratches and swirls',
+    },
+    {
+      icon: Droplets,
+      title: 'Stain Resistant',
+      description: 'Repels bugs, bird droppings, and environmental contaminants',
+    },
+    {
+      icon: Zap,
+      title: 'Clear & Durable',
+      description: 'Virtually invisible protection with exceptional optical clarity',
+    },
+  ];
+
+  const coverageOptions = [
+    {
+      name: 'Partial Front',
+      areas: ['Front bumper', 'Partial bonnet', 'Headlights', 'Side mirrors'],
+      price: 'From $1,200',
+    },
+    {
+      name: 'Full Front',
+      areas: ['Front bumper', 'Full bonnet', 'Full front guards', 'Headlights', 'Side mirrors'],
+      price: 'From $2,500',
+      popular: true,
+    },
+    {
+      name: 'Track Pack',
+      areas: [
+        'Full front coverage',
+        'Lower side sills',
+        'A-pillars',
+        'Leading edge of roof',
+        'Partial rear wheel arch',
+      ],
+      price: 'From $3,400',
+    },
+    {
+      name: 'Full Body',
+      areas: ['Complete vehicle wrap', 'All painted panels', 'Headlights', 'Maximum protection'],
+      price: 'From $6,000',
+    },
+  ];
+
+  return (
+    <div className="min-h-screen">
+      <Hero
+        title="Paint Protection Film (PPF)"
+        subtitle="Stone Chip Protection"
+        description="Advanced transparent film for ultimate paint protection"
+        image={heroImage}
+        height="large"
+        ctaText="Get Quote"
+        ctaLink="#contact"
+      />
+
+      <section className="py-20 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center mb-16">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
+              XPEL Ultimate Plus Paint Protection Film
+            </h2>
+            <p className="text-foreground/70 text-lg leading-relaxed">
+              Paint Protection Films are an advanced transparent film that is used to protect your paint
+              from damage caused by stone chips, bug splatter and minor abrasions. Our premium XPEL
+              films feature self-healing technology and maintain the factory finish of your vehicle
+              while providing invisible, industry-leading protection.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            {benefits.map((benefit) => (
+              <Card key={benefit.title} className="hover-elevate active-elevate-2 transition-all">
+                <CardContent className="p-6 text-center">
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
+                    <benefit.icon className="w-8 h-8 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-lg mb-2">{benefit.title}</h3>
+                  <p className="text-foreground/60 text-sm">{benefit.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <div className="mb-12">
+            <h3 className="font-display text-2xl font-bold text-foreground mb-8 text-center">
+              Coverage Options
+            </h3>
+            <div className="grid md:grid-cols-2 gap-6">
+              {coverageOptions.map((option) => (
+                <Card
+                  key={option.name}
+                  className={`hover-elevate active-elevate-2 transition-all ${
+                    option.popular ? 'border-primary border-2' : ''
+                  }`}
+                >
+                  <CardContent className="p-6">
+                    {option.popular && (
+                      <span className="inline-block px-3 py-1 bg-primary text-primary-foreground text-sm font-semibold rounded-md mb-4">
+                        Most Popular
+                      </span>
+                    )}
+                    <h4 className="font-display text-xl font-bold mb-2">{option.name}</h4>
+                    <p className="text-2xl font-bold text-primary mb-4">{option.price}</p>
+                    <ul className="space-y-2">
+                      {option.areas.map((area, index) => (
+                        <li key={index} className="flex items-start gap-2 text-sm text-foreground/70">
+                          <span className="text-primary mt-0.5">•</span>
+                          <span>{area}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          <Card className="p-6 bg-card/50">
+            <p className="text-sm text-foreground/60 italic text-center">
+              * All PPF installations include XPEL Fusion LITE ceramic coating applied to the film for
+              enhanced protection and easier maintenance. Prices vary based on vehicle size and
+              complexity. Contact us for a custom quote tailored to your vehicle.
+            </p>
+          </Card>
+        </div>
+      </section>
+
+      <ContactSection />
+    </div>
+  );
+}

@@ -1,0 +1,55 @@
+import { Card } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { ArrowRight } from 'lucide-react';
+import { Link } from 'wouter';
+
+interface ServiceCardProps {
+  title: string;
+  description: string;
+  image: string;
+  link: string;
+}
+
+export default function ServiceCard({ title, description, image, link }: ServiceCardProps) {
+  return (
+    <Card
+      className="group relative overflow-hidden border-0 bg-card hover-elevate active-elevate-2 transition-all duration-300"
+      data-testid={`card-service-${title.toLowerCase().replace(/\s+/g, '-')}`}
+    >
+      <div className="relative aspect-[4/3] overflow-hidden">
+        <img
+          src={image}
+          alt={title}
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          data-testid={`img-service-${title.toLowerCase().replace(/\s+/g, '-')}`}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+      </div>
+
+      <div className="absolute bottom-0 left-0 right-0 p-6">
+        <h3
+          className="font-display text-2xl font-bold text-white mb-2"
+          data-testid={`text-service-title-${title.toLowerCase().replace(/\s+/g, '-')}`}
+        >
+          {title}
+        </h3>
+        <p
+          className="text-white/80 text-sm mb-4 line-clamp-2"
+          data-testid={`text-service-description-${title.toLowerCase().replace(/\s+/g, '-')}`}
+        >
+          {description}
+        </p>
+        <Link href={link}>
+          <Button
+            variant="ghost"
+            className="gap-2 text-primary hover:text-primary p-0 h-auto font-semibold group-hover:gap-3 transition-all"
+            data-testid={`button-learn-more-${title.toLowerCase().replace(/\s+/g, '-')}`}
+          >
+            Learn More
+            <ArrowRight className="w-4 h-4" />
+          </Button>
+        </Link>
+      </div>
+    </Card>
+  );
+}
