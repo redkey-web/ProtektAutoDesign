@@ -1,7 +1,7 @@
 import Hero from '@/components/Hero';
 import PricingCard from '@/components/PricingCard';
 import ContactSection from '@/components/ContactSection';
-import heroImage from '@assets/generated_images/Ceramic_coating_hero_image_2e9cd7e0.png';
+import heroImage from '@assets/Ceramic coating service Sydney - New Car Protection_1761915866845.webp';
 
 export default function NewCarProtection() {
   const ceramicFeatures = [
