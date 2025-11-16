@@ -7,7 +7,7 @@ import paintCorrectionImage from '@assets/Paint correction_1763294797362.webp';
 import windowTintImage from '@assets/generated_images/Window_tinting_hero_image_502b22ab.png';
 import ppfImage from '@assets/generated_images/PPF_installation_hero_image_7d912c0a.png';
 import motorcycleImage from '@assets/generated_images/Motorcycle_protection_hero_image_de67be60.png';
-import packagesImage from '@assets/generated_images/Full_packages_hero_image_d6723e08.png';
+import packagesImage from '@assets/Full packages Protekt Auto_1763295209283.webp';
 
 export default function Home() {
   const services = [

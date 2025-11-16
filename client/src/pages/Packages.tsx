@@ -2,7 +2,7 @@ import Hero from '@/components/Hero';
 import PricingCard from '@/components/PricingCard';
 import ContactSection from '@/components/ContactSection';
 import QuoteCalculator from '@/components/QuoteCalculator';
-import heroImage from '@assets/generated_images/Full_packages_hero_image_d6723e08.png';
+import heroImage from '@assets/Full packages Protekt Auto_1763295209283.webp';
 
 export default function Packages() {
   const enthusiastFeatures = [
