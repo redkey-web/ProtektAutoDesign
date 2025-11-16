@@ -121,9 +121,32 @@ export default function Hero({
       </div>
 
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
-        <div className="w-6 h-10 rounded-full border-2 border-white/50 flex items-start justify-center p-2">
-          <div className="w-1.5 h-1.5 rounded-full bg-white/70" />
-        </div>
+        <svg
+          width="48"
+          height="48"
+          viewBox="0 0 48 48"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="text-white/70"
+          data-testid="icon-scroll-down"
+        >
+          {/* H-pattern gate */}
+          <path
+            d="M 12 12 L 12 36 M 24 12 L 24 36 M 36 12 L 36 36 M 12 16 L 36 16 M 12 32 L 36 32"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+          />
+          {/* Gear position labels */}
+          <text x="12" y="11" fontSize="7" fill="currentColor" textAnchor="middle" fontWeight="600">1</text>
+          <text x="12" y="44" fontSize="7" fill="currentColor" textAnchor="middle" fontWeight="600">2</text>
+          <text x="24" y="11" fontSize="7" fill="currentColor" textAnchor="middle" fontWeight="600">3</text>
+          <text x="24" y="44" fontSize="7" fill="currentColor" textAnchor="middle" fontWeight="600">4</text>
+          <text x="36" y="11" fontSize="7" fill="currentColor" textAnchor="middle" fontWeight="600">5</text>
+          <text x="36" y="44" fontSize="7" fill="currentColor" textAnchor="middle" fontWeight="600">R</text>
+          {/* Shifter knob in neutral position */}
+          <circle cx="24" cy="24" r="4" fill="currentColor" opacity="0.9" />
+        </svg>
       </div>
     </div>
   );
