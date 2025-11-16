@@ -2,7 +2,7 @@ import Hero from '@/components/Hero';
 import ServiceCard from '@/components/ServiceCard';
 import ContactSection from '@/components/ContactSection';
 import heroImage from '@assets/generated_images/Ceramic_coating_hero_image_2e9cd7e0.png';
-import ceramicImage from '@assets/generated_images/Ceramic_coating_hero_image_2e9cd7e0.png';
+import ceramicImage from '@assets/Ceramic coating service Sydney - New Car Protection_1763295133288.webp';
 import paintCorrectionImage from '@assets/Paint correction_1763294797362.webp';
 import windowTintImage from '@assets/generated_images/Window_tinting_hero_image_502b22ab.png';
 import ppfImage from '@assets/generated_images/PPF_installation_hero_image_7d912c0a.png';
