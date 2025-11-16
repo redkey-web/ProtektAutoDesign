@@ -3,7 +3,7 @@ import ProcessTimeline from '@/components/ProcessTimeline';
 import ContactSection from '@/components/ContactSection';
 import BeforeAfterSlider from '@/components/BeforeAfterSlider';
 import { Card } from '@/components/ui/card';
-import heroImage from '@assets/generated_images/Paint_correction_process_image_4d6495fd.png';
+import heroImage from '@assets/Paint correction_1763294797362.webp';
 import ceramicImage from '@assets/generated_images/Ceramic_coating_hero_image_2e9cd7e0.png';
 
 export default function PaintCorrection() {

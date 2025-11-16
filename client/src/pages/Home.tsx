@@ -3,7 +3,7 @@ import ServiceCard from '@/components/ServiceCard';
 import ContactSection from '@/components/ContactSection';
 import heroImage from '@assets/generated_images/Ceramic_coating_hero_image_2e9cd7e0.png';
 import ceramicImage from '@assets/generated_images/Ceramic_coating_hero_image_2e9cd7e0.png';
-import paintCorrectionImage from '@assets/generated_images/Paint_correction_process_image_4d6495fd.png';
+import paintCorrectionImage from '@assets/Paint correction_1763294797362.webp';
 import windowTintImage from '@assets/generated_images/Window_tinting_hero_image_502b22ab.png';
 import ppfImage from '@assets/generated_images/PPF_installation_hero_image_7d912c0a.png';
 import motorcycleImage from '@assets/generated_images/Motorcycle_protection_hero_image_de67be60.png';
