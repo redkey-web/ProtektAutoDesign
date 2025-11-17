@@ -2,7 +2,7 @@ import Hero from '@/components/Hero';
 import ContactSection from '@/components/ContactSection';
 import { Card, CardContent } from '@/components/ui/card';
 import { Shield, Zap, Droplets, RefreshCw } from 'lucide-react';
-import heroImage from '@assets/generated_images/PPF_installation_hero_image_7d912c0a.png';
+import heroImage from '@assets/PPF _1763343626090.webp';
 
 export default function StonechipProtection() {
   const benefits = [
