@@ -48,8 +48,8 @@ export default function Navigation() {
                     location === link.path 
                       ? 'text-primary !bg-transparent' 
                       : isScrolled 
-                        ? 'text-white/90 hover:!bg-transparent hover:backdrop-blur-md' 
-                        : 'text-white/80 hover:!bg-transparent hover:backdrop-blur-md'
+                        ? 'text-white/70 hover:text-white hover:!bg-transparent hover:backdrop-blur-md' 
+                        : 'text-white/70 hover:text-white hover:!bg-transparent hover:backdrop-blur-md'
                   }`}
                   data-testid={`link-nav-${link.label.toLowerCase().replace(' ', '-')}`}
                 >
@@ -90,7 +90,7 @@ export default function Navigation() {
               <Link key={link.path} href={link.path}>
                 <span
                   className={`mobile-menu-text block py-2 px-3 rounded-md text-base font-medium cursor-pointer transition-all ${
-                    location === link.path ? 'text-primary bg-black/60' : 'text-white/90 hover:bg-black/60 hover:text-gray-500'
+                    location === link.path ? 'text-primary bg-black/60' : 'text-white/70 hover:text-white hover:bg-black/60'
                   }`}
                   onClick={() => setIsMobileMenuOpen(false)}
                   data-testid={`link-mobile-${link.label.toLowerCase().replace(' ', '-')}`}
