@@ -58,7 +58,7 @@ export default function Navigation() {
           <div className="hidden lg:flex items-center gap-4">
             <Button
               variant="default"
-              className="gap-2"
+              className="gap-2 hover:bg-transparent hover:backdrop-blur-md hover:border-primary transition-all"
               onClick={() => window.location.href = 'tel:0286062842'}
               data-testid="button-call-desktop"
             >
@@ -80,13 +80,13 @@ export default function Navigation() {
       </div>
 
       {isMobileMenuOpen && (
-        <div className="lg:hidden bg-black/95 backdrop-blur-md border-b border-white/10" data-testid="mobile-menu">
+        <div className="lg:hidden bg-black/70 backdrop-blur-md border-b border-white/10" data-testid="mobile-menu">
           <div className="px-4 py-4 space-y-3">
             {navLinks.map((link) => (
               <Link key={link.path} href={link.path}>
                 <span
-                  className={`block py-2 text-base font-medium cursor-pointer ${
-                    location === link.path ? 'text-primary' : 'text-white/90'
+                  className={`block py-2 px-3 rounded-md text-base font-medium cursor-pointer transition-all ${
+                    location === link.path ? 'text-primary bg-transparent' : 'text-white/90 hover:bg-transparent hover:backdrop-blur-md'
                   }`}
                   onClick={() => setIsMobileMenuOpen(false)}
                   data-testid={`link-mobile-${link.label.toLowerCase().replace(' ', '-')}`}
