@@ -90,7 +90,7 @@ export default function Navigation() {
               <Link key={link.path} href={link.path}>
                 <span
                   className={`block py-2 px-3 rounded-md text-base font-medium cursor-pointer transition-all ${
-                    location === link.path ? 'text-primary bg-primary/5' : 'text-white/90 hover:bg-primary/5'
+                    location === link.path ? 'text-primary bg-white/30' : 'text-white/90 hover:bg-white/30 hover:text-white'
                   }`}
                   onClick={() => setIsMobileMenuOpen(false)}
                   data-testid={`link-mobile-${link.label.toLowerCase().replace(' ', '-')}`}
