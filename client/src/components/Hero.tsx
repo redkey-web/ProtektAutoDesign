@@ -40,17 +40,19 @@ export default function Hero({
       className={`relative ${heightClasses[height]} flex items-center justify-center overflow-hidden`}
       data-testid="hero-section"
     >
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 overflow-hidden">
         {videoUrl ? (
           <>
-            <iframe
-              src={`${videoUrl}?background=1&autoplay=1&loop=1&muted=1&quality=720p`}
-              className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2 -mt-[120px] -mb-[120px]"
-              frameBorder="0"
-              allow="autoplay; fullscreen"
-              title="Hero background video"
-              data-testid="hero-background-video"
-            />
+            <div className="absolute inset-0 scale-110">
+              <iframe
+                src={`${videoUrl}?background=1&autoplay=1&loop=1&muted=1&quality=720p`}
+                className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2"
+                frameBorder="0"
+                allow="autoplay; fullscreen"
+                title="Hero background video"
+                data-testid="hero-background-video"
+              />
+            </div>
             <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70 z-10" />
           </>
         ) : image ? (
