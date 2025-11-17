@@ -149,3 +149,41 @@ Preferred communication style: Simple, everyday language.
 - Images stored in `attached_assets` directory with Vite alias for imports
 - Generated AI images for service pages and hero sections
 - Logo assets in WebP format for performance
+
+## Recent Changes (November 2024)
+
+### SEO & Conversion Optimization Implementation
+
+**SEO Infrastructure**
+- Created `SEO.tsx` component with dynamic meta tags (title, description, keywords, Open Graph, canonical URLs)
+- Implemented unique page titles and descriptions for all 7 pages targeting distinct keywords to prevent cannibalization
+  - Homepage: "vehicle paint protection Sydney"
+  - Ceramic Coating: "ceramic coating Sydney" + "graphene coating Sydney"
+  - Paint Correction: "paint correction Sydney" + "cut and polish Sydney"
+  - PPF: "paint protection film Sydney" + "stone chip protection"
+  - Window Tinting: "window tinting Sydney" + "ceramic window tint"
+  - Motorcycle: "motorcycle ceramic coating Sydney"
+  - Packages: "car protection packages Sydney"
+- Added `StructuredData.tsx` component with AutomotiveBusiness schema including location (24 George Street, Clyde NSW 2142), hours, services, and ratings
+
+**Conversion Optimization Components**
+- `TrustBadges.tsx` - Displays trust signals on homepage hero (4.9 Google rating, 10+ years, 1000+ customers, certified applicators)
+- `Testimonials.tsx` - Social proof section with 4 customer reviews and aggregate Google rating
+- `UrgencyBanner.tsx` - Scarcity/deadline messaging deployed to all service pages with contextual urgency messages
+- `RelatedServices.tsx` - Internal linking component on service pages with SEO-friendly anchor text for cross-linking
+
+**Enhanced Hero Component**
+- Added dual CTA support: primary action button + phone CTA with clickable phone number (02) 8606 2842
+- Phone CTA deployed across all pages (homepage and 6 service pages) for consistent conversion opportunities
+- New props: `showPhoneCta`, `showTrustBadges` for flexible configuration
+
+**Page Updates**
+- All pages now include SEO metadata, phone CTAs, and urgency messaging for consistent conversion optimization
+- Homepage: added TrustBadges and Testimonials sections
+- Service pages: added UrgencyBanner and RelatedServices for internal linking
+- Comprehensive FAQ sections maintained on all pages
+
+**Business Information**
+- Location: 24 George Street, Clyde, NSW 2142
+- Phone: (02) 8606 2842
+- Hours: Mon-Fri 8am-5pm, Sat 8am-2pm
