@@ -122,30 +122,64 @@ export default function Hero({
 
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
         <svg
-          width="48"
-          height="48"
-          viewBox="0 0 48 48"
+          width="56"
+          height="56"
+          viewBox="0 0 56 56"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           className="text-white/70"
           data-testid="icon-scroll-down"
         >
-          {/* H-pattern gate */}
-          <path
-            d="M 12 12 L 12 36 M 24 12 L 24 36 M 36 12 L 36 36 M 12 16 L 36 16 M 12 32 L 36 32"
+          {/* Circular shift gate base */}
+          <circle
+            cx="28"
+            cy="28"
+            r="20"
             stroke="currentColor"
             strokeWidth="1.5"
-            strokeLinecap="round"
+            opacity="0.4"
           />
-          {/* Gear position labels */}
-          <text x="12" y="11" fontSize="7" fill="currentColor" textAnchor="middle" fontWeight="600">1</text>
-          <text x="12" y="44" fontSize="7" fill="currentColor" textAnchor="middle" fontWeight="600">2</text>
-          <text x="24" y="11" fontSize="7" fill="currentColor" textAnchor="middle" fontWeight="600">3</text>
-          <text x="24" y="44" fontSize="7" fill="currentColor" textAnchor="middle" fontWeight="600">4</text>
-          <text x="36" y="11" fontSize="7" fill="currentColor" textAnchor="middle" fontWeight="600">5</text>
-          <text x="36" y="44" fontSize="7" fill="currentColor" textAnchor="middle" fontWeight="600">R</text>
-          {/* Shifter knob in neutral position */}
-          <circle cx="24" cy="24" r="4" fill="currentColor" opacity="0.9" />
+          
+          {/* Gear position dots */}
+          <circle cx="28" cy="8" r="1.5" fill="currentColor" opacity="0.6" />
+          <circle cx="44" cy="18" r="1.5" fill="currentColor" opacity="0.6" />
+          <circle cx="44" cy="38" r="1.5" fill="currentColor" opacity="0.6" />
+          <circle cx="28" cy="48" r="1.5" fill="currentColor" opacity="0.6" />
+          <circle cx="12" cy="38" r="1.5" fill="currentColor" opacity="0.6" />
+          <circle cx="12" cy="18" r="1.5" fill="currentColor" opacity="0.6" />
+          
+          {/* Gear labels */}
+          <text x="28" y="6" fontSize="6" fill="currentColor" textAnchor="middle" fontWeight="600">1</text>
+          <text x="46" y="20" fontSize="6" fill="currentColor" textAnchor="middle" fontWeight="600">2</text>
+          <text x="46" y="40" fontSize="6" fill="currentColor" textAnchor="middle" fontWeight="600">3</text>
+          <text x="28" y="52" fontSize="6" fill="currentColor" textAnchor="middle" fontWeight="600">4</text>
+          <text x="10" y="40" fontSize="6" fill="currentColor" textAnchor="middle" fontWeight="600">5</text>
+          <text x="10" y="20" fontSize="6" fill="currentColor" textAnchor="middle" fontWeight="600">R</text>
+          
+          {/* Motion trail from 3rd to 4th (fading line) */}
+          <path
+            d="M 44 38 L 36 43"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            opacity="0.3"
+          />
+          
+          {/* Shifter stick */}
+          <line
+            x1="28"
+            y1="28"
+            x2="36"
+            y2="43"
+            stroke="currentColor"
+            strokeWidth="2.5"
+            strokeLinecap="round"
+            opacity="0.8"
+          />
+          
+          {/* Shifter knob at intermediate position (pulling from 3rd to 4th) */}
+          <circle cx="36" cy="43" r="5" fill="currentColor" opacity="0.9" />
+          <circle cx="36" cy="43" r="3" fill="currentColor" opacity="0.5" />
         </svg>
       </div>
     </div>
