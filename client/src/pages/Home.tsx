@@ -1,6 +1,7 @@
 import Hero from '@/components/Hero';
 import ServiceCard from '@/components/ServiceCard';
 import ContactSection from '@/components/ContactSection';
+import WelcomeVideo from '@/components/WelcomeVideo';
 import heroImage from '@assets/generated_images/Ceramic_coating_hero_image_2e9cd7e0.png';
 import ceramicImage from '@assets/Ceramic coating service Sydney - New Car Protection_1763295133288.webp';
 import paintCorrectionImage from '@assets/Paint correction_1763294797362.webp';
@@ -61,11 +62,10 @@ export default function Home() {
         title="Sydney's #1 Paint Protection & Car Care Workshops"
         subtitle="Premium Automotive Detailing"
         description="The best paint protection coatings & films in Sydney"
-        image={heroImage}
+        videoUrl="https://player.vimeo.com/video/578269899"
         ctaText="View Services"
         ctaLink="#services"
         secondaryCtaText="Contact Us"
-        showPlayButton={true}
         showLogo={true}
       />
 
@@ -89,24 +89,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 bg-card">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
-            Welcome to Protekt Auto
-          </h2>
-          <p className="text-foreground/70 text-lg max-w-4xl mx-auto leading-relaxed">
-            Want to keep your car looking as good as new or better? In order to maintain that new car
-            shine, it's important to look after your vehicle's paint job with our paint protection
-            films and ceramic coatings. If you've started to notice any swirls or scratches in the
-            paint, don't worry, we can help you with that too with our paint correction services.
-          </p>
-          <p className="text-foreground/70 text-lg max-w-4xl mx-auto leading-relaxed mt-4">
-            At Protekt Auto, we're dedicated to providing excellent customer service and ensuring that
-            you are completely satisfied with the results of our new car protection products and
-            services.
-          </p>
-        </div>
-      </section>
+      <WelcomeVideo />
 
       <ContactSection />
     </div>

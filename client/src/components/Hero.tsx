@@ -6,7 +6,8 @@ interface HeroProps {
   title: string;
   subtitle?: string;
   description?: string;
-  image: string;
+  image?: string;
+  videoUrl?: string;
   ctaText?: string;
   ctaLink?: string;
   secondaryCtaText?: string;
@@ -20,6 +21,7 @@ export default function Hero({
   subtitle,
   description,
   image,
+  videoUrl,
   ctaText = 'Get Started',
   ctaLink = '#contact',
   secondaryCtaText,
@@ -39,13 +41,29 @@ export default function Hero({
       data-testid="hero-section"
     >
       <div className="absolute inset-0 z-0">
-        <img
-          src={image}
-          alt={title}
-          className="w-full h-full object-cover"
-          data-testid="hero-background-image"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
+        {videoUrl ? (
+          <>
+            <iframe
+              src={`${videoUrl}?background=1&autoplay=1&loop=1&muted=1&quality=720p`}
+              className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2"
+              frameBorder="0"
+              allow="autoplay; fullscreen"
+              title="Hero background video"
+              data-testid="hero-background-video"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70 z-10" />
+          </>
+        ) : image ? (
+          <>
+            <img
+              src={image}
+              alt={title}
+              className="w-full h-full object-cover"
+              data-testid="hero-background-image"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
+          </>
+        ) : null}
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
