@@ -57,7 +57,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen">
+    <>
       <Hero
         title="Sydney's #1 Paint Protection & Car Care Workshops"
         subtitle="Premium Automotive Detailing"
@@ -92,6 +92,6 @@ export default function Home() {
       <WelcomeVideo />
 
       <ContactSection />
-    </div>
+    </>
   );
 }

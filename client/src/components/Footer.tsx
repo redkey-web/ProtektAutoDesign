@@ -1,5 +1,6 @@
 import { Link } from 'wouter';
 import logoImage from '@assets/Protekt Logo_1761708306237.webp';
+import nxtzenLogo from '@assets/nxtzen.png-2-removebg-preview_1763346531578.png';
 import { Instagram, Facebook } from 'lucide-react';
 
 export default function Footer() {
@@ -20,7 +21,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div className="col-span-1 md:col-span-2">
             <img src={logoImage} alt="Protekt Auto" className="h-10 mb-4" data-testid="img-footer-logo" />
-            <p className="text-foreground/60 mb-4 max-w-md" data-testid="text-footer-description">
+            <p className="text-white/70 mb-4 max-w-md" data-testid="text-footer-description">
               Sydney's premier automotive paint protection specialists. We provide professional ceramic
               coatings, paint correction, and paint protection film services.
             </p>
@@ -29,7 +30,7 @@ export default function Footer() {
                 href="https://instagram.com/protektauto"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-lg hover-elevate active-elevate-2 transition-colors"
+                className="p-2 rounded-lg hover-elevate active-elevate-2 transition-colors text-white/80 hover:text-white"
                 data-testid="link-instagram"
               >
                 <Instagram className="w-5 h-5" />
@@ -38,7 +39,7 @@ export default function Footer() {
                 href="https://facebook.com/protektauto"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-lg hover-elevate active-elevate-2 transition-colors"
+                className="p-2 rounded-lg hover-elevate active-elevate-2 transition-colors text-white/80 hover:text-white"
                 data-testid="link-facebook"
               >
                 <Facebook className="w-5 h-5" />
@@ -47,13 +48,13 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-semibold text-foreground mb-4" data-testid="text-services-heading">Services</h3>
+            <h3 className="font-semibold text-white mb-4" data-testid="text-services-heading">Services</h3>
             <ul className="space-y-2">
               {services.map((service) => (
                 <li key={service.path}>
                   <Link href={service.path}>
                     <span
-                      className="text-foreground/60 hover:text-primary transition-colors cursor-pointer"
+                      className="text-white/70 hover:text-primary transition-colors cursor-pointer"
                       data-testid={`link-footer-${service.name.toLowerCase().replace(/\s+/g, '-')}`}
                     >
                       {service.name}
@@ -65,8 +66,8 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-semibold text-foreground mb-4" data-testid="text-contact-heading">Contact</h3>
-            <ul className="space-y-2 text-foreground/60">
+            <h3 className="font-semibold text-white mb-4" data-testid="text-contact-heading">Contact</h3>
+            <ul className="space-y-2 text-white/70">
               <li data-testid="text-footer-phone">
                 <a href="tel:0286062842" className="hover:text-primary transition-colors">
                   (02) 8606 2842
@@ -86,7 +87,21 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-border text-center text-foreground/60 text-sm">
+        <div className="py-8 border-t border-white/10">
+          <h3 className="font-semibold text-white mb-6 text-center" data-testid="text-brands-heading">
+            Brands We Use
+          </h3>
+          <div className="flex justify-center items-center">
+            <img 
+              src={nxtzenLogo} 
+              alt="NXTZEN" 
+              className="h-12 opacity-80 hover:opacity-100 transition-opacity" 
+              data-testid="img-brand-nxtzen"
+            />
+          </div>
+        </div>
+
+        <div className="pt-8 border-t border-white/10 text-center text-white/60 text-sm">
           <p data-testid="text-copyright">
             © {currentYear} Protekt Auto. All rights reserved.
           </p>
