@@ -14,12 +14,12 @@ import packagesImage from '@assets/Full packages Protekt Auto_1763295209283.webp
 export default function Home() {
   const faqItems: FAQItem[] = [
     {
-      question: 'What services do you offer?',
-      answer: 'We offer premium automotive detailing and protection services including ceramic coatings, paint correction, window tinting, paint protection film (PPF), and motorcycle protection. We also offer customized packages to suit your specific needs.',
+      question: 'Why choose Protekt Auto for my vehicle protection?',
+      answer: 'Protekt Auto is Sydney\'s premier automotive protection specialist with years of experience in ceramic coatings, PPF, and paint correction. We use only the highest quality products, work in a professional controlled environment, and our technicians are certified applicators. Every service comes with manufacturer-backed guarantees and our commitment to perfection. Our clients choose us for our attention to detail, transparent pricing, and results that speak for themselves.',
     },
     {
-      question: 'Where are you located?',
-      answer: 'We are located at 24 George Street, Clyde, NSW 2142. Our facility is equipped with state-of-the-art equipment to provide the best service for your vehicle.',
+      question: 'What makes ceramic coating and PPF worth the investment?',
+      answer: 'Premium paint protection is an investment that pays for itself. Ceramic coatings and PPF preserve your vehicle\'s showroom finish, making it easier to clean and maintain while protecting against UV damage, scratches, and environmental contaminants. This protection significantly boosts resale value and saves you money compared to future paint correction or repainting. With our 5-10 year guarantees, your vehicle stays protected for years, maintaining that premium look that sets it apart.',
     },
     {
       question: 'How long does a ceramic coating application take?',
