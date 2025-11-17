@@ -375,4 +375,13 @@
   .border.hover-elevate:not(.no-hover-interaction-elevate)::after {
     inset: -1px;
   }
+
+  /* Mobile menu text shadow - dark by default, neon blue on hover */
+  .mobile-menu-text {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+  }
+
+  .mobile-menu-text:hover {
+    text-shadow: 0 2px 12px rgba(0, 188, 212, 0.8), 0 0 20px rgba(0, 188, 212, 0.6);
+  }
 }
