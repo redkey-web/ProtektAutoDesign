@@ -4,7 +4,7 @@ import ContactSection from '@/components/ContactSection';
 import heroImage from '@assets/generated_images/Ceramic_coating_hero_image_2e9cd7e0.png';
 import ceramicImage from '@assets/Ceramic coating service Sydney - New Car Protection_1763295133288.webp';
 import paintCorrectionImage from '@assets/Paint correction_1763294797362.webp';
-import windowTintImage from '@assets/generated_images/Window_tinting_hero_image_502b22ab.png';
+import windowTintImage from '@assets/Windown tinting_1763343495843.webp';
 import ppfImage from '@assets/generated_images/PPF_installation_hero_image_7d912c0a.png';
 import motorcycleImage from '@assets/generated_images/Motorcycle_protection_hero_image_de67be60.png';
 import packagesImage from '@assets/Full packages Protekt Auto_1763295209283.webp';

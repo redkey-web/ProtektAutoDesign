@@ -4,7 +4,7 @@ import TintComparison from '@/components/TintComparison';
 import SavingsCalculator from '@/components/SavingsCalculator';
 import { Card, CardContent } from '@/components/ui/card';
 import { Shield, Sun, Thermometer, Eye } from 'lucide-react';
-import heroImage from '@assets/generated_images/Window_tinting_hero_image_502b22ab.png';
+import heroImage from '@assets/Windown tinting_1763343495843.webp';
 
 export default function WindowTinting() {
   const benefits = [
