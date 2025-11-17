@@ -47,7 +47,7 @@ export default function Navigation() {
                   className={`text-sm font-medium transition-all duration-200 cursor-pointer px-3 py-2 rounded-md ${
                     location === link.path 
                       ? 'text-primary !bg-transparent' 
-                      : 'text-white/90 hover:text-white hover:!bg-transparent'
+                      : 'text-white/90 hover:text-gray-700 hover:!bg-transparent hover:drop-shadow-[0_2px_6px_rgba(0,188,212,0.9)]'
                   }`}
                   data-testid={`link-nav-${link.label.toLowerCase().replace(' ', '-')}`}
                 >
@@ -88,7 +88,7 @@ export default function Navigation() {
               <Link key={link.path} href={link.path}>
                 <span
                   className={`mobile-menu-text block py-2 px-3 rounded-md text-base font-medium cursor-pointer transition-all ${
-                    location === link.path ? 'text-primary bg-black/60' : 'text-white/90 hover:text-white hover:bg-black/60'
+                    location === link.path ? 'text-primary bg-black/60' : 'text-white/90 hover:text-gray-700 hover:bg-black/60 hover:drop-shadow-[0_2px_6px_rgba(0,188,212,0.9)]'
                   }`}
                   onClick={() => setIsMobileMenuOpen(false)}
                   data-testid={`link-mobile-${link.label.toLowerCase().replace(' ', '-')}`}
