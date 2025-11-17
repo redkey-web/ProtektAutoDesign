@@ -376,28 +376,9 @@
     inset: -1px;
   }
 
-  /* Mobile menu text shadow - dark by default, neon blue on hover */
+  /* Mobile menu text shadow */
   .mobile-menu-text {
-    position: relative;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
-    z-index: 1;
-  }
-
-  .mobile-menu-text::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    z-index: -1;
-    pointer-events: none;
-  }
-
-  .mobile-menu-text:hover {
-    text-shadow: 0 2px 8px rgba(0, 188, 212, 0.9), 0 0 12px rgba(0, 188, 212, 0.8);
-  }
-
-  .mobile-menu-text:hover::before {
-    box-shadow: 0 0 20px rgba(0, 188, 212, 0.8), inset 0 0 20px rgba(0, 188, 212, 0.6);
   }
 
   /* Phone button inner glow on hover */
