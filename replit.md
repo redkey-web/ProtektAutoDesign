@@ -27,8 +27,11 @@ Preferred communication style: Simple, everyday language.
 - Custom CSS variables for theming supporting light/dark modes
 
 **Design Philosophy**
-- Premium, luxury automotive aesthetic drawing from high-end configurators
-- Typography system using Space Grotesk (display) and Inter (body) fonts
+- Premium, luxury automotive aesthetic drawing from high-end configurators and Awwwards.com winners
+- Typography system using Bebas Neue (headings) and Barlow Condensed (body) fonts for aggressive premium automotive feel
+- Brand colors: Teal/cyan accent (#00BCD4), dark/black backgrounds
+- Premium glass-morphism effects: CTA buttons with 100% transparent backgrounds on hover with backdrop blur and neon outlines
+- Navigation transparency: 80% transparent (bg-black/20) when scrolled with backdrop blur
 - Sophisticated micro-interactions with elevation effects (hover-elevate, active-elevate-2)
 - Mobile-first responsive design with breakpoint-specific layouts
 
@@ -39,7 +42,12 @@ Preferred communication style: Simple, everyday language.
 - Reusable components for heroes, pricing cards, process timelines, before/after sliders
 
 **Key Features**
+- Vimeo hero background video (autoplay, muted) with negative margins to crop letterbox bars
+- YouTube welcome section video with custom play button overlay
 - Interactive before/after image slider for showcasing paint correction results
+- Premium glass-morphism hover effects on all CTA buttons (100% transparent with backdrop blur)
+- Navigation with 80% transparency (bg-black/20) when scrolled, items go 100% transparent on hover
+- Fully clickable service tiles (entire card wrapped in Link component)
 - Savings calculator for window tinting ROI demonstration
 - Quote calculator for custom service packages
 - Film comparison tools for tinting options
@@ -94,8 +102,17 @@ Preferred communication style: Simple, everyday language.
 **Component Styling Patterns**
 - Card components with subtle shadows and borders
 - Buttons with variant-based styling (default, destructive, outline, secondary, ghost)
+- Premium glass-morphism hover effects using `hover:!bg-transparent hover:backdrop-blur-md` with `!important` overrides to achieve 100% transparent backgrounds
+- Navigation items use `hover:!bg-transparent` to override shadcn Button defaults
 - Form inputs with consistent height (h-9) matching button heights
 - Hover and active states using CSS variable-based elevation overlays
+
+**Design Implementation Notes**
+- `!important` is used strategically to override shadcn Button component defaults for premium glass-morphism effects
+- Hero video uses negative margins (`-mt-[120px] -mb-[120px]`) to crop Vimeo letterbox bars
+- Transparency notation: `bg-black/20` = 20% opacity = 80% transparent
+- Header enlarged logo uses negative margins (`-my-2`) for visual prominence
+- HTML/body have explicit `margin: 0; padding: 0` to eliminate spacing issues
 
 ## External Dependencies
 
