@@ -2,7 +2,6 @@ import Hero from '@/components/Hero';
 import ProcessTimeline from '@/components/ProcessTimeline';
 import ContactSection from '@/components/ContactSection';
 import BeforeAfterSlider from '@/components/BeforeAfterSlider';
-import TypewriterText from '@/components/TypewriterText';
 import { Card } from '@/components/ui/card';
 import heroImage from '@assets/Paint correction_1763294797362.webp';
 import ceramicImage from '@assets/generated_images/Ceramic_coating_hero_image_2e9cd7e0.png';
@@ -80,18 +79,12 @@ export default function PaintCorrection() {
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6 text-center">
               Professional Paint Correction Services
             </h2>
-            <TypewriterText
-              text="Paint correction is the most visually impactful exterior enhancement a detailer can make to a vehicle's exterior. If you want to enhance the gloss of your car's paint or remove unsightly swirls and scratches, then this is achievable with our paint correction and enhancement (machine polishing) services."
-              speed={1}
-              delay={0}
-              className="text-foreground/70 text-lg leading-relaxed mb-6"
-            />
-            <TypewriterText
-              text="We use different grades of abrasive polishes and pads along with our modern-day polishing techniques and equipment to achieve the best finish possible from the packages we offer below."
-              speed={1}
-              delay={250}
-              className="text-foreground/70 text-lg leading-relaxed"
-            />
+            <p className="text-foreground/70 text-lg leading-relaxed mb-6">
+              Paint correction is the most visually impactful exterior enhancement a detailer can make to a vehicle's exterior. If you want to enhance the gloss of your car's paint or remove unsightly swirls and scratches, then this is achievable with our paint correction and enhancement (machine polishing) services.
+            </p>
+            <p className="text-foreground/70 text-lg leading-relaxed">
+              We use different grades of abrasive polishes and pads along with our modern-day polishing techniques and equipment to achieve the best finish possible from the packages we offer below.
+            </p>
           </div>
 
           <div className="mb-16">

@@ -4,7 +4,6 @@ import { Textarea } from '@/components/ui/textarea';
 import { Card } from '@/components/ui/card';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import { useState } from 'react';
-import TypewriterText from '@/components/TypewriterText';
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -31,13 +30,9 @@ export default function ContactSection() {
           >
             Get In Touch
           </h2>
-          <TypewriterText
-            text="Ready to protect your vehicle? Contact us today for a quote or to book your service."
-            speed={1}
-            delay={0}
-            className="text-foreground/60 text-lg max-w-2xl mx-auto"
-            data-testid="text-contact-subtitle"
-          />
+          <p className="text-foreground/60 text-lg max-w-2xl mx-auto" data-testid="text-contact-subtitle">
+            Ready to protect your vehicle? Contact us today for a quote or to book your service.
+          </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">

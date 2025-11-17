@@ -2,7 +2,6 @@ import { Link } from 'wouter';
 import logoImage from '@assets/Protekt Logo_1761708306237.webp';
 import nxtzenLogo from '@assets/nxtzen.png-2-removebg-preview_1763346531578.png';
 import { Instagram, Facebook } from 'lucide-react';
-import TypewriterText from '@/components/TypewriterText';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -22,13 +21,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div className="col-span-1 md:col-span-2">
             <img src={logoImage} alt="Protekt Auto" className="h-10 mb-4" data-testid="img-footer-logo" />
-            <TypewriterText
-              text="Sydney's premier automotive paint protection specialists. We provide professional ceramic coatings, paint correction, and paint protection film services."
-              speed={1}
-              delay={0}
-              className="text-white/70 mb-4 max-w-md"
-              data-testid="text-footer-description"
-            />
+            <p className="text-white/70 mb-4 max-w-md" data-testid="text-footer-description">
+              Sydney's premier automotive paint protection specialists. We provide professional ceramic coatings, paint correction, and paint protection film services.
+            </p>
             <div className="flex gap-4">
               <a
                 href="https://instagram.com/protektauto"

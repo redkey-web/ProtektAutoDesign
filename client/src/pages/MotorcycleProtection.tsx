@@ -1,6 +1,5 @@
 import Hero from '@/components/Hero';
 import ContactSection from '@/components/ContactSection';
-import TypewriterText from '@/components/TypewriterText';
 import { Card, CardContent } from '@/components/ui/card';
 import { Shield, Droplets, Sparkles } from 'lucide-react';
 import heroImage from '@assets/Motorcycle ceramic coat protection sydney_1763343837693.webp';
@@ -48,12 +47,9 @@ export default function MotorcycleProtection() {
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
               Professional Motorcycle Protection
             </h2>
-            <TypewriterText
-              text="Protect your bike with our Ceramic Coatings and Stone Chip Protection Film from any damage to your paintwork. Whether you ride a sport bike, cruiser, or adventure motorcycle, our specialized protection services will keep your bike looking showroom fresh."
-              speed={1}
-              delay={0}
-              className="text-foreground/70 text-lg leading-relaxed"
-            />
+            <p className="text-foreground/70 text-lg leading-relaxed">
+              Protect your bike with our Ceramic Coatings and Stone Chip Protection Film from any damage to your paintwork. Whether you ride a sport bike, cruiser, or adventure motorcycle, our specialized protection services will keep your bike looking showroom fresh.
+            </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-16">

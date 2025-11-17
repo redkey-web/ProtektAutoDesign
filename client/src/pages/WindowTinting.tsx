@@ -2,7 +2,6 @@ import Hero from '@/components/Hero';
 import ContactSection from '@/components/ContactSection';
 import TintComparison from '@/components/TintComparison';
 import SavingsCalculator from '@/components/SavingsCalculator';
-import TypewriterText from '@/components/TypewriterText';
 import { Card, CardContent } from '@/components/ui/card';
 import { Shield, Sun, Thermometer, Eye } from 'lucide-react';
 import heroImage from '@assets/Windown tinting_1763343495843.webp';
@@ -49,12 +48,9 @@ export default function WindowTinting() {
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
               Quality Carbon to Ceramic Grade Films
             </h2>
-            <TypewriterText
-              text="Protect yourself from harmful UV rays (block out up to 99% of harmful UV rays), infrared, glare, and heat of the sun. Our quality carbon to ceramic grade films provide the perfect balance of performance, aesthetics, and protection for your vehicle."
-              speed={1}
-              delay={0}
-              className="text-foreground/70 text-lg leading-relaxed"
-            />
+            <p className="text-foreground/70 text-lg leading-relaxed">
+              Protect yourself from harmful UV rays (block out up to 99% of harmful UV rays), infrared, glare, and heat of the sun. Our quality carbon to ceramic grade films provide the perfect balance of performance, aesthetics, and protection for your vehicle.
+            </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">

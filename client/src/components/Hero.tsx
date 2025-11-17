@@ -1,7 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Play } from 'lucide-react';
 import logoImage from '@assets/Protekt Logo_1761708306237.webp';
-import TypewriterText from '@/components/TypewriterText';
 
 interface HeroProps {
   title: string;
@@ -94,13 +93,9 @@ export default function Hero({
           {title}
         </h1>
         {description && (
-          <TypewriterText
-            text={description}
-            speed={1}
-            delay={0}
-            className="text-white/90 text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto mb-8 font-light"
-            data-testid="hero-description"
-          />
+          <p className="text-white/90 text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto mb-8 font-light" data-testid="hero-description">
+            {description}
+          </p>
         )}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button

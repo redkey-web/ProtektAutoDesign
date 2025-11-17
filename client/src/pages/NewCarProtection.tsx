@@ -1,7 +1,6 @@
 import Hero from '@/components/Hero';
 import PricingCard from '@/components/PricingCard';
 import ContactSection from '@/components/ContactSection';
-import TypewriterText from '@/components/TypewriterText';
 import heroImage from '@assets/Ceramic coating service Sydney - New Car Protection_1763295133288.webp';
 
 export default function NewCarProtection() {
@@ -50,12 +49,9 @@ export default function NewCarProtection() {
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
               Premium Paint Protection Coatings
             </h2>
-            <TypewriterText
-              text="Keep your new car's paint in perfect condition with Protekt Auto's premium Ceramic and Graphene paint protection coatings. Our coatings provide maximum durability, a high gloss, and make ongoing care for your vehicle's paintwork much easier."
-              speed={1}
-              delay={0}
-              className="text-foreground/70 text-lg leading-relaxed"
-            />
+            <p className="text-foreground/70 text-lg leading-relaxed">
+              Keep your new car's paint in perfect condition with Protekt Auto's premium Ceramic and Graphene paint protection coatings. Our coatings provide maximum durability, a high gloss, and make ongoing care for your vehicle's paintwork much easier.
+            </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 mb-16">
