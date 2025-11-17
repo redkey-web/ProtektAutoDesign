@@ -1,9 +1,33 @@
 import Hero from '@/components/Hero';
 import PricingCard from '@/components/PricingCard';
 import ContactSection from '@/components/ContactSection';
+import FAQ, { FAQItem } from '@/components/FAQ';
 import heroImage from '@assets/Ceramic coating service Sydney - New Car Protection_1763295133288.webp';
 
 export default function NewCarProtection() {
+  const faqItems: FAQItem[] = [
+    {
+      question: 'What is the difference between Ceramic and Graphene coatings?',
+      answer: 'Graphene coatings contain enhanced graphene nanoparticles that make them significantly more robust and durable than traditional ceramic coatings. They offer superior corrosion resistance, an intense deeper gloss finish, and easier long-term maintenance. Graphene coatings also come with a 7-year guarantee versus the 5-year guarantee for ceramic coatings.',
+    },
+    {
+      question: 'How long does the coating last?',
+      answer: 'Our Ceramic Professional coating comes with a 5-year guarantee, while our Graphene Professional coating includes a 7-year guarantee. The actual lifespan can be even longer with proper maintenance and care.',
+    },
+    {
+      question: 'Does the coating protect against scratches?',
+      answer: 'While ceramic and graphene coatings significantly improve scratch resistance and protect against minor abrasions, they are not scratch-proof. For maximum protection against stone chips and deeper scratches, we recommend combining the coating with Paint Protection Film (PPF).',
+    },
+    {
+      question: 'How should I maintain my coated vehicle?',
+      answer: 'Coated vehicles are much easier to maintain. We recommend regular washing with pH-neutral car wash soap, avoiding automatic car washes with harsh brushes, and periodic application of a ceramic booster spray to maintain the hydrophobic properties.',
+    },
+    {
+      question: 'Can the coating be applied to any vehicle?',
+      answer: 'Yes, ceramic and graphene coatings can be applied to any vehicle regardless of age or condition. However, for optimal results and to ensure the coating bonds properly, we include paint preparation and machine polishing with every coating application.',
+    },
+  ];
+
   const ceramicFeatures = [
     'Silicon Carbide (SiC) main component',
     'Permanent covalent bond to surface',
@@ -109,6 +133,8 @@ export default function NewCarProtection() {
           </div>
         </div>
       </section>
+
+      <FAQ items={faqItems} title="Ceramic Coating FAQs" />
 
       <ContactSection />
     </div>

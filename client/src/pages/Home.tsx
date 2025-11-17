@@ -2,6 +2,7 @@ import Hero from '@/components/Hero';
 import ServiceCard from '@/components/ServiceCard';
 import ContactSection from '@/components/ContactSection';
 import WelcomeVideo from '@/components/WelcomeVideo';
+import FAQ, { FAQItem } from '@/components/FAQ';
 import heroImage from '@assets/generated_images/Ceramic_coating_hero_image_2e9cd7e0.png';
 import ceramicImage from '@assets/Ceramic coating service Sydney - New Car Protection_1763295133288.webp';
 import paintCorrectionImage from '@assets/Paint correction_1763294797362.webp';
@@ -11,6 +12,33 @@ import motorcycleImage from '@assets/Motorcycle ceramic coat protection sydney_1
 import packagesImage from '@assets/Full packages Protekt Auto_1763295209283.webp';
 
 export default function Home() {
+  const faqItems: FAQItem[] = [
+    {
+      question: 'What services do you offer?',
+      answer: 'We offer premium automotive detailing and protection services including ceramic coatings, paint correction, window tinting, paint protection film (PPF), and motorcycle protection. We also offer customized packages to suit your specific needs.',
+    },
+    {
+      question: 'Where are you located?',
+      answer: 'We are located at 24 George Street, Clyde, NSW 2142. Our facility is equipped with state-of-the-art equipment to provide the best service for your vehicle.',
+    },
+    {
+      question: 'How long does a ceramic coating application take?',
+      answer: 'A ceramic coating application typically takes 1-3 days depending on the condition of your vehicle and the package selected. This includes proper paint preparation, correction if needed, and curing time.',
+    },
+    {
+      question: 'Do you offer mobile services?',
+      answer: 'All our services are performed at our professional workshop in Clyde to ensure the highest quality results. Our controlled environment allows us to deliver superior finish and longevity for your vehicle protection.',
+    },
+    {
+      question: 'How do I book an appointment?',
+      answer: 'You can book an appointment by calling us at (02) 8606 2842 or using the contact form on our website. We\'ll discuss your requirements and schedule a convenient time for your service.',
+    },
+    {
+      question: 'What payment methods do you accept?',
+      answer: 'We accept cash, credit/debit cards, and bank transfers. Payment is typically required upon completion of services.',
+    },
+  ];
+
   const services = [
     {
       title: 'New Car Protection',
@@ -89,6 +117,8 @@ export default function Home() {
       </section>
 
       <WelcomeVideo />
+
+      <FAQ items={faqItems} />
 
       <ContactSection />
     </>

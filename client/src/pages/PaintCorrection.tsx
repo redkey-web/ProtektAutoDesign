@@ -2,11 +2,35 @@ import Hero from '@/components/Hero';
 import ProcessTimeline from '@/components/ProcessTimeline';
 import ContactSection from '@/components/ContactSection';
 import BeforeAfterSlider from '@/components/BeforeAfterSlider';
+import FAQ, { FAQItem } from '@/components/FAQ';
 import { Card } from '@/components/ui/card';
 import heroImage from '@assets/Paint correction_1763294797362.webp';
 import ceramicImage from '@assets/generated_images/Ceramic_coating_hero_image_2e9cd7e0.png';
 
 export default function PaintCorrection() {
+  const faqItems: FAQItem[] = [
+    {
+      question: 'What stage of paint correction do I need?',
+      answer: 'The appropriate stage depends on your vehicle\'s paint condition and your expectations. Stage 1 is ideal for newer vehicles or light enhancement, Stage 2 is recommended for most vehicles with light to mild swirls and scratches, and Full Correction is for those seeking a defect-free finish. We recommend an inspection to determine the best option for your vehicle.',
+    },
+    {
+      question: 'Will paint correction remove all scratches?',
+      answer: 'Paint correction can remove or significantly reduce 75-95% of swirls and scratches depending on the stage selected. However, very deep scratches that have penetrated through the clear coat cannot be fully removed without repainting. We assess each vehicle individually to set realistic expectations.',
+    },
+    {
+      question: 'How long does paint correction take?',
+      answer: 'The duration varies based on the stage selected and vehicle size. Stage 1 typically takes 1 day, Stage 2 takes 1-2 days, and Full Correction can take 2-4 days depending on the paint\'s condition and complexity.',
+    },
+    {
+      question: 'Should I get paint correction before ceramic coating?',
+      answer: 'Yes, we highly recommend paint correction before applying ceramic coating. The coating will lock in the current condition of your paint, so correcting imperfections first ensures you get the best possible result and maximum gloss from your coating.',
+    },
+    {
+      question: 'How long will the results last?',
+      answer: 'With proper care and maintenance, paint correction results can last a long time. However, without protection like ceramic coating or regular waxing, environmental factors and washing can gradually reintroduce defects. We recommend protecting the corrected paint with our ceramic or graphene coatings for long-lasting results.',
+    },
+  ];
+
   const stages = [
     {
       stage: 'Stage 1',
@@ -112,6 +136,8 @@ export default function PaintCorrection() {
           />
         </div>
       </section>
+
+      <FAQ items={faqItems} title="Paint Correction FAQs" />
 
       <ContactSection />
     </div>

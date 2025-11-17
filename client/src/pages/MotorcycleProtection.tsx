@@ -1,10 +1,34 @@
 import Hero from '@/components/Hero';
 import ContactSection from '@/components/ContactSection';
+import FAQ, { FAQItem } from '@/components/FAQ';
 import { Card, CardContent } from '@/components/ui/card';
 import { Shield, Droplets, Sparkles } from 'lucide-react';
 import heroImage from '@assets/Motorcycle ceramic coat protection sydney_1763343837693.webp';
 
 export default function MotorcycleProtection() {
+  const faqItems: FAQItem[] = [
+    {
+      question: 'Do you work on all types of motorcycles?',
+      answer: 'Yes! We work on all types of motorcycles including sport bikes, cruisers, adventure bikes, touring bikes, and custom builds. Our technicians have experience with various makes and models.',
+    },
+    {
+      question: 'Is ceramic coating safe for motorcycle paint?',
+      answer: 'Absolutely! Ceramic coating is completely safe for motorcycle paint and provides excellent protection against road grime, bugs, UV rays, and environmental contaminants. It also makes cleaning much easier and enhances the depth of your paint\'s color.',
+    },
+    {
+      question: 'What areas of my bike should have PPF?',
+      answer: 'We typically recommend PPF on high-impact areas such as the fuel tank, front fender, lower fairings, headlight, and instrument cluster. These areas are most vulnerable to stone chips and debris damage. We can customize coverage based on your riding style and preferences.',
+    },
+    {
+      question: 'How long does motorcycle protection take?',
+      answer: 'Ceramic coating application typically takes 1-2 days, while PPF installation can take 1-3 days depending on the coverage area. The complete protection package usually requires 2-4 days. We\'ll provide a more accurate timeline after assessing your specific motorcycle.',
+    },
+    {
+      question: 'Can you protect chrome and metal parts?',
+      answer: 'Yes! Our ceramic coatings work excellently on chrome, polished aluminum, and other metal surfaces. They help prevent oxidation, make cleaning easier, and maintain that showroom shine on all your bike\'s components.',
+    },
+  ];
+
   const services = [
     {
       icon: Sparkles,
@@ -131,6 +155,8 @@ export default function MotorcycleProtection() {
           </Card>
         </div>
       </section>
+
+      <FAQ items={faqItems} title="Motorcycle Protection FAQs" />
 
       <ContactSection />
     </div>

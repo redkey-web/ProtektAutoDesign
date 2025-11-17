@@ -1,10 +1,34 @@
 import Hero from '@/components/Hero';
 import ContactSection from '@/components/ContactSection';
+import FAQ, { FAQItem } from '@/components/FAQ';
 import { Card, CardContent } from '@/components/ui/card';
 import { Shield, Zap, Droplets, RefreshCw } from 'lucide-react';
 import heroImage from '@assets/PPF _1763343626090.webp';
 
 export default function StonechipProtection() {
+  const faqItems: FAQItem[] = [
+    {
+      question: 'What is Paint Protection Film (PPF)?',
+      answer: 'PPF is a transparent, thermoplastic urethane film applied to your vehicle\'s painted surfaces. It provides a protective barrier against stone chips, scratches, bug splatter, and environmental damage while maintaining your paint\'s original appearance.',
+    },
+    {
+      question: 'Does PPF really self-heal?',
+      answer: 'Yes! Our premium PPF features heat-activated self-healing technology. Minor scratches and swirl marks disappear when exposed to heat (from the sun or warm water), keeping your film looking pristine. Deeper cuts or gouges that penetrate through the film cannot self-heal.',
+    },
+    {
+      question: 'How long does PPF last?',
+      answer: 'Quality PPF typically lasts 7-10 years with proper care and maintenance. Our films come with manufacturer warranties and resist yellowing, cracking, and peeling throughout their lifespan.',
+    },
+    {
+      question: 'Can PPF be removed?',
+      answer: 'Yes, PPF can be professionally removed without damaging your paint. In fact, when removed, your paint underneath will look as good as the day it was applied, as it has been protected from the elements.',
+    },
+    {
+      question: 'What coverage option should I choose?',
+      answer: 'It depends on your needs and budget. Partial Front is great for basic protection, Full Front is our most popular choice for comprehensive coverage of high-impact areas, Track Pack is ideal for performance driving, and Full Body provides maximum protection for the entire vehicle. We can help you decide based on your vehicle use.',
+    },
+  ];
+
   const benefits = [
     {
       icon: Shield,
@@ -138,6 +162,8 @@ export default function StonechipProtection() {
           </Card>
         </div>
       </section>
+
+      <FAQ items={faqItems} title="Paint Protection Film FAQs" />
 
       <ContactSection />
     </div>

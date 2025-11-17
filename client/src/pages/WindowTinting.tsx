@@ -2,11 +2,35 @@ import Hero from '@/components/Hero';
 import ContactSection from '@/components/ContactSection';
 import TintComparison from '@/components/TintComparison';
 import SavingsCalculator from '@/components/SavingsCalculator';
+import FAQ, { FAQItem } from '@/components/FAQ';
 import { Card, CardContent } from '@/components/ui/card';
 import { Shield, Sun, Thermometer, Eye } from 'lucide-react';
 import heroImage from '@assets/Windown tinting_1763343495843.webp';
 
 export default function WindowTinting() {
+  const faqItems: FAQItem[] = [
+    {
+      question: 'Is window tinting legal in NSW?',
+      answer: 'Yes, window tinting is legal in NSW with specific regulations. The front side windows must allow at least 35% of light through, and the windscreen can only have tint on the top 10% (visor strip). The rear windows and back windscreen can be darker. All our tints comply with NSW regulations.',
+    },
+    {
+      question: 'How long does window tinting take?',
+      answer: 'A full vehicle tint typically takes 2-4 hours depending on the vehicle size and complexity. The tint needs to cure for 2-3 days before you can wind down the windows or clean them.',
+    },
+    {
+      question: 'What\'s the difference between carbon and ceramic tint?',
+      answer: 'Carbon tint offers excellent heat rejection and UV protection at a great value. Ceramic tint provides superior heat rejection (up to 50% more than carbon), better clarity, no signal interference, and longer-lasting performance. Ceramic is our premium option for maximum comfort and protection.',
+    },
+    {
+      question: 'Will tinting affect my GPS, phone, or radio signals?',
+      answer: 'Our ceramic tints are completely signal-friendly and won\'t interfere with GPS, mobile phones, or radio signals. Some metallic tints can cause interference, which is why we recommend ceramic films for the best performance.',
+    },
+    {
+      question: 'How do I maintain my window tint?',
+      answer: 'Wait 2-3 days after installation before cleaning. Use a soft cloth with mild soap and water or ammonia-free glass cleaner. Avoid abrasive materials and harsh chemicals. Don\'t wind windows down for the first 2-3 days to allow proper curing.',
+    },
+  ];
+
   const benefits = [
     {
       icon: Sun,
@@ -76,6 +100,8 @@ export default function WindowTinting() {
           <SavingsCalculator />
         </div>
       </section>
+
+      <FAQ items={faqItems} title="Window Tinting FAQs" />
 
       <ContactSection />
     </div>
