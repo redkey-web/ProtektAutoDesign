@@ -142,8 +142,8 @@ export default function Hero({
 
       <div className="absolute bottom-[57px] left-[44.5%] -translate-x-1/2 z-10 animate-bounce -mt-20">
         <svg
-          width="20"
-          height="20"
+          width="26"
+          height="26"
           viewBox="0 0 40 40"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
