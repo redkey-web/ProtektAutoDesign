@@ -59,13 +59,13 @@ export default function Navigation() {
 
           <div className="hidden lg:flex items-center gap-4">
             <Button
+              size="icon"
               variant="default"
-              className="phone-button-glow gap-2 hover:!bg-transparent hover:backdrop-blur-md hover:border-primary transition-all"
+              className="phone-button-glow hover:!bg-transparent hover:backdrop-blur-md hover:border-primary transition-all"
               onClick={() => window.location.href = 'tel:0286062842'}
               data-testid="button-call-desktop"
             >
-              <Phone className="w-4 h-4" />
-              (02) 8606 2842
+              <Phone className="w-5 h-5" />
             </Button>
           </div>
 
