@@ -2,6 +2,7 @@ import Hero from '@/components/Hero';
 import PricingCard from '@/components/PricingCard';
 import ContactSection from '@/components/ContactSection';
 import QuoteCalculator from '@/components/QuoteCalculator';
+import TypewriterText from '@/components/TypewriterText';
 import heroImage from '@assets/Full packages Protekt Auto_1763295209283.webp';
 
 export default function Packages() {
@@ -65,11 +66,12 @@ export default function Packages() {
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
               Choose Your Protection Level
             </h2>
-            <p className="text-foreground/70 text-lg leading-relaxed">
-              Give your vehicle the best protection with our package options or tailor it to your
-              requirements. Each package is designed to provide comprehensive protection while fitting
-              different needs and budgets.
-            </p>
+            <TypewriterText
+              text="Give your vehicle the best protection with our package options or tailor it to your requirements. Each package is designed to provide comprehensive protection while fitting different needs and budgets."
+              speed={1}
+              delay={0}
+              className="text-foreground/70 text-lg leading-relaxed"
+            />
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">

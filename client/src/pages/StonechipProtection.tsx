@@ -1,5 +1,6 @@
 import Hero from '@/components/Hero';
 import ContactSection from '@/components/ContactSection';
+import TypewriterText from '@/components/TypewriterText';
 import { Card, CardContent } from '@/components/ui/card';
 import { Shield, Zap, Droplets, RefreshCw } from 'lucide-react';
 import heroImage from '@assets/PPF _1763343626090.webp';
@@ -76,12 +77,12 @@ export default function StonechipProtection() {
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
               XPEL Ultimate Plus Paint Protection Film
             </h2>
-            <p className="text-foreground/70 text-lg leading-relaxed">
-              Paint Protection Films are an advanced transparent film that is used to protect your paint
-              from damage caused by stone chips, bug splatter and minor abrasions. Our premium XPEL
-              films feature self-healing technology and maintain the factory finish of your vehicle
-              while providing invisible, industry-leading protection.
-            </p>
+            <TypewriterText
+              text="Paint Protection Films are an advanced transparent film that is used to protect your paint from damage caused by stone chips, bug splatter and minor abrasions. Our premium XPEL films feature self-healing technology and maintain the factory finish of your vehicle while providing invisible, industry-leading protection."
+              speed={1}
+              delay={0}
+              className="text-foreground/70 text-lg leading-relaxed"
+            />
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
