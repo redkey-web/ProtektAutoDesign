@@ -61,7 +61,7 @@ export default function Navigation() {
             <Button
               size="icon"
               variant="default"
-              className="phone-button-glow hover:!bg-transparent hover:backdrop-blur-md hover:border-primary transition-all"
+              className="phone-button-glow hover:!bg-primary/20 hover:border-primary transition-all"
               onClick={() => window.location.href = 'tel:0286062842'}
               data-testid="button-call-desktop"
             >

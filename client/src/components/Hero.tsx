@@ -106,7 +106,7 @@ export default function Hero({
           <Button
             size="lg"
             variant="default"
-            className="gap-2 text-base px-8 transition-all duration-300 hover:bg-primary/10 hover:backdrop-blur-md hover:shadow-[0_0_20px_rgba(0,188,212,0.6)] hover:border-transparent focus-visible:ring-0"
+            className="gap-2 text-base px-8 transition-all duration-300 hover:bg-primary/20 hover:shadow-[0_0_20px_rgba(0,188,212,0.6)] hover:border-transparent focus-visible:ring-0"
             onClick={() => {
               if (ctaLink.startsWith('#')) {
                 document.querySelector(ctaLink)?.scrollIntoView({ behavior: 'smooth' });
@@ -123,7 +123,7 @@ export default function Hero({
             <Button
               size="lg"
               variant="outline"
-              className="gap-2 text-base px-8 bg-white/10 backdrop-blur-sm border-white/20 text-white transition-all duration-300 hover:!bg-transparent hover:backdrop-blur-md hover:shadow-[0_0_20px_rgba(255,255,255,0.6)]"
+              className="gap-2 text-base px-8 bg-white/10 border-white/20 text-white transition-all duration-300 hover:!bg-white/5 hover:shadow-[0_0_20px_rgba(255,255,255,0.6)]"
               onClick={() => window.location.href = 'tel:0286062842'}
               data-testid="button-hero-phone-cta"
             >
@@ -135,7 +135,7 @@ export default function Hero({
             <Button
               size="lg"
               variant="outline"
-              className="gap-2 text-base px-8 bg-white/10 backdrop-blur-sm border-white/20 text-white transition-all duration-300 hover:!bg-transparent hover:backdrop-blur-md hover:shadow-[0_0_20px_rgba(255,255,255,0.6)]"
+              className="gap-2 text-base px-8 bg-white/10 border-white/20 text-white transition-all duration-300 hover:!bg-white/5 hover:shadow-[0_0_20px_rgba(255,255,255,0.6)]"
               onClick={() => {
                 document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
               }}
@@ -148,7 +148,7 @@ export default function Hero({
             <Button
               size="icon"
               variant="outline"
-              className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20"
+              className="w-16 h-16 rounded-full bg-white/10 border-white/20 hover:bg-white/20"
               data-testid="button-play-video"
             >
               <Play className="w-6 h-6 text-white fill-white" />
