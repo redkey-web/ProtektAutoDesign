@@ -2,7 +2,7 @@ import Hero from '@/components/Hero';
 import ContactSection from '@/components/ContactSection';
 import { Card, CardContent } from '@/components/ui/card';
 import { Shield, Droplets, Sparkles } from 'lucide-react';
-import heroImage from '@assets/generated_images/Motorcycle_protection_hero_image_de67be60.png';
+import heroImage from '@assets/Motorcycle ceramic coat protection sydney_1763343837693.webp';
 
 export default function MotorcycleProtection() {
   const services = [

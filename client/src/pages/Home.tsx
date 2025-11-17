@@ -6,7 +6,7 @@ import ceramicImage from '@assets/Ceramic coating service Sydney - New Car Prote
 import paintCorrectionImage from '@assets/Paint correction_1763294797362.webp';
 import windowTintImage from '@assets/Windown tinting_1763343495843.webp';
 import ppfImage from '@assets/PPF _1763343626090.webp';
-import motorcycleImage from '@assets/generated_images/Motorcycle_protection_hero_image_de67be60.png';
+import motorcycleImage from '@assets/Motorcycle ceramic coat protection sydney_1763343837693.webp';
 import packagesImage from '@assets/Full packages Protekt Auto_1763295209283.webp';
 
 export default function Home() {
