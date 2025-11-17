@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Play } from 'lucide-react';
+import { ArrowRight, Play, Phone } from 'lucide-react';
+import TrustBadges from '@/components/TrustBadges';
 import logoImage from '@assets/Protekt Logo_1761708306237.webp';
 
 interface HeroProps {
@@ -11,9 +12,11 @@ interface HeroProps {
   ctaText?: string;
   ctaLink?: string;
   secondaryCtaText?: string;
+  showPhoneCta?: boolean;
   height?: 'full' | 'large' | 'medium';
   showPlayButton?: boolean;
   showLogo?: boolean;
+  showTrustBadges?: boolean;
 }
 
 export default function Hero({
@@ -25,9 +28,11 @@ export default function Hero({
   ctaText = 'Get Started',
   ctaLink = '#contact',
   secondaryCtaText,
+  showPhoneCta = false,
   height = 'full',
   showPlayButton = false,
   showLogo = false,
+  showTrustBadges = false,
 }: HeroProps) {
   const heightClasses = {
     full: 'h-screen',
@@ -114,6 +119,18 @@ export default function Hero({
             {ctaText}
             <ArrowRight className="w-5 h-5" />
           </Button>
+          {showPhoneCta && (
+            <Button
+              size="lg"
+              variant="outline"
+              className="gap-2 text-base px-8 bg-white/10 backdrop-blur-sm border-white/20 text-white transition-all duration-300 hover:!bg-transparent hover:backdrop-blur-md hover:shadow-[0_0_20px_rgba(255,255,255,0.6)]"
+              onClick={() => window.location.href = 'tel:0286062842'}
+              data-testid="button-hero-phone-cta"
+            >
+              <Phone className="w-5 h-5" />
+              (02) 8606 2842
+            </Button>
+          )}
           {secondaryCtaText && (
             <Button
               size="lg"
@@ -138,6 +155,12 @@ export default function Hero({
             </Button>
           )}
         </div>
+        
+        {showTrustBadges && (
+          <div className="mt-12">
+            <TrustBadges />
+          </div>
+        )}
       </div>
 
       <div className="absolute bottom-[57px] left-[44.5%] -translate-x-1/2 z-10 animate-bounce -mt-20">

@@ -1,6 +1,8 @@
 import Hero from '@/components/Hero';
 import ContactSection from '@/components/ContactSection';
 import FAQ, { FAQItem } from '@/components/FAQ';
+import SEO from '@/components/SEO';
+import UrgencyBanner from '@/components/UrgencyBanner';
 import { Card, CardContent } from '@/components/ui/card';
 import { Shield, Droplets, Sparkles } from 'lucide-react';
 import heroImage from '@assets/Motorcycle ceramic coat protection sydney_1763343837693.webp';
@@ -55,6 +57,12 @@ export default function MotorcycleProtection() {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Motorcycle Ceramic Coating Sydney | Motorbike PPF | Bike Detailing | Protekt Auto"
+        description="Professional motorcycle ceramic coating Sydney. Protect your bike with ceramic coatings & PPF. Sport bikes, cruisers, adventure bikes from $600. Call (02) 8606 2842"
+        keywords="motorcycle ceramic coating Sydney, motorbike PPF Sydney, motorcycle detailing Sydney, bike ceramic coating, motorcycle protection Sydney"
+        canonical="https://protektauto.com.au/motorcycle-protection"
+      />
       <Hero
         title="Motorcycle Protection"
         subtitle="Premium Bike Detailing"
@@ -63,9 +71,18 @@ export default function MotorcycleProtection() {
         height="large"
         ctaText="Get Quote"
         ctaLink="#contact"
+        showPhoneCta={true}
       />
 
       <section className="py-20 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+          <UrgencyBanner
+            message="Track season approaching!"
+            highlight="Protect your bike before the first ride."
+            icon="trending"
+          />
+        </div>
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">

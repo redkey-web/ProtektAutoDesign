@@ -1,6 +1,9 @@
 import Hero from '@/components/Hero';
 import ContactSection from '@/components/ContactSection';
 import FAQ, { FAQItem } from '@/components/FAQ';
+import SEO from '@/components/SEO';
+import UrgencyBanner from '@/components/UrgencyBanner';
+import RelatedServices from '@/components/RelatedServices';
 import { Card, CardContent } from '@/components/ui/card';
 import { Shield, Zap, Droplets, RefreshCw } from 'lucide-react';
 import heroImage from '@assets/PPF _1763343626090.webp';
@@ -84,6 +87,12 @@ export default function StonechipProtection() {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Paint Protection Film Sydney | PPF Installer | Stone Chip Protection | Protekt Auto"
+        description="Expert PPF installer Sydney. Self-healing paint protection film protects against stone chips, scratches & road debris. Full body from $5,500. Call (02) 8606 2842"
+        keywords="paint protection film Sydney, PPF installer Sydney, stone chip protection, PPF Sydney, clear bra Sydney"
+        canonical="https://protektauto.com.au/stonechip-protection"
+      />
       <Hero
         title="Paint Protection Film (PPF)"
         subtitle="Stone Chip Protection"
@@ -92,9 +101,18 @@ export default function StonechipProtection() {
         height="large"
         ctaText="Get Quote"
         ctaLink="#contact"
+        showPhoneCta={true}
       />
 
       <section className="py-20 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+          <UrgencyBanner
+            message="Premium XPEL installation."
+            highlight="Book early for high-demand models."
+            icon="trending"
+          />
+        </div>
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
@@ -162,6 +180,26 @@ export default function StonechipProtection() {
           </Card>
         </div>
       </section>
+
+      <RelatedServices
+        services={[
+          {
+            title: 'Ceramic Coating Sydney',
+            description: 'Maximize protection by adding ceramic coating on top of your PPF for enhanced gloss and easier cleaning.',
+            link: '/new-car-protection',
+          },
+          {
+            title: 'Paint Correction Sydney',
+            description: 'Prepare your paint surface with professional correction before PPF installation for the best results.',
+            link: '/paint-correction',
+          },
+          {
+            title: 'Protection Packages',
+            description: 'Get the ultimate protection with our packages combining PPF, ceramic coating, and paint correction.',
+            link: '/packages',
+          },
+        ]}
+      />
 
       <FAQ items={faqItems} title="Paint Protection Film FAQs" />
 

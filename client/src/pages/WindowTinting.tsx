@@ -3,6 +3,8 @@ import ContactSection from '@/components/ContactSection';
 import TintComparison from '@/components/TintComparison';
 import SavingsCalculator from '@/components/SavingsCalculator';
 import FAQ, { FAQItem } from '@/components/FAQ';
+import SEO from '@/components/SEO';
+import UrgencyBanner from '@/components/UrgencyBanner';
 import { Card, CardContent } from '@/components/ui/card';
 import { Shield, Sun, Thermometer, Eye } from 'lucide-react';
 import heroImage from '@assets/Windown tinting_1763343495843.webp';
@@ -56,6 +58,12 @@ export default function WindowTinting() {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Window Tinting Sydney | Ceramic Tint | Legal NSW Compliant | Protekt Auto"
+        description="Premium window tinting Sydney. Block 99% UV rays with ceramic & carbon films. Legal NSW compliant tinting. Heat rejection & privacy. Free quotes (02) 8606 2842"
+        keywords="window tinting Sydney, ceramic window tint Sydney, legal window tint NSW, car tinting Sydney, window film Sydney"
+        canonical="https://protektauto.com.au/window-tinting"
+      />
       <Hero
         title="Premium Window Tinting"
         subtitle="Window Tinting Solutions"
@@ -64,9 +72,18 @@ export default function WindowTinting() {
         height="large"
         ctaText="Get Quote"
         ctaLink="#contact"
+        showPhoneCta={true}
       />
 
       <section className="py-20 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+          <UrgencyBanner
+            message="Beat the summer heat!"
+            highlight="Book your tinting before December rush."
+            icon="trending"
+          />
+        </div>
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">

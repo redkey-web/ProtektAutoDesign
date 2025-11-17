@@ -3,6 +3,9 @@ import ServiceCard from '@/components/ServiceCard';
 import ContactSection from '@/components/ContactSection';
 import WelcomeVideo from '@/components/WelcomeVideo';
 import FAQ, { FAQItem } from '@/components/FAQ';
+import SEO from '@/components/SEO';
+import StructuredData from '@/components/StructuredData';
+import Testimonials from '@/components/Testimonials';
 import heroImage from '@assets/generated_images/Ceramic_coating_hero_image_2e9cd7e0.png';
 import ceramicImage from '@assets/Ceramic coating service Sydney - New Car Protection_1763295133288.webp';
 import paintCorrectionImage from '@assets/Paint correction_1763294797362.webp';
@@ -86,6 +89,13 @@ export default function Home() {
 
   return (
     <>
+      <SEO
+        title="Vehicle Paint Protection Sydney | Ceramic Coating & PPF Specialist | Protekt Auto"
+        description="Sydney's #1 vehicle paint protection specialists. Premium ceramic coatings, graphene coatings, paint correction, window tinting & PPF installation. Protect your investment with Protekt Auto. Call (02) 8606 2842"
+        keywords="vehicle paint protection Sydney, ceramic coating specialist Sydney, PPF installer Sydney, paint protection Sydney, car detailing Sydney"
+        canonical="https://protektauto.com.au/"
+      />
+      <StructuredData type="AutomotiveBusiness" />
       <Hero
         title="Sydney's #1 Paint Protection & Car Care Workshops"
         subtitle="Premium Automotive Detailing"
@@ -93,8 +103,9 @@ export default function Home() {
         videoUrl="https://player.vimeo.com/video/578269899"
         ctaText="View Services"
         ctaLink="#services"
-        secondaryCtaText="Contact Us"
+        showPhoneCta={true}
         showLogo={true}
+        showTrustBadges={true}
       />
 
       <section id="services" className="py-20 bg-background mt-20">
@@ -117,6 +128,8 @@ export default function Home() {
       </section>
 
       <WelcomeVideo />
+
+      <Testimonials />
 
       <FAQ items={faqItems} />
 

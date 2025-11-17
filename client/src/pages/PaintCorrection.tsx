@@ -3,6 +3,8 @@ import ProcessTimeline from '@/components/ProcessTimeline';
 import ContactSection from '@/components/ContactSection';
 import BeforeAfterSlider from '@/components/BeforeAfterSlider';
 import FAQ, { FAQItem } from '@/components/FAQ';
+import SEO from '@/components/SEO';
+import RelatedServices from '@/components/RelatedServices';
 import { Card } from '@/components/ui/card';
 import heroImage from '@assets/Paint correction_1763294797362.webp';
 import ceramicImage from '@assets/generated_images/Ceramic_coating_hero_image_2e9cd7e0.png';
@@ -87,6 +89,12 @@ export default function PaintCorrection() {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Paint Correction Sydney | Cut & Polish | Machine Polishing | Protekt Auto"
+        description="Professional paint correction Sydney. Remove swirls, scratches & restore gloss with our machine polishing services. 3-stage correction from $660. Call (02) 8606 2842 for a quote."
+        keywords="paint correction Sydney, cut and polish Sydney, machine polishing Sydney, swirl removal Sydney, car polishing Sydney"
+        canonical="https://protektauto.com.au/paint-correction"
+      />
       <Hero
         title="Paint Correction & Enhancement"
         subtitle="Automotive Paint Correction"
@@ -136,6 +144,26 @@ export default function PaintCorrection() {
           />
         </div>
       </section>
+
+      <RelatedServices
+        services={[
+          {
+            title: 'Ceramic Coating Sydney',
+            description: 'Protect your freshly corrected paint with our premium ceramic or graphene coating for long-lasting shine.',
+            link: '/new-car-protection',
+          },
+          {
+            title: 'Window Tinting',
+            description: 'Complement your paint correction with professional ceramic window tinting for heat rejection and UV protection.',
+            link: '/window-tinting',
+          },
+          {
+            title: 'Protection Packages',
+            description: 'Save with our complete packages that include paint correction, ceramic coating, and PPF installation.',
+            link: '/packages',
+          },
+        ]}
+      />
 
       <FAQ items={faqItems} title="Paint Correction FAQs" />
 

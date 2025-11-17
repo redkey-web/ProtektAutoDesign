@@ -2,6 +2,9 @@ import Hero from '@/components/Hero';
 import PricingCard from '@/components/PricingCard';
 import ContactSection from '@/components/ContactSection';
 import FAQ, { FAQItem } from '@/components/FAQ';
+import SEO from '@/components/SEO';
+import UrgencyBanner from '@/components/UrgencyBanner';
+import RelatedServices from '@/components/RelatedServices';
 import heroImage from '@assets/Ceramic coating service Sydney - New Car Protection_1763295133288.webp';
 
 export default function NewCarProtection() {
@@ -57,6 +60,12 @@ export default function NewCarProtection() {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Ceramic Coating Sydney | Graphene Coating | New Car Protection | Protekt Auto"
+        description="Best ceramic coating Sydney. Premium ceramic & graphene coatings for new cars with 5-7 year guarantees. Professional application from $950. Protect your new car's paint with Protekt Auto. Book now (02) 8606 2842"
+        keywords="ceramic coating Sydney, graphene coating Sydney, new car paint protection, ceramic coating near me, car ceramic coating Sydney"
+        canonical="https://protektauto.com.au/new-car-protection"
+      />
       <Hero
         title="Ceramic Coating Sydney"
         subtitle="Need Paint Protection for a New Car? Nothing Protects Like Ceramic & Graphene Coatings"
@@ -64,9 +73,18 @@ export default function NewCarProtection() {
         height="large"
         ctaText="Get Quote"
         ctaLink="#contact"
+        showPhoneCta={true}
       />
 
       <section className="py-20 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+          <UrgencyBanner
+            message="Limited spots available this month."
+            highlight="Only 4 new car protection slots remaining!"
+            icon="clock"
+          />
+        </div>
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
@@ -132,6 +150,26 @@ export default function NewCarProtection() {
           </div>
         </div>
       </section>
+
+      <RelatedServices
+        services={[
+          {
+            title: 'Paint Correction Sydney',
+            description: 'Remove swirls and scratches with our professional machine polishing service before ceramic coating application.',
+            link: '/paint-correction',
+          },
+          {
+            title: 'Paint Protection Film',
+            description: 'Add self-healing PPF to high-impact areas for maximum protection against stone chips and road debris.',
+            link: '/stonechip-protection',
+          },
+          {
+            title: 'Protection Packages',
+            description: 'Save with our complete protection packages combining ceramic coating, PPF, and paint correction.',
+            link: '/packages',
+          },
+        ]}
+      />
 
       <FAQ items={faqItems} title="Ceramic Coating FAQs" />
 

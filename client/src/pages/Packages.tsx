@@ -2,6 +2,7 @@ import Hero from '@/components/Hero';
 import PricingCard from '@/components/PricingCard';
 import ContactSection from '@/components/ContactSection';
 import QuoteCalculator from '@/components/QuoteCalculator';
+import SEO from '@/components/SEO';
 import heroImage from '@assets/Full packages Protekt Auto_1763295209283.webp';
 
 export default function Packages() {
@@ -49,6 +50,12 @@ export default function Packages() {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Car Protection Packages Sydney | Ceramic Coating & PPF Packages | Protekt Auto"
+        description="Complete car protection packages Sydney. Ceramic coating, PPF & paint correction bundles. Enthusiast, Street, Track & Complete packages from $2,500. Save with package deals. Call (02) 8606 2842"
+        keywords="car protection packages Sydney, ceramic coating packages, PPF packages Sydney, vehicle protection bundles, car detailing packages Sydney"
+        canonical="https://protektauto.com.au/packages"
+      />
       <Hero
         title="Protection Packages"
         subtitle="Complete Vehicle Protection"
@@ -57,6 +64,7 @@ export default function Packages() {
         height="large"
         ctaText="Get Quote"
         ctaLink="#contact"
+        showPhoneCta={true}
       />
 
       <section className="py-20 bg-background">
