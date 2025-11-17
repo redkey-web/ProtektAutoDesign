@@ -120,72 +120,72 @@ export default function Hero({
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce flex items-center justify-center">
         <svg
-          width="50"
-          height="50"
-          viewBox="0 0 50 50"
+          width="40"
+          height="40"
+          viewBox="0 0 40 40"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="text-white/70"
+          className="text-white/80"
           data-testid="icon-scroll-down"
         >
           {/* Outer knob circle */}
           <circle
-            cx="25"
-            cy="25"
-            r="23"
+            cx="20"
+            cy="20"
+            r="18.5"
             stroke="currentColor"
-            strokeWidth="1.5"
-            opacity="0.5"
+            strokeWidth="1.2"
+            opacity="0.6"
           />
           
-          {/* Inner gate circle */}
+          {/* Inner gate background */}
           <circle
-            cx="25"
-            cy="25"
-            r="16"
+            cx="20"
+            cy="20"
+            r="13"
             fill="currentColor"
-            opacity="0.15"
+            opacity="0.12"
           />
           
-          {/* H-pattern gate lines */}
+          {/* H-pattern gate lines - cleaner design */}
           {/* Left vertical (R-2) */}
-          <line x1="13" y1="16" x2="13" y2="34" stroke="currentColor" strokeWidth="1.5" opacity="0.6" />
+          <line x1="11" y1="13" x2="11" y2="27" stroke="currentColor" strokeWidth="1.2" opacity="0.7" />
           {/* Middle vertical (1-4) */}
-          <line x1="25" y1="16" x2="25" y2="34" stroke="currentColor" strokeWidth="1.5" opacity="0.6" />
+          <line x1="20" y1="13" x2="20" y2="27" stroke="currentColor" strokeWidth="1.2" opacity="0.7" />
           {/* Right vertical (3-5) */}
-          <line x1="37" y1="16" x2="37" y2="34" stroke="currentColor" strokeWidth="1.5" opacity="0.6" />
+          <line x1="29" y1="13" x2="29" y2="27" stroke="currentColor" strokeWidth="1.2" opacity="0.7" />
           {/* Top horizontal */}
-          <line x1="13" y1="20" x2="37" y2="20" stroke="currentColor" strokeWidth="1.5" opacity="0.6" />
+          <line x1="11" y1="16" x2="29" y2="16" stroke="currentColor" strokeWidth="1.2" opacity="0.7" />
           {/* Bottom horizontal */}
-          <line x1="13" y1="30" x2="37" y2="30" stroke="currentColor" strokeWidth="1.5" opacity="0.6" />
+          <line x1="11" y1="24" x2="29" y2="24" stroke="currentColor" strokeWidth="1.2" opacity="0.7" />
           
-          {/* Gear position labels - Top row: R 1 3 5 */}
-          <text x="13" y="14" fontSize="6" fill="currentColor" textAnchor="middle" fontWeight="600">R</text>
-          <text x="25" y="14" fontSize="6" fill="currentColor" textAnchor="middle" fontWeight="600">1</text>
-          <text x="37" y="14" fontSize="6" fill="currentColor" textAnchor="middle" fontWeight="600">3</text>
+          {/* Gear position labels - Top row: R 1 3 */}
+          <text x="11" y="11.5" fontSize="5.5" fill="currentColor" textAnchor="middle" fontWeight="700" fontFamily="system-ui">R</text>
+          <text x="20" y="11.5" fontSize="5.5" fill="currentColor" textAnchor="middle" fontWeight="700" fontFamily="system-ui">1</text>
+          <text x="29" y="11.5" fontSize="5.5" fill="currentColor" textAnchor="middle" fontWeight="700" fontFamily="system-ui">3</text>
           
-          {/* Bottom row: 2 4 6 */}
-          <text x="13" y="39" fontSize="6" fill="currentColor" textAnchor="middle" fontWeight="600">2</text>
-          <text x="25" y="39" fontSize="6" fill="currentColor" textAnchor="middle" fontWeight="600">4</text>
-          <text x="37" y="39" fontSize="6" fill="currentColor" textAnchor="middle" fontWeight="600">5</text>
+          {/* Bottom row: 2 4 5 */}
+          <text x="11" y="31" fontSize="5.5" fill="currentColor" textAnchor="middle" fontWeight="700" fontFamily="system-ui">2</text>
+          <text x="20" y="31" fontSize="5.5" fill="currentColor" textAnchor="middle" fontWeight="700" fontFamily="system-ui">4</text>
+          <text x="29" y="31" fontSize="5.5" fill="currentColor" textAnchor="middle" fontWeight="700" fontFamily="system-ui">5</text>
           
           {/* Shifter stick pointing up (1st gear position) */}
           <line
-            x1="25"
-            y1="25"
-            x2="25"
-            y2="18"
+            x1="20"
+            y1="20"
+            x2="20"
+            y2="14.5"
             stroke="currentColor"
-            strokeWidth="2.5"
+            strokeWidth="2"
             strokeLinecap="round"
-            opacity="0.9"
+            opacity="0.95"
           />
           
           {/* Shifter knob at top (1st gear) */}
-          <circle cx="25" cy="18" r="4" fill="currentColor" opacity="0.9" />
-          <circle cx="25" cy="18" r="2.5" fill="currentColor" opacity="0.6" />
+          <circle cx="20" cy="14.5" r="3.5" fill="currentColor" opacity="0.95" />
+          <circle cx="20" cy="14.5" r="2" fill="currentColor" opacity="0.5" />
         </svg>
       </div>
     </div>
