@@ -119,7 +119,7 @@ export default function Hero({
             <Button
               size="lg"
               variant="outline"
-              className="gap-2 text-base px-8 bg-white/10 backdrop-blur-sm border-white/20 text-white transition-all duration-300 hover:bg-white/10 hover:backdrop-blur-md hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] hover:border-white"
+              className="gap-2 text-base px-8 bg-white/10 backdrop-blur-sm border-white/20 text-white transition-all duration-300 hover:bg-transparent hover:backdrop-blur-md hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] hover:border-white"
               data-testid="button-hero-secondary-cta"
             >
               {secondaryCtaText}

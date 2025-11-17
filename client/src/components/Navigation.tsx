@@ -30,7 +30,7 @@ export default function Navigation() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-black/50 backdrop-blur-md border-b border-white/10' : 'bg-transparent'
+        isScrolled ? 'bg-black/80 backdrop-blur-md border-b border-white/10' : 'bg-transparent'
       }`}
       data-testid="navigation-header"
     >
@@ -44,8 +44,12 @@ export default function Navigation() {
             {navLinks.map((link) => (
               <Link key={link.path} href={link.path}>
                 <span
-                  className={`text-sm font-medium transition-colors hover:text-primary cursor-pointer ${
-                    location === link.path ? 'text-primary' : isScrolled ? 'text-white/90' : 'text-white/80'
+                  className={`text-sm font-medium transition-all duration-200 cursor-pointer px-3 py-2 rounded-md ${
+                    location === link.path 
+                      ? 'text-primary bg-transparent' 
+                      : isScrolled 
+                        ? 'text-white/90 hover:bg-transparent hover:backdrop-blur-md' 
+                        : 'text-white/80 hover:bg-transparent hover:backdrop-blur-md'
                   }`}
                   data-testid={`link-nav-${link.label.toLowerCase().replace(' ', '-')}`}
                 >
