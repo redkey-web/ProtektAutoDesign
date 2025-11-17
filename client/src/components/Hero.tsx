@@ -140,7 +140,7 @@ export default function Hero({
         </div>
       </div>
 
-      <div className="absolute bottom-[57px] left-1/2 -translate-x-1/2 z-10 animate-bounce -mt-20">
+      <div className="absolute bottom-[57px] left-[50%] -translate-x-1/2 z-10 animate-bounce -mt-20">
         <svg
           width="40"
           height="40"
