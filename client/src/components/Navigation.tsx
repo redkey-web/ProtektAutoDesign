@@ -62,7 +62,7 @@ export default function Navigation() {
           <div className="hidden lg:flex items-center gap-4">
             <Button
               variant="default"
-              className="gap-2 hover:!bg-transparent hover:backdrop-blur-md hover:border-primary transition-all"
+              className="phone-button-glow gap-2 hover:!bg-transparent hover:backdrop-blur-md hover:border-primary transition-all"
               onClick={() => window.location.href = 'tel:0286062842'}
               data-testid="button-call-desktop"
             >
@@ -101,7 +101,7 @@ export default function Navigation() {
             ))}
             <Button
               variant="default"
-              className="w-full gap-2 mt-4"
+              className="phone-button-glow w-full gap-2 mt-4"
               onClick={() => window.location.href = 'tel:0286062842'}
               data-testid="button-call-mobile"
             >
