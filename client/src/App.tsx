@@ -6,6 +6,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import StickyPhoneButton from "@/components/StickyPhoneButton";
 import Home from "@/pages/Home";
 import NewCarProtection from "@/pages/NewCarProtection";
 import PaintCorrection from "@/pages/PaintCorrection";
@@ -49,6 +50,7 @@ function App() {
           <Navigation />
           <Router />
           <Footer />
+          <StickyPhoneButton />
         </div>
         <Toaster />
       </TooltipProvider>
