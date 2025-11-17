@@ -43,7 +43,7 @@ export default function Hero({
       <div className="absolute inset-0 z-0 overflow-hidden">
         {videoUrl ? (
           <>
-            <div className="absolute inset-0 scale-110 -mt-16">
+            <div className="absolute inset-0 scale-110 -mt-16 -mb-20">
               <iframe
                 src={`${videoUrl}?background=1&autoplay=1&loop=1&muted=1&quality=720p`}
                 className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2"
