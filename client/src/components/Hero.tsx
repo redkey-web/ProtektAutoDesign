@@ -96,7 +96,7 @@ export default function Hero({
         {description && (
           <TypewriterText
             text={description}
-            speed={15}
+            speed={1}
             delay={500}
             className="text-white/90 text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto mb-8 font-light"
             data-testid="hero-description"

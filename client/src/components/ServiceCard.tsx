@@ -2,6 +2,7 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'wouter';
+import TypewriterText from '@/components/TypewriterText';
 
 interface ServiceCardProps {
   title: string;
@@ -34,12 +35,13 @@ export default function ServiceCard({ title, description, image, link }: Service
           >
             {title}
           </h3>
-          <p
+          <TypewriterText
+            text={description}
+            speed={1}
+            delay={0}
             className="text-white/80 text-sm mb-4 line-clamp-2"
             data-testid={`text-service-description-${title.toLowerCase().replace(/\s+/g, '-')}`}
-          >
-            {description}
-          </p>
+          />
           <div
             className="flex items-center gap-2 text-primary font-semibold group-hover:gap-3 transition-all"
             data-testid={`button-learn-more-${title.toLowerCase().replace(/\s+/g, '-')}`}

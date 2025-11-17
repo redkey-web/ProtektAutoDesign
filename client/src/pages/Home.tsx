@@ -2,6 +2,7 @@ import Hero from '@/components/Hero';
 import ServiceCard from '@/components/ServiceCard';
 import ContactSection from '@/components/ContactSection';
 import WelcomeVideo from '@/components/WelcomeVideo';
+import TypewriterText from '@/components/TypewriterText';
 import heroImage from '@assets/generated_images/Ceramic_coating_hero_image_2e9cd7e0.png';
 import ceramicImage from '@assets/Ceramic coating service Sydney - New Car Protection_1763295133288.webp';
 import paintCorrectionImage from '@assets/Paint correction_1763294797362.webp';
@@ -75,10 +76,12 @@ export default function Home() {
             <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
               Our Services
             </h2>
-            <p className="text-foreground/60 text-lg max-w-3xl mx-auto">
-              From new cars and motorcycles to existing vehicles that need their paint restored and
-              protected. Browse through our services and select what's right for you.
-            </p>
+            <TypewriterText
+              text="From new cars and motorcycles to existing vehicles that need their paint restored and protected. Browse through our services and select what's right for you."
+              speed={1}
+              delay={0}
+              className="text-foreground/60 text-lg max-w-3xl mx-auto"
+            />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
