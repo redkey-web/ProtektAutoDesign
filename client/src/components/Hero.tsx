@@ -45,7 +45,7 @@ export default function Hero({
           <>
             <iframe
               src={`${videoUrl}?background=1&autoplay=1&loop=1&muted=1&quality=720p`}
-              className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2"
+              className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2 -mt-[120px] -mb-[120px]"
               frameBorder="0"
               allow="autoplay; fullscreen"
               title="Hero background video"
@@ -119,7 +119,10 @@ export default function Hero({
             <Button
               size="lg"
               variant="outline"
-              className="gap-2 text-base px-8 bg-white/10 backdrop-blur-sm border-white/20 text-white transition-all duration-300 hover:bg-transparent hover:backdrop-blur-md hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] hover:border-white"
+              className="gap-2 text-base px-8 bg-white/10 backdrop-blur-sm border-white/20 text-white transition-all duration-300 hover:!bg-transparent hover:backdrop-blur-md hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] hover:border-white"
+              onClick={() => {
+                document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
+              }}
               data-testid="button-hero-secondary-cta"
             >
               {secondaryCtaText}

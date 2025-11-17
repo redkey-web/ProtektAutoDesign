@@ -30,7 +30,7 @@ export default function Navigation() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-black/80 backdrop-blur-md border-b border-white/10' : 'bg-transparent'
+        isScrolled ? 'bg-black/20 backdrop-blur-md border-b border-white/10' : 'bg-transparent'
       }`}
       data-testid="navigation-header"
     >
@@ -46,10 +46,10 @@ export default function Navigation() {
                 <span
                   className={`text-sm font-medium transition-all duration-200 cursor-pointer px-3 py-2 rounded-md ${
                     location === link.path 
-                      ? 'text-primary bg-transparent' 
+                      ? 'text-primary !bg-transparent' 
                       : isScrolled 
-                        ? 'text-white/90 hover:bg-transparent hover:backdrop-blur-md' 
-                        : 'text-white/80 hover:bg-transparent hover:backdrop-blur-md'
+                        ? 'text-white/90 hover:!bg-transparent hover:backdrop-blur-md' 
+                        : 'text-white/80 hover:!bg-transparent hover:backdrop-blur-md'
                   }`}
                   data-testid={`link-nav-${link.label.toLowerCase().replace(' ', '-')}`}
                 >
@@ -62,7 +62,7 @@ export default function Navigation() {
           <div className="hidden lg:flex items-center gap-4">
             <Button
               variant="default"
-              className="gap-2 hover:bg-transparent hover:backdrop-blur-md hover:border-primary transition-all"
+              className="gap-2 hover:!bg-transparent hover:backdrop-blur-md hover:border-primary transition-all"
               onClick={() => window.location.href = 'tel:0286062842'}
               data-testid="button-call-desktop"
             >
@@ -90,7 +90,7 @@ export default function Navigation() {
               <Link key={link.path} href={link.path}>
                 <span
                   className={`block py-2 px-3 rounded-md text-base font-medium cursor-pointer transition-all ${
-                    location === link.path ? 'text-primary bg-transparent' : 'text-white/90 hover:bg-transparent hover:backdrop-blur-md'
+                    location === link.path ? 'text-primary !bg-transparent' : 'text-white/90 hover:!bg-transparent hover:backdrop-blur-md'
                   }`}
                   onClick={() => setIsMobileMenuOpen(false)}
                   data-testid={`link-mobile-${link.label.toLowerCase().replace(' ', '-')}`}
