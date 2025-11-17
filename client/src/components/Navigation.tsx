@@ -92,6 +92,7 @@ export default function Navigation() {
                   className={`block py-2 px-3 rounded-md text-base font-medium cursor-pointer transition-all ${
                     location === link.path ? 'text-primary bg-black/60' : 'text-white/90 hover:bg-black/60 hover:text-white'
                   }`}
+                  style={{ textShadow: '0 2px 8px rgba(0, 0, 0, 0.8)' }}
                   onClick={() => setIsMobileMenuOpen(false)}
                   data-testid={`link-mobile-${link.label.toLowerCase().replace(' ', '-')}`}
                 >
