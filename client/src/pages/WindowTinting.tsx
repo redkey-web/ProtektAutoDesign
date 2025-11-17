@@ -1,7 +1,6 @@
 import Hero from '@/components/Hero';
 import ContactSection from '@/components/ContactSection';
 import TintComparison from '@/components/TintComparison';
-import SavingsCalculator from '@/components/SavingsCalculator';
 import FAQ, { FAQItem } from '@/components/FAQ';
 import SEO from '@/components/SEO';
 import UrgencyBanner from '@/components/UrgencyBanner';
@@ -109,12 +108,6 @@ export default function WindowTinting() {
           </div>
 
           <TintComparison />
-        </div>
-      </section>
-
-      <section className="py-20 bg-card">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SavingsCalculator />
         </div>
       </section>
 
