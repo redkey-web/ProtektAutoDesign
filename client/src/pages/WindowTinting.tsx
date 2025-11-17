@@ -5,7 +5,7 @@ import FAQ, { FAQItem } from '@/components/FAQ';
 import SEO from '@/components/SEO';
 import UrgencyBanner from '@/components/UrgencyBanner';
 import { Card, CardContent } from '@/components/ui/card';
-import { Shield, Sun, Thermometer, Eye } from 'lucide-react';
+import { Shield, Sun, Thermometer, Eye, Check } from 'lucide-react';
 import heroImage from '@assets/Windown tinting_1763343495843.webp';
 
 export default function WindowTinting() {
@@ -53,6 +53,15 @@ export default function WindowTinting() {
       title: 'Privacy & Security',
       description: 'Enhanced privacy and added security for your vehicle and belongings',
     },
+  ];
+
+  const additionalBenefits = [
+    'Prevents interior fading and cracking',
+    'Reduces eye strain and fatigue',
+    'Increases privacy and security',
+    'Enhances vehicle appearance',
+    'Helps maintain resale value',
+    'Protects against skin damage',
   ];
 
   return (
@@ -108,6 +117,28 @@ export default function WindowTinting() {
           </div>
 
           <TintComparison />
+
+          <div className="mt-16">
+            <Card className="bg-card/50">
+              <CardContent className="p-8">
+                <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-8 text-center">
+                  ADDITIONAL BENEFITS
+                </h3>
+                <div className="grid md:grid-cols-2 gap-4 max-w-3xl mx-auto">
+                  {additionalBenefits.map((benefit, index) => (
+                    <div
+                      key={index}
+                      className="flex items-start gap-3"
+                      data-testid={`additional-benefit-${index}`}
+                    >
+                      <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-foreground/80">{benefit}</span>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </section>
 
