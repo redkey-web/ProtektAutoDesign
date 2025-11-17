@@ -22,14 +22,14 @@ export default function PricingCard({
 }: PricingCardProps) {
   return (
     <Card
-      className={`relative overflow-hidden hover-elevate active-elevate-2 transition-all duration-300 ${
+      className={`relative hover-elevate active-elevate-2 transition-all duration-300 ${
         popular ? 'border-primary border-2' : ''
       }`}
       data-testid={`card-pricing-${name.toLowerCase().replace(/\s+/g, '-')}`}
     >
       {popular && (
         <Badge
-          className="absolute top-4 right-4 bg-primary text-primary-foreground"
+          className="absolute -top-3 right-4 bg-primary text-primary-foreground"
           data-testid="badge-popular"
         >
           Most Popular
