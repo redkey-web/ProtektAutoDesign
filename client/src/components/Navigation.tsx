@@ -37,7 +37,7 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link href="/" data-testid="link-home-logo">
-            <img src={logoImage} alt="Protekt Auto" className="h-10 sm:h-12 -my-2" />
+            <img src={logoImage} alt="Protekt Auto" className="h-14 sm:h-16 -my-2" />
           </Link>
 
           <div className="hidden lg:flex items-center gap-8">
