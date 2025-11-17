@@ -378,11 +378,26 @@
 
   /* Mobile menu text shadow - dark by default, neon blue on hover */
   .mobile-menu-text {
+    position: relative;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+    z-index: 1;
+  }
+
+  .mobile-menu-text::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    z-index: -1;
+    pointer-events: none;
   }
 
   .mobile-menu-text:hover {
     text-shadow: 0 2px 12px rgba(0, 188, 212, 0.8), 0 0 20px rgba(0, 188, 212, 0.6);
+  }
+
+  .mobile-menu-text:hover::before {
+    box-shadow: 0 0 30px rgba(0, 188, 212, 0.5), inset 0 0 30px rgba(0, 188, 212, 0.3);
   }
 
   /* Phone button inner glow on hover */
