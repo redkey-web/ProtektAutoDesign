@@ -58,9 +58,8 @@ export default function NewCarProtection() {
   return (
     <div className="min-h-screen">
       <Hero
-        title="Ceramic & Graphene Coating"
-        subtitle="Sydney's Best Applicators"
-        description="The ultimate new car paint protection"
+        title="Ceramic Coating Sydney"
+        subtitle="Need Paint Protection for a New Car? Nothing Protects Like Ceramic & Graphene Coatings"
         image={heroImage}
         height="large"
         ctaText="Get Quote"
