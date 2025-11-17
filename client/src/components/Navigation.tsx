@@ -84,13 +84,13 @@ export default function Navigation() {
       </div>
 
       {isMobileMenuOpen && (
-        <div className="lg:hidden bg-black/5 backdrop-blur-md border-b border-white/10" data-testid="mobile-menu">
+        <div className="lg:hidden bg-black/5 border-b border-white/10" data-testid="mobile-menu">
           <div className="px-4 py-4 space-y-3">
             {navLinks.map((link) => (
               <Link key={link.path} href={link.path}>
                 <span
                   className={`mobile-menu-text block py-2 px-3 rounded-md text-base font-medium cursor-pointer transition-all ${
-                    location === link.path ? 'text-primary bg-black/60' : 'text-white/90 hover:bg-black/60 hover:text-black'
+                    location === link.path ? 'text-primary bg-black/60' : 'text-white/90 hover:bg-black/60 hover:text-gray-500'
                   }`}
                   onClick={() => setIsMobileMenuOpen(false)}
                   data-testid={`link-mobile-${link.label.toLowerCase().replace(' ', '-')}`}
