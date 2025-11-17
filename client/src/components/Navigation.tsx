@@ -30,14 +30,14 @@ export default function Navigation() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-black/90 backdrop-blur-md border-b border-white/10' : 'bg-transparent'
+        isScrolled ? 'bg-black/50 backdrop-blur-md border-b border-white/10' : 'bg-transparent'
       }`}
       data-testid="navigation-header"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16">
           <Link href="/" data-testid="link-home-logo">
-            <img src={logoImage} alt="Protekt Auto" className="h-8 sm:h-10" />
+            <img src={logoImage} alt="Protekt Auto" className="h-6 sm:h-8" />
           </Link>
 
           <div className="hidden lg:flex items-center gap-8">
@@ -70,7 +70,7 @@ export default function Navigation() {
           <Button
             size="icon"
             variant="ghost"
-            className="lg:hidden"
+            className="lg:hidden text-primary hover:text-primary"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             data-testid="button-mobile-menu-toggle"
           >
