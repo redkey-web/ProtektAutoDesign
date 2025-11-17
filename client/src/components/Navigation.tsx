@@ -30,7 +30,7 @@ export default function Navigation() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-black/60 backdrop-blur-md border-b border-white/10' : 'bg-transparent'
+        isScrolled ? 'bg-black/40 backdrop-blur-md backdrop-brightness-50 border-b border-white/10' : 'bg-transparent'
       }`}
       data-testid="navigation-header"
     >
@@ -47,9 +47,7 @@ export default function Navigation() {
                   className={`text-sm font-medium transition-all duration-200 cursor-pointer px-3 py-2 rounded-md ${
                     location === link.path 
                       ? 'text-primary !bg-transparent' 
-                      : isScrolled 
-                        ? 'text-white/70 hover:text-white hover:!bg-transparent hover:backdrop-blur-md' 
-                        : 'text-white/70 hover:text-white hover:!bg-transparent hover:backdrop-blur-md'
+                      : 'text-white/90 hover:text-white hover:!bg-transparent'
                   }`}
                   data-testid={`link-nav-${link.label.toLowerCase().replace(' ', '-')}`}
                 >
@@ -90,7 +88,7 @@ export default function Navigation() {
               <Link key={link.path} href={link.path}>
                 <span
                   className={`mobile-menu-text block py-2 px-3 rounded-md text-base font-medium cursor-pointer transition-all ${
-                    location === link.path ? 'text-primary bg-black/60' : 'text-white/70 hover:text-white hover:bg-black/60'
+                    location === link.path ? 'text-primary bg-black/60' : 'text-white/90 hover:text-white hover:bg-black/60'
                   }`}
                   onClick={() => setIsMobileMenuOpen(false)}
                   data-testid={`link-mobile-${link.label.toLowerCase().replace(' ', '-')}`}
