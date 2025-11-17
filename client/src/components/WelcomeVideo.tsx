@@ -43,12 +43,12 @@ export default function WelcomeVideo() {
                 <div className="absolute inset-0 bg-black/30" />
                 <button
                   onClick={handlePlayClick}
-                  className="absolute inset-0 flex items-center justify-center group hover-elevate active-elevate-2"
+                  className="absolute inset-0 flex items-center justify-center group cursor-pointer"
                   aria-label="Play welcome video"
                   data-testid="button-play-welcome-video"
                 >
-                  <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-primary flex items-center justify-center shadow-2xl transition-transform group-hover:scale-110">
-                    <Play className="w-10 h-10 md:w-12 md:h-12 text-primary-foreground fill-primary-foreground ml-1" />
+                  <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-primary flex items-center justify-center shadow-[0_0_40px_rgba(0,188,212,0.6)] transition-all duration-300 group-hover:scale-110 group-hover:shadow-[0_0_60px_rgba(0,188,212,0.8)]">
+                    <Play className="w-12 h-12 md:w-16 md:h-16 text-primary-foreground fill-primary-foreground ml-1" />
                   </div>
                 </button>
               </>
