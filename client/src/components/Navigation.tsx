@@ -15,26 +15,32 @@ export default function Navigation() {
       const scrollY = window.scrollY;
       setIsScrolled(scrollY > 20);
       
-      // Calculate logo opacity based on scroll position
-      // Hero section is typically 100vh, start fading in at 40vh, fully visible at 100vh
-      const heroHeight = window.innerHeight;
-      const fadeStartScroll = heroHeight * 0.4; // Start fading at 40% of viewport height
-      const fadeEndScroll = heroHeight; // Fully visible at 100% of viewport height
-      
-      if (scrollY < fadeStartScroll) {
-        setLogoOpacity(0);
-      } else if (scrollY >= fadeEndScroll) {
-        setLogoOpacity(1);
+      // Only apply fade effect on homepage
+      if (location === '/') {
+        // Calculate logo opacity based on scroll position
+        // Hero section is typically 100vh, start fading in at 40vh, fully visible at 100vh
+        const heroHeight = window.innerHeight;
+        const fadeStartScroll = heroHeight * 0.4; // Start fading at 40% of viewport height
+        const fadeEndScroll = heroHeight; // Fully visible at 100% of viewport height
+        
+        if (scrollY < fadeStartScroll) {
+          setLogoOpacity(0);
+        } else if (scrollY >= fadeEndScroll) {
+          setLogoOpacity(1);
+        } else {
+          // Calculate opacity between 0 and 1 based on scroll progress
+          const opacity = (scrollY - fadeStartScroll) / (fadeEndScroll - fadeStartScroll);
+          setLogoOpacity(opacity);
+        }
       } else {
-        // Calculate opacity between 0 and 1 based on scroll progress
-        const opacity = (scrollY - fadeStartScroll) / (fadeEndScroll - fadeStartScroll);
-        setLogoOpacity(opacity);
+        // On other pages, logo is always visible
+        setLogoOpacity(1);
       }
     };
     handleScroll(); // Run on mount
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [location]);
 
   const navLinks = [
     { path: '/', label: 'Home' },
