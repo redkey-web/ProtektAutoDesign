@@ -7,12 +7,31 @@ import logoImage from '@assets/Protekt Logo_1761708306237.webp';
 export default function Navigation() {
   const [location] = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
+  const [logoOpacity, setLogoOpacity] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      const scrollY = window.scrollY;
+      setIsScrolled(scrollY > 20);
+      
+      // Calculate logo opacity based on scroll position
+      // Hero section is typically 100vh, start fading in at 40vh, fully visible at 100vh
+      const heroHeight = window.innerHeight;
+      const fadeStartScroll = heroHeight * 0.4; // Start fading at 40% of viewport height
+      const fadeEndScroll = heroHeight; // Fully visible at 100% of viewport height
+      
+      if (scrollY < fadeStartScroll) {
+        setLogoOpacity(0);
+      } else if (scrollY >= fadeEndScroll) {
+        setLogoOpacity(1);
+      } else {
+        // Calculate opacity between 0 and 1 based on scroll progress
+        const opacity = (scrollY - fadeStartScroll) / (fadeEndScroll - fadeStartScroll);
+        setLogoOpacity(opacity);
+      }
     };
+    handleScroll(); // Run on mount
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -37,7 +56,12 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link href="/" data-testid="link-home-logo">
-            <img src={logoImage} alt="Protekt Auto" className="h-14 sm:h-16 -my-2 -ml-2" />
+            <img 
+              src={logoImage} 
+              alt="Protekt Auto" 
+              className="h-14 sm:h-16 -my-2 -ml-2 transition-opacity duration-300" 
+              style={{ opacity: logoOpacity }}
+            />
           </Link>
 
           <div className="hidden lg:flex items-center gap-8">
