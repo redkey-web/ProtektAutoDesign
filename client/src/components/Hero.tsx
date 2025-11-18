@@ -106,7 +106,7 @@ export default function Hero({
           <Button
             size="lg"
             variant="default"
-            className="gap-2 text-base px-8 opacity-70 border-2 border-primary shadow-[inset_0_0_15px_rgba(0,0,0,0.6)] transition-all duration-300 hover:bg-primary/20 hover:shadow-[inset_0_0_15px_rgba(0,0,0,0.6),0_0_20px_rgba(0,188,212,0.6)] focus-visible:ring-0"
+            className="gap-2 text-base px-8 bg-primary/20 border-2 border-primary shadow-[inset_0_0_15px_rgba(0,0,0,0.6),0_0_20px_rgba(0,188,212,0.6)] transition-all duration-300 hover:opacity-70 hover:shadow-[inset_0_0_15px_rgba(0,0,0,0.6)] focus-visible:ring-0"
             onClick={() => {
               if (ctaLink.startsWith('#')) {
                 document.querySelector(ctaLink)?.scrollIntoView({ behavior: 'smooth' });
