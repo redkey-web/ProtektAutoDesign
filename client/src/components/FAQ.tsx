@@ -4,7 +4,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-import patternLogo from '@assets/image_1764055702258.png';
 
 export interface FAQItem {
   question: string;
@@ -23,20 +22,8 @@ export default function FAQ({
   items,
 }: FAQProps) {
   return (
-    <section className="py-16 sm:py-20 bg-background relative overflow-hidden" data-testid="faq-section">
-      {/* Pattern Overlay */}
-      <div 
-        className="absolute inset-0 pointer-events-none opacity-20"
-        style={{
-          backgroundImage: `url(${patternLogo})`,
-          backgroundRepeat: 'repeat',
-          backgroundSize: '60px 60px',
-          backgroundAttachment: 'fixed',
-          filter: 'invert(1)',
-        }}
-      />
-      
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section className="py-16 sm:py-20 bg-background" data-testid="faq-section">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2
             className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4"
