@@ -39,6 +39,7 @@ Preferred communication style: Simple, everyday language.
 - Home page with hero sections and service cards
 - Dedicated service pages (Ceramic Coating, Paint Correction, Window Tinting, PPF, Motorcycle Protection)
 - Package comparison page with pricing tiers
+- Gallery page showcasing work portfolio with filter system and lightbox viewer
 - Reusable components for heroes, pricing cards, process timelines, before/after sliders
 
 **Key Features**
@@ -187,3 +188,24 @@ Preferred communication style: Simple, everyday language.
 - Location: 24 George Street, Clyde, NSW 2142
 - Phone: (02) 8606 2842
 - Hours: Mon-Fri 8am-5pm, Sat 8am-2pm
+
+### Gallery Page Implementation (November 2024)
+
+**Gallery Features**
+- Created dedicated `/gallery` route with filterable image gallery
+- 8 professional photos showcasing services and team at work
+- Category filter system: All, Team at Work, Ceramic Coating, Paint Correction, Window Tinting, PPF, Motorcycle, Full Packages
+- Lightbox modal for full-size image viewing with overlay captions
+- Responsive grid layout with hover effects and smooth transitions
+- SEO optimized with unique meta tags for gallery page
+
+**Window Tinting Page Enhancement**
+- Added professional team work photo showing window tint application process
+- Implemented two-column layout: Additional Benefits section + team work image
+- Image features gradient overlay with caption: "Expert Precision Application - Our certified technicians ensure flawless results"
+- Improved visual storytelling demonstrating professional service quality
+
+**Navigation Enhancement**
+- Header logo fade-in effect on homepage only (invisible at top, gradually appears while scrolling past hero, fully visible at hero bottom)
+- Logo always visible on all other pages for consistent branding
+- Gallery added to main navigation menu for easy access
