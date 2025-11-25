@@ -109,7 +109,7 @@ export default function PaintCorrection() {
       <section className="py-20 bg-background relative overflow-hidden">
         {/* Pattern Overlay */}
         <div 
-          className="absolute inset-0 pointer-events-none opacity-25"
+          className="absolute inset-0 pointer-events-none opacity-10"
           style={{
             backgroundImage: `url(${patternLogo})`,
             backgroundRepeat: 'repeat',
