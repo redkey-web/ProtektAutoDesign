@@ -81,11 +81,6 @@ const galleryImages: GalleryImage[] = [
     category: 'Paint Correction',
   },
   {
-    src: greenAMGGTR,
-    alt: 'Green Mercedes-AMG GT R receiving full paint correction in workshop',
-    category: 'Paint Correction',
-  },
-  {
     src: redFerrari488,
     alt: 'Red Ferrari 488 paint correction service in professional workshop',
     category: 'Paint Correction',
