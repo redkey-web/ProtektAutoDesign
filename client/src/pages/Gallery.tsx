@@ -37,6 +37,16 @@ import ppfBlueGolfR from '@assets/image_1764078505288.png';
 import ppfSilverS2000 from '@assets/image_1764078467974.png';
 import blueSubaruPolish from '@assets/image_1764078880441.png';
 import redCarRoofPolish from '@assets/image_1764078911061.png';
+import whiteLamborghini from '@assets/image_1764079097517.png';
+import greenAMGGTR from '@assets/image_1764079112946.png';
+import redFerrari488 from '@assets/image_1764079158599.png';
+import blackLamborghiniGallardo from '@assets/image_1764079173185.png';
+import redPorscheGT2RS from '@assets/image_1764079188912.png';
+import blackDucati900 from '@assets/image_1764079206025.png';
+import orangeHarley from '@assets/image_1764079222888.png';
+import taillightDetail from '@assets/image_1764079236797.png';
+import silverPajero2 from '@assets/image_1764079248918.png';
+import whiteSubaruSTI from '@assets/image_1764079281717.png';
 
 interface GalleryImage {
   src: string;
@@ -64,6 +74,56 @@ const galleryImages: GalleryImage[] = [
     src: redCarRoofPolish,
     alt: 'Expert polishing red car roof with Rupes machine for ceramic coating prep',
     category: 'Team at Work',
+  },
+  {
+    src: whiteLamborghini,
+    alt: 'White Lamborghini Huracan showcasing flawless paint correction results',
+    category: 'Paint Correction',
+  },
+  {
+    src: greenAMGGTR,
+    alt: 'Green Mercedes-AMG GT R receiving full paint correction in workshop',
+    category: 'Paint Correction',
+  },
+  {
+    src: redFerrari488,
+    alt: 'Red Ferrari 488 paint correction service in professional workshop',
+    category: 'Paint Correction',
+  },
+  {
+    src: blackLamborghiniGallardo,
+    alt: 'Black Lamborghini Gallardo with mirror finish outside Protekt Auto',
+    category: 'Paint Correction',
+  },
+  {
+    src: redPorscheGT2RS,
+    alt: 'Red Porsche GT2 RS professional paint correction and detailing',
+    category: 'Paint Correction',
+  },
+  {
+    src: whiteSubaruSTI,
+    alt: 'White Subaru WRX STI paint correction for track-ready finish',
+    category: 'Paint Correction',
+  },
+  {
+    src: taillightDetail,
+    alt: 'Precision detail work showcasing perfect paint correction finish',
+    category: 'Paint Correction',
+  },
+  {
+    src: blackDucati900,
+    alt: 'Black Ducati 900 motorcycle detailing and paint correction',
+    category: 'Motorcycle',
+  },
+  {
+    src: orangeHarley,
+    alt: 'Harley-Davidson motorcycle receiving premium care at Protekt Auto',
+    category: 'Motorcycle',
+  },
+  {
+    src: silverPajero2,
+    alt: 'Mitsubishi Pajero complete detailing and protection package',
+    category: 'Full Packages',
   },
   {
     src: ceramicCoating1,

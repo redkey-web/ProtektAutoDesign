@@ -9,6 +9,16 @@ import { Card } from '@/components/ui/card';
 import heroImage from '@assets/Paint correction_1763294797362.webp';
 import ceramicImage from '@assets/generated_images/Ceramic_coating_hero_image_2e9cd7e0.png';
 import patternLogo from '@assets/image_1764055702258.png';
+import whiteLamborghini from '@assets/image_1764079097517.png';
+import greenAMGGTR from '@assets/image_1764079112946.png';
+import redFerrari488 from '@assets/image_1764079158599.png';
+import blackLamborghiniGallardo from '@assets/image_1764079173185.png';
+import redPorscheGT2RS from '@assets/image_1764079188912.png';
+import blackDucati900 from '@assets/image_1764079206025.png';
+import orangeHarley from '@assets/image_1764079222888.png';
+import taillightDetail from '@assets/image_1764079236797.png';
+import silverPajero2 from '@assets/image_1764079248918.png';
+import whiteSubaruSTI from '@assets/image_1764079281717.png';
 
 export default function PaintCorrection() {
   const faqItems: FAQItem[] = [
@@ -153,6 +163,190 @@ export default function PaintCorrection() {
               afterImage={ceramicImage}
               title="See The Difference - Paint Correction Results"
             />
+          </div>
+        </div>
+      </section>
+
+      {/* Paint Correction Gallery */}
+      <section className="py-20 bg-muted/30 relative overflow-hidden">
+        <div 
+          className="absolute inset-0 pointer-events-none opacity-[0.02]"
+          style={{
+            backgroundImage: `url(${patternLogo})`,
+            backgroundRepeat: 'repeat',
+            backgroundSize: '150px 150px',
+          }}
+        />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-12">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Our Paint Correction Work
+            </h2>
+            <p className="text-foreground/70 text-lg">
+              See the stunning results of our professional paint correction services on premium vehicles
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div 
+              className="relative group overflow-hidden rounded-md hover-elevate active-elevate-2 transition-all cursor-pointer"
+              data-testid="gallery-img-lamborghini-huracan"
+            >
+              <img
+                src={whiteLamborghini}
+                alt="White Lamborghini Huracan after paint correction"
+                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-sm font-medium">Lamborghini Huracan</p>
+                <p className="text-xs text-white/80">Premium Paint Correction</p>
+              </div>
+            </div>
+
+            <div 
+              className="relative group overflow-hidden rounded-md hover-elevate active-elevate-2 transition-all cursor-pointer"
+              data-testid="gallery-img-amg-gtr"
+            >
+              <img
+                src={greenAMGGTR}
+                alt="Green Mercedes-AMG GT R paint correction in workshop"
+                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-sm font-medium">Mercedes-AMG GT R</p>
+                <p className="text-xs text-white/80">Full Paint Correction</p>
+              </div>
+            </div>
+
+            <div 
+              className="relative group overflow-hidden rounded-md hover-elevate active-elevate-2 transition-all cursor-pointer"
+              data-testid="gallery-img-ferrari-488"
+            >
+              <img
+                src={redFerrari488}
+                alt="Red Ferrari 488 paint correction service"
+                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-sm font-medium">Ferrari 488</p>
+                <p className="text-xs text-white/80">Stage 2 Paint Correction</p>
+              </div>
+            </div>
+
+            <div 
+              className="relative group overflow-hidden rounded-md hover-elevate active-elevate-2 transition-all cursor-pointer"
+              data-testid="gallery-img-lamborghini-gallardo"
+            >
+              <img
+                src={blackLamborghiniGallardo}
+                alt="Black Lamborghini Gallardo detailed at Protekt Auto"
+                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-sm font-medium">Lamborghini Gallardo</p>
+                <p className="text-xs text-white/80">Showroom-Ready Finish</p>
+              </div>
+            </div>
+
+            <div 
+              className="relative group overflow-hidden rounded-md hover-elevate active-elevate-2 transition-all cursor-pointer"
+              data-testid="gallery-img-porsche-gt2rs"
+            >
+              <img
+                src={redPorscheGT2RS}
+                alt="Red Porsche GT2 RS paint correction"
+                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-sm font-medium">Porsche GT2 RS</p>
+                <p className="text-xs text-white/80">Professional Detailing</p>
+              </div>
+            </div>
+
+            <div 
+              className="relative group overflow-hidden rounded-md hover-elevate active-elevate-2 transition-all cursor-pointer"
+              data-testid="gallery-img-subaru-sti"
+            >
+              <img
+                src={whiteSubaruSTI}
+                alt="White Subaru WRX STI paint correction"
+                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-sm font-medium">Subaru WRX STI</p>
+                <p className="text-xs text-white/80">Track-Ready Detail</p>
+              </div>
+            </div>
+
+            <div 
+              className="relative group overflow-hidden rounded-md hover-elevate active-elevate-2 transition-all cursor-pointer"
+              data-testid="gallery-img-taillight-detail"
+            >
+              <img
+                src={taillightDetail}
+                alt="Perfect paint correction detail work on taillight"
+                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-sm font-medium">Precision Detail Work</p>
+                <p className="text-xs text-white/80">Flawless Finish</p>
+              </div>
+            </div>
+
+            <div 
+              className="relative group overflow-hidden rounded-md hover-elevate active-elevate-2 transition-all cursor-pointer"
+              data-testid="gallery-img-ducati-900"
+            >
+              <img
+                src={blackDucati900}
+                alt="Ducati 900 motorcycle detailing"
+                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-sm font-medium">Ducati 900</p>
+                <p className="text-xs text-white/80">Motorcycle Paint Correction</p>
+              </div>
+            </div>
+
+            <div 
+              className="relative group overflow-hidden rounded-md hover-elevate active-elevate-2 transition-all cursor-pointer"
+              data-testid="gallery-img-harley-davidson"
+            >
+              <img
+                src={orangeHarley}
+                alt="Harley-Davidson motorcycle at Protekt Auto"
+                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-sm font-medium">Harley-Davidson</p>
+                <p className="text-xs text-white/80">Premium Motorcycle Care</p>
+              </div>
+            </div>
+
+            <div 
+              className="relative group overflow-hidden rounded-md hover-elevate active-elevate-2 transition-all cursor-pointer"
+              data-testid="gallery-img-pajero"
+            >
+              <img
+                src={silverPajero2}
+                alt="Mitsubishi Pajero complete detailing package"
+                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-sm font-medium">Mitsubishi Pajero</p>
+                <p className="text-xs text-white/80">Complete Detail Package</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
