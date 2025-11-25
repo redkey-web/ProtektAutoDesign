@@ -7,6 +7,7 @@ import RelatedServices from '@/components/RelatedServices';
 import { Card, CardContent } from '@/components/ui/card';
 import { Shield, Zap, Droplets, RefreshCw } from 'lucide-react';
 import heroImage from '@assets/PPF _1763343626090.webp';
+import standardFrontImage from '@assets/Standard+Front.png_1764037467188.webp';
 
 export default function StonechipProtection() {
   const faqItems: FAQItem[] = [
@@ -169,6 +170,27 @@ export default function StonechipProtection() {
                 </Card>
               ))}
             </div>
+          </div>
+
+          <div className="mb-12">
+            <Card className="bg-card/50 overflow-hidden">
+              <CardContent className="p-8">
+                <h3 className="font-display text-2xl font-bold text-foreground mb-6 text-center">
+                  Standard + Front Coverage Explained
+                </h3>
+                <div className="max-w-4xl mx-auto">
+                  <img
+                    src={standardFrontImage}
+                    alt="Standard + Front PPF coverage diagram showing protected areas: side mirrors, leading edge bonnet, leading edge front guards, and full front bumper"
+                    className="w-full h-auto rounded-md"
+                    data-testid="img-standard-front-coverage"
+                  />
+                  <p className="text-foreground/70 text-sm text-center mt-4 italic">
+                    Visual guide showing the key areas protected in our Standard + Front package
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
           </div>
 
           <Card className="p-6 bg-card/50">
