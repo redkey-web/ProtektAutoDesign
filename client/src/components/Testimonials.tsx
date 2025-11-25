@@ -46,7 +46,7 @@ export default function Testimonials() {
     <section className="py-20 bg-muted/30 relative overflow-hidden" data-testid="testimonials-section">
       {/* Pattern Overlay */}
       <div 
-        className="absolute inset-0 pointer-events-none opacity-10"
+        className="absolute inset-0 pointer-events-none opacity-20"
         style={{
           backgroundImage: `url(${patternLogo})`,
           backgroundRepeat: 'repeat',
