@@ -7,6 +7,13 @@ import UrgencyBanner from '@/components/UrgencyBanner';
 import RelatedServices from '@/components/RelatedServices';
 import heroImage from '@assets/Ceramic coating service Sydney - New Car Protection_1763295133288.webp';
 import patternLogo from '@assets/image_1764055702258.png';
+import redKiaStinger from '@assets/image_1764078183711.png';
+import blueMazdaCX5 from '@assets/image_1764078215963.png';
+import silverPajero from '@assets/image_1764078270132.png';
+import blackMinivan from '@assets/image_1764078290137.png';
+import blueAMG from '@assets/image_1764078337288.png';
+import blueBMWM3 from '@assets/image_1764078350610.png';
+import coatingApplication from '@assets/image_1764078403000.png';
 
 export default function NewCarProtection() {
   const faqItems: FAQItem[] = [
@@ -164,6 +171,134 @@ export default function NewCarProtection() {
                   <span>Exterior Glass Coating (all glass)</span>
                   <span className="font-semibold text-primary">$150</span>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Ceramic Coating Gallery */}
+      <section className="py-20 bg-muted/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Our Ceramic Coating Work
+            </h2>
+            <p className="text-foreground/70 text-lg">
+              See the stunning results of our premium ceramic coating applications
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div 
+              className="relative group overflow-hidden rounded-md hover-elevate active-elevate-2 transition-all cursor-pointer"
+              data-testid="gallery-img-kia-stinger"
+            >
+              <img
+                src={redKiaStinger}
+                alt="Red Kia Stinger with ceramic coating under heat lamps"
+                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-sm font-medium">Kia Stinger</p>
+                <p className="text-xs text-white/80">Ceramic Coating Application</p>
+              </div>
+            </div>
+
+            <div 
+              className="relative group overflow-hidden rounded-md hover-elevate active-elevate-2 transition-all cursor-pointer"
+              data-testid="gallery-img-mazda"
+            >
+              <img
+                src={blueMazdaCX5}
+                alt="Blue Mazda CX-5 receiving ceramic coating"
+                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-sm font-medium">Mazda CX-5</p>
+                <p className="text-xs text-white/80">Premium Workshop Treatment</p>
+              </div>
+            </div>
+
+            <div 
+              className="relative group overflow-hidden rounded-md hover-elevate active-elevate-2 transition-all cursor-pointer"
+              data-testid="gallery-img-amg"
+            >
+              <img
+                src={blueAMG}
+                alt="Blue Mercedes-Benz AMG with ceramic coating"
+                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-sm font-medium">Mercedes-Benz AMG</p>
+                <p className="text-xs text-white/80">Premium Ceramic Protection</p>
+              </div>
+            </div>
+
+            <div 
+              className="relative group overflow-hidden rounded-md hover-elevate active-elevate-2 transition-all cursor-pointer"
+              data-testid="gallery-img-pajero"
+            >
+              <img
+                src={silverPajero}
+                alt="Silver Mitsubishi Pajero with ceramic coating"
+                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-sm font-medium">Mitsubishi Pajero</p>
+                <p className="text-xs text-white/80">Complete Ceramic Package</p>
+              </div>
+            </div>
+
+            <div 
+              className="relative group overflow-hidden rounded-md hover-elevate active-elevate-2 transition-all cursor-pointer"
+              data-testid="gallery-img-minivan"
+            >
+              <img
+                src={blackMinivan}
+                alt="Black minivan with mirror-like ceramic coating finish"
+                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-sm font-medium">Black Minivan</p>
+                <p className="text-xs text-white/80">Mirror-Like Finish</p>
+              </div>
+            </div>
+
+            <div 
+              className="relative group overflow-hidden rounded-md hover-elevate active-elevate-2 transition-all cursor-pointer"
+              data-testid="gallery-img-bmw"
+            >
+              <img
+                src={blueBMWM3}
+                alt="Light blue BMW M3 with ceramic coating at night"
+                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-sm font-medium">BMW M3</p>
+                <p className="text-xs text-white/80">Ceramic Coating Excellence</p>
+              </div>
+            </div>
+
+            <div 
+              className="relative group overflow-hidden rounded-md hover-elevate active-elevate-2 transition-all cursor-pointer"
+              data-testid="gallery-img-application"
+            >
+              <img
+                src={coatingApplication}
+                alt="Professional ceramic coating application process"
+                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-sm font-medium">Expert Application</p>
+                <p className="text-xs text-white/80">Professional Precision</p>
               </div>
             </div>
           </div>

@@ -17,6 +17,13 @@ import teslaWhite from '@assets/image_1764072963008.png';
 import workshopAction from '@assets/image_1764072995131.png';
 import camrySide from '@assets/image_1764073032097.png';
 import camryRear from '@assets/image_1764073128235.png';
+import redKiaStinger from '@assets/image_1764078183711.png';
+import blueMazdaCX5 from '@assets/image_1764078215963.png';
+import silverPajero from '@assets/image_1764078270132.png';
+import blackMinivan from '@assets/image_1764078290137.png';
+import blueAMG from '@assets/image_1764078337288.png';
+import blueBMWM3 from '@assets/image_1764078350610.png';
+import coatingApplication from '@assets/image_1764078403000.png';
 
 interface GalleryImage {
   src: string;
@@ -44,6 +51,41 @@ const galleryImages: GalleryImage[] = [
     src: ceramicCoating2,
     alt: 'Graphene ceramic coating application process',
     category: 'Ceramic Coating',
+  },
+  {
+    src: redKiaStinger,
+    alt: 'Red Kia Stinger with ceramic coating under heat lamps in workshop',
+    category: 'Ceramic Coating',
+  },
+  {
+    src: blueMazdaCX5,
+    alt: 'Blue Mazda CX-5 receiving ceramic coating in modern workshop',
+    category: 'Ceramic Coating',
+  },
+  {
+    src: silverPajero,
+    alt: 'Silver Mitsubishi Pajero with fresh ceramic coating',
+    category: 'Ceramic Coating',
+  },
+  {
+    src: blackMinivan,
+    alt: 'Black minivan showcasing mirror-like ceramic coating finish',
+    category: 'Ceramic Coating',
+  },
+  {
+    src: blueAMG,
+    alt: 'Blue Mercedes-Benz AMG with premium ceramic coating',
+    category: 'Ceramic Coating',
+  },
+  {
+    src: blueBMWM3,
+    alt: 'Light blue BMW M3 with ceramic coating at night',
+    category: 'Ceramic Coating',
+  },
+  {
+    src: coatingApplication,
+    alt: 'Professional technician applying ceramic coating to vehicle',
+    category: 'Team at Work',
   },
   {
     src: paintCorrection,
