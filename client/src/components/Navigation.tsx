@@ -76,10 +76,10 @@ export default function Navigation() {
             {navLinks.map((link) => (
               <Link key={link.path} href={link.path}>
                 <span
-                  className={`text-sm font-medium transition-all duration-200 cursor-pointer px-3 py-2 rounded-md ${
+                  className={`nav-link-desktop text-sm font-medium transition-all duration-200 cursor-pointer px-3 py-2 rounded-md ${
                     location === link.path 
-                      ? 'text-primary !bg-transparent' 
-                      : 'text-white/90 hover:text-white hover:!bg-transparent hover:drop-shadow-[0_2px_6px_rgba(0,188,212,0.9)]'
+                      ? 'text-primary active' 
+                      : 'text-white/90 hover:text-white'
                   }`}
                   data-testid={`link-nav-${link.label.toLowerCase().replace(' ', '-')}`}
                 >

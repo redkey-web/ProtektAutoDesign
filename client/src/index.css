@@ -385,4 +385,98 @@
   .phone-button-glow:hover {
     box-shadow: inset 0 0 20px rgba(0, 188, 212, 0.6), inset 0 0 40px rgba(0, 188, 212, 0.3);
   }
+
+  /* Navigation menu item shine effect - like ceramic coating */
+  @keyframes nav-shimmer {
+    0% {
+      transform: translateX(-100%) skewX(-15deg);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(200%) skewX(-15deg);
+      opacity: 0;
+    }
+  }
+
+  @keyframes nav-glow {
+    0%, 100% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+
+  .nav-link-desktop {
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Protective coating underline */
+  .nav-link-desktop::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, 
+      transparent 0%, 
+      rgba(0, 188, 212, 0.8) 20%, 
+      rgba(0, 188, 212, 1) 50%, 
+      rgba(0, 188, 212, 0.8) 80%, 
+      transparent 100%
+    );
+    transform: translateX(-50%);
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Shimmer shine effect */
+  .nav-link-desktop::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+      transparent 0%, 
+      rgba(255, 255, 255, 0.3) 50%, 
+      transparent 100%
+    );
+    transform: translateX(-100%) skewX(-15deg);
+    opacity: 0;
+  }
+
+  .nav-link-desktop:hover::before {
+    width: 100%;
+  }
+
+  .nav-link-desktop:hover::after {
+    animation: nav-shimmer 1.5s ease-in-out;
+  }
+
+  /* Protective glow effect on hover */
+  .nav-link-desktop:hover {
+    text-shadow: 
+      0 0 10px rgba(0, 188, 212, 0.5),
+      0 0 20px rgba(0, 188, 212, 0.3),
+      0 0 30px rgba(0, 188, 212, 0.2);
+    filter: brightness(1.1);
+  }
+
+  /* Active state - appears coated/protected */
+  .nav-link-desktop.active {
+    text-shadow: 
+      0 0 15px rgba(0, 188, 212, 0.8),
+      0 0 25px rgba(0, 188, 212, 0.4);
+  }
+
+  .nav-link-desktop.active::before {
+    width: 100%;
+    animation: nav-glow 2s ease-in-out infinite;
+  }
 }
