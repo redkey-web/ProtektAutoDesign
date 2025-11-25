@@ -6,6 +6,7 @@ import FAQ, { FAQItem } from '@/components/FAQ';
 import SEO from '@/components/SEO';
 import StructuredData from '@/components/StructuredData';
 import Testimonials from '@/components/Testimonials';
+import FeaturedArticles from '@/components/FeaturedArticles';
 import heroImage from '@assets/generated_images/Ceramic_coating_hero_image_2e9cd7e0.png';
 import ceramicImage from '@assets/Ceramic coating service Sydney - New Car Protection_1763295133288.webp';
 import paintCorrectionImage from '@assets/Paint correction_1763294797362.webp';
@@ -130,6 +131,8 @@ export default function Home() {
       <WelcomeVideo />
 
       <Testimonials />
+
+      <FeaturedArticles />
 
       <FAQ items={faqItems} />
 

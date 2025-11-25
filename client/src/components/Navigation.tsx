@@ -51,6 +51,7 @@ export default function Navigation() {
     { path: '/motorcycle-protection', label: 'Motorcycle' },
     { path: '/packages', label: 'Packages' },
     { path: '/gallery', label: 'Gallery' },
+    { path: '/blog', label: 'Blog' },
   ];
 
   return (

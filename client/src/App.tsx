@@ -15,6 +15,8 @@ import StonechipProtection from "@/pages/StonechipProtection";
 import MotorcycleProtection from "@/pages/MotorcycleProtection";
 import Packages from "@/pages/Packages";
 import Gallery from "@/pages/Gallery";
+import Blog from "@/pages/Blog";
+import BlogPost from "@/pages/BlogPost";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -28,6 +30,8 @@ function Router() {
       <Route path="/motorcycle-protection" component={MotorcycleProtection} />
       <Route path="/packages" component={Packages} />
       <Route path="/gallery" component={Gallery} />
+      <Route path="/blog" component={Blog} />
+      <Route path="/blog/:slug" component={BlogPost} />
       <Route component={NotFound} />
     </Switch>
   );
