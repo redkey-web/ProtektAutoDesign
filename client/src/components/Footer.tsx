@@ -20,7 +20,7 @@ export default function Footer() {
   return (
     <footer className="bg-black/90 border-t border-white/10" data-testid="footer">
       {/* Brands We Use Section - Above Footer Content */}
-      <div className="bg-black py-12 border-b border-white/10">
+      <div className="bg-black/70 py-12 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h3 className="font-semibold text-white mb-8 text-center text-xl" data-testid="text-brands-heading">
             Brands We Use
