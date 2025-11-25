@@ -1,15 +1,35 @@
+import { useState, useMemo } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { Link } from 'wouter';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 import SEO from '@/components/SEO';
 import { Calendar, User } from 'lucide-react';
 import { type Post } from '@shared/schema';
 
 export default function Blog() {
+  const [selectedTag, setSelectedTag] = useState<string>('all');
+  
   const { data: posts, isLoading } = useQuery<Post[]>({
     queryKey: ['/api/posts'],
   });
+
+  // Extract all unique tags from posts
+  const allTags = useMemo(() => {
+    if (!posts) return [];
+    const tagSet = new Set<string>();
+    posts.forEach(post => {
+      post.tags.forEach(tag => tagSet.add(tag));
+    });
+    return Array.from(tagSet).sort();
+  }, [posts]);
+
+  // Filter posts based on selected tag
+  const filteredPosts = useMemo(() => {
+    if (!posts || selectedTag === 'all') return posts || [];
+    return posts.filter(post => post.tags.includes(selectedTag));
+  }, [posts, selectedTag]);
 
   if (isLoading) {
     return (
@@ -52,8 +72,39 @@ export default function Blog() {
               <p className="text-foreground/60 text-lg">No blog posts yet. Check back soon!</p>
             </div>
           ) : (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {posts.map((post) => (
+            <>
+              {/* Tag Filter */}
+              <div className="mb-12">
+                <h3 className="text-sm font-medium text-foreground/70 mb-4">Filter by Topic</h3>
+                <div className="flex flex-wrap gap-3">
+                  <Button
+                    variant={selectedTag === 'all' ? 'default' : 'outline'}
+                    onClick={() => setSelectedTag('all')}
+                    data-testid="button-filter-all"
+                  >
+                    All Posts
+                  </Button>
+                  {allTags.map((tag) => (
+                    <Button
+                      key={tag}
+                      variant={selectedTag === tag ? 'default' : 'outline'}
+                      onClick={() => setSelectedTag(tag)}
+                      data-testid={`button-filter-${tag}`}
+                    >
+                      {tag}
+                    </Button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Posts Grid */}
+              {filteredPosts.length === 0 ? (
+                <div className="text-center py-20">
+                  <p className="text-foreground/60 text-lg">No posts found for this topic.</p>
+                </div>
+              ) : (
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {filteredPosts.map((post) => (
                 <Link key={post.id} href={`/blog/${post.slug}`}>
                   <Card className="h-full hover-elevate active-elevate-2 transition-all cursor-pointer" data-testid={`card-blog-${post.slug}`}>
                     {post.coverImage && (
@@ -100,7 +151,9 @@ export default function Blog() {
                   </Card>
                 </Link>
               ))}
-            </div>
+                </div>
+              )}
+            </>
           )}
         </div>
       </section>

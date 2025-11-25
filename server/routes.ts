@@ -37,12 +37,17 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   app.patch("/api/posts/:slug", async (req, res) => {
     try {
-      const post = await storage.updatePost(req.params.slug, req.body);
+      // Validate request body using partial schema (allows partial updates)
+      const validated = insertPostSchema.partial().parse(req.body);
+      const post = await storage.updatePost(req.params.slug, validated);
       if (!post) {
         return res.status(404).json({ error: "Post not found" });
       }
       res.json(post);
-    } catch (error) {
+    } catch (error: any) {
+      if (error.name === 'ZodError') {
+        return res.status(400).json({ error: "Invalid post data", details: error.errors });
+      }
       res.status(500).json({ error: "Failed to update post" });
     }
   });
