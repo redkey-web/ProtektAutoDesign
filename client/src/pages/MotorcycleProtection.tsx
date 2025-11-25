@@ -78,7 +78,7 @@ export default function MotorcycleProtection() {
       <section className="py-20 bg-background relative overflow-hidden">
         {/* Pattern Overlay */}
         <div 
-          className="absolute inset-0 pointer-events-none opacity-5"
+          className="absolute inset-0 pointer-events-none opacity-[0.02]"
           style={{
             backgroundImage: `url(${patternLogo})`,
             backgroundRepeat: 'repeat',
