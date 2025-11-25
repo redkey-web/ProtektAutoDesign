@@ -90,18 +90,8 @@ export default function WindowTinting() {
         showPhoneCta={true}
       />
 
-      <section className="py-20 bg-background relative overflow-hidden">
-        {/* Pattern Overlay */}
-        <div 
-          className="absolute inset-0 pointer-events-none opacity-[0.02]"
-          style={{
-            backgroundImage: `url(${patternLogo})`,
-            backgroundRepeat: 'repeat',
-            backgroundSize: '150px 150px',
-          }}
-        />
-        
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 relative z-10">
+      <section className="py-20 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
           <UrgencyBanner
             message="Beat the summer heat!"
             highlight="Book your tinting before December rush."
@@ -175,7 +165,17 @@ export default function WindowTinting() {
       </section>
 
       {/* Window Tinting Gallery */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-20 bg-muted/30 relative overflow-hidden">
+        {/* Pattern Overlay */}
+        <div 
+          className="absolute inset-0 pointer-events-none opacity-[0.02]"
+          style={{
+            backgroundImage: `url(${patternLogo})`,
+            backgroundRepeat: 'repeat',
+            backgroundSize: '150px 150px',
+          }}
+        />
+        <div className="relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -267,6 +267,7 @@ export default function WindowTinting() {
               </div>
             </div>
           </div>
+        </div>
         </div>
       </section>
 

@@ -75,18 +75,8 @@ export default function MotorcycleProtection() {
         showPhoneCta={true}
       />
 
-      <section className="py-20 bg-background relative overflow-hidden">
-        {/* Pattern Overlay */}
-        <div 
-          className="absolute inset-0 pointer-events-none opacity-[0.02]"
-          style={{
-            backgroundImage: `url(${patternLogo})`,
-            backgroundRepeat: 'repeat',
-            backgroundSize: '150px 150px',
-          }}
-        />
-        
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 relative z-10">
+      <section className="py-20 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
           <UrgencyBanner
             message="Track season approaching!"
             highlight="Protect your bike before the first ride."
@@ -184,7 +174,20 @@ export default function MotorcycleProtection() {
         </div>
       </section>
 
-      <FAQ items={faqItems} title="Motorcycle Protection FAQs" />
+      <section className="relative overflow-hidden">
+        {/* Pattern Overlay */}
+        <div 
+          className="absolute inset-0 pointer-events-none opacity-[0.02]"
+          style={{
+            backgroundImage: `url(${patternLogo})`,
+            backgroundRepeat: 'repeat',
+            backgroundSize: '150px 150px',
+          }}
+        />
+        <div className="relative z-10">
+          <FAQ items={faqItems} title="Motorcycle Protection FAQs" />
+        </div>
+      </section>
 
       <ContactSection />
     </div>

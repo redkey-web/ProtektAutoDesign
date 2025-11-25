@@ -77,18 +77,8 @@ export default function NewCarProtection() {
         showPhoneCta={true}
       />
 
-      <section className="py-20 bg-background relative overflow-hidden">
-        {/* Pattern Overlay */}
-        <div 
-          className="absolute inset-0 pointer-events-none opacity-[0.02]"
-          style={{
-            backgroundImage: `url(${patternLogo})`,
-            backgroundRepeat: 'repeat',
-            backgroundSize: '150px 150px',
-          }}
-        />
-        
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 relative z-10">
+      <section className="py-20 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
           <UrgencyBanner
             message="Limited spots available this month."
             highlight="Only 4 new car protection slots remaining!"
@@ -180,8 +170,19 @@ export default function NewCarProtection() {
         </div>
       </section>
 
-      <RelatedServices
-        services={[
+      <section className="relative overflow-hidden">
+        {/* Pattern Overlay */}
+        <div 
+          className="absolute inset-0 pointer-events-none opacity-[0.02]"
+          style={{
+            backgroundImage: `url(${patternLogo})`,
+            backgroundRepeat: 'repeat',
+            backgroundSize: '150px 150px',
+          }}
+        />
+        <div className="relative z-10">
+          <RelatedServices
+            services={[
           {
             title: 'Paint Correction Sydney',
             description: 'Remove swirls and scratches with our professional machine polishing service before ceramic coating application.',
@@ -197,10 +198,12 @@ export default function NewCarProtection() {
             description: 'Save with our complete protection packages combining ceramic coating, PPF, and paint correction.',
             link: '/packages',
           },
-        ]}
-      />
+            ]}
+          />
 
-      <FAQ items={faqItems} title="Ceramic Coating FAQs" />
+          <FAQ items={faqItems} title="Ceramic Coating FAQs" />
+        </div>
+      </section>
 
       <ContactSection />
     </div>

@@ -106,18 +106,8 @@ export default function PaintCorrection() {
         ctaLink="#contact"
       />
 
-      <section className="py-20 bg-background relative overflow-hidden">
-        {/* Pattern Overlay */}
-        <div 
-          className="absolute inset-0 pointer-events-none opacity-[0.02]"
-          style={{
-            backgroundImage: `url(${patternLogo})`,
-            backgroundRepeat: 'repeat',
-            backgroundSize: '150px 150px',
-          }}
-        />
-        
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <section className="py-20 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto mb-16">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6 text-center">
               Professional Paint Correction Services
@@ -146,13 +136,24 @@ export default function PaintCorrection() {
         </div>
       </section>
 
-      <section className="py-20 bg-card">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <BeforeAfterSlider
-            beforeImage={heroImage}
-            afterImage={ceramicImage}
-            title="See The Difference - Paint Correction Results"
-          />
+      <section className="py-20 bg-card relative overflow-hidden">
+        {/* Pattern Overlay */}
+        <div 
+          className="absolute inset-0 pointer-events-none opacity-[0.02]"
+          style={{
+            backgroundImage: `url(${patternLogo})`,
+            backgroundRepeat: 'repeat',
+            backgroundSize: '150px 150px',
+          }}
+        />
+        <div className="relative z-10">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <BeforeAfterSlider
+              beforeImage={heroImage}
+              afterImage={ceramicImage}
+              title="See The Difference - Paint Correction Results"
+            />
+          </div>
         </div>
       </section>
 
