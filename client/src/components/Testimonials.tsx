@@ -50,7 +50,7 @@ export default function Testimonials() {
         style={{
           backgroundImage: `url(${patternLogo})`,
           backgroundRepeat: 'repeat',
-          backgroundSize: '120px 120px',
+          backgroundSize: '60px 60px',
           backgroundAttachment: 'fixed',
         }}
       />
