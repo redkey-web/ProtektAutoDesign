@@ -35,7 +35,7 @@ export default function TrustBadges() {
       {badges.map((badge, index) => (
         <div
           key={index}
-          className="flex flex-col items-center gap-2 p-4 rounded-lg bg-white/15 border border-white/20"
+          className="flex flex-col items-center gap-2 p-4 rounded-lg bg-black/50 border border-white/20 backdrop-blur-sm"
           data-testid={`trust-badge-${index}`}
         >
           <badge.icon className="w-8 h-8 text-primary" />
