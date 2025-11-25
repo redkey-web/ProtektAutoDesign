@@ -6,6 +6,7 @@ import SEO from '@/components/SEO';
 import UrgencyBanner from '@/components/UrgencyBanner';
 import RelatedServices from '@/components/RelatedServices';
 import heroImage from '@assets/Ceramic coating service Sydney - New Car Protection_1763295133288.webp';
+import patternLogo from '@assets/image_1764055702258.png';
 
 export default function NewCarProtection() {
   const faqItems: FAQItem[] = [
@@ -76,8 +77,18 @@ export default function NewCarProtection() {
         showPhoneCta={true}
       />
 
-      <section className="py-20 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+      <section className="py-20 bg-background relative overflow-hidden">
+        {/* Pattern Overlay */}
+        <div 
+          className="absolute inset-0 pointer-events-none opacity-25"
+          style={{
+            backgroundImage: `url(${patternLogo})`,
+            backgroundRepeat: 'repeat',
+            backgroundSize: '150px 150px',
+          }}
+        />
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 relative z-10">
           <UrgencyBanner
             message="Limited spots available this month."
             highlight="Only 4 new car protection slots remaining!"
@@ -85,7 +96,7 @@ export default function NewCarProtection() {
           />
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
               Premium Paint Protection Coatings

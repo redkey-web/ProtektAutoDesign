@@ -9,6 +9,7 @@ import { Shield, Zap, Droplets, RefreshCw } from 'lucide-react';
 import heroImage from '@assets/PPF _1763343626090.webp';
 import standardFrontImage from '@assets/Standard+Front.png_1764037467188.webp';
 import trackPackImage from '@assets/Track+pack.png_1764037523863.webp';
+import patternLogo from '@assets/image_1764055702258.png';
 
 export default function StonechipProtection() {
   const faqItems: FAQItem[] = [
@@ -106,8 +107,18 @@ export default function StonechipProtection() {
         showPhoneCta={true}
       />
 
-      <section className="py-20 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+      <section className="py-20 bg-background relative overflow-hidden">
+        {/* Pattern Overlay */}
+        <div 
+          className="absolute inset-0 pointer-events-none opacity-25"
+          style={{
+            backgroundImage: `url(${patternLogo})`,
+            backgroundRepeat: 'repeat',
+            backgroundSize: '150px 150px',
+          }}
+        />
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 relative z-10">
           <UrgencyBanner
             message="Premium XPEL installation."
             highlight="Book early for high-demand models."
@@ -115,7 +126,7 @@ export default function StonechipProtection() {
           />
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
               XPEL Ultimate Plus Paint Protection Film

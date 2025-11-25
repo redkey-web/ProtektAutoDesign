@@ -8,6 +8,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Shield, Sun, Thermometer, Eye, Check } from 'lucide-react';
 import heroImage from '@assets/Windown tinting_1763343495843.webp';
 import teamWorkImage from '@assets/window tint_1764036060927.webp';
+import patternLogo from '@assets/image_1764055702258.png';
 
 export default function WindowTinting() {
   const faqItems: FAQItem[] = [
@@ -84,8 +85,18 @@ export default function WindowTinting() {
         showPhoneCta={true}
       />
 
-      <section className="py-20 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+      <section className="py-20 bg-background relative overflow-hidden">
+        {/* Pattern Overlay */}
+        <div 
+          className="absolute inset-0 pointer-events-none opacity-25"
+          style={{
+            backgroundImage: `url(${patternLogo})`,
+            backgroundRepeat: 'repeat',
+            backgroundSize: '150px 150px',
+          }}
+        />
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 relative z-10">
           <UrgencyBanner
             message="Beat the summer heat!"
             highlight="Book your tinting before December rush."
@@ -93,7 +104,7 @@ export default function WindowTinting() {
           />
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
               Quality Carbon to Ceramic Grade Films

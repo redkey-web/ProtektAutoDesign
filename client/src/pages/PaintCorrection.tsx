@@ -8,6 +8,7 @@ import RelatedServices from '@/components/RelatedServices';
 import { Card } from '@/components/ui/card';
 import heroImage from '@assets/Paint correction_1763294797362.webp';
 import ceramicImage from '@assets/generated_images/Ceramic_coating_hero_image_2e9cd7e0.png';
+import patternLogo from '@assets/image_1764055702258.png';
 
 export default function PaintCorrection() {
   const faqItems: FAQItem[] = [
@@ -105,8 +106,18 @@ export default function PaintCorrection() {
         ctaLink="#contact"
       />
 
-      <section className="py-20 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-background relative overflow-hidden">
+        {/* Pattern Overlay */}
+        <div 
+          className="absolute inset-0 pointer-events-none opacity-25"
+          style={{
+            backgroundImage: `url(${patternLogo})`,
+            backgroundRepeat: 'repeat',
+            backgroundSize: '150px 150px',
+          }}
+        />
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto mb-16">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6 text-center">
               Professional Paint Correction Services

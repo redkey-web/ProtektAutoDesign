@@ -4,6 +4,7 @@ import ContactSection from '@/components/ContactSection';
 import QuoteCalculator from '@/components/QuoteCalculator';
 import SEO from '@/components/SEO';
 import heroImage from '@assets/Full packages Protekt Auto_1763295209283.webp';
+import patternLogo from '@assets/image_1764055702258.png';
 
 export default function Packages() {
   const enthusiastFeatures = [
@@ -67,8 +68,18 @@ export default function Packages() {
         showPhoneCta={true}
       />
 
-      <section className="py-20 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-background relative overflow-hidden">
+        {/* Pattern Overlay */}
+        <div 
+          className="absolute inset-0 pointer-events-none opacity-25"
+          style={{
+            backgroundImage: `url(${patternLogo})`,
+            backgroundRepeat: 'repeat',
+            backgroundSize: '150px 150px',
+          }}
+        />
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
               Choose Your Protection Level

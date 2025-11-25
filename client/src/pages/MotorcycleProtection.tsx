@@ -6,6 +6,7 @@ import UrgencyBanner from '@/components/UrgencyBanner';
 import { Card, CardContent } from '@/components/ui/card';
 import { Shield, Droplets, Sparkles } from 'lucide-react';
 import heroImage from '@assets/Motorcycle ceramic coat protection sydney_1763343837693.webp';
+import patternLogo from '@assets/image_1764055702258.png';
 
 export default function MotorcycleProtection() {
   const faqItems: FAQItem[] = [
@@ -74,8 +75,18 @@ export default function MotorcycleProtection() {
         showPhoneCta={true}
       />
 
-      <section className="py-20 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+      <section className="py-20 bg-background relative overflow-hidden">
+        {/* Pattern Overlay */}
+        <div 
+          className="absolute inset-0 pointer-events-none opacity-25"
+          style={{
+            backgroundImage: `url(${patternLogo})`,
+            backgroundRepeat: 'repeat',
+            backgroundSize: '150px 150px',
+          }}
+        />
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 relative z-10">
           <UrgencyBanner
             message="Track season approaching!"
             highlight="Protect your bike before the first ride."
@@ -83,7 +94,7 @@ export default function MotorcycleProtection() {
           />
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
               Professional Motorcycle Protection
