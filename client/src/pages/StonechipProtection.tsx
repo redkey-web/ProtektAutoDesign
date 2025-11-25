@@ -10,6 +10,17 @@ import heroImage from '@assets/PPF _1763343626090.webp';
 import standardFrontImage from '@assets/Standard+Front.png_1764037467188.webp';
 import trackPackImage from '@assets/Track+pack.png_1764037523863.webp';
 import patternLogo from '@assets/image_1764055702258.png';
+import ppfBlueHood from '@assets/image_1764078701691.png';
+import ppfMercedesWheel from '@assets/image_1764078688742.png';
+import ppfRedCarHeatGun from '@assets/image_1764078670534.png';
+import ppfBlueMustangLift from '@assets/image_1764078653120.png';
+import ppfBlackCarSqueegee from '@assets/image_1764078620864.png';
+import ppfWhitePorsche from '@assets/image_1764078599443.png';
+import ppfPorscheGT3 from '@assets/image_1764078577631.png';
+import ppfApplicationCloseup from '@assets/image_1764078535126.png';
+import ppfBMWWorkshop from '@assets/image_1764078523774.png';
+import ppfBlueGolfR from '@assets/image_1764078505288.png';
+import ppfSilverS2000 from '@assets/image_1764078467974.png';
 
 export default function StonechipProtection() {
   const faqItems: FAQItem[] = [
@@ -221,6 +232,198 @@ export default function StonechipProtection() {
               complexity. Contact us for a custom quote tailored to your vehicle.
             </p>
           </Card>
+        </div>
+      </section>
+
+      {/* PPF Gallery */}
+      <section className="py-20 bg-muted/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Our Paint Protection Film Work
+            </h2>
+            <p className="text-foreground/70 text-lg">
+              See the precision and quality of our professional PPF installations
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div 
+              className="relative group overflow-hidden rounded-md hover-elevate active-elevate-2 transition-all cursor-pointer"
+              data-testid="gallery-img-ppf-blue-hood"
+            >
+              <img
+                src={ppfBlueHood}
+                alt="PPF application on blue car hood"
+                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-sm font-medium">Wet Installation Technique</p>
+                <p className="text-xs text-white/80">Professional PPF Application</p>
+              </div>
+            </div>
+
+            <div 
+              className="relative group overflow-hidden rounded-md hover-elevate active-elevate-2 transition-all cursor-pointer"
+              data-testid="gallery-img-ppf-mercedes"
+            >
+              <img
+                src={ppfMercedesWheel}
+                alt="Mercedes-Benz wheel with PPF protection"
+                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-sm font-medium">Mercedes-Benz</p>
+                <p className="text-xs text-white/80">Premium Detail Protection</p>
+              </div>
+            </div>
+
+            <div 
+              className="relative group overflow-hidden rounded-md hover-elevate active-elevate-2 transition-all cursor-pointer"
+              data-testid="gallery-img-ppf-heat-gun"
+            >
+              <img
+                src={ppfRedCarHeatGun}
+                alt="Technician heat-forming PPF"
+                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-sm font-medium">Heat-Forming Process</p>
+                <p className="text-xs text-white/80">Expert Installation Technique</p>
+              </div>
+            </div>
+
+            <div 
+              className="relative group overflow-hidden rounded-md hover-elevate active-elevate-2 transition-all cursor-pointer"
+              data-testid="gallery-img-ppf-mustang"
+            >
+              <img
+                src={ppfBlueMustangLift}
+                alt="Blue Ford Mustang PPF installation"
+                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-sm font-medium">Ford Mustang</p>
+                <p className="text-xs text-white/80">Full Workshop Installation</p>
+              </div>
+            </div>
+
+            <div 
+              className="relative group overflow-hidden rounded-md hover-elevate active-elevate-2 transition-all cursor-pointer"
+              data-testid="gallery-img-ppf-squeegee"
+            >
+              <img
+                src={ppfBlackCarSqueegee}
+                alt="Professional squeegee technique"
+                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-sm font-medium">Squeegee Technique</p>
+                <p className="text-xs text-white/80">Bubble-Free Application</p>
+              </div>
+            </div>
+
+            <div 
+              className="relative group overflow-hidden rounded-md hover-elevate active-elevate-2 transition-all cursor-pointer"
+              data-testid="gallery-img-ppf-porsche-app"
+            >
+              <img
+                src={ppfWhitePorsche}
+                alt="PPF application on white Porsche"
+                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-sm font-medium">Porsche</p>
+                <p className="text-xs text-white/80">Front End PPF Installation</p>
+              </div>
+            </div>
+
+            <div 
+              className="relative group overflow-hidden rounded-md hover-elevate active-elevate-2 transition-all cursor-pointer"
+              data-testid="gallery-img-ppf-gt3"
+            >
+              <img
+                src={ppfPorscheGT3}
+                alt="Porsche GT3 with complete PPF"
+                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-sm font-medium">Porsche GT3</p>
+                <p className="text-xs text-white/80">Complete PPF Package</p>
+              </div>
+            </div>
+
+            <div 
+              className="relative group overflow-hidden rounded-md hover-elevate active-elevate-2 transition-all cursor-pointer"
+              data-testid="gallery-img-ppf-closeup"
+            >
+              <img
+                src={ppfApplicationCloseup}
+                alt="Close-up of PPF application"
+                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-sm font-medium">Installation Detail</p>
+                <p className="text-xs text-white/80">Wet Installation Process</p>
+              </div>
+            </div>
+
+            <div 
+              className="relative group overflow-hidden rounded-md hover-elevate active-elevate-2 transition-all cursor-pointer"
+              data-testid="gallery-img-ppf-bmw"
+            >
+              <img
+                src={ppfBMWWorkshop}
+                alt="BMW PPF installation in workshop"
+                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-sm font-medium">BMW</p>
+                <p className="text-xs text-white/80">Premium Workshop Installation</p>
+              </div>
+            </div>
+
+            <div 
+              className="relative group overflow-hidden rounded-md hover-elevate active-elevate-2 transition-all cursor-pointer"
+              data-testid="gallery-img-ppf-golf"
+            >
+              <img
+                src={ppfBlueGolfR}
+                alt="Blue Volkswagen Golf R front bumper detail"
+                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-sm font-medium">Volkswagen Golf R</p>
+                <p className="text-xs text-white/80">Front Bumper Protection</p>
+              </div>
+            </div>
+
+            <div 
+              className="relative group overflow-hidden rounded-md hover-elevate active-elevate-2 transition-all cursor-pointer"
+              data-testid="gallery-img-ppf-s2000"
+            >
+              <img
+                src={ppfSilverS2000}
+                alt="Silver Honda S2000 with PPF protection"
+                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-sm font-medium">Honda S2000</p>
+                <p className="text-xs text-white/80">Classic Sports Car Protection</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

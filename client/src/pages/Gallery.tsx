@@ -24,6 +24,17 @@ import blackMinivan from '@assets/image_1764078290137.png';
 import blueAMG from '@assets/image_1764078337288.png';
 import blueBMWM3 from '@assets/image_1764078350610.png';
 import coatingApplication from '@assets/image_1764078403000.png';
+import ppfBlueHood from '@assets/image_1764078701691.png';
+import ppfMercedesWheel from '@assets/image_1764078688742.png';
+import ppfRedCarHeatGun from '@assets/image_1764078670534.png';
+import ppfBlueMustangLift from '@assets/image_1764078653120.png';
+import ppfBlackCarSqueegee from '@assets/image_1764078620864.png';
+import ppfWhitePorsche from '@assets/image_1764078599443.png';
+import ppfPorscheGT3 from '@assets/image_1764078577631.png';
+import ppfApplicationCloseup from '@assets/image_1764078535126.png';
+import ppfBMWWorkshop from '@assets/image_1764078523774.png';
+import ppfBlueGolfR from '@assets/image_1764078505288.png';
+import ppfSilverS2000 from '@assets/image_1764078467974.png';
 
 interface GalleryImage {
   src: string;
@@ -120,6 +131,61 @@ const galleryImages: GalleryImage[] = [
   {
     src: ppfProtection,
     alt: 'Paint protection film (PPF) application',
+    category: 'PPF',
+  },
+  {
+    src: ppfBlueHood,
+    alt: 'PPF application on blue car hood with wet installation technique',
+    category: 'PPF',
+  },
+  {
+    src: ppfMercedesWheel,
+    alt: 'Mercedes-Benz wheel detail with PPF protection',
+    category: 'PPF',
+  },
+  {
+    src: ppfRedCarHeatGun,
+    alt: 'Technician heat-forming PPF on red vehicle',
+    category: 'Team at Work',
+  },
+  {
+    src: ppfBlueMustangLift,
+    alt: 'Blue Ford Mustang receiving PPF installation on workshop lift',
+    category: 'PPF',
+  },
+  {
+    src: ppfBlackCarSqueegee,
+    alt: 'Professional squeegee technique for PPF application',
+    category: 'Team at Work',
+  },
+  {
+    src: ppfWhitePorsche,
+    alt: 'Expert applying PPF to white Porsche front end',
+    category: 'Team at Work',
+  },
+  {
+    src: ppfPorscheGT3,
+    alt: 'Porsche GT3 with complete PPF protection package',
+    category: 'PPF',
+  },
+  {
+    src: ppfApplicationCloseup,
+    alt: 'Close-up of PPF application process showing wet installation',
+    category: 'Team at Work',
+  },
+  {
+    src: ppfBMWWorkshop,
+    alt: 'BMW receiving PPF installation in premium workshop',
+    category: 'PPF',
+  },
+  {
+    src: ppfBlueGolfR,
+    alt: 'Blue Volkswagen Golf R front bumper PPF detail',
+    category: 'PPF',
+  },
+  {
+    src: ppfSilverS2000,
+    alt: 'Silver Honda S2000 convertible with PPF protection',
     category: 'PPF',
   },
   {
