@@ -196,6 +196,8 @@ export default function PaintCorrection() {
                 src={whiteLamborghini}
                 alt="White Lamborghini Huracan after paint correction"
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -212,6 +214,8 @@ export default function PaintCorrection() {
                 src={greenAMGGTR}
                 alt="Green Mercedes-AMG GT R paint correction in workshop"
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -228,6 +232,8 @@ export default function PaintCorrection() {
                 src={redFerrari488}
                 alt="Red Ferrari 488 paint correction service"
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -244,6 +250,8 @@ export default function PaintCorrection() {
                 src={blackLamborghiniGallardo}
                 alt="Black Lamborghini Gallardo detailed at Protekt Auto"
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -260,6 +268,8 @@ export default function PaintCorrection() {
                 src={redPorscheGT2RS}
                 alt="Red Porsche GT2 RS paint correction"
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -276,6 +286,8 @@ export default function PaintCorrection() {
                 src={whiteSubaruSTI}
                 alt="White Subaru WRX STI paint correction"
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -292,6 +304,8 @@ export default function PaintCorrection() {
                 src={taillightDetail}
                 alt="Perfect paint correction detail work on taillight"
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -308,6 +322,8 @@ export default function PaintCorrection() {
                 src={blackDucati900}
                 alt="Ducati 900 motorcycle detailing"
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -324,6 +340,8 @@ export default function PaintCorrection() {
                 src={orangeHarley}
                 alt="Harley-Davidson motorcycle at Protekt Auto"
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -340,6 +358,8 @@ export default function PaintCorrection() {
                 src={silverPajero2}
                 alt="Mitsubishi Pajero complete detailing package"
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">

@@ -200,6 +200,8 @@ export default function NewCarProtection() {
                 src={blueSubaruPolish}
                 alt="Technician polishing blue Subaru with machine polisher"
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -216,6 +218,8 @@ export default function NewCarProtection() {
                 src={redCarRoofPolish}
                 alt="Expert polishing red car roof with Rupes machine"
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -232,6 +236,8 @@ export default function NewCarProtection() {
                 src={redKiaStinger}
                 alt="Red Kia Stinger with ceramic coating under heat lamps"
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -248,6 +254,8 @@ export default function NewCarProtection() {
                 src={blueMazdaCX5}
                 alt="Blue Mazda CX-5 receiving ceramic coating"
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -264,6 +272,8 @@ export default function NewCarProtection() {
                 src={blueAMG}
                 alt="Blue Mercedes-Benz AMG with ceramic coating"
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -280,6 +290,8 @@ export default function NewCarProtection() {
                 src={silverPajero}
                 alt="Silver Mitsubishi Pajero with ceramic coating"
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -296,6 +308,8 @@ export default function NewCarProtection() {
                 src={blackMinivan}
                 alt="Black minivan with mirror-like ceramic coating finish"
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -312,6 +326,8 @@ export default function NewCarProtection() {
                 src={blueBMWM3}
                 alt="Light blue BMW M3 with ceramic coating at night"
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -328,6 +344,8 @@ export default function NewCarProtection() {
                 src={coatingApplication}
                 alt="Professional ceramic coating application process"
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">

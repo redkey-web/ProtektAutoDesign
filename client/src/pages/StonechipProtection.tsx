@@ -256,6 +256,8 @@ export default function StonechipProtection() {
                 src={ppfBlueHood}
                 alt="PPF application on blue car hood"
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -272,6 +274,8 @@ export default function StonechipProtection() {
                 src={ppfMercedesWheel}
                 alt="Mercedes-Benz wheel with PPF protection"
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -288,6 +292,8 @@ export default function StonechipProtection() {
                 src={ppfRedCarHeatGun}
                 alt="Technician heat-forming PPF"
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -304,6 +310,8 @@ export default function StonechipProtection() {
                 src={ppfBlueMustangLift}
                 alt="Blue Ford Mustang PPF installation"
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -320,6 +328,8 @@ export default function StonechipProtection() {
                 src={ppfBlackCarSqueegee}
                 alt="Professional squeegee technique"
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -336,6 +346,8 @@ export default function StonechipProtection() {
                 src={ppfWhitePorsche}
                 alt="PPF application on white Porsche"
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -352,6 +364,8 @@ export default function StonechipProtection() {
                 src={ppfPorscheGT3}
                 alt="Porsche GT3 with complete PPF"
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -368,6 +382,8 @@ export default function StonechipProtection() {
                 src={ppfApplicationCloseup}
                 alt="Close-up of PPF application"
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -384,6 +400,8 @@ export default function StonechipProtection() {
                 src={ppfBMWWorkshop}
                 alt="BMW PPF installation in workshop"
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -400,6 +418,8 @@ export default function StonechipProtection() {
                 src={ppfBlueGolfR}
                 alt="Blue Volkswagen Golf R front bumper detail"
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -416,6 +436,8 @@ export default function StonechipProtection() {
                 src={ppfSilverS2000}
                 alt="Silver Honda S2000 with PPF protection"
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">

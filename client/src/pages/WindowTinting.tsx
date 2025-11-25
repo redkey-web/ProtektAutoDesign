@@ -152,6 +152,8 @@ export default function WindowTinting() {
                 src={teamWorkImage}
                 alt="Professional window tinting application by Protekt Auto team"
                 className="w-full h-auto rounded-md shadow-lg"
+                loading="lazy"
+                decoding="async"
                 data-testid="img-team-work"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-md pointer-events-none" />
@@ -195,7 +197,9 @@ export default function WindowTinting() {
                 src={ramShowroom}
                 alt="RAM 1500 TRX with professional ceramic window tinting"
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
-              />
+                loading="lazy"
+                                decoding="async"
+                              />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <p className="text-sm font-medium">RAM 1500 TRX</p>
@@ -211,7 +215,8 @@ export default function WindowTinting() {
                 src={teslaWhite}
                 alt="White Tesla Model 3 with ceramic window tinting"
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
-              />
+                loading="lazy"
+                              />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <p className="text-sm font-medium">Tesla Model 3</p>
@@ -227,7 +232,8 @@ export default function WindowTinting() {
                 src={workshopAction}
                 alt="Professional window tinting application in progress"
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
-              />
+                loading="lazy"
+                              />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <p className="text-sm font-medium">Expert Application</p>
@@ -243,7 +249,8 @@ export default function WindowTinting() {
                 src={camrySide}
                 alt="Toyota Camry Hybrid with professional window tinting"
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
-              />
+                loading="lazy"
+                              />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <p className="text-sm font-medium">Toyota Camry Hybrid</p>
@@ -259,7 +266,8 @@ export default function WindowTinting() {
                 src={camryRear}
                 alt="Toyota Camry showing completed window tint installation"
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
-              />
+                loading="lazy"
+                              />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <p className="text-sm font-medium">Finished Installation</p>

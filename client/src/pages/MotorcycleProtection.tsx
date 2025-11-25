@@ -208,6 +208,8 @@ export default function MotorcycleProtection() {
                 src={whiteHonda}
                 alt="White Honda sportbike with ceramic coating protection"
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -224,6 +226,8 @@ export default function MotorcycleProtection() {
                 src={blackDucatiSide}
                 alt="Black Ducati 900 SD motorcycle detailing"
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -240,6 +244,8 @@ export default function MotorcycleProtection() {
                 src={blackDucatiRear}
                 alt="Black Ducati 900 SD rear view showcasing ceramic finish"
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -256,6 +262,8 @@ export default function MotorcycleProtection() {
                 src={burgundyHarley}
                 alt="Burgundy Harley-Davidson in professional workshop"
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -272,6 +280,8 @@ export default function MotorcycleProtection() {
                 src={orangeHarleyShop}
                 alt="Harley-Davidson motorcycle outside Protekt Auto workshop"
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">

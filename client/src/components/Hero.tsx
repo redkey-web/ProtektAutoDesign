@@ -66,6 +66,7 @@ export default function Hero({
               src={image}
               alt={title}
               className="w-full h-full object-cover"
+              loading="eager"
               data-testid="hero-background-image"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
@@ -80,6 +81,7 @@ export default function Hero({
               src={logoImage} 
               alt="Protekt Auto" 
               className="w-64 sm:w-80 md:w-96 lg:w-[28rem] h-auto drop-shadow-2xl"
+              loading="eager"
             />
           </div>
         )}
