@@ -14,6 +14,8 @@ import blackMinivan from '@assets/image_1764078290137.png';
 import blueAMG from '@assets/image_1764078337288.png';
 import blueBMWM3 from '@assets/image_1764078350610.png';
 import coatingApplication from '@assets/image_1764078403000.png';
+import blueSubaruPolish from '@assets/image_1764078880441.png';
+import redCarRoofPolish from '@assets/image_1764078911061.png';
 
 export default function NewCarProtection() {
   const faqItems: FAQItem[] = [
@@ -190,6 +192,38 @@ export default function NewCarProtection() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div 
+              className="relative group overflow-hidden rounded-md hover-elevate active-elevate-2 transition-all cursor-pointer"
+              data-testid="gallery-img-subaru-polish"
+            >
+              <img
+                src={blueSubaruPolish}
+                alt="Technician polishing blue Subaru with machine polisher"
+                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-sm font-medium">Blue Subaru</p>
+                <p className="text-xs text-white/80">Professional Machine Polishing</p>
+              </div>
+            </div>
+
+            <div 
+              className="relative group overflow-hidden rounded-md hover-elevate active-elevate-2 transition-all cursor-pointer"
+              data-testid="gallery-img-red-roof-polish"
+            >
+              <img
+                src={redCarRoofPolish}
+                alt="Expert polishing red car roof with Rupes machine"
+                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-sm font-medium">Red Car Detail</p>
+                <p className="text-xs text-white/80">Rupes Machine Polish</p>
+              </div>
+            </div>
+
             <div 
               className="relative group overflow-hidden rounded-md hover-elevate active-elevate-2 transition-all cursor-pointer"
               data-testid="gallery-img-kia-stinger"

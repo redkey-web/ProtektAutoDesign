@@ -35,6 +35,8 @@ import ppfApplicationCloseup from '@assets/image_1764078535126.png';
 import ppfBMWWorkshop from '@assets/image_1764078523774.png';
 import ppfBlueGolfR from '@assets/image_1764078505288.png';
 import ppfSilverS2000 from '@assets/image_1764078467974.png';
+import blueSubaruPolish from '@assets/image_1764078880441.png';
+import redCarRoofPolish from '@assets/image_1764078911061.png';
 
 interface GalleryImage {
   src: string;
@@ -51,6 +53,16 @@ const galleryImages: GalleryImage[] = [
   {
     src: workshopAction,
     alt: 'Expert technician applying window tint in our Sydney workshop',
+    category: 'Team at Work',
+  },
+  {
+    src: blueSubaruPolish,
+    alt: 'Technician polishing blue Subaru with professional machine polisher',
+    category: 'Team at Work',
+  },
+  {
+    src: redCarRoofPolish,
+    alt: 'Expert polishing red car roof with Rupes machine for ceramic coating prep',
     category: 'Team at Work',
   },
   {
