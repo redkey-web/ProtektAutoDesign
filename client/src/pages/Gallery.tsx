@@ -1,0 +1,188 @@
+import SEO from '@/components/SEO';
+import { useState } from 'react';
+import { X } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+
+// Import all gallery images
+import windowTintTeam from '@assets/window tint_1764036060927.webp';
+import ceramicCoating1 from '@assets/Ceramic coating service Sydney - New Car Protection_1761915866845.webp';
+import ceramicCoating2 from '@assets/Ceramic coating service Sydney - New Car Protection_1763295133288.webp';
+import fullPackages from '@assets/Full packages Protekt Auto_1763295209283.webp';
+import motorcycleProtection from '@assets/Motorcycle ceramic coat protection sydney_1763343837693.webp';
+import paintCorrection from '@assets/Paint correction_1763294797362.webp';
+import ppfProtection from '@assets/PPF _1763343626090.webp';
+import windowTinting from '@assets/Windown tinting_1763343495843.webp';
+
+interface GalleryImage {
+  src: string;
+  alt: string;
+  category: string;
+}
+
+const galleryImages: GalleryImage[] = [
+  {
+    src: windowTintTeam,
+    alt: 'Professional window tinting application - Protekt Auto team at work',
+    category: 'Team at Work',
+  },
+  {
+    src: ceramicCoating1,
+    alt: 'Premium ceramic coating service for new car protection',
+    category: 'Ceramic Coating',
+  },
+  {
+    src: ceramicCoating2,
+    alt: 'Graphene ceramic coating application process',
+    category: 'Ceramic Coating',
+  },
+  {
+    src: paintCorrection,
+    alt: 'Paint correction and polishing service',
+    category: 'Paint Correction',
+  },
+  {
+    src: windowTinting,
+    alt: 'Ceramic window tinting installation',
+    category: 'Window Tinting',
+  },
+  {
+    src: ppfProtection,
+    alt: 'Paint protection film (PPF) application',
+    category: 'PPF',
+  },
+  {
+    src: motorcycleProtection,
+    alt: 'Motorcycle ceramic coating protection',
+    category: 'Motorcycle',
+  },
+  {
+    src: fullPackages,
+    alt: 'Complete protection packages for luxury vehicles',
+    category: 'Full Packages',
+  },
+];
+
+export default function Gallery() {
+  const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
+  const [filter, setFilter] = useState<string>('All');
+
+  const categories = ['All', ...Array.from(new Set(galleryImages.map(img => img.category)))];
+
+  const filteredImages = filter === 'All' 
+    ? galleryImages 
+    : galleryImages.filter(img => img.category === filter);
+
+  return (
+    <div className="min-h-screen">
+      <SEO
+        title="Gallery | Premium Car Detailing Work | Protekt Auto Sydney"
+        description="View our premium car detailing and protection work. Ceramic coating, paint correction, PPF, window tinting gallery. Sydney's trusted automotive protection experts."
+        keywords="car detailing gallery Sydney, ceramic coating photos, paint protection work, PPF installation Sydney, window tinting gallery"
+        canonical="https://protektauto.com.au/gallery"
+      />
+
+      {/* Hero Section */}
+      <section className="relative min-h-[50vh] flex items-center justify-center bg-black">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/40 z-10" />
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-30"
+          style={{ backgroundImage: `url(${ceramicCoating1})` }}
+        />
+        <div className="relative z-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20">
+          <h1 className="font-display text-5xl md:text-7xl font-bold text-white mb-6">
+            OUR WORK
+          </h1>
+          <p className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto">
+            Showcasing our premium automotive detailing and protection services
+          </p>
+        </div>
+      </section>
+
+      {/* Filter Section */}
+      <section className="py-8 bg-background border-b border-border">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-wrap gap-3 justify-center">
+            {categories.map((category) => (
+              <Button
+                key={category}
+                variant={filter === category ? 'default' : 'outline'}
+                onClick={() => setFilter(category)}
+                className="transition-all"
+                data-testid={`button-filter-${category.toLowerCase().replace(' ', '-')}`}
+              >
+                {category}
+              </Button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery Grid */}
+      <section className="py-20 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredImages.map((image, index) => (
+              <div
+                key={index}
+                className="group relative overflow-hidden rounded-md cursor-pointer hover-elevate active-elevate-2 transition-all"
+                onClick={() => setSelectedImage(image)}
+                data-testid={`gallery-image-${index}`}
+              >
+                <div className="aspect-[4/3] overflow-hidden bg-black">
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
+                    <p className="text-sm font-medium mb-1">{image.category}</p>
+                    <p className="text-xs text-white/80 line-clamp-2">{image.alt}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {filteredImages.length === 0 && (
+            <div className="text-center py-20">
+              <p className="text-foreground/60 text-lg">No images found in this category.</p>
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* Lightbox Modal */}
+      {selectedImage && (
+        <div
+          className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4"
+          onClick={() => setSelectedImage(null)}
+          data-testid="lightbox-modal"
+        >
+          <Button
+            size="icon"
+            variant="ghost"
+            className="absolute top-4 right-4 text-white hover:text-white/80 z-10"
+            onClick={() => setSelectedImage(null)}
+            data-testid="button-close-lightbox"
+          >
+            <X className="w-6 h-6" />
+          </Button>
+          <div className="relative max-w-6xl max-h-[90vh] w-full">
+            <img
+              src={selectedImage.src}
+              alt={selectedImage.alt}
+              className="w-full h-full object-contain"
+              onClick={(e) => e.stopPropagation()}
+            />
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 text-white">
+              <p className="font-medium mb-1">{selectedImage.category}</p>
+              <p className="text-sm text-white/80">{selectedImage.alt}</p>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}

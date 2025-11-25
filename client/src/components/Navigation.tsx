@@ -50,6 +50,7 @@ export default function Navigation() {
     { path: '/stonechip-protection', label: 'PPF' },
     { path: '/motorcycle-protection', label: 'Motorcycle' },
     { path: '/packages', label: 'Packages' },
+    { path: '/gallery', label: 'Gallery' },
   ];
 
   return (

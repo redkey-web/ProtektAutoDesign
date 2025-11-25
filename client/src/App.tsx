@@ -14,6 +14,7 @@ import WindowTinting from "@/pages/WindowTinting";
 import StonechipProtection from "@/pages/StonechipProtection";
 import MotorcycleProtection from "@/pages/MotorcycleProtection";
 import Packages from "@/pages/Packages";
+import Gallery from "@/pages/Gallery";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -26,6 +27,7 @@ function Router() {
       <Route path="/stonechip-protection" component={StonechipProtection} />
       <Route path="/motorcycle-protection" component={MotorcycleProtection} />
       <Route path="/packages" component={Packages} />
+      <Route path="/gallery" component={Gallery} />
       <Route component={NotFound} />
     </Switch>
   );

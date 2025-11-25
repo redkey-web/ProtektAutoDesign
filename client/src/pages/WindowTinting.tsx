@@ -7,6 +7,7 @@ import UrgencyBanner from '@/components/UrgencyBanner';
 import { Card, CardContent } from '@/components/ui/card';
 import { Shield, Sun, Thermometer, Eye, Check } from 'lucide-react';
 import heroImage from '@assets/Windown tinting_1763343495843.webp';
+import teamWorkImage from '@assets/window tint_1764036060927.webp';
 
 export default function WindowTinting() {
   const faqItems: FAQItem[] = [
@@ -118,26 +119,41 @@ export default function WindowTinting() {
 
           <TintComparison />
 
-          <div className="mt-16">
-            <Card className="bg-card/50">
-              <CardContent className="p-8">
-                <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-8 text-center">
-                  ADDITIONAL BENEFITS
-                </h3>
-                <div className="grid md:grid-cols-2 gap-4 max-w-3xl mx-auto">
-                  {additionalBenefits.map((benefit, index) => (
-                    <div
-                      key={index}
-                      className="flex items-start gap-3"
-                      data-testid={`additional-benefit-${index}`}
-                    >
-                      <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-foreground/80">{benefit}</span>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+          <div className="mt-16 grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <Card className="bg-card/50">
+                <CardContent className="p-8">
+                  <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-8">
+                    ADDITIONAL BENEFITS
+                  </h3>
+                  <div className="grid gap-4">
+                    {additionalBenefits.map((benefit, index) => (
+                      <div
+                        key={index}
+                        className="flex items-start gap-3"
+                        data-testid={`additional-benefit-${index}`}
+                      >
+                        <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span className="text-foreground/80">{benefit}</span>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+            <div className="relative">
+              <img
+                src={teamWorkImage}
+                alt="Professional window tinting application by Protekt Auto team"
+                className="w-full h-auto rounded-md shadow-lg"
+                data-testid="img-team-work"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-md pointer-events-none" />
+              <div className="absolute bottom-4 left-4 right-4 text-white">
+                <p className="text-sm font-medium">Expert Precision Application</p>
+                <p className="text-xs text-white/80">Our certified technicians ensure flawless results</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
