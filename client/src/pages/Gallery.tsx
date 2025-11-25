@@ -47,6 +47,11 @@ import orangeHarley from '@assets/image_1764079222888.png';
 import taillightDetail from '@assets/image_1764079236797.png';
 import silverPajero2 from '@assets/image_1764079248918.png';
 import whiteSubaruSTI from '@assets/image_1764079281717.png';
+import whiteHonda from '@assets/image_1764079557269.png';
+import blackDucatiSide from '@assets/image_1764079593202.png';
+import blackDucatiRear from '@assets/image_1764079603369.png';
+import burgundyHarley from '@assets/image_1764079613406.png';
+import orangeHarleyShop from '@assets/image_1764079622210.png';
 
 interface GalleryImage {
   src: string;
@@ -113,6 +118,31 @@ const galleryImages: GalleryImage[] = [
   {
     src: orangeHarley,
     alt: 'Harley-Davidson motorcycle receiving premium care at Protekt Auto',
+    category: 'Motorcycle',
+  },
+  {
+    src: whiteHonda,
+    alt: 'White Honda sportbike with professional ceramic coating protection',
+    category: 'Motorcycle',
+  },
+  {
+    src: blackDucatiSide,
+    alt: 'Black Ducati 900 SD motorcycle complete protection package',
+    category: 'Motorcycle',
+  },
+  {
+    src: blackDucatiRear,
+    alt: 'Black Ducati 900 SD rear view showcasing premium ceramic finish',
+    category: 'Motorcycle',
+  },
+  {
+    src: burgundyHarley,
+    alt: 'Burgundy Harley-Davidson professional detailing in workshop',
+    category: 'Motorcycle',
+  },
+  {
+    src: orangeHarleyShop,
+    alt: 'Harley-Davidson motorcycle outside Protekt Auto Sydney workshop',
     category: 'Motorcycle',
   },
   {

@@ -7,6 +7,11 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Shield, Droplets, Sparkles } from 'lucide-react';
 import heroImage from '@assets/Motorcycle ceramic coat protection sydney_1763343837693.webp';
 import patternLogo from '@assets/image_1764055702258.png';
+import whiteHonda from '@assets/image_1764079557269.png';
+import blackDucatiSide from '@assets/image_1764079593202.png';
+import blackDucatiRear from '@assets/image_1764079603369.png';
+import burgundyHarley from '@assets/image_1764079613406.png';
+import orangeHarleyShop from '@assets/image_1764079622210.png';
 
 export default function MotorcycleProtection() {
   const faqItems: FAQItem[] = [
@@ -171,6 +176,110 @@ export default function MotorcycleProtection() {
               a custom quote for your specific bike.
             </p>
           </Card>
+        </div>
+      </section>
+
+      {/* Motorcycle Gallery */}
+      <section className="py-20 bg-muted/30 relative overflow-hidden">
+        <div 
+          className="absolute inset-0 pointer-events-none opacity-[0.02]"
+          style={{
+            backgroundImage: `url(${patternLogo})`,
+            backgroundRepeat: 'repeat',
+            backgroundSize: '150px 150px',
+          }}
+        />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-12">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Our Motorcycle Protection Work
+            </h2>
+            <p className="text-foreground/70 text-lg">
+              See the stunning results of our professional motorcycle ceramic coating and PPF services
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div 
+              className="relative group overflow-hidden rounded-md hover-elevate active-elevate-2 transition-all cursor-pointer"
+              data-testid="gallery-img-honda-sportbike"
+            >
+              <img
+                src={whiteHonda}
+                alt="White Honda sportbike with ceramic coating protection"
+                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-sm font-medium">Honda Sportbike</p>
+                <p className="text-xs text-white/80">Ceramic Coating Protection</p>
+              </div>
+            </div>
+
+            <div 
+              className="relative group overflow-hidden rounded-md hover-elevate active-elevate-2 transition-all cursor-pointer"
+              data-testid="gallery-img-ducati-side"
+            >
+              <img
+                src={blackDucatiSide}
+                alt="Black Ducati 900 SD motorcycle detailing"
+                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-sm font-medium">Ducati 900 SD</p>
+                <p className="text-xs text-white/80">Complete Protection Package</p>
+              </div>
+            </div>
+
+            <div 
+              className="relative group overflow-hidden rounded-md hover-elevate active-elevate-2 transition-all cursor-pointer"
+              data-testid="gallery-img-ducati-rear"
+            >
+              <img
+                src={blackDucatiRear}
+                alt="Black Ducati 900 SD rear view showcasing ceramic finish"
+                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-sm font-medium">Ducati 900 SD</p>
+                <p className="text-xs text-white/80">Premium Ceramic Finish</p>
+              </div>
+            </div>
+
+            <div 
+              className="relative group overflow-hidden rounded-md hover-elevate active-elevate-2 transition-all cursor-pointer"
+              data-testid="gallery-img-harley-burgundy"
+            >
+              <img
+                src={burgundyHarley}
+                alt="Burgundy Harley-Davidson in professional workshop"
+                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-sm font-medium">Harley-Davidson</p>
+                <p className="text-xs text-white/80">Professional Detailing Service</p>
+              </div>
+            </div>
+
+            <div 
+              className="relative group overflow-hidden rounded-md hover-elevate active-elevate-2 transition-all cursor-pointer"
+              data-testid="gallery-img-harley-shop"
+            >
+              <img
+                src={orangeHarleyShop}
+                alt="Harley-Davidson motorcycle outside Protekt Auto workshop"
+                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-sm font-medium">Harley-Davidson</p>
+                <p className="text-xs text-white/80">Premium Motorcycle Care</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
