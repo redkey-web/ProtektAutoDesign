@@ -3,6 +3,9 @@
 ## Overview
 Protekt Auto is a luxury automotive detailing and protection service website for a Sydney-based business. It specializes in ceramic coatings, paint correction, window tinting, and paint protection film (PPF). The project is a full-stack React application with an Express backend, designed to provide an immersive visual experience mirroring the sophistication of luxury automotive brands.
 
+## Recent Changes (November 25, 2025)
+**Trust & Social Proof Integration**: Added TrustBadges and Testimonials components to all service pages (New Car Protection, Paint Correction, Window Tinting, Stonechip Protection, Motorcycle Protection, Packages). TrustBadges display 4 credibility indicators (4.9/5 Google Rating, 10+ Years Experience, 1000+ Happy Customers, Certified Applicators) positioned after hero sections. Testimonials showcase 4 customer reviews with 5-star ratings and aggregate Google rating (4.9 based on 150+ reviews) positioned before FAQ sections.
+
 ## User Preferences
 Preferred communication style: Simple, everyday language.
 
@@ -12,8 +15,8 @@ Preferred communication style: Simple, everyday language.
 **Framework & Build System:** React 18 with TypeScript, Vite for development and optimized builds, Wouter for routing, and TanStack Query for server state management.
 **UI Component System:** Radix UI for accessible foundations, shadcn/ui (New York style) for customizable components, and Tailwind CSS with custom design tokens for styling.
 **Design Philosophy:** Premium, luxury automotive aesthetic using Bebas Neue and Barlow Condensed fonts, Teal/cyan accents, dark backgrounds, glass-morphism effects, sophisticated micro-interactions, and mobile-first responsive design.
-**Page Structure:** Includes Home, dedicated service pages (Ceramic Coating, Paint Correction, Window Tinting, PPF, Motorcycle Protection), Package comparison, and a Gallery page. Features reusable components for heroes, pricing, and process timelines.
-**Key Features:** Vimeo hero background video, YouTube welcome video, interactive before/after image slider, glass-morphism hover effects on CTAs, transparent navigation, fully clickable service tiles, savings and quote calculators, film comparison tools, and contact forms with validation.
+**Page Structure:** Includes Home, dedicated service pages (Ceramic Coating, Paint Correction, Window Tinting, PPF, Motorcycle Protection), Package comparison, and a Gallery page. Features reusable components for heroes, pricing, process timelines, trust badges, and testimonials.
+**Key Features:** Vimeo hero background video, YouTube welcome video, interactive before/after image slider, glass-morphism hover effects on CTAs, transparent navigation, fully clickable service tiles, savings and quote calculators, film comparison tools, trust badges with social proof metrics, customer testimonials with Google reviews integration, and contact forms with validation.
 
 ### Backend Architecture
 **Server Framework:** Express.js with TypeScript for API routing.
