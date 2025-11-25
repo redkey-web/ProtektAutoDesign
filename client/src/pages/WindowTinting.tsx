@@ -9,6 +9,11 @@ import { Shield, Sun, Thermometer, Eye, Check } from 'lucide-react';
 import heroImage from '@assets/Windown tinting_1763343495843.webp';
 import teamWorkImage from '@assets/window tint_1764036060927.webp';
 import patternLogo from '@assets/image_1764055702258.png';
+import ramShowroom from '@assets/image_1764072936497.png';
+import teslaWhite from '@assets/image_1764072963008.png';
+import workshopAction from '@assets/image_1764072995131.png';
+import camrySide from '@assets/image_1764073032097.png';
+import camryRear from '@assets/image_1764073128235.png';
 
 export default function WindowTinting() {
   const faqItems: FAQItem[] = [
@@ -163,6 +168,102 @@ export default function WindowTinting() {
               <div className="absolute bottom-4 left-4 right-4 text-white">
                 <p className="text-sm font-medium">Expert Precision Application</p>
                 <p className="text-xs text-white/80">Our certified technicians ensure flawless results</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Window Tinting Gallery */}
+      <section className="py-20 bg-muted/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Our Window Tinting Work
+            </h2>
+            <p className="text-foreground/70 text-lg">
+              See the quality and precision of our professional window tinting installations
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div 
+              className="relative group overflow-hidden rounded-md hover-elevate active-elevate-2 transition-all cursor-pointer"
+              data-testid="gallery-img-ram"
+            >
+              <img
+                src={ramShowroom}
+                alt="RAM 1500 TRX with professional ceramic window tinting"
+                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-sm font-medium">RAM 1500 TRX</p>
+                <p className="text-xs text-white/80">Premium Ceramic Tint</p>
+              </div>
+            </div>
+
+            <div 
+              className="relative group overflow-hidden rounded-md hover-elevate active-elevate-2 transition-all cursor-pointer"
+              data-testid="gallery-img-tesla"
+            >
+              <img
+                src={teslaWhite}
+                alt="White Tesla Model 3 with ceramic window tinting"
+                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-sm font-medium">Tesla Model 3</p>
+                <p className="text-xs text-white/80">Ceramic Window Tint</p>
+              </div>
+            </div>
+
+            <div 
+              className="relative group overflow-hidden rounded-md hover-elevate active-elevate-2 transition-all cursor-pointer"
+              data-testid="gallery-img-workshop"
+            >
+              <img
+                src={workshopAction}
+                alt="Professional window tinting application in progress"
+                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-sm font-medium">Expert Application</p>
+                <p className="text-xs text-white/80">Our team at work</p>
+              </div>
+            </div>
+
+            <div 
+              className="relative group overflow-hidden rounded-md hover-elevate active-elevate-2 transition-all cursor-pointer"
+              data-testid="gallery-img-camry-side"
+            >
+              <img
+                src={camrySide}
+                alt="Toyota Camry Hybrid with professional window tinting"
+                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-sm font-medium">Toyota Camry Hybrid</p>
+                <p className="text-xs text-white/80">Complete Tint Package</p>
+              </div>
+            </div>
+
+            <div 
+              className="relative group overflow-hidden rounded-md hover-elevate active-elevate-2 transition-all cursor-pointer"
+              data-testid="gallery-img-camry-rear"
+            >
+              <img
+                src={camryRear}
+                alt="Toyota Camry showing completed window tint installation"
+                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-sm font-medium">Finished Installation</p>
+                <p className="text-xs text-white/80">NSW Legal Compliant</p>
               </div>
             </div>
           </div>

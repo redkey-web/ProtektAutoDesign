@@ -12,6 +12,11 @@ import motorcycleProtection from '@assets/Motorcycle ceramic coat protection syd
 import paintCorrection from '@assets/Paint correction_1763294797362.webp';
 import ppfProtection from '@assets/PPF _1763343626090.webp';
 import windowTinting from '@assets/Windown tinting_1763343495843.webp';
+import ramShowroom from '@assets/image_1764072936497.png';
+import teslaWhite from '@assets/image_1764072963008.png';
+import workshopAction from '@assets/image_1764072995131.png';
+import camrySide from '@assets/image_1764073032097.png';
+import camryRear from '@assets/image_1764073128235.png';
 
 interface GalleryImage {
   src: string;
@@ -23,6 +28,11 @@ const galleryImages: GalleryImage[] = [
   {
     src: windowTintTeam,
     alt: 'Professional window tinting application - Protekt Auto team at work',
+    category: 'Team at Work',
+  },
+  {
+    src: workshopAction,
+    alt: 'Expert technician applying window tint in our Sydney workshop',
     category: 'Team at Work',
   },
   {
@@ -43,6 +53,26 @@ const galleryImages: GalleryImage[] = [
   {
     src: windowTinting,
     alt: 'Ceramic window tinting installation',
+    category: 'Window Tinting',
+  },
+  {
+    src: ramShowroom,
+    alt: 'RAM 1500 TRX with professional ceramic window tinting in modern showroom',
+    category: 'Window Tinting',
+  },
+  {
+    src: teslaWhite,
+    alt: 'White Tesla Model 3 showcasing premium ceramic window tint',
+    category: 'Window Tinting',
+  },
+  {
+    src: camrySide,
+    alt: 'Toyota Camry Hybrid with professional window tinting application',
+    category: 'Window Tinting',
+  },
+  {
+    src: camryRear,
+    alt: 'Toyota Camry showing completed window tint installation',
     category: 'Window Tinting',
   },
   {
