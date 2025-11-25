@@ -4,6 +4,8 @@ import TintComparison from '@/components/TintComparison';
 import FAQ, { FAQItem } from '@/components/FAQ';
 import SEO from '@/components/SEO';
 import UrgencyBanner from '@/components/UrgencyBanner';
+import TrustBadges from '@/components/TrustBadges';
+import Testimonials from '@/components/Testimonials';
 import { Card, CardContent } from '@/components/ui/card';
 import { Shield, Sun, Thermometer, Eye, Check } from 'lucide-react';
 import heroImage from '@assets/Windown tinting_1763343495843.webp';
@@ -97,6 +99,10 @@ export default function WindowTinting() {
             highlight="Book your tinting before December rush."
             icon="trending"
           />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+          <TrustBadges />
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -278,6 +284,8 @@ export default function WindowTinting() {
         </div>
         </div>
       </section>
+
+      <Testimonials />
 
       <FAQ items={faqItems} title="Window Tinting FAQs" />
 

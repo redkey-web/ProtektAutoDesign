@@ -5,6 +5,8 @@ import BeforeAfterSlider from '@/components/BeforeAfterSlider';
 import FAQ, { FAQItem } from '@/components/FAQ';
 import SEO from '@/components/SEO';
 import RelatedServices from '@/components/RelatedServices';
+import TrustBadges from '@/components/TrustBadges';
+import Testimonials from '@/components/Testimonials';
 import { Card } from '@/components/ui/card';
 import heroImage from '@assets/Paint correction_1763294797362.webp';
 import ceramicImage from '@assets/generated_images/Ceramic_coating_hero_image_2e9cd7e0.png';
@@ -117,6 +119,10 @@ export default function PaintCorrection() {
       />
 
       <section className="py-20 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+          <TrustBadges />
+        </div>
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto mb-16">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6 text-center">
@@ -370,6 +376,8 @@ export default function PaintCorrection() {
           </div>
         </div>
       </section>
+
+      <Testimonials />
 
       <RelatedServices
         services={[

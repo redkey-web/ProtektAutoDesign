@@ -3,6 +3,8 @@ import ContactSection from '@/components/ContactSection';
 import FAQ, { FAQItem } from '@/components/FAQ';
 import SEO from '@/components/SEO';
 import UrgencyBanner from '@/components/UrgencyBanner';
+import TrustBadges from '@/components/TrustBadges';
+import Testimonials from '@/components/Testimonials';
 import { Card, CardContent } from '@/components/ui/card';
 import { Shield, Droplets, Sparkles } from 'lucide-react';
 import heroImage from '@assets/Motorcycle ceramic coat protection sydney_1763343837693.webp';
@@ -87,6 +89,10 @@ export default function MotorcycleProtection() {
             highlight="Protect your bike before the first ride."
             icon="trending"
           />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+          <TrustBadges />
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -292,6 +298,8 @@ export default function MotorcycleProtection() {
           </div>
         </div>
       </section>
+
+      <Testimonials />
 
       <section className="relative overflow-hidden">
         {/* Pattern Overlay */}

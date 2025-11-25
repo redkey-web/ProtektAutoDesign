@@ -5,6 +5,8 @@ import FAQ, { FAQItem } from '@/components/FAQ';
 import SEO from '@/components/SEO';
 import UrgencyBanner from '@/components/UrgencyBanner';
 import RelatedServices from '@/components/RelatedServices';
+import TrustBadges from '@/components/TrustBadges';
+import Testimonials from '@/components/Testimonials';
 import heroImage from '@assets/Ceramic coating service Sydney - New Car Protection_1763295133288.webp';
 import patternLogo from '@assets/image_1764055702258.png';
 import redKiaStinger from '@assets/image_1764078183711.png';
@@ -93,6 +95,10 @@ export default function NewCarProtection() {
             highlight="Only 4 new car protection slots remaining!"
             icon="clock"
           />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+          <TrustBadges />
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -356,6 +362,8 @@ export default function NewCarProtection() {
           </div>
         </div>
       </section>
+
+      <Testimonials />
 
       <section className="relative overflow-hidden">
         {/* Pattern Overlay */}

@@ -4,6 +4,8 @@ import FAQ, { FAQItem } from '@/components/FAQ';
 import SEO from '@/components/SEO';
 import UrgencyBanner from '@/components/UrgencyBanner';
 import RelatedServices from '@/components/RelatedServices';
+import TrustBadges from '@/components/TrustBadges';
+import Testimonials from '@/components/Testimonials';
 import { Card, CardContent } from '@/components/ui/card';
 import { Shield, Zap, Droplets, RefreshCw } from 'lucide-react';
 import heroImage from '@assets/PPF _1763343626090.webp';
@@ -125,6 +127,10 @@ export default function StonechipProtection() {
             highlight="Book early for high-demand models."
             icon="trending"
           />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+          <TrustBadges />
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -448,6 +454,8 @@ export default function StonechipProtection() {
           </div>
         </div>
       </section>
+
+      <Testimonials />
 
       <section className="relative overflow-hidden">
         {/* Pattern Overlay */}
