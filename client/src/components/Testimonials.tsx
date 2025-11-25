@@ -52,7 +52,6 @@ export default function Testimonials() {
           backgroundRepeat: 'repeat',
           backgroundSize: '60px 60px',
           backgroundAttachment: 'fixed',
-          filter: 'invert(1)',
         }}
       />
       
