@@ -1,5 +1,6 @@
 import { Star } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import patternLogo from '@assets/image_1764055702258.png';
 
 interface Testimonial {
   name: string;
@@ -42,8 +43,18 @@ const testimonials: Testimonial[] = [
 
 export default function Testimonials() {
   return (
-    <section className="py-20 bg-muted/30" data-testid="testimonials-section">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20 bg-muted/30 relative overflow-hidden" data-testid="testimonials-section">
+      {/* Pattern Overlay */}
+      <div 
+        className="absolute inset-0 pointer-events-none opacity-25"
+        style={{
+          backgroundImage: `url(${patternLogo})`,
+          backgroundRepeat: 'repeat',
+          backgroundSize: '150px 150px',
+        }}
+      />
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
             What Our Customers Say
