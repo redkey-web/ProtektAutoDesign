@@ -95,6 +95,24 @@ export default function NewCarProtection() {
             </p>
           </div>
 
+          <div className="max-w-4xl mx-auto mb-16">
+            <div className="relative w-full rounded-lg overflow-hidden shadow-xl" style={{ aspectRatio: '16/9' }}>
+              <iframe
+                className="absolute top-0 left-0 w-full h-full"
+                src="https://www.youtube.com/embed/VnLmuumbiaA?si=NbahIa814vG7dN0Q&amp;start=1"
+                title="Ceramic Coating Application Process"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+                data-testid="video-ceramic-coating"
+              />
+            </div>
+            <p className="text-foreground/70 text-sm text-center mt-4 italic">
+              Watch our professional ceramic coating application process
+            </p>
+          </div>
+
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             <PricingCard
               name="Ceramic Professional"
