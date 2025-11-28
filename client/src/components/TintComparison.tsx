@@ -21,11 +21,11 @@ export default function TintComparison() {
   const films: TintSpec[] = [
     {
       name: 'Carbon Film',
-      price: 'From $400',
+      price: 'From $350',
       uvRejection: 99,
-      heatRejection: 45,
-      glareReduction: 60,
-      warranty: '5 years',
+      heatRejection: 42,
+      glareReduction: 78,
+      warranty: 'Lifetime film & labour',
       features: [
         'Non-metallic construction',
         'Won\'t interfere with electronics',
@@ -38,8 +38,8 @@ export default function TintComparison() {
       price: 'From $650',
       uvRejection: 99,
       heatRejection: 65,
-      glareReduction: 75,
-      warranty: 'Lifetime',
+      glareReduction: 78,
+      warranty: 'Lifetime film & labour',
       recommended: true,
       features: [
         'Nano-ceramic technology',
@@ -51,11 +51,11 @@ export default function TintComparison() {
     },
     {
       name: 'Premium Ceramic',
-      price: 'From $950',
+      price: 'From $890',
       uvRejection: 99,
-      heatRejection: 85,
-      glareReduction: 85,
-      warranty: 'Lifetime',
+      heatRejection: 71,
+      glareReduction: 78,
+      warranty: 'Lifetime film & labour',
       features: [
         'Top-tier ceramic film',
         'Highest heat rejection',
@@ -164,9 +164,9 @@ export default function TintComparison() {
                           <Thermometer className="w-6 h-6 text-primary" />
                         </div>
                         <div>
-                          <h6 className="font-semibold mb-1">Heat Reduction</h6>
+                          <h6 className="font-semibold mb-1">Solar Energy Rejection</h6>
                           <p className="text-sm text-foreground/60">
-                            Rejects {film.heatRejection}% of infrared heat for superior cabin comfort
+                            Rejects up to {film.heatRejection}% of solar energy for increased cabin comfort
                             and reduced A/C load.
                           </p>
                         </div>

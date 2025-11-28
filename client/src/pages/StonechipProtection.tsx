@@ -73,31 +73,41 @@ export default function StonechipProtection() {
 
   const coverageOptions = [
     {
-      name: 'Partial Front',
-      areas: ['Front bumper', 'Partial bonnet', 'Headlights', 'Side mirrors'],
-      price: 'From $1,200',
+      name: 'Standard Front Kit',
+      areas: ['Front bumper bar', 'Bonnet leading edge', 'Front guards', 'Side mirrors'],
+      price: 'From $1,750',
     },
     {
-      name: 'Full Front',
-      areas: ['Front bumper', 'Full bonnet', 'Full front guards', 'Headlights', 'Side mirrors'],
-      price: 'From $2,500',
+      name: 'Complete Front Kit',
+      areas: ['Front bumper', 'Full bonnet', 'Full front guards', 'Side mirrors'],
+      price: 'From $2,600',
       popular: true,
     },
     {
       name: 'Track Pack',
       areas: [
-        'Full front coverage',
-        'Lower side sills',
+        'Full front kit coverage',
+        'Side sills',
         'A-pillars',
         'Leading edge of roof',
-        'Partial rear wheel arch',
+        'Partial lower wheel arch (behind rear wheel)',
       ],
-      price: 'From $3,400',
+      price: 'From $3,500',
     },
     {
-      name: 'Full Body',
-      areas: ['Complete vehicle wrap', 'All painted panels', 'Headlights', 'Maximum protection'],
-      price: 'From $6,000',
+      name: 'Full Sides',
+      areas: ['Side doors (x4)', 'Front guards', 'Rocker panels', 'Rear guards', 'Top cant rails'],
+      price: 'From $3,800',
+    },
+    {
+      name: 'Wear & Tear Kit',
+      areas: ['Door cups', 'Door edges', 'Top of rear bumper strip', 'Inner door sill strips'],
+      price: 'From $550',
+    },
+    {
+      name: 'Full Wraps',
+      areas: ['All exterior painted panels', 'Complete vehicle coverage', 'Maximum protection'],
+      price: 'From $6,800',
     },
   ];
 
@@ -161,7 +171,7 @@ export default function StonechipProtection() {
             <h3 className="font-display text-2xl font-bold text-foreground mb-8 text-center">
               Coverage Options
             </h3>
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {coverageOptions.map((option) => (
                 <Card
                   key={option.name}
@@ -188,6 +198,14 @@ export default function StonechipProtection() {
                   </CardContent>
                 </Card>
               ))}
+            </div>
+            <div className="mt-8 p-6 bg-card rounded-lg">
+              <p className="text-foreground/70 text-sm">
+                <strong className="text-foreground">Bulk and custom fitting services</strong> are also available for maximum coverage. Prices are based on the application required.
+              </p>
+              <p className="text-foreground/60 text-xs mt-3 italic">
+                * Prices quoted above are "Starting From" based on small-size hatch/coupes and should only be used as an approximate guide. Prices/packages will vary depending on the size and trim level of the vehicle. Additional costs apply for applications to plastic, carbon and painted trims.
+              </p>
             </div>
           </div>
 

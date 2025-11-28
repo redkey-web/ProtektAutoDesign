@@ -98,9 +98,9 @@ export default function Home() {
       />
       <StructuredData type="AutomotiveBusiness" />
       <Hero
-        title="Sydney's #1 Paint Protection & Car Care Workshops"
+        title="Sydney's #1 Paint Protection & Car Care Specialists"
         subtitle="Premium Automotive Detailing"
-        description="The best paint protection coatings & films in Sydney"
+        description="The best ceramic coatings & paint protection films in Sydney"
         videoUrl="https://player.vimeo.com/video/578269899"
         ctaText="View Services"
         ctaLink="#services"

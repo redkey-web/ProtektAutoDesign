@@ -129,7 +129,7 @@ export default function NewCarProtection() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
             <PricingCard
               name="Ceramic Professional"
               price="From $950"
@@ -144,6 +144,9 @@ export default function NewCarProtection() {
               popular={true}
             />
           </div>
+          <p className="text-foreground/60 text-xs text-center mb-16 italic max-w-2xl mx-auto">
+            * "From" prices listed are based on a small sized vehicle. Price will vary depending on size and colour of the vehicle.
+          </p>
 
           <div className="max-w-2xl mx-auto">
             <h3 className="font-display text-2xl font-bold text-foreground mb-8 text-center">
