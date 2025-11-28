@@ -3,7 +3,16 @@
 ## Overview
 Protekt Auto is a luxury automotive detailing and protection service website for a Sydney-based business. It specializes in ceramic coatings, paint correction, window tinting, and paint protection film (PPF). The project is a full-stack React application with an Express backend, designed to provide an immersive visual experience mirroring the sophistication of luxury automotive brands.
 
-## Recent Changes (November 25, 2025)
+## Recent Changes (November 28, 2025)
+**Content & Pricing Updates**:
+- Home Page: Updated hero tagline to "Sydney's #1 Paint Protection & Car Care Specialists" and description to "The best ceramic coatings & paint protection films in Sydney"
+- Business Hours: Monday-Friday 8:00am-4:30pm, Saturday 8:30am-11:00am (appointment only for pick ups, drop offs & quotes), Sunday Closed
+- Window Tinting: New pricing ($350/$650/$890), Solar Energy Rejection specs (42%/65%/71%), 78% glare reduction, Lifetime film & labour warranties
+- PPF Page: 6 packages (Wear & Tear $550, Standard Front $1,750, Complete Front $2,600, Track Pack $3,500, Full Sides $3,800, Full Wraps $6,800) with pricing disclaimers
+- Ceramic Coating: Added pricing note about vehicle size affecting quotes
+- Testimonials: Updated with 4 real Google reviews (John Tran, liftytim, Hieu Nguyen, Peter Lynden) with yellow Google-style stars, time stamps, and clickable Google Reviews badge
+
+## Previous Changes (November 25, 2025)
 **Trust & Social Proof Integration**: Added TrustBadges and Testimonials components to all service pages (New Car Protection, Paint Correction, Window Tinting, Stonechip Protection, Motorcycle Protection, Packages). TrustBadges display 4 credibility indicators (4.9/5 Google Rating, 10+ Years Experience, 1000+ Happy Customers, Certified Applicators) positioned after hero sections. Testimonials showcase 4 customer reviews with 5-star ratings and aggregate Google rating (4.9 based on 150+ reviews) positioned before FAQ sections.
 
 ## User Preferences

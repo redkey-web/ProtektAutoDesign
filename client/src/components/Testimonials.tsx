@@ -1,4 +1,5 @@
 import { Star } from 'lucide-react';
+import { SiGoogle } from 'react-icons/si';
 import { Card, CardContent } from '@/components/ui/card';
 import patternLogo from '@assets/image_1764055702258.png';
 
@@ -8,36 +9,41 @@ interface Testimonial {
   rating: number;
   text: string;
   service: string;
+  timeAgo: string;
 }
 
 const testimonials: Testimonial[] = [
   {
-    name: 'James M.',
+    name: 'John Tran',
     vehicle: 'Porsche 911 GT3',
     rating: 5,
-    text: 'Exceptional work on my GT3. The ceramic coating looks absolutely stunning and the paint correction removed years of swirls. Highly professional team.',
-    service: 'Ceramic Coating & Paint Correction',
+    text: 'This is the second time I came to see these guys, they are professionals at what they do, they talk to you let you know what\'s going on, and they are very friendly, my time with them has always been pleasant, and I\'m very happy with the result for a second time, so thank you to you Dave and the team',
+    service: 'Return Customer',
+    timeAgo: '8 weeks ago',
   },
   {
-    name: 'Sarah T.',
-    vehicle: 'Mercedes-Benz AMG',
+    name: 'liftytim',
+    vehicle: 'BMW M2',
     rating: 5,
-    text: 'Best PPF installation in Sydney. The self-healing film is incredible and the finish is flawless. Worth every dollar to protect my AMG.',
-    service: 'Paint Protection Film',
+    text: 'Absolutely amazing attention to detail with service to match. I get a heap of comments about the satin PPF on my BMW M2. Probably because it doesn\'t look like a wrap at all. Mint condition over 2 years later. Both cars ceramic coated as well, making them incredibly easy to maintain. Highly recommend.',
+    service: 'Satin PPF & Ceramic Coating',
+    timeAgo: '19 weeks ago',
   },
   {
-    name: 'Michael R.',
-    vehicle: 'BMW M4',
+    name: 'Hieu Nguyen',
+    vehicle: 'Mitsubishi Pajero',
     rating: 5,
-    text: 'Outstanding service from start to finish. The graphene coating has made washing so easy and the gloss is deeper than factory. Can\'t recommend enough!',
-    service: 'Graphene Coating',
+    text: 'Absolutely recommend Protekt Auto! I\'ve had multiple vehicles tinted here and the quality is always top-notch. David and the team are legends — their product knowledge, attention to detail, and passion for what they do really shine through. Most recently, they did a Stage 1 detail on my Pajero and it came out looking like a million bucks.',
+    service: 'Window Tinting & Detailing',
+    timeAgo: '20 weeks ago',
   },
   {
-    name: 'David L.',
-    vehicle: 'Audi RS6',
+    name: 'Peter Lynden',
+    vehicle: 'Local Guide',
     rating: 5,
-    text: 'Had the full Track package done. The attention to detail is incredible. Every inch of the car is protected and looks better than new.',
-    service: 'Track Package',
+    text: 'Thank you to David and his staff for an outstanding job on our new car. It looks amazing. I would recommend ProTekt for attention to detail, customer service and communication and a first rate facility. I will use them again in the future. Conveniently located as well near train station and major roads.',
+    service: 'New Car Protection',
+    timeAgo: '25 weeks ago',
   },
 ];
 
@@ -73,17 +79,20 @@ export default function Testimonials() {
               data-testid={`testimonial-${index}`}
             >
               <CardContent className="p-6">
-                <div className="flex gap-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="w-5 h-5 fill-primary text-primary"
-                      data-testid={`star-${i}`}
-                    />
-                  ))}
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex gap-1">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star
+                        key={i}
+                        className="w-4 h-4 fill-yellow-400 text-yellow-400"
+                        data-testid={`star-${i}`}
+                      />
+                    ))}
+                  </div>
+                  <span className="text-xs text-foreground/50">{testimonial.timeAgo}</span>
                 </div>
                 
-                <p className="text-foreground/80 mb-4 text-sm leading-relaxed">
+                <p className="text-foreground/80 mb-4 text-sm leading-relaxed line-clamp-5">
                   "{testimonial.text}"
                 </p>
                 
@@ -100,16 +109,27 @@ export default function Testimonials() {
         </div>
 
         <div className="text-center mt-12">
-          <div className="inline-flex items-center gap-4 bg-card p-6 rounded-lg border border-border">
+          <a 
+            href="https://www.google.com/search?q=protekt+auto+clyde+reviews" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-4 bg-card p-6 rounded-lg border border-border hover-elevate transition-all cursor-pointer"
+            data-testid="link-google-reviews"
+          >
+            <SiGoogle className="w-8 h-8 text-foreground" />
             <div className="flex items-center gap-2">
-              <Star className="w-6 h-6 fill-primary text-primary" />
-              <span className="text-3xl font-bold text-foreground">4.9</span>
+              <div className="flex gap-0.5">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                ))}
+              </div>
+              <span className="text-2xl font-bold text-foreground">4.9</span>
             </div>
-            <div className="text-left">
-              <p className="font-semibold text-foreground">Rated on Google</p>
+            <div className="text-left border-l border-border pl-4">
+              <p className="font-semibold text-foreground">Google Reviews</p>
               <p className="text-sm text-foreground/60">Based on 150+ reviews</p>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </section>
