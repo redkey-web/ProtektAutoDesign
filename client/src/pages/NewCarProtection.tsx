@@ -115,7 +115,7 @@ export default function NewCarProtection() {
             <div className="relative w-full rounded-lg overflow-hidden shadow-xl" style={{ aspectRatio: '16/9' }}>
               <iframe
                 className="absolute top-0 left-0 w-full h-full"
-                src="https://www.youtube.com/embed/VnLmuumbiaA?si=NbahIa814vG7dN0Q&amp;start=1"
+                src="https://www.youtube.com/embed/O4DKBON2hzs?si=NBUCVlrwm2GKTS7b"
                 title="Ceramic Coating Application Process"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
