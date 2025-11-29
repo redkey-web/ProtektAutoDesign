@@ -480,9 +480,9 @@
     animation: nav-glow 2s ease-in-out infinite;
   }
 
-  /* 3D Dot Pattern Background - Prominent with dark background */
+  /* 3D Dot Pattern Background - Prominent with light background */
   .ceramic-coating-dot-pattern {
-    background-color: hsl(222 47% 8%);
+    background-color: hsl(220 15% 92%);
     background-image: 
       radial-gradient(circle, hsl(187 100% 42% / 0.35) 1.5px, transparent 1.5px),
       radial-gradient(circle, hsl(187 100% 50% / 0.2) 3px, transparent 3px),
