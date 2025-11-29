@@ -88,11 +88,8 @@ export default function NewCarProtection() {
         showPhoneCta={true}
       />
 
-      <section className="py-20 bg-background relative overflow-hidden">
-        {/* 3D Dot Pattern Background Overlay */}
-        <div className="dot-pattern-3d opacity-40" aria-hidden="true" />
-        
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 relative z-10">
+      <section className="py-20 bg-background ceramic-coating-dot-pattern">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
           <UrgencyBanner
             message="Limited spots available this month."
             highlight="Only 4 new car protection slots remaining!"
@@ -100,7 +97,7 @@ export default function NewCarProtection() {
           />
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
           <TrustBadges />
         </div>
 
@@ -372,14 +369,7 @@ export default function NewCarProtection() {
       <Testimonials />
 
       <section className="relative overflow-hidden">
-        {/* 3D Dot Wave Pattern Overlay */}
-        <div className="dot-pattern-wave opacity-30" aria-hidden="true">
-          <div className="wave-layer wave-layer-1" />
-          <div className="wave-layer wave-layer-2" />
-          <div className="wave-layer wave-layer-3" />
-        </div>
-        
-        {/* Logo Pattern Overlay */}
+        {/* Pattern Overlay */}
         <div 
           className="absolute inset-0 pointer-events-none opacity-[0.02]"
           style={{
