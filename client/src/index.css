@@ -480,13 +480,15 @@
     animation: nav-glow 2s ease-in-out infinite;
   }
 
-  /* 3D Dot Pattern Background - Simplified stable version */
+  /* 3D Dot Pattern Background - Prominent with dark background */
   .ceramic-coating-dot-pattern {
+    background-color: hsl(222 47% 8%);
     background-image: 
-      radial-gradient(circle, hsl(187 100% 42% / 0.08) 1px, transparent 1px),
-      radial-gradient(circle, hsl(187 100% 50% / 0.05) 2px, transparent 2px);
-    background-size: 30px 30px, 60px 60px;
-    background-position: 0 0, 15px 15px;
+      radial-gradient(circle, hsl(187 100% 42% / 0.35) 1.5px, transparent 1.5px),
+      radial-gradient(circle, hsl(187 100% 50% / 0.2) 3px, transparent 3px),
+      radial-gradient(circle, hsl(187 100% 60% / 0.12) 1px, transparent 1px);
+    background-size: 30px 30px, 60px 60px, 15px 15px;
+    background-position: 0 0, 15px 15px, 7px 7px;
     background-attachment: fixed;
   }
 }
