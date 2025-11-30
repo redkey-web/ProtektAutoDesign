@@ -130,6 +130,12 @@ export default function StonechipProtection() {
         showPhoneCta={true}
       />
 
+      <section className="py-12 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <TrustBadges />
+        </div>
+      </section>
+
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
           <UrgencyBanner
@@ -137,10 +143,6 @@ export default function StonechipProtection() {
             highlight="Book early for high-demand models."
             icon="trending"
           />
-        </div>
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-          <TrustBadges />
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

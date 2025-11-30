@@ -89,7 +89,11 @@ export default function NewCarProtection() {
         showPhoneCta={true}
       />
 
-      <Testimonials />
+      <section className="py-12 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <TrustBadges />
+        </div>
+      </section>
 
       <GoogleReviewSummary />
 
@@ -100,10 +104,6 @@ export default function NewCarProtection() {
             highlight="Only 4 new car protection slots remaining!"
             icon="clock"
           />
-        </div>
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-          <TrustBadges />
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -133,6 +133,8 @@ export default function NewCarProtection() {
               Watch our professional ceramic coating application process
             </p>
           </div>
+
+          <Testimonials />
 
           <div className="grid md:grid-cols-2 gap-8 mb-8">
             <PricingCard
