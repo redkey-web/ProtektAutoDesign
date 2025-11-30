@@ -110,7 +110,11 @@ export default function Home() {
         showTrustBadges={true}
       />
 
-      <GoogleReviewSummary />
+      <section className="py-16 bg-background flex items-center justify-center">
+        <div className="w-full max-w-3xl px-4 sm:px-6 lg:px-8">
+          <GoogleReviewSummary />
+        </div>
+      </section>
 
       <section id="services" className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
