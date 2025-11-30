@@ -137,6 +137,29 @@ export default function Home() {
 
       <WelcomeVideo />
 
+      <section className="py-16 bg-card/50 border-t border-b border-border">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-3">
+              Beyond Automotive
+            </h3>
+            <p className="text-foreground/70 text-lg mb-6">
+              We also offer Commercial and Residential Window Tinting, Frosted Glass, and Natural Stone Protection Film services.
+            </p>
+            <a
+              href="https://www.protektsurfacesolutions.com.au"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover-elevate transition-all"
+              data-testid="link-protekt-surface-solutions"
+            >
+              Visit Protekt Surface Solutions
+              <span className="text-sm">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
       <Testimonials />
 
       <FeaturedArticles />
