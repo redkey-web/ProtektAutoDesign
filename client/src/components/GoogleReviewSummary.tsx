@@ -10,7 +10,7 @@ export default function GoogleReviewSummary() {
   };
 
   return (
-    <div className="py-12 bg-background border-t border-white/10">
+    <div className="py-0 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <button
           onClick={scrollToTestimonials}
