@@ -88,6 +88,8 @@ export default function NewCarProtection() {
         showPhoneCta={true}
       />
 
+      <Testimonials />
+
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
           <UrgencyBanner
@@ -365,8 +367,6 @@ export default function NewCarProtection() {
           </div>
         </div>
       </section>
-
-      <Testimonials />
 
       <section className="relative overflow-hidden">
         {/* Pattern Overlay */}

@@ -123,11 +123,11 @@ export default function Testimonials() {
                   <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                 ))}
               </div>
-              <span className="text-2xl font-bold text-foreground">4.9</span>
+              <span className="text-2xl font-bold text-foreground">5.0</span>
             </div>
             <div className="text-left border-l border-border pl-4">
               <p className="font-semibold text-foreground">Google Reviews</p>
-              <p className="text-sm text-foreground/60">Based on 150+ reviews</p>
+              <p className="text-sm text-foreground/60">Based on 160+ reviews</p>
             </div>
           </a>
         </div>
