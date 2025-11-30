@@ -7,7 +7,7 @@ const blogPosts: InsertPost[] = [
     title: "Ultimate Guide to Ceramic Coating vs Graphene Coating in Sydney",
     author: "Protekt Auto Team",
     excerpt: "Confused about ceramic vs graphene coatings for your car? This comprehensive guide breaks down the differences, benefits, and which protection is right for your Sydney vehicle.",
-    coverImage: "/attached_assets/Ceramic coating service Sydney - New Car Protection_1763295133288.webp",
+    coverImage: "https://images.unsplash.com/photo-1533619927073-ffe591cbf048?w=800&q=80",
     content: `
       <h2>Choosing the Right Paint Protection for Your Vehicle</h2>
       <p>When it comes to protecting your vehicle's paint in Sydney's harsh climate, choosing between ceramic and graphene coatings can be challenging. Both offer exceptional protection, but understanding their differences will help you make the right investment for your car.</p>
@@ -107,7 +107,7 @@ const blogPosts: InsertPost[] = [
     title: "How PPF Track Packs Protect Performance Vehicles on Australian Roads",
     author: "Protekt Auto Team",
     excerpt: "Track packs offer comprehensive PPF coverage for performance cars. Learn how this advanced protection saves your investment from Australia's harsh road conditions.",
-    coverImage: "/attached_assets/Track+pack.png_1764037523863.webp",
+    coverImage: "https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=800&q=80",
     content: `
       <h2>Ultimate Protection for Performance Vehicles</h2>
       <p>Performance vehicles represent significant investments, and protecting them from Australia's unique road conditions is essential. Paint Protection Film (PPF) Track Packs offer comprehensive coverage specifically designed for enthusiasts who demand the best protection for their high-performance cars.</p>
@@ -256,7 +256,7 @@ const blogPosts: InsertPost[] = [
     title: "Window Tinting Laws & Comfort Benefits for NSW Drivers",
     author: "Protekt Auto Team",
     excerpt: "Complete guide to NSW window tinting regulations and how quality tint improves comfort, protects interiors, and reduces energy costs in Sydney's climate.",
-    coverImage: "/attached_assets/Windown tinting_1763343495843.webp",
+    coverImage: "https://images.unsplash.com/photo-1489824904134-891ab64532f1?w=800&q=80",
     content: `
       <h2>Understanding NSW Window Tinting Regulations</h2>
       <p>Window tinting offers significant benefits for Sydney drivers, but understanding NSW legal requirements is essential before installation. This comprehensive guide covers everything you need to know about window tint laws and the comfort benefits for your vehicle.</p>
@@ -452,7 +452,7 @@ const blogPosts: InsertPost[] = [
     title: "Motorcycle Detailing Checklist Before Your Next Ride",
     author: "Protekt Auto Team",
     excerpt: "Essential motorcycle care guide covering ceramic coating, PPF protection, and maintenance tips to keep your bike looking showroom-fresh in Sydney conditions.",
-    coverImage: "/attached_assets/Motorcycle ceramic coat protection sydney_1763343837693.webp",
+    coverImage: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
     content: `
       <h2>Complete Motorcycle Protection and Detailing Guide</h2>
       <p>Motorcycles face even harsher conditions than cars - direct exposure to road debris, bugs, weather, and UV radiation without the protection of an enclosed cabin. This comprehensive checklist ensures your bike stays protected and looking its best.</p>
@@ -699,7 +699,7 @@ const blogPosts: InsertPost[] = [
     title: "New Car Delivery Protection Plan: First 30 Days Checklist",
     author: "Protekt Auto Team",
     excerpt: "Comprehensive protection plan for new car owners. Learn when to apply ceramic coating, PPF, and paint correction to maximize your investment from day one.",
-    coverImage: "/attached_assets/Full packages Protekt Auto_1763295209283.webp",
+    coverImage: "https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=800&q=80",
     content: `
       <h2>Protecting Your New Car Investment From Day One</h2>
       <p>Congratulations on your new car purchase! The first 30 days after delivery are critical for establishing a protection plan that will preserve your vehicle's showroom condition for years to come. This comprehensive checklist ensures you make the right decisions at the right time.</p>
