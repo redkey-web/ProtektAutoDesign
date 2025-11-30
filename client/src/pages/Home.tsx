@@ -7,6 +7,7 @@ import SEO from '@/components/SEO';
 import StructuredData from '@/components/StructuredData';
 import Testimonials from '@/components/Testimonials';
 import FeaturedArticles from '@/components/FeaturedArticles';
+import GoogleReviewSummary from '@/components/GoogleReviewSummary';
 import heroImage from '@assets/generated_images/Ceramic_coating_hero_image_2e9cd7e0.png';
 import ceramicImage from '@assets/Ceramic coating service Sydney - New Car Protection_1763295133288.webp';
 import paintCorrectionImage from '@assets/Paint correction_1763294797362.webp';
@@ -109,7 +110,9 @@ export default function Home() {
         showTrustBadges={true}
       />
 
-      <section id="services" className="py-20 bg-background mt-20">
+      <GoogleReviewSummary />
+
+      <section id="services" className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
