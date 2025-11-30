@@ -7,6 +7,7 @@ import UrgencyBanner from '@/components/UrgencyBanner';
 import RelatedServices from '@/components/RelatedServices';
 import TrustBadges from '@/components/TrustBadges';
 import Testimonials from '@/components/Testimonials';
+import GoogleReviewSummary from '@/components/GoogleReviewSummary';
 import heroImage from '@assets/Ceramic coating service Sydney - New Car Protection_1763295133288.webp';
 import patternLogo from '@assets/image_1764055702258.png';
 import redKiaStinger from '@assets/image_1764078183711.png';
@@ -89,6 +90,8 @@ export default function NewCarProtection() {
       />
 
       <Testimonials />
+
+      <GoogleReviewSummary />
 
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
