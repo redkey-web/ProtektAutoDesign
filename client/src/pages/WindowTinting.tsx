@@ -6,8 +6,14 @@ import SEO from '@/components/SEO';
 import UrgencyBanner from '@/components/UrgencyBanner';
 import TrustBadges from '@/components/TrustBadges';
 import Testimonials from '@/components/Testimonials';
+import FeaturedArticles from '@/components/FeaturedArticles';
 import { Card, CardContent } from '@/components/ui/card';
 import { Shield, Sun, Thermometer, Eye, Check } from 'lucide-react';
+import { useQuery } from '@tanstack/react-query';
+import { Link } from 'wouter';
+import { Badge } from '@/components/ui/badge';
+import { Calendar, User } from 'lucide-react';
+import { type Post } from '@shared/schema';
 import heroImage from '@assets/Windown tinting_1763343495843.webp';
 import teamWorkImage from '@assets/window tint_1764036060927.webp';
 import patternLogo from '@assets/image_1764055702258.png';
@@ -16,6 +22,7 @@ import teslaWhite from '@assets/image_1764072963008.png';
 import workshopAction from '@assets/image_1764072995131.png';
 import camrySide from '@assets/image_1764073032097.png';
 import camryRear from '@assets/image_1764073128235.png';
+import protektSurfaceLogo from '@assets/image_1764615091338.png';
 
 export default function WindowTinting() {
   const faqItems: FAQItem[] = [
@@ -287,11 +294,115 @@ export default function WindowTinting() {
         </div>
       </section>
 
+      <section className="py-16 bg-card/50 border-t border-b border-border">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-3">
+              Beyond Automotive
+            </h3>
+            <p className="text-foreground/70 text-lg mb-8">
+              We also offer Commercial and Residential Window Tinting, Frosted Glass, and Natural Stone Protection Film services.
+            </p>
+            <a
+              href="https://www.protektsurfacesolutions.com.au"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex hover-elevate transition-all"
+              data-testid="link-protekt-surface-solutions"
+            >
+              <img 
+                src={protektSurfaceLogo} 
+                alt="Protekt Surface Solutions" 
+                className="h-16 w-auto"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <RelatedWindowTintArticles />
+
       <Testimonials />
 
       <FAQ items={faqItems} title="Window Tinting FAQs" />
 
       <ContactSection />
     </div>
+  );
+}
+
+function RelatedWindowTintArticles() {
+  const { data: posts, isLoading } = useQuery<Post[]>({
+    queryKey: ['/api/posts'],
+  });
+
+  const windowTintPosts = posts?.filter(post => 
+    post.tags.includes('window tinting') || post.slug.includes('window-tinting')
+  ) || [];
+
+  if (isLoading || windowTintPosts.length === 0) {
+    return null;
+  }
+
+  return (
+    <section className="py-20 bg-background" data-testid="section-window-tint-articles">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+            Window Tinting Insights
+          </h2>
+          <p className="text-foreground/70 text-lg max-w-2xl mx-auto">
+            Expert advice and tips on window tinting benefits, NSW regulations, and protection solutions
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8">
+          {windowTintPosts.slice(0, 2).map((post) => (
+            <Link key={post.id} href={`/blog/${post.slug}`}>
+              <Card className="h-full hover-elevate active-elevate-2 transition-all cursor-pointer" data-testid={`card-window-tint-${post.slug}`}>
+                {post.coverImage && (
+                  <div className="aspect-video w-full overflow-hidden rounded-t-lg">
+                    <img
+                      src={post.coverImage}
+                      alt={post.title}
+                      className="w-full h-full object-cover"
+                      data-testid={`img-window-tint-cover-${post.slug}`}
+                    />
+                  </div>
+                )}
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-2 mb-3 flex-wrap">
+                    {post.tags.slice(0, 2).map((tag) => (
+                      <Badge key={tag} variant="secondary" className="text-xs">
+                        {tag}
+                      </Badge>
+                    ))}
+                  </div>
+                  <h3 className="font-display text-xl font-bold text-foreground hover:text-primary transition-colors line-clamp-2 mb-3" data-testid={`text-window-tint-title-${post.slug}`}>
+                    {post.title}
+                  </h3>
+                  <p className="text-foreground/70 mb-4 line-clamp-2 text-sm" data-testid={`text-window-tint-excerpt-${post.slug}`}>
+                    {post.excerpt}
+                  </p>
+                  <div className="flex items-center gap-3 text-xs text-foreground/50">
+                    <span className="flex items-center gap-1">
+                      <User className="w-3 h-3" />
+                      {post.author}
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <Calendar className="w-3 h-3" />
+                      {new Date(post.publishedAt).toLocaleDateString('en-AU', {
+                        month: 'short',
+                        day: 'numeric',
+                      })}
+                    </span>
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }
