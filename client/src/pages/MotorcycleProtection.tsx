@@ -14,6 +14,9 @@ import blackDucatiSide from '@assets/image_1764079593202.png';
 import blackDucatiRear from '@assets/image_1764079603369.png';
 import burgundyHarley from '@assets/image_1764079613406.png';
 import orangeHarleyShop from '@assets/image_1764079622210.png';
+import ppfStandardKit from '@assets/image_1764602606328.png';
+import ppfExtendedKit from '@assets/image_1764602635146.png';
+import workshopImage from '@assets/image_1764602659202.png';
 
 export default function MotorcycleProtection() {
   const faqItems: FAQItem[] = [
@@ -39,27 +42,39 @@ export default function MotorcycleProtection() {
     },
   ];
 
+  const ceramicPackages = [
+    { name: 'Sports Bike', price: '$790' },
+    { name: 'Cruiser/Naked', price: '$950' },
+    { name: 'Large Cruiser', price: '$1,100' },
+  ];
+
+  const ppfPackages = [
+    { name: 'Standard Kit', price: 'From $850', description: 'Nose cone, headlights, leading edge of side fairings, wheel guard, tank wear areas & seat' },
+    { name: 'Extended Kit', price: 'From $2,200', description: 'Standard kit plus full side fairings and top tank section' },
+    { name: 'Full Custom', price: 'From $2,950', description: 'Complete coverage of all exterior painted surfaces' },
+  ];
+
   const services = [
     {
       icon: Sparkles,
       title: 'Ceramic Coating',
       description:
         'Premium ceramic protection for your motorcycle\'s paint, wheels, and components for enhanced gloss and easy maintenance.',
-      price: 'From $600',
+      price: 'From $790',
     },
     {
       icon: Shield,
       title: 'Paint Protection Film',
       description:
         'Strategic PPF application on high-impact areas like tank, fenders, and fairings to prevent chips and scratches.',
-      price: 'From $800',
+      price: 'From $850',
     },
     {
       icon: Droplets,
       title: 'Complete Protection Package',
       description:
         'Full ceramic coating plus PPF on critical areas for maximum protection and showroom finish.',
-      price: 'From $1,400',
+      price: 'From $2,600',
     },
   ];
 
@@ -187,6 +202,80 @@ export default function MotorcycleProtection() {
         </div>
       </section>
 
+      {/* PPF Coverage Area Section */}
+      <section className="py-20 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+              PPF Coverage Options
+            </h2>
+            <p className="text-foreground/70 text-lg max-w-2xl mx-auto">
+              Choose the coverage level that matches your riding style and protection needs
+            </p>
+          </div>
+
+          {/* Coverage Diagrams */}
+          <div className="grid md:grid-cols-2 gap-8 mb-16">
+            <div className="space-y-4" data-testid="section-ppf-standard">
+              <div className="rounded-md overflow-hidden bg-muted hover-elevate active-elevate-2 transition-all">
+                <img
+                  src={ppfStandardKit}
+                  alt="Standard PPF Kit coverage areas"
+                  className="w-full h-auto"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div className="bg-card p-6 rounded-md">
+                <h3 className="font-display text-xl font-bold text-foreground mb-3">Standard Kit</h3>
+                <p className="text-foreground/70 mb-4 text-sm">
+                  Perfect for daily riders. Protects all high-impact areas including nose cone, headlights, leading edge of side fairings, wheel guard, main tank wear areas and seat/duck tail.
+                </p>
+                <p className="text-2xl font-bold text-primary">From $850</p>
+              </div>
+            </div>
+
+            <div className="space-y-4" data-testid="section-ppf-extended">
+              <div className="rounded-md overflow-hidden bg-muted hover-elevate active-elevate-2 transition-all">
+                <img
+                  src={ppfExtendedKit}
+                  alt="Extended PPF Kit coverage areas"
+                  className="w-full h-auto"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div className="bg-card p-6 rounded-md">
+                <h3 className="font-display text-xl font-bold text-foreground mb-3">Extended Kit</h3>
+                <p className="text-foreground/70 mb-4 text-sm">
+                  Comprehensive protection including everything in Standard Kit plus full side fairings (upper and lower) and top tank section. Ideal for sport bike enthusiasts.
+                </p>
+                <p className="text-2xl font-bold text-primary">From $2,200</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Ceramic Packages */}
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
+            {ceramicPackages.map((pkg) => (
+              <Card key={pkg.name} className="hover-elevate active-elevate-2 transition-all">
+                <CardContent className="p-6">
+                  <h4 className="font-display text-lg font-bold text-foreground mb-2">{pkg.name}</h4>
+                  <p className="text-foreground/60 text-sm mb-4">Ceramic Coating Package</p>
+                  <p className="text-2xl font-bold text-primary">{pkg.price}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <div className="bg-card p-6 rounded-md border border-border/50 text-center">
+            <p className="text-foreground/60 text-sm">
+              * All prices are starting from and vary based on motorcycle size, type, and specific requirements. Contact us for a custom quote tailored to your bike.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Motorcycle Gallery */}
       <section className="py-20 bg-muted/30 relative overflow-hidden">
         <div 
@@ -295,6 +384,24 @@ export default function MotorcycleProtection() {
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <p className="text-sm font-medium">Harley-Davidson</p>
                 <p className="text-xs text-white/80">Premium Motorcycle Care</p>
+              </div>
+            </div>
+
+            <div 
+              className="relative group overflow-hidden rounded-md hover-elevate active-elevate-2 transition-all cursor-pointer"
+              data-testid="gallery-img-workshop-service"
+            >
+              <img
+                src={workshopImage}
+                alt="Protekt Auto workshop - professional motorcycle ceramic coating and PPF installation"
+                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-sm font-medium">Professional Installation</p>
+                <p className="text-xs text-white/80">Expert Ceramic Coating & PPF Service</p>
               </div>
             </div>
           </div>
