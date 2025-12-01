@@ -17,6 +17,7 @@ import orangeHarleyShop from '@assets/image_1764079622210.png';
 import ppfStandardKit from '@assets/image_1764602606328.png';
 import ppfExtendedKit from '@assets/image_1764602635146.png';
 import workshopImage from '@assets/image_1764602659202.png';
+import bikeSketchesImage from '@assets/image_1764605871930.png';
 
 export default function MotorcycleProtection() {
   const faqItems: FAQItem[] = [
@@ -255,17 +256,20 @@ export default function MotorcycleProtection() {
             </div>
           </div>
 
-          {/* Ceramic Packages */}
-          <div className="grid md:grid-cols-3 gap-6 mb-12">
-            {ceramicPackages.map((pkg) => (
-              <Card key={pkg.name} className="hover-elevate active-elevate-2 transition-all">
-                <CardContent className="p-6">
-                  <h4 className="font-display text-lg font-bold text-foreground mb-2">{pkg.name}</h4>
-                  <p className="text-foreground/60 text-sm mb-4">Ceramic Coating Package</p>
-                  <p className="text-2xl font-bold text-primary">{pkg.price}</p>
-                </CardContent>
-              </Card>
-            ))}
+          {/* Ceramic Packages with Sketches */}
+          <div className="mb-12">
+            <h3 className="font-display text-2xl font-bold text-foreground mb-8 text-center">
+              Ceramic Coating Packages by Bike Type
+            </h3>
+            <div className="rounded-md overflow-hidden bg-background/50 border border-border/30 p-6 hover-elevate active-elevate-2 transition-all">
+              <img
+                src={bikeSketchesImage}
+                alt="Industrial style sketches of sports bike, cruiser, and large cruiser motorcycles"
+                className="w-full h-auto"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
           </div>
 
           <div className="bg-card p-6 rounded-md border border-border/50 text-center">
