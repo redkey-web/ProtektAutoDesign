@@ -15,6 +15,7 @@ import windowTintImage from '@assets/Windown tinting_1763343495843.webp';
 import ppfImage from '@assets/PPF _1763343626090.webp';
 import motorcycleImage from '@assets/Motorcycle ceramic coat protection sydney_1763343837693.webp';
 import packagesImage from '@assets/Full packages Protekt Auto_1763295209283.webp';
+import protektSurfaceLogo from '@assets/image_1764615091338.png';
 
 export default function Home() {
   const faqItems: FAQItem[] = [
@@ -143,18 +144,21 @@ export default function Home() {
             <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-3">
               Beyond Automotive
             </h3>
-            <p className="text-foreground/70 text-lg mb-6">
+            <p className="text-foreground/70 text-lg mb-8">
               We also offer Commercial and Residential Window Tinting, Frosted Glass, and Natural Stone Protection Film services.
             </p>
             <a
               href="https://www.protektsurfacesolutions.com.au"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover-elevate transition-all"
+              className="inline-flex hover-elevate transition-all"
               data-testid="link-protekt-surface-solutions"
             >
-              Visit Protekt Surface Solutions
-              <span className="text-sm">→</span>
+              <img 
+                src={protektSurfaceLogo} 
+                alt="Protekt Surface Solutions" 
+                className="h-16 w-auto"
+              />
             </a>
           </div>
         </div>
