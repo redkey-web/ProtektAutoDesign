@@ -263,15 +263,17 @@ export default function MotorcycleProtection() {
               Ceramic Coating Packages by Bike Type
             </h3>
             <div className="grid md:grid-cols-2 gap-6 mb-8">
-              <div className="rounded-md overflow-hidden bg-background/50 border border-border/30 p-4 hover-elevate active-elevate-2 transition-all">
-                <img
-                  src={sportsBikeTechnical}
-                  alt="Sports Bike technical drawing - Ducati Model 916"
-                  className="w-full h-auto grayscale"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <div className="mt-4 text-center">
+              <div 
+                className="rounded-md overflow-hidden bg-background/50 border border-border/30 p-6 hover-elevate active-elevate-2 transition-all relative min-h-80 flex items-end justify-center bg-cover bg-center"
+                style={{
+                  backgroundImage: `url(${sportsBikeTechnical})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                }}
+                data-testid="card-sportsbike-ceramic"
+              >
+                <div className="absolute inset-0 bg-black/40" />
+                <div className="relative z-10 text-center">
                   <h4 className="font-display text-lg font-bold text-foreground mb-2">Sports Bike</h4>
                   <p className="text-foreground/70 text-sm mb-2">Ceramic Coating Package</p>
                   <p className="text-2xl font-bold text-primary">$790</p>
