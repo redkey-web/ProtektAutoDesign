@@ -18,6 +18,7 @@ import ppfStandardKit from '@assets/image_1764602606328.png';
 import ppfExtendedKit from '@assets/image_1764602635146.png';
 import workshopImage from '@assets/image_1764602659202.png';
 import bikeSketchesImage from '@assets/image_1764605871930.png';
+import sportsBikeTechnical from '@assets/Gemini_Generated_Image_e59ouye59ouye59o_1764661821275.png';
 
 export default function MotorcycleProtection() {
   const faqItems: FAQItem[] = [
@@ -261,14 +262,30 @@ export default function MotorcycleProtection() {
             <h3 className="font-display text-2xl font-bold text-foreground mb-8 text-center">
               Ceramic Coating Packages by Bike Type
             </h3>
-            <div className="rounded-md overflow-hidden bg-background/50 border border-border/30 p-6 hover-elevate active-elevate-2 transition-all">
-              <img
-                src={bikeSketchesImage}
-                alt="Industrial style sketches of sports bike, cruiser, and large cruiser motorcycles"
-                className="w-full h-auto"
-                loading="lazy"
-                decoding="async"
-              />
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
+              <div className="rounded-md overflow-hidden bg-background/50 border border-border/30 p-4 hover-elevate active-elevate-2 transition-all">
+                <img
+                  src={sportsBikeTechnical}
+                  alt="Sports Bike technical drawing - Ducati Model 916"
+                  className="w-full h-auto grayscale"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div className="mt-4 text-center">
+                  <h4 className="font-display text-lg font-bold text-foreground mb-2">Sports Bike</h4>
+                  <p className="text-foreground/70 text-sm mb-2">Ceramic Coating Package</p>
+                  <p className="text-2xl font-bold text-primary">$790</p>
+                </div>
+              </div>
+              <div className="rounded-md overflow-hidden bg-background/50 border border-border/30 p-6 hover-elevate active-elevate-2 transition-all">
+                <img
+                  src={bikeSketchesImage}
+                  alt="Industrial style sketches of sports bike, cruiser, and large cruiser motorcycles"
+                  className="w-full h-auto"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
             </div>
           </div>
 
