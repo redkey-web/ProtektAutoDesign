@@ -269,10 +269,11 @@ export default function MotorcycleProtection() {
                   backgroundImage: `url(${sportsBikeTechnical})`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
+                  filter: 'grayscale(100%) opacity(0.4)',
                 }}
                 data-testid="card-sportsbike-ceramic"
               >
-                <div className="absolute inset-0 bg-black/40" />
+                <div className="absolute inset-0 bg-black/30" />
                 <div className="relative z-10 text-center">
                   <h4 className="font-display text-lg font-bold text-foreground mb-2">Sports Bike</h4>
                   <p className="text-foreground/70 text-sm mb-2">Ceramic Coating Package</p>
