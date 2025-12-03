@@ -264,26 +264,26 @@ export default function MotorcycleProtection() {
             </h3>
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               <div 
-                className="rounded-md overflow-hidden bg-background/50 border border-border/30 p-6 hover-elevate active-elevate-2 transition-all"
+                className="bg-card p-6 rounded-md hover-elevate active-elevate-2 transition-all"
                 data-testid="card-sportsbike-ceramic"
               >
-                <h4 className="font-display text-lg font-bold text-foreground mb-2">Sports Bike</h4>
+                <h3 className="font-display text-xl font-bold text-foreground mb-3">Sports Bike</h3>
                 <p className="text-foreground/70 text-sm mb-4">Premium ceramic coating for high-performance sports bikes</p>
                 <p className="text-2xl font-bold text-primary">$790</p>
               </div>
               <div 
-                className="rounded-md overflow-hidden bg-background/50 border border-border/30 p-6 hover-elevate active-elevate-2 transition-all"
+                className="bg-card p-6 rounded-md hover-elevate active-elevate-2 transition-all"
                 data-testid="card-cruiser-ceramic"
               >
-                <h4 className="font-display text-lg font-bold text-foreground mb-2">Cruiser & Naked Bikes</h4>
+                <h3 className="font-display text-xl font-bold text-foreground mb-3">Cruiser & Naked Bikes</h3>
                 <p className="text-foreground/70 text-sm mb-4">Full protection for standard and naked motorcycle models</p>
                 <p className="text-2xl font-bold text-primary">$950</p>
               </div>
               <div 
-                className="rounded-md overflow-hidden bg-background/50 border border-border/30 p-6 hover-elevate active-elevate-2 transition-all"
+                className="bg-card p-6 rounded-md hover-elevate active-elevate-2 transition-all"
                 data-testid="card-largecruiser-ceramic"
               >
-                <h4 className="font-display text-lg font-bold text-foreground mb-2">Large Cruiser</h4>
+                <h3 className="font-display text-xl font-bold text-foreground mb-3">Large Cruiser</h3>
                 <p className="text-foreground/70 text-sm mb-4">Extended coverage for larger motorcycles and touring bikes</p>
                 <p className="text-2xl font-bold text-primary">$1,100</p>
               </div>
