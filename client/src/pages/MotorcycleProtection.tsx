@@ -264,17 +264,10 @@ export default function MotorcycleProtection() {
             </h3>
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               <div 
-                className="rounded-md overflow-hidden bg-background/50 border border-border/30 p-6 hover-elevate active-elevate-2 transition-all relative min-h-80 flex items-end justify-center bg-cover bg-center"
-                style={{
-                  backgroundImage: `url(${sportsBikeTechnical})`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                  filter: 'grayscale(100%) opacity(0.4)',
-                }}
+                className="rounded-md overflow-hidden bg-background/50 border border-border/30 p-6 hover-elevate active-elevate-2 transition-all relative min-h-80 flex items-end justify-center"
                 data-testid="card-sportsbike-ceramic"
               >
-                <div className="absolute inset-0 bg-black/30" />
-                <div className="relative z-10 text-center">
+                <div className="text-center">
                   <h4 className="font-display text-lg font-bold text-foreground mb-2">Sports Bike</h4>
                   <p className="text-foreground/70 text-sm mb-2">Ceramic Coating Package</p>
                   <p className="text-2xl font-bold text-primary">$790</p>
@@ -308,6 +301,16 @@ export default function MotorcycleProtection() {
             backgroundImage: `url(${patternLogo})`,
             backgroundRepeat: 'repeat',
             backgroundSize: '150px 150px',
+          }}
+        />
+        <div 
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            backgroundImage: `url(${sportsBikeTechnical})`,
+            backgroundSize: 'contain',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            filter: 'grayscale(100%) opacity(0.6)',
           }}
         />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
