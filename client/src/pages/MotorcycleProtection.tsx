@@ -257,30 +257,35 @@ export default function MotorcycleProtection() {
             </div>
           </div>
 
-          {/* Ceramic Packages with Sketches */}
+          {/* Ceramic Packages by Bike Type */}
           <div className="mb-12">
             <h3 className="font-display text-2xl font-bold text-foreground mb-8 text-center">
               Ceramic Coating Packages by Bike Type
             </h3>
-            <div className="grid md:grid-cols-2 gap-6 mb-8">
+            <div className="grid md:grid-cols-3 gap-6 mb-8">
               <div 
-                className="rounded-md overflow-hidden bg-background/50 border border-border/30 p-6 hover-elevate active-elevate-2 transition-all relative min-h-80 flex items-end justify-center"
+                className="rounded-md overflow-hidden bg-background/50 border border-border/30 p-6 hover-elevate active-elevate-2 transition-all"
                 data-testid="card-sportsbike-ceramic"
               >
-                <div className="text-center">
-                  <h4 className="font-display text-lg font-bold text-foreground mb-2">Sports Bike</h4>
-                  <p className="text-foreground/70 text-sm mb-2">Ceramic Coating Package</p>
-                  <p className="text-2xl font-bold text-primary">$790</p>
-                </div>
+                <h4 className="font-display text-lg font-bold text-foreground mb-2">Sports Bike</h4>
+                <p className="text-foreground/70 text-sm mb-4">Premium ceramic coating for high-performance sports bikes</p>
+                <p className="text-2xl font-bold text-primary">$790</p>
               </div>
-              <div className="rounded-md overflow-hidden bg-background/50 border border-border/30 p-6 hover-elevate active-elevate-2 transition-all">
-                <img
-                  src={bikeSketchesImage}
-                  alt="Industrial style sketches of sports bike, cruiser, and large cruiser motorcycles"
-                  className="w-full h-auto"
-                  loading="lazy"
-                  decoding="async"
-                />
+              <div 
+                className="rounded-md overflow-hidden bg-background/50 border border-border/30 p-6 hover-elevate active-elevate-2 transition-all"
+                data-testid="card-cruiser-ceramic"
+              >
+                <h4 className="font-display text-lg font-bold text-foreground mb-2">Cruiser & Naked Bikes</h4>
+                <p className="text-foreground/70 text-sm mb-4">Full protection for standard and naked motorcycle models</p>
+                <p className="text-2xl font-bold text-primary">$950</p>
+              </div>
+              <div 
+                className="rounded-md overflow-hidden bg-background/50 border border-border/30 p-6 hover-elevate active-elevate-2 transition-all"
+                data-testid="card-largecruiser-ceramic"
+              >
+                <h4 className="font-display text-lg font-bold text-foreground mb-2">Large Cruiser</h4>
+                <p className="text-foreground/70 text-sm mb-4">Extended coverage for larger motorcycles and touring bikes</p>
+                <p className="text-2xl font-bold text-primary">$1,100</p>
               </div>
             </div>
           </div>
