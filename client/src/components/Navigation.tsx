@@ -46,7 +46,7 @@ export default function Navigation() {
     { path: '/', label: 'Home' },
     { path: '/new-car-protection', label: 'Ceramic Coating' },
     { path: '/paint-correction', label: 'Paint Correction' },
-    { path: '/window-tinting', label: 'Window Tinting' },
+    { path: '/window-tinting', label: 'Tinting' },
     { path: '/stonechip-protection', label: 'PPF' },
     { path: '/motorcycle-protection', label: 'Motorcycle' },
     { path: '/packages', label: 'Packages' },
@@ -72,7 +72,7 @@ export default function Navigation() {
             />
           </Link>
 
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-4">
             {navLinks.map((link) => (
               <Link key={link.path} href={link.path}>
                 <span
