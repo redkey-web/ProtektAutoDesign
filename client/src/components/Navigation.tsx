@@ -43,7 +43,6 @@ export default function Navigation() {
   }, [location]);
 
   const navLinks = [
-    { path: '/', label: 'Home' },
     { path: '/new-car-protection', label: 'Ceramic Coating' },
     { path: '/paint-correction', label: 'Paint Correction' },
     { path: '/window-tinting', label: 'Tinting' },
