@@ -308,16 +308,6 @@ export default function MotorcycleProtection() {
             backgroundSize: '150px 150px',
           }}
         />
-        <div 
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            backgroundImage: `url(${sportsBikeTechnical})`,
-            backgroundSize: 'contain',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            filter: 'grayscale(100%) opacity(0.6)',
-          }}
-        />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-12">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
