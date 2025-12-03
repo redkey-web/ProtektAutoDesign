@@ -262,20 +262,32 @@ export default function MotorcycleProtection() {
             <h3 className="font-display text-2xl font-bold text-foreground mb-8 text-center">
               Ceramic Coating Packages by Bike Type
             </h3>
-            <div className="rounded-md overflow-hidden bg-background/50 border border-border/30 p-6 hover-elevate active-elevate-2 transition-all relative min-h-80 flex items-end justify-center bg-cover bg-center"
-              style={{
-                backgroundImage: `url(${sportsBikeTechnical})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                filter: 'grayscale(100%) opacity(0.4)',
-              }}
-              data-testid="card-sportsbike-ceramic"
-            >
-              <div className="absolute inset-0 bg-black/30" />
-              <div className="relative z-10 text-center">
-                <h4 className="font-display text-lg font-bold text-foreground mb-2">Sports Bike</h4>
-                <p className="text-foreground/70 text-sm mb-2">Ceramic Coating Package</p>
-                <p className="text-2xl font-bold text-primary">$790</p>
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
+              <div 
+                className="rounded-md overflow-hidden bg-background/50 border border-border/30 p-6 hover-elevate active-elevate-2 transition-all relative min-h-80 flex items-end justify-center bg-cover bg-center"
+                style={{
+                  backgroundImage: `url(${sportsBikeTechnical})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  filter: 'grayscale(100%) opacity(0.4)',
+                }}
+                data-testid="card-sportsbike-ceramic"
+              >
+                <div className="absolute inset-0 bg-black/30" />
+                <div className="relative z-10 text-center">
+                  <h4 className="font-display text-lg font-bold text-foreground mb-2">Sports Bike</h4>
+                  <p className="text-foreground/70 text-sm mb-2">Ceramic Coating Package</p>
+                  <p className="text-2xl font-bold text-primary">$790</p>
+                </div>
+              </div>
+              <div className="rounded-md overflow-hidden bg-background/50 border border-border/30 p-6 hover-elevate active-elevate-2 transition-all">
+                <img
+                  src={bikeSketchesImage}
+                  alt="Industrial style sketches of sports bike, cruiser, and large cruiser motorcycles"
+                  className="w-full h-auto"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
             </div>
           </div>
