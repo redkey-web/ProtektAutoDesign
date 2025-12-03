@@ -15,6 +15,7 @@ export default function Footer() {
     { name: 'Paint Protection Film', path: '/stonechip-protection' },
     { name: 'Motorcycle Protection', path: '/motorcycle-protection' },
     { name: 'Packages', path: '/packages' },
+    { name: 'Blog', path: '/blog' },
   ];
 
   return (
