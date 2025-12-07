@@ -74,7 +74,7 @@ export default function Hero({
         ) : null}
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-[10vh] xl:mt-[30vh]">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center xl:mt-[20vh]">
         {showLogo && (
           <div className="mb-8 flex justify-center" data-testid="hero-logo">
             <img 

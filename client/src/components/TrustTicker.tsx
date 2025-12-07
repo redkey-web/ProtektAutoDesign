@@ -11,7 +11,7 @@ export default function TrustTicker() {
   const repeatedItems = [...items, ...items, ...items, ...items];
 
   return (
-    <div className="sticky top-[72px] z-40 bg-black/80 backdrop-blur-sm border-b border-primary/20 overflow-hidden">
+    <div className="sticky top-[72px] z-40 bg-black/80 backdrop-blur-sm border-b border-primary/20 overflow-hidden -mb-[36px]">
       <div className="flex animate-scroll">
         {repeatedItems.map((item, index) => (
           <div
