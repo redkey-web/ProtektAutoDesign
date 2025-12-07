@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import Hero from '@/components/Hero';
 import ServiceCard from '@/components/ServiceCard';
 import ContactSection from '@/components/ContactSection';
@@ -9,6 +10,7 @@ import Testimonials from '@/components/Testimonials';
 import FeaturedArticles from '@/components/FeaturedArticles';
 import GoogleReviewSummary from '@/components/GoogleReviewSummary';
 import { Button } from '@/components/ui/button';
+import AnimatedLogo from '@/components/AnimatedLogo';
 import heroImage from '@assets/generated_images/Ceramic_coating_hero_image_2e9cd7e0.png';
 import ceramicImage from '@assets/Ceramic coating service Sydney - New Car Protection_1763295133288.webp';
 import paintCorrectionImage from '@assets/Paint correction_1763294797362.webp';
@@ -19,6 +21,14 @@ import packagesImage from '@assets/Full packages Protekt Auto_1763295209283.webp
 import protektSurfaceLogo from '@assets/image_1764615091338.png';
 
 export default function Home() {
+  useEffect(() => {
+    window.dispatchEvent(new CustomEvent('logoAnimationStart'));
+  }, []);
+
+  const handleAnimationComplete = () => {
+    window.dispatchEvent(new CustomEvent('logoAnimationComplete'));
+  };
+
   const faqItems: FAQItem[] = [
     {
       question: 'Why choose Protekt Auto for my vehicle protection?',
@@ -100,6 +110,7 @@ export default function Home() {
         canonical="https://protektauto.com.au/"
       />
       <StructuredData type="AutomotiveBusiness" />
+      <AnimatedLogo onAnimationComplete={handleAnimationComplete} />
       <Hero
         title="Sydney's #1 Paint Protection & Car Care Specialists"
         subtitle="Premium Automotive Detailing"
@@ -108,7 +119,7 @@ export default function Home() {
         ctaText="View Services"
         ctaLink="#services"
         showPhoneCta={true}
-        showLogo={true}
+        showLogo={false}
         showTrustBadges={true}
       />
 

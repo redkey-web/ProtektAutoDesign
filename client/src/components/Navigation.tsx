@@ -9,38 +9,62 @@ export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [logoOpacity, setLogoOpacity] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [animationComplete, setAnimationComplete] = useState(false);
+
+  useEffect(() => {
+    const handleAnimationStart = () => {
+      setAnimationComplete(false);
+    };
+    
+    const handleAnimationComplete = () => {
+      setAnimationComplete(true);
+    };
+
+    window.addEventListener('logoAnimationStart', handleAnimationStart);
+    window.addEventListener('logoAnimationComplete', handleAnimationComplete);
+    
+    return () => {
+      window.removeEventListener('logoAnimationStart', handleAnimationStart);
+      window.removeEventListener('logoAnimationComplete', handleAnimationComplete);
+    };
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
       setIsScrolled(scrollY > 20);
       
-      // Only apply fade effect on homepage
+      // Only apply fade/animation logic on homepage
       if (location === '/') {
-        // Calculate logo opacity based on scroll position
-        // Hero section is typically 100vh, start fading in at 40vh, fully visible at 100vh
-        const heroHeight = window.innerHeight;
-        const fadeStartScroll = heroHeight * 0.4; // Start fading at 40% of viewport height
-        const fadeEndScroll = heroHeight; // Fully visible at 100% of viewport height
-        
-        if (scrollY < fadeStartScroll) {
+        // If animation hasn't completed yet, keep logo hidden (animated logo is visible)
+        if (!animationComplete) {
           setLogoOpacity(0);
-        } else if (scrollY >= fadeEndScroll) {
-          setLogoOpacity(1);
-        } else {
-          // Calculate opacity between 0 and 1 based on scroll progress
-          const opacity = (scrollY - fadeStartScroll) / (fadeEndScroll - fadeStartScroll);
-          setLogoOpacity(opacity);
+          return;
         }
+        
+        // After animation completes, show logo immediately at full opacity
+        // (user can scroll and logo stays visible since it animated into place)
+        setLogoOpacity(1);
       } else {
         // On other pages, logo is always visible
         setLogoOpacity(1);
       }
     };
-    handleScroll(); // Run on mount
+    
+    // Update immediately when animation state changes
+    if (location === '/') {
+      if (animationComplete) {
+        setLogoOpacity(1);
+      } else {
+        setLogoOpacity(0);
+      }
+    } else {
+      setLogoOpacity(1);
+    }
+    
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [location]);
+  }, [location, animationComplete]);
 
   const navLinks = [
     { path: '/new-car-protection', label: 'Ceramic Coating' },
