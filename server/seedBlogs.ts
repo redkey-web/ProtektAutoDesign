@@ -7,7 +7,7 @@ const blogPosts: InsertPost[] = [
     title: "Ultimate Guide to Ceramic Coating vs Graphene Coating in Sydney",
     author: "Protekt Auto Team",
     excerpt: "Confused about ceramic vs graphene coatings for your car? This comprehensive guide breaks down the differences, benefits, and which protection is right for your Sydney vehicle.",
-    coverImage: "https://images.unsplash.com/photo-1533619927073-ffe591cbf048?w=800&q=80",
+    coverImage: "https://images.unsplash.com/photo-1619405399517-d7fce0f13302?w=800&q=80",
     content: `
       <h2>Choosing the Right Paint Protection for Your Vehicle</h2>
       <p>When it comes to protecting your vehicle's paint in Sydney's harsh climate, choosing between ceramic and graphene coatings can be challenging. Both offer exceptional protection, but understanding their differences will help you make the right investment for your car.</p>
@@ -107,7 +107,7 @@ const blogPosts: InsertPost[] = [
     title: "How PPF Track Packs Protect Performance Vehicles on Australian Roads",
     author: "Protekt Auto Team",
     excerpt: "Track packs offer comprehensive PPF coverage for performance cars. Learn how this advanced protection saves your investment from Australia's harsh road conditions.",
-    coverImage: "https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=800&q=80",
+    coverImage: "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800&q=80",
     content: `
       <h2>Ultimate Protection for Performance Vehicles</h2>
       <p>Performance vehicles represent significant investments, and protecting them from Australia's unique road conditions is essential. Paint Protection Film (PPF) Track Packs offer comprehensive coverage specifically designed for enthusiasts who demand the best protection for their high-performance cars.</p>
@@ -256,7 +256,7 @@ const blogPosts: InsertPost[] = [
     title: "Window Tinting Laws & Comfort Benefits for NSW Drivers",
     author: "Protekt Auto Team",
     excerpt: "Complete guide to NSW window tinting regulations and how quality tint improves comfort, protects interiors, and reduces energy costs in Sydney's climate.",
-    coverImage: "https://images.unsplash.com/photo-1489824904134-891ab64532f1?w=800&q=80",
+    coverImage: "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=800&q=80",
     content: `
       <h2>Understanding NSW Window Tinting Regulations</h2>
       <p>Window tinting offers significant benefits for Sydney drivers, but understanding NSW legal requirements is essential before installation. This comprehensive guide covers everything you need to know about window tint laws and the comfort benefits for your vehicle.</p>
@@ -452,7 +452,7 @@ const blogPosts: InsertPost[] = [
     title: "Motorcycle Detailing Checklist Before Your Next Ride",
     author: "Protekt Auto Team",
     excerpt: "Essential motorcycle care guide covering ceramic coating, PPF protection, and maintenance tips to keep your bike looking showroom-fresh in Sydney conditions.",
-    coverImage: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
+    coverImage: "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=800&q=80",
     content: `
       <h2>Complete Motorcycle Protection and Detailing Guide</h2>
       <p>Motorcycles face even harsher conditions than cars - direct exposure to road debris, bugs, weather, and UV radiation without the protection of an enclosed cabin. This comprehensive checklist ensures your bike stays protected and looking its best.</p>
@@ -699,7 +699,7 @@ const blogPosts: InsertPost[] = [
     title: "New Car Delivery Protection Plan: First 30 Days Checklist",
     author: "Protekt Auto Team",
     excerpt: "Comprehensive protection plan for new car owners. Learn when to apply ceramic coating, PPF, and paint correction to maximize your investment from day one.",
-    coverImage: "https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=800&q=80",
+    coverImage: "https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?w=800&q=80",
     content: `
       <h2>Protecting Your New Car Investment From Day One</h2>
       <p>Congratulations on your new car purchase! The first 30 days after delivery are critical for establishing a protection plan that will preserve your vehicle's showroom condition for years to come. This comprehensive checklist ensures you make the right decisions at the right time.</p>
@@ -968,7 +968,7 @@ const blogPosts: InsertPost[] = [
     title: "How to Properly Maintain Your Ceramic Coating in Sydney",
     author: "Protekt Auto Team",
     excerpt: "Learn the essential maintenance tips to keep your ceramic coating performing at its best in Sydney's climate, ensuring maximum protection and longevity.",
-    coverImage: "https://images.unsplash.com/photo-1507136566006-cfc505b114fc?w=800&q=80",
+    coverImage: "https://images.unsplash.com/photo-1601362840469-51e4d8d58785?w=800&q=80",
     content: `
       <h2>Maintaining Your Ceramic Coating Investment</h2>
       <p>You've invested in professional ceramic coating protection for your vehicle - now it's time to ensure you get the most out of that investment. Proper maintenance is the key to keeping your coating performing at its peak for the full duration of its 5-7 year lifespan.</p>
@@ -1129,7 +1129,7 @@ const blogPosts: InsertPost[] = [
     title: "Paint Correction Explained: Understanding Stages & Benefits",
     author: "Protekt Auto Team",
     excerpt: "Discover what paint correction really involves, the different stages of correction, and why it's essential before applying ceramic coating or PPF.",
-    coverImage: "https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?w=800&q=80",
+    coverImage: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80",
     content: `
       <h2>What is Paint Correction?</h2>
       <p>Paint correction is the process of permanently removing surface imperfections from your vehicle's paintwork through machine polishing. Unlike temporary fixes that simply fill scratches, professional paint correction actually removes a microscopic layer of clear coat to reveal the undamaged paint beneath.</p>
@@ -1326,7 +1326,7 @@ const blogPosts: InsertPost[] = [
     title: "Why Winter is the Best Time for PPF Installation in Sydney",
     author: "Protekt Auto Team",
     excerpt: "Discover why Sydney's cooler winter months offer ideal conditions for Paint Protection Film installation, plus exclusive seasonal benefits.",
-    coverImage: "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&q=80",
+    coverImage: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=800&q=80",
     content: `
       <h2>The Winter Advantage for PPF Installation</h2>
       <p>While many vehicle owners wait until summer to think about protection, savvy car enthusiasts know that winter is actually the optimal time for Paint Protection Film installation. Here's why Sydney's cooler months offer significant advantages for PPF application.</p>
@@ -1503,7 +1503,7 @@ const blogPosts: InsertPost[] = [
     title: "Top 10 Car Care Myths Debunked by Sydney Detailing Experts",
     author: "Protekt Auto Team",
     excerpt: "From dishwashing liquid to automatic car washes, we separate fact from fiction on common car care misconceptions that could be damaging your vehicle.",
-    coverImage: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&q=80",
+    coverImage: "https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?w=800&q=80",
     content: `
       <h2>Separating Car Care Fact from Fiction</h2>
       <p>In our years of professional detailing experience, we've heard countless car care myths passed down from generation to generation. While some of these tips may have been valid decades ago, modern paint systems, coatings, and materials require different care approaches. Let's debunk the top 10 myths that could be damaging your vehicle.</p>
@@ -1666,7 +1666,7 @@ const blogPosts: InsertPost[] = [
     title: "Choosing a Sydney Car Detailer: What to Look For",
     author: "Protekt Auto Team",
     excerpt: "Not all detailers are created equal. Learn the key factors that separate professional automotive detailing from backyard operations in Sydney.",
-    coverImage: "https://images.unsplash.com/photo-1607860108855-64acf2078ed9?w=800&q=80",
+    coverImage: "https://images.unsplash.com/photo-1625047509248-ec889cbff17f?w=800&q=80",
     content: `
       <h2>Finding Quality in Sydney's Detailing Market</h2>
       <p>Sydney has hundreds of businesses offering car detailing services, from mobile operators to full-service facilities. With such variety comes significant quality differences. Here's how to identify professional detailers who will treat your vehicle with the care it deserves.</p>
