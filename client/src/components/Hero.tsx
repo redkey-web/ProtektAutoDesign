@@ -87,7 +87,7 @@ export default function Hero({
         )}
         {subtitle && (
           <p
-            className="text-primary text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold tracking-widest uppercase mb-8"
+            className="text-primary text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold tracking-widest uppercase mb-8 max-w-[80%] mx-auto"
             data-testid="hero-subtitle"
           >
             {subtitle}
