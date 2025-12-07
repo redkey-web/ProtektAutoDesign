@@ -3,7 +3,6 @@ import PricingCard from '@/components/PricingCard';
 import ContactSection from '@/components/ContactSection';
 import QuoteCalculator from '@/components/QuoteCalculator';
 import SEO from '@/components/SEO';
-import TrustBadges from '@/components/TrustBadges';
 import Testimonials from '@/components/Testimonials';
 import heroImage from '@assets/Full packages Protekt Auto_1763295209283.webp';
 import patternLogo from '@assets/image_1764055702258.png';
@@ -71,10 +70,6 @@ export default function Packages() {
       />
 
       <section className="py-20 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-          <TrustBadges />
-        </div>
-
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">

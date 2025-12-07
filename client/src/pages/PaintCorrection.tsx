@@ -5,7 +5,6 @@ import BeforeAfterSlider from '@/components/BeforeAfterSlider';
 import FAQ, { FAQItem } from '@/components/FAQ';
 import SEO from '@/components/SEO';
 import RelatedServices from '@/components/RelatedServices';
-import TrustBadges from '@/components/TrustBadges';
 import Testimonials from '@/components/Testimonials';
 import { Card } from '@/components/ui/card';
 import heroImage from '@assets/Paint correction_1763294797362.webp';
@@ -117,12 +116,6 @@ export default function PaintCorrection() {
         ctaText="Get Quote"
         ctaLink="#contact"
       />
-
-      <section className="py-12 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <TrustBadges />
-        </div>
-      </section>
 
       <section className="py-20 bg-background">
 

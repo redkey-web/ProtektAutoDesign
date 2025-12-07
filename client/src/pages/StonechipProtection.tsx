@@ -4,7 +4,6 @@ import FAQ, { FAQItem } from '@/components/FAQ';
 import SEO from '@/components/SEO';
 import UrgencyBanner from '@/components/UrgencyBanner';
 import RelatedServices from '@/components/RelatedServices';
-import TrustBadges from '@/components/TrustBadges';
 import Testimonials from '@/components/Testimonials';
 import { Card, CardContent } from '@/components/ui/card';
 import { Shield, Zap, Droplets, RefreshCw } from 'lucide-react';
@@ -129,12 +128,6 @@ export default function StonechipProtection() {
         ctaLink="#contact"
         showPhoneCta={true}
       />
-
-      <section className="py-12 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <TrustBadges />
-        </div>
-      </section>
 
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
