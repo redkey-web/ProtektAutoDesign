@@ -53,7 +53,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div className="col-span-1 md:col-span-2">
-            <img src={logoImage} alt="Protekt Auto" className="h-10 mb-4" data-testid="img-footer-logo" />
+            <img src={logoImage} alt="Protekt Auto" className="h-[3.25rem] mb-4" data-testid="img-footer-logo" />
             <p className="text-white/70 mb-4 max-w-md" data-testid="text-footer-description">
               Sydney's premier automotive paint protection specialists. We provide professional ceramic coatings, paint correction, and paint protection film services.
             </p>
