@@ -19,7 +19,7 @@ export default function TrustTicker() {
             className="flex items-center gap-2 px-8 py-2 whitespace-nowrap"
           >
             <item.icon className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-foreground">{item.text}</span>
+            <span className="text-sm font-medium text-white">{item.text}</span>
           </div>
         ))}
       </div>
