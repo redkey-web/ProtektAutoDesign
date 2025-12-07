@@ -87,18 +87,24 @@ export default function Hero({
         )}
         {subtitle && (
           <p
-            className="text-primary text-sm sm:text-base font-semibold tracking-wider uppercase mb-4"
+            className="text-primary text-sm sm:text-base font-semibold tracking-wider uppercase mb-6"
             data-testid="hero-subtitle"
           >
             {subtitle}
           </p>
         )}
-        <h1
-          className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight tracking-tight"
-          data-testid="hero-title"
-        >
-          {title}
-        </h1>
+        <div className="relative inline-block mb-6">
+          <div className="absolute -inset-x-6 sm:-inset-x-10 inset-y-1 sm:inset-y-2 bg-primary/15 -skew-x-12 transform" />
+          <h1
+            className="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-white relative leading-none tracking-tight"
+            data-testid="hero-title"
+          >
+            {title}
+          </h1>
+        </div>
+        <div className="flex justify-center mb-6">
+          <div className="h-1 w-24 sm:w-32 bg-primary -skew-x-12 transform" />
+        </div>
         {description && (
           <p className="text-white/90 text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto mb-8 font-light" data-testid="hero-description">
             {description}
