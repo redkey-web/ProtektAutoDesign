@@ -8,6 +8,7 @@ import StructuredData from '@/components/StructuredData';
 import Testimonials from '@/components/Testimonials';
 import FeaturedArticles from '@/components/FeaturedArticles';
 import GoogleReviewSummary from '@/components/GoogleReviewSummary';
+import { Button } from '@/components/ui/button';
 import heroImage from '@assets/generated_images/Ceramic_coating_hero_image_2e9cd7e0.png';
 import ceramicImage from '@assets/Ceramic coating service Sydney - New Car Protection_1763295133288.webp';
 import paintCorrectionImage from '@assets/Paint correction_1763294797362.webp';
@@ -147,19 +148,24 @@ export default function Home() {
             <p className="text-foreground/70 text-lg mb-8">
               We also offer Commercial and Residential Window Tinting, Frosted Glass, and Natural Stone Protection Film services.
             </p>
-            <a
-              href="https://www.protektsurfacesolutions.com.au"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex hover-elevate transition-all"
-              data-testid="link-protekt-surface-solutions"
+            <Button
+              asChild
+              variant="outline"
+              size="lg"
+              data-testid="button-protekt-surface-solutions"
             >
-              <img 
-                src={protektSurfaceLogo} 
-                alt="Protekt Surface Solutions" 
-                className="h-16 w-auto"
-              />
-            </a>
+              <a
+                href="https://www.protektsurfacesolutions.com.au"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img 
+                  src={protektSurfaceLogo} 
+                  alt="Protekt Surface Solutions" 
+                  className="h-10 w-auto"
+                />
+              </a>
+            </Button>
           </div>
         </div>
       </section>

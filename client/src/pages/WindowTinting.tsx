@@ -8,6 +8,7 @@ import TrustBadges from '@/components/TrustBadges';
 import Testimonials from '@/components/Testimonials';
 import FeaturedArticles from '@/components/FeaturedArticles';
 import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 import { Shield, Sun, Thermometer, Eye, Check } from 'lucide-react';
 import { useQuery } from '@tanstack/react-query';
 import { Link } from 'wouter';
@@ -303,19 +304,24 @@ export default function WindowTinting() {
             <p className="text-foreground/70 text-lg mb-8">
               We also offer Commercial and Residential Window Tinting, Frosted Glass, and Natural Stone Protection Film services.
             </p>
-            <a
-              href="https://www.protektsurfacesolutions.com.au"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex hover-elevate transition-all"
-              data-testid="link-protekt-surface-solutions"
+            <Button
+              asChild
+              variant="outline"
+              size="lg"
+              data-testid="button-protekt-surface-solutions"
             >
-              <img 
-                src={protektSurfaceLogo} 
-                alt="Protekt Surface Solutions" 
-                className="h-16 w-auto"
-              />
-            </a>
+              <a
+                href="https://www.protektsurfacesolutions.com.au"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img 
+                  src={protektSurfaceLogo} 
+                  alt="Protekt Surface Solutions" 
+                  className="h-10 w-auto"
+                />
+              </a>
+            </Button>
           </div>
         </div>
       </section>
