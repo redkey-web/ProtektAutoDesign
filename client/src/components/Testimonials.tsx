@@ -63,7 +63,7 @@ export default function Testimonials() {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
             What Our Customers Say
           </h2>
           <p className="text-foreground/70 text-lg max-w-2xl mx-auto">

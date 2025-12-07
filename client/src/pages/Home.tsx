@@ -142,7 +142,7 @@ export default function Home() {
       <section className="py-16 bg-card/50 border-t border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-3">
+            <h3 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-3">
               Beyond Automotive
             </h3>
             <p className="text-foreground/70 text-lg mb-8">
