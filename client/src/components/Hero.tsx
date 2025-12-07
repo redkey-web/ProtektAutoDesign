@@ -87,7 +87,7 @@ export default function Hero({
         )}
         {subtitle && (
           <p
-            className="text-primary text-base sm:text-lg md:text-xl font-semibold tracking-wider uppercase mb-8"
+            className="text-primary text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold tracking-widest uppercase mb-8"
             data-testid="hero-subtitle"
           >
             {subtitle}
@@ -96,7 +96,7 @@ export default function Hero({
         <div className="relative inline-block mb-8">
           <div className="absolute -inset-x-6 sm:-inset-x-12 inset-y-1 sm:inset-y-3 bg-primary/15 -skew-x-12 transform" />
           <h1
-            className="font-display text-5xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[10rem] font-bold text-white relative leading-none tracking-tight"
+            className="font-display text-5xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[10rem] font-bold text-white relative leading-none tracking-wide"
             data-testid="hero-title"
           >
             {title}

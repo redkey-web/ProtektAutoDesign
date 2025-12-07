@@ -31,17 +31,17 @@ export default function TrustBadges() {
   ];
 
   return (
-    <div className="flex flex-wrap justify-center gap-3 md:gap-8" data-testid="trust-badges">
+    <div className="flex flex-wrap justify-center gap-4 md:gap-8" data-testid="trust-badges">
       {badges.map((badge, index) => (
         <div
           key={index}
-          className="flex items-center gap-2 px-3 py-2 rounded-md bg-black/40 border border-white/15 backdrop-blur-sm"
+          className="flex items-center gap-2.5 px-4 py-2.5 rounded-md bg-black/40 border border-white/15 backdrop-blur-sm"
           data-testid={`trust-badge-${index}`}
         >
-          <badge.icon className="w-5 h-5 text-primary" />
-          <div className="flex items-baseline gap-1.5">
-            <span className="text-sm md:text-base font-bold text-white">{badge.value}</span>
-            <span className="text-xs text-white/70">{badge.label}</span>
+          <badge.icon className="w-6 h-6 text-primary" />
+          <div className="flex items-baseline gap-2">
+            <span className="text-base md:text-lg font-bold text-white">{badge.value}</span>
+            <span className="text-xs md:text-sm text-white/70">{badge.label}</span>
           </div>
         </div>
       ))}
