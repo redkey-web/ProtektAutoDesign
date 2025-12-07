@@ -86,6 +86,8 @@ export default function NewCarProtection() {
         ctaText="Get Quote"
         ctaLink="#contact"
         showPhoneCta={true}
+        subtitlePosition="below"
+        contentOffset="-mt-[10%]"
       />
 
       <GoogleReviewSummary />

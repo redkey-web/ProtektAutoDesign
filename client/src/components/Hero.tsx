@@ -17,6 +17,8 @@ interface HeroProps {
   showPlayButton?: boolean;
   showLogo?: boolean;
   showTrustBadges?: boolean;
+  subtitlePosition?: 'above' | 'below';
+  contentOffset?: string;
 }
 
 export default function Hero({
@@ -33,6 +35,8 @@ export default function Hero({
   showPlayButton = false,
   showLogo = false,
   showTrustBadges = false,
+  subtitlePosition = 'above',
+  contentOffset,
 }: HeroProps) {
   const heightClasses = {
     full: 'h-screen',
@@ -74,7 +78,7 @@ export default function Hero({
         ) : null}
       </div>
 
-      <div className="relative z-10 w-full mx-auto px-4 sm:px-6 lg:px-8 text-center xl:mt-[20vh]">
+      <div className={`relative z-10 w-full mx-auto px-4 sm:px-6 lg:px-8 text-center ${contentOffset || 'xl:mt-[20vh]'}`}>
         {showLogo && (
           <div className="mb-8 flex justify-center" data-testid="hero-logo">
             <img 
@@ -85,7 +89,7 @@ export default function Hero({
             />
           </div>
         )}
-        {subtitle && (
+        {subtitle && subtitlePosition === 'above' && (
           <p
             className="text-primary text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold tracking-widest uppercase mb-8 max-w-[80%] mx-auto"
             data-testid="hero-subtitle"
@@ -102,6 +106,14 @@ export default function Hero({
             {title}
           </h1>
         </div>
+        {subtitle && subtitlePosition === 'below' && (
+          <p
+            className="text-primary text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold tracking-widest uppercase mb-8 max-w-[80%] mx-auto"
+            data-testid="hero-subtitle"
+          >
+            {subtitle}
+          </p>
+        )}
         <div className="flex justify-center mb-10">
           <div className="h-1 w-28 sm:w-40 bg-primary -skew-x-12 transform" />
         </div>
