@@ -54,12 +54,19 @@ export default function Blog() {
         canonical="https://protektauto.com.au/blog"
       />
 
-      <div className="bg-gradient-to-b from-black to-background py-20 border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-display text-4xl md:text-6xl font-bold text-white mb-6">
-            Car Detailing Insights
-          </h1>
-          <p className="text-white/80 text-lg max-w-3xl mx-auto">
+      <div className="bg-gradient-to-b from-black to-background py-24 border-b border-white/10 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+          <div className="relative inline-block">
+            <div className="absolute -inset-x-8 inset-y-2 bg-primary/20 -skew-x-12 transform" />
+            <h1 className="font-display text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold text-white relative tracking-tight">
+              CAR DETAILING
+              <span className="block text-primary">INSIGHTS</span>
+            </h1>
+          </div>
+          <div className="mt-8 flex justify-center">
+            <div className="h-1 w-32 bg-primary -skew-x-12 transform" />
+          </div>
+          <p className="text-white/80 text-lg max-w-3xl mx-auto mt-8">
             Expert guides, tips, and industry insights from Sydney's premium automotive protection specialists
           </p>
         </div>
