@@ -7,64 +7,16 @@ import logoImage from '@assets/Protekt Logo_1761708306237.webp';
 export default function Navigation() {
   const [location] = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
-  const [logoOpacity, setLogoOpacity] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [animationComplete, setAnimationComplete] = useState(false);
-
-  useEffect(() => {
-    const handleAnimationStart = () => {
-      setAnimationComplete(false);
-    };
-    
-    const handleAnimationComplete = () => {
-      setAnimationComplete(true);
-    };
-
-    window.addEventListener('logoAnimationStart', handleAnimationStart);
-    window.addEventListener('logoAnimationComplete', handleAnimationComplete);
-    
-    return () => {
-      window.removeEventListener('logoAnimationStart', handleAnimationStart);
-      window.removeEventListener('logoAnimationComplete', handleAnimationComplete);
-    };
-  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollY = window.scrollY;
-      setIsScrolled(scrollY > 20);
-      
-      // Only apply fade/animation logic on homepage
-      if (location === '/') {
-        // If animation hasn't completed yet, keep logo hidden (animated logo is visible)
-        if (!animationComplete) {
-          setLogoOpacity(0);
-          return;
-        }
-        
-        // After animation completes, show logo immediately at full opacity
-        // (user can scroll and logo stays visible since it animated into place)
-        setLogoOpacity(1);
-      } else {
-        // On other pages, logo is always visible
-        setLogoOpacity(1);
-      }
+      setIsScrolled(window.scrollY > 20);
     };
-    
-    // Update immediately when animation state changes
-    if (location === '/') {
-      if (animationComplete) {
-        setLogoOpacity(1);
-      } else {
-        setLogoOpacity(0);
-      }
-    } else {
-      setLogoOpacity(1);
-    }
     
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [location, animationComplete]);
+  }, []);
 
   const navLinks = [
     { path: '/new-car-protection', label: 'Ceramic Coating' },
@@ -90,8 +42,7 @@ export default function Navigation() {
             <img 
               src={logoImage} 
               alt="Protekt Auto" 
-              className="h-14 sm:h-16 -my-2 -ml-2 transition-opacity duration-300" 
-              style={{ opacity: logoOpacity }}
+              className="h-14 sm:h-16 -my-2 -ml-2" 
             />
           </Link>
 
