@@ -106,7 +106,7 @@ export default function Hero({
           <div className="h-1 w-28 sm:w-40 bg-primary -skew-x-12 transform" />
         </div>
         {description && (
-          <p className="text-white/90 text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto mb-12 font-light" data-testid="hero-description">
+          <p className="text-white/90 text-xl sm:text-2xl md:text-3xl lg:text-4xl max-w-4xl mx-auto mb-12 font-light" data-testid="hero-description">
             {description}
           </p>
         )}
