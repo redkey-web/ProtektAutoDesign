@@ -74,7 +74,7 @@ export default function Hero({
         ) : null}
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center -mt-10">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-[10vh]">
         {showLogo && (
           <div className="mb-8 flex justify-center" data-testid="hero-logo">
             <img 
@@ -96,7 +96,7 @@ export default function Hero({
         <div className="relative inline-block mb-8">
           <div className="absolute -inset-x-6 sm:-inset-x-12 inset-y-1 sm:inset-y-3 bg-primary/15 -skew-x-12 transform" />
           <h1
-            className="font-display text-5xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[10rem] font-bold text-white relative leading-none tracking-wide"
+            className="font-display text-5xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[10rem] font-bold text-white relative leading-none tracking-normal"
             data-testid="hero-title"
           >
             {title}
