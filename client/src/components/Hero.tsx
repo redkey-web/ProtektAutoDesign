@@ -87,26 +87,26 @@ export default function Hero({
         )}
         {subtitle && (
           <p
-            className="text-primary text-sm sm:text-base font-semibold tracking-wider uppercase mb-6"
+            className="text-primary text-base sm:text-lg md:text-xl font-semibold tracking-wider uppercase mb-8"
             data-testid="hero-subtitle"
           >
             {subtitle}
           </p>
         )}
-        <div className="relative inline-block mb-6">
-          <div className="absolute -inset-x-6 sm:-inset-x-10 inset-y-1 sm:inset-y-2 bg-primary/15 -skew-x-12 transform" />
+        <div className="relative inline-block mb-8">
+          <div className="absolute -inset-x-6 sm:-inset-x-12 inset-y-1 sm:inset-y-3 bg-primary/15 -skew-x-12 transform" />
           <h1
-            className="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-white relative leading-none tracking-tight"
+            className="font-display text-5xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[10rem] font-bold text-white relative leading-none tracking-tight"
             data-testid="hero-title"
           >
             {title}
           </h1>
         </div>
-        <div className="flex justify-center mb-6">
-          <div className="h-1 w-24 sm:w-32 bg-primary -skew-x-12 transform" />
+        <div className="flex justify-center mb-10">
+          <div className="h-1 w-28 sm:w-40 bg-primary -skew-x-12 transform" />
         </div>
         {description && (
-          <p className="text-white/90 text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto mb-8 font-light" data-testid="hero-description">
+          <p className="text-white/90 text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto mb-12 font-light" data-testid="hero-description">
             {description}
           </p>
         )}
@@ -165,7 +165,7 @@ export default function Hero({
         </div>
         
         {showTrustBadges && (
-          <div className="mt-12">
+          <div className="mt-16">
             <TrustBadges />
           </div>
         )}
