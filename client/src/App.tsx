@@ -67,9 +67,9 @@ function App() {
         <div className="min-h-screen bg-background">
           <ScrollToTop />
           <Navigation />
-          <TrustTicker />
           <Router />
           <Footer />
+          <TrustTicker />
           <StickyPhoneButton />
         </div>
         <Toaster />
