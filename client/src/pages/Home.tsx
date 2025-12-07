@@ -120,7 +120,7 @@ export default function Home() {
         ctaLink="#services"
         showPhoneCta={true}
         showLogo={false}
-        showTrustBadges={true}
+        showTrustBadges={false}
       />
 
       <section className="py-6 bg-background flex items-center justify-center">
