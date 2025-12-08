@@ -114,7 +114,7 @@ export default function Hero({
             {subtitle}
           </p>
         )}
-        <div className="flex justify-center mb-10">
+        <div className="flex justify-center mb-4">
           <div className="h-1 w-28 sm:w-40 bg-primary -skew-x-12 transform" />
         </div>
         {description && (
