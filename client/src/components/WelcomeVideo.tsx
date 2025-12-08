@@ -16,9 +16,7 @@ export default function WelcomeVideo() {
             Welcome to Protekt Auto
           </h2>
           <p className="text-foreground/70 text-lg max-w-4xl mx-auto leading-relaxed">If you want your car to keep that fresh, new-car shine, the right protection matters. We specialise in paint protection film (PPF) and ceramic coating services that help prevent scratches, UV damage, road grime, and long-term wear.</p>
-          <p className="text-foreground/70 text-lg max-w-4xl mx-auto leading-relaxed mt-4">
-            At Protekt Auto, we're dedicated to providing excellent customer service and ensuring that you are completely satisfied with the results of our new car protection products and services.
-          </p>
+          <p className="text-foreground/70 text-lg max-w-4xl mx-auto leading-relaxed mt-4">Already seeing swirl marks or light scratches? Our professional paint correction restores clarity and gloss before we apply your chosen protection.</p>
         </div>
 
         <div className="max-w-5xl mx-auto">
