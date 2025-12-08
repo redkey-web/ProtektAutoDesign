@@ -4,12 +4,12 @@ import patternLogo from '@assets/image_1764055702258.png';
 export default function StickyPhoneButton() {
   return (
     <div 
-      className="fixed bottom-0 left-0 right-0 z-40 w-full"
+      className="fixed bottom-0 left-0 right-0 z-40 w-full bg-primary"
       style={{
         backgroundImage: `url(${patternLogo})`,
         backgroundRepeat: 'repeat',
         backgroundSize: '60px 60px',
-        backgroundColor: 'hsl(var(--primary))',
+        backgroundBlendMode: 'multiply',
       }}
     >
       <a
