@@ -15,9 +15,7 @@ export default function WelcomeVideo() {
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Welcome to Protekt Auto
           </h2>
-          <p className="text-foreground/70 text-lg max-w-4xl mx-auto leading-relaxed">
-            Want to keep your car looking as good as new or better? In order to maintain that new car shine, it's important to look after your vehicle's paint job with our paint protection films and ceramic coatings. If you've started to notice any swirls or scratches in the paint, don't worry, we can help you with that too with our paint correction services.
-          </p>
+          <p className="text-foreground/70 text-lg max-w-4xl mx-auto leading-relaxed">If you want your car to keep that fresh, new-car shine, the right protection matters. We specialise in paint protection film (PPF) and ceramic coating services that help prevent scratches, UV damage, road grime, and long-term wear.</p>
           <p className="text-foreground/70 text-lg max-w-4xl mx-auto leading-relaxed mt-4">
             At Protekt Auto, we're dedicated to providing excellent customer service and ensuring that you are completely satisfied with the results of our new car protection products and services.
           </p>
