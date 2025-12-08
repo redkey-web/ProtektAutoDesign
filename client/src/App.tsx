@@ -5,6 +5,7 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Navigation from "@/components/Navigation";
+import TrustTicker from "@/components/TrustTicker";
 import Footer from "@/components/Footer";
 import StickyPhoneButton from "@/components/StickyPhoneButton";
 import Home from "@/pages/Home";
@@ -68,6 +69,7 @@ function App() {
           <Navigation />
           <Router />
           <Footer />
+          <TrustTicker />
           <StickyPhoneButton />
         </div>
         <Toaster />
