@@ -110,6 +110,7 @@ export default function Home() {
         showPhoneCta={false}
         showLogo={false}
         showTrustBadges={false}
+        contentOffset="xl:mt-[13vh]"
       />
 
       <section className="py-6 bg-background flex items-center justify-center">
