@@ -103,7 +103,7 @@ export default function Home() {
       <Hero
         title={
           <>
-            <span className="text-primary md:text-white lg:text-white">Sydney's #1</span> Paint Protection & Car Care <span className="text-primary md:text-white lg:text-white">Specialists</span>
+            <span className="text-cyan-300 md:text-white lg:text-white">Sydney's #1</span> Paint Protection & Car Care <span className="text-cyan-300 md:text-white lg:text-white">Specialists</span>
           </>
         }
         subtitle="Premium Automotive Detailing"
