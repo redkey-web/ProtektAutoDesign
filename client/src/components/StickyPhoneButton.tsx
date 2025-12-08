@@ -5,13 +5,18 @@ export default function StickyPhoneButton() {
   return (
     <div 
       className="fixed bottom-0 left-0 right-0 z-40 w-full bg-primary"
-      style={{
-        backgroundImage: `url(${patternLogo})`,
-        backgroundRepeat: 'repeat',
-        backgroundSize: '60px 60px',
-        backgroundBlendMode: 'multiply',
-      }}
     >
+      {/* Pattern overlay - very subtle */}
+      <div 
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage: `url(${patternLogo})`,
+          backgroundRepeat: 'repeat',
+          backgroundSize: '60px 60px',
+          opacity: 0.12,
+        }}
+      />
+      {/* Text content on top */}
       <a
         href="tel:0286062842"
         className="relative flex items-center justify-center gap-3 w-full py-3 text-black font-bold text-base tracking-wide hover:bg-black/10 transition-all"
