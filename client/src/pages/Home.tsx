@@ -107,7 +107,7 @@ export default function Home() {
         videoUrl="https://player.vimeo.com/video/578269899"
         ctaText="View Services"
         ctaLink="#services"
-        showPhoneCta={true}
+        showPhoneCta={false}
         showLogo={false}
         showTrustBadges={false}
       />

@@ -95,7 +95,7 @@ export default function MotorcycleProtection() {
         height="large"
         ctaText="Get Quote"
         ctaLink="#contact"
-        showPhoneCta={true}
+        showPhoneCta={false}
       />
 
       <section className="py-20 bg-background">
