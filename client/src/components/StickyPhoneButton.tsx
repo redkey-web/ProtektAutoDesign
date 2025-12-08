@@ -5,7 +5,7 @@ export default function StickyPhoneButton() {
   return (
     <div className="fixed bottom-0 left-0 right-0 z-40">
       <div 
-        className="absolute inset-0 pointer-events-none opacity-5"
+        className="absolute inset-0 pointer-events-none opacity-30"
         style={{
           backgroundImage: `url(${patternLogo})`,
           backgroundRepeat: 'repeat',
