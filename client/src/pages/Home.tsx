@@ -119,6 +119,8 @@ export default function Home() {
         </div>
       </section>
 
+      <WelcomeVideo />
+
       <section id="services" className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -137,8 +139,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <WelcomeVideo />
 
       <section className="py-16 bg-card/50 border-t border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
