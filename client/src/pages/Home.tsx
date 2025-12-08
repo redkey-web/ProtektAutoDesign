@@ -101,7 +101,11 @@ export default function Home() {
       />
       <StructuredData type="AutomotiveBusiness" />
       <Hero
-        title="Sydney's #1 Paint Protection & Car Care Specialists"
+        title={
+          <>
+            <span className="text-primary md:text-white lg:text-white">Sydney's #1</span> Paint Protection & Car Care <span className="text-primary md:text-white lg:text-white">Specialists</span>
+          </>
+        }
         subtitle="Premium Automotive Detailing"
         description="The best ceramic coatings & paint protection films in Sydney"
         videoUrl="https://player.vimeo.com/video/578269899"

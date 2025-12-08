@@ -4,7 +4,7 @@ import TrustBadges from '@/components/TrustBadges';
 import logoImage from '@assets/Protekt Logo_1761708306237.webp';
 
 interface HeroProps {
-  title: string;
+  title: string | React.ReactNode;
   subtitle?: string;
   description?: string;
   image?: string;
