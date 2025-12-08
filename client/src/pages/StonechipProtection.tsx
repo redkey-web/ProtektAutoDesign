@@ -468,8 +468,6 @@ export default function StonechipProtection() {
         </div>
       </section>
 
-      <Testimonials />
-
       <section className="relative overflow-hidden">
         {/* Pattern Overlay */}
         <div 
@@ -504,6 +502,8 @@ export default function StonechipProtection() {
           <FAQ items={faqItems} title="Paint Protection Film FAQs" />
         </div>
       </section>
+
+      <Testimonials />
 
       <ContactSection />
     </div>

@@ -423,8 +423,6 @@ export default function MotorcycleProtection() {
         </div>
       </section>
 
-      <Testimonials />
-
       <section className="relative overflow-hidden">
         {/* Pattern Overlay */}
         <div 
@@ -439,6 +437,8 @@ export default function MotorcycleProtection() {
           <FAQ items={faqItems} title="Motorcycle Protection FAQs" />
         </div>
       </section>
+
+      <Testimonials />
 
       <ContactSection />
     </div>

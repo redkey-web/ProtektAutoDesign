@@ -129,8 +129,6 @@ export default function NewCarProtection() {
             </p>
           </div>
 
-          <Testimonials />
-
           <div className="grid md:grid-cols-2 gap-8 mb-8">
             <PricingCard
               name="Ceramic Professional"
@@ -189,6 +187,8 @@ export default function NewCarProtection() {
           </div>
         </div>
       </section>
+
+      <Testimonials />
 
       {/* Ceramic Coating Gallery */}
       <section className="py-20 bg-muted/30">

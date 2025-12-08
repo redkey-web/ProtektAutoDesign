@@ -373,8 +373,6 @@ export default function PaintCorrection() {
         </div>
       </section>
 
-      <Testimonials />
-
       <RelatedServices
         services={[
           {
@@ -396,6 +394,8 @@ export default function PaintCorrection() {
       />
 
       <FAQ items={faqItems} title="Paint Correction FAQs" />
+
+      <Testimonials />
 
       <ContactSection />
     </div>

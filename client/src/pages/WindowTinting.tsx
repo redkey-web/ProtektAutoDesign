@@ -321,9 +321,9 @@ export default function WindowTinting() {
 
       <RelatedWindowTintArticles />
 
-      <Testimonials />
-
       <FAQ items={faqItems} title="Window Tinting FAQs" />
+
+      <Testimonials />
 
       <ContactSection />
     </div>
