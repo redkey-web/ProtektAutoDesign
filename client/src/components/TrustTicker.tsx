@@ -19,7 +19,7 @@ export default function TrustTicker() {
         {repeatedItems.map((item, index) => (
           <div
             key={index}
-            className="flex items-center gap-2 px-8 py-2 whitespace-nowrap"
+            className="flex items-center gap-2 px-8 py-2 whitespace-nowrap pt-[9px] pb-[9px] pl-[44px] pr-[44px] bg-[#0e1729] text-left"
           >
             <item.icon className="w-4 h-4 text-primary" />
             <span className="text-sm font-medium text-white">{item.text}</span>
