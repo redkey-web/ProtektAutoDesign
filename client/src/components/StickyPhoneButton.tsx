@@ -24,7 +24,7 @@ export default function StickyPhoneButton() {
         data-testid="sticky-phone-bar"
       >
         <Phone style={{ width: '2rem', height: '2rem' }} />
-        <span>Call Now: (02) 8606 2842</span>
+        <span> (02) 8606 2842</span>
       </a>
     </div>
   );
