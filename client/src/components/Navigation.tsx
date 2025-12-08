@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Link, useLocation } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { Phone, Menu, X } from 'lucide-react';
@@ -6,17 +6,7 @@ import logoImage from '@assets/Protekt Logo_1761708306237.webp';
 
 export default function Navigation() {
   const [location] = useLocation();
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const navLinks = [
     { path: '/new-car-protection', label: 'Ceramic Coating' },
@@ -31,9 +21,7 @@ export default function Navigation() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-black/40 backdrop-blur-md backdrop-brightness-50 border-b border-white/10' : 'bg-transparent'
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 bg-black/40 backdrop-blur-md backdrop-brightness-50 border-b border-white/10"
       data-testid="navigation-header"
     >
       <div className="w-full px-4 sm:px-6 lg:px-8">
