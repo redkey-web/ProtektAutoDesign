@@ -19,11 +19,11 @@ export default function StickyPhoneButton() {
       {/* Text content on top */}
       <a
         href="tel:0286062842"
-        className="relative flex items-center justify-center gap-3 w-full text-black font-bold text-base tracking-wide hover:bg-black/10 transition-all"
-        style={{ paddingTop: 'calc(0.75rem + 2.5px)', paddingBottom: 'calc(0.75rem + 2.5px)' }}
+        className="relative flex items-center justify-center gap-3 w-full text-black font-bold tracking-wide hover:bg-black/10 transition-all"
+        style={{ paddingTop: 'calc(0.75rem + 2.5px)', paddingBottom: 'calc(0.75rem + 2.5px)', fontSize: '3rem' }}
         data-testid="sticky-phone-bar"
       >
-        <Phone className="w-5 h-5" />
+        <Phone style={{ width: '2rem', height: '2rem' }} />
         <span>Call Now: (02) 8606 2842</span>
       </a>
     </div>
