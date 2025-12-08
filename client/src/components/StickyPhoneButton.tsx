@@ -19,7 +19,8 @@ export default function StickyPhoneButton() {
       {/* Text content on top */}
       <a
         href="tel:0286062842"
-        className="relative flex items-center justify-center gap-3 w-full py-3 text-black font-bold text-base tracking-wide hover:bg-black/10 transition-all"
+        className="relative flex items-center justify-center gap-3 w-full text-black font-bold text-base tracking-wide hover:bg-black/10 transition-all"
+        style={{ paddingTop: 'calc(0.75rem + 2.5px)', paddingBottom: 'calc(0.75rem + 2.5px)' }}
         data-testid="sticky-phone-bar"
       >
         <Phone className="w-5 h-5" />
