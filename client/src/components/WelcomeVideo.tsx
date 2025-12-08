@@ -57,6 +57,7 @@ export default function WelcomeVideo() {
               />
             )}
           </div>
+          <p className="text-foreground/70 text-lg max-w-4xl mx-auto leading-relaxed mt-8">Whether you’re buying a new car or refreshing an older one, Protekt Auto focuses on straightforward service, quality workmanship, and results you’ll be happy with long-term. Our new car protection packages give you lasting shine, stronger resale value, and a finish that actually stays cleaner.</p>
         </div>
       </div>
     </section>
