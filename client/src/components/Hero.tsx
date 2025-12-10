@@ -123,10 +123,8 @@ export default function Hero({
           </p>
         )}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button
-            size="lg"
-            variant="default"
-            className="gap-2 text-lg px-8 transition-all duration-300 hover:bg-primary/20 hover:shadow-[0_0_20px_rgba(0,188,212,0.6)] hover:border-transparent focus-visible:ring-0"
+          <button
+            className="flex items-center gap-2 px-6 py-3 bg-primary text-black font-bold tracking-wide skew-x-[-8deg] hover:bg-primary/90 transition-all"
             onClick={() => {
               if (ctaLink.startsWith('#')) {
                 document.querySelector(ctaLink)?.scrollIntoView({ behavior: 'smooth' });
@@ -136,9 +134,9 @@ export default function Hero({
             }}
             data-testid="button-hero-cta"
           >
-            {ctaText}
-            <ArrowRight className="w-5 h-5" />
-          </Button>
+            <span className="skew-x-[8deg]">{ctaText}</span>
+            <ArrowRight className="w-5 h-5 skew-x-[8deg]" />
+          </button>
           {showPhoneCta && (
             <Button
               size="lg"
