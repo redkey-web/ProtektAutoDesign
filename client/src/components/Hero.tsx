@@ -97,7 +97,7 @@ export default function Hero({
             {subtitle}
           </p>
         )}
-        <div className="relative inline-block mb-8">
+        <div className="relative block mb-8 text-left">
           <div className="absolute -inset-x-6 sm:-inset-x-12 inset-y-1 sm:inset-y-3 bg-primary/15 -skew-x-12 transform" />
           <h1
             className="font-display text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[8rem] font-bold text-white relative leading-none tracking-normal"
