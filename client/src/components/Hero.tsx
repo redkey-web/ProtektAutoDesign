@@ -97,15 +97,12 @@ export default function Hero({
             {subtitle}
           </p>
         )}
-        <div className="relative block mb-8 text-left">
-          <div className="absolute -inset-x-6 sm:-inset-x-12 inset-y-1 sm:inset-y-3 bg-primary/15 -skew-x-12 transform" />
-          <h1
-            className="font-display text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[8rem] font-bold text-white relative leading-none tracking-normal"
-            data-testid="hero-title"
-          >
-            {title}
-          </h1>
-        </div>
+        <h1
+          className="font-display text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[8rem] font-bold text-white leading-none tracking-normal mb-8"
+          data-testid="hero-title"
+        >
+          {title}
+        </h1>
         {subtitle && subtitlePosition === 'below' && (
           <p
             className="text-primary text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold tracking-widest uppercase mb-8 max-w-[80%] mx-auto"
@@ -114,9 +111,6 @@ export default function Hero({
             {subtitle}
           </p>
         )}
-        <div className="flex justify-center mb-4">
-          <div className="h-1 w-28 sm:w-40 bg-primary -skew-x-12 transform" />
-        </div>
         {description && (
           <p className="text-white/90 text-xl sm:text-2xl md:text-3xl lg:text-4xl max-w-4xl mx-auto mb-12 font-light" data-testid="hero-description">
             {description}
