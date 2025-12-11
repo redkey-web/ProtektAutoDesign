@@ -493,3 +493,14 @@
 .animate-scroll {
   animation: scroll 12s linear infinite;
 }
+
+@keyframes engine-blink {
+  0%, 100% {
+    border-color: rgba(34, 197, 94, 0.8);
+    box-shadow: 0 0 20px rgba(34, 197, 94, 0.6);
+  }
+  50% {
+    border-color: rgba(34, 197, 94, 0.3);
+    box-shadow: 0 0 40px rgba(34, 197, 94, 1);
+  }
+}

@@ -52,20 +52,19 @@ export default function Navigation() {
           </div>
 
           <div className="hidden lg:flex items-center gap-2">
-            <a
-              href="tel:0286062842"
-              className="hidden xl:flex items-center gap-2 px-4 py-2 bg-primary text-black font-bold text-sm tracking-wide skew-x-[-8deg] hover:bg-primary/90 transition-all"
-              data-testid="button-call-desktop-number"
+            <Button
+              className="hidden xl:flex items-center gap-2 px-6 py-2 bg-primary text-black font-bold text-sm tracking-wide hover:bg-primary/90 transition-all"
+              onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
+              data-testid="button-book-now-desktop"
             >
-              <Phone className="w-4 h-4 skew-x-[8deg]" />
-              <span className="skew-x-[8deg]">(02) 8606 2842</span>
-            </a>
+              Book Now
+            </Button>
             <Button
               size="icon"
               variant="default"
               className="xl:hidden phone-button-glow hover:!bg-primary/20 hover:border-primary transition-all"
-              onClick={() => window.location.href = 'tel:0286062842'}
-              data-testid="button-call-desktop"
+              onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
+              data-testid="button-book-now-icon"
             >
               <Phone className="w-5 h-5" />
             </Button>
