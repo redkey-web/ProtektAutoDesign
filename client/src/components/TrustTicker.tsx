@@ -13,7 +13,7 @@ export default function TrustTicker() {
   return (
     <div 
       className="fixed left-0 right-0 z-40 bg-black/70 backdrop-blur-sm border-t border-primary/20 overflow-hidden"
-      style={{ bottom: '3rem' }}
+      style={{ bottom: 'calc(8rem + 130px)' }}
     >
       <div className="flex animate-scroll">
         {repeatedItems.map((item, index) => (
