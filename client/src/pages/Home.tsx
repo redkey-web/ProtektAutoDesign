@@ -163,7 +163,7 @@ export default function Home() {
                 <img 
                   src={protektSurfaceLogo} 
                   alt="Protekt Surface Solutions" 
-                  className="h-10 w-auto"
+                  className="h-[4.25rem] w-auto"
                 />
               </a>
             </Button>
