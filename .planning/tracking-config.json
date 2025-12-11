@@ -1,0 +1,14 @@
+{
+  "enabled": true,
+  "project": "ProtektAutoDesign",
+  "project_type": "webdev",
+  "level": "project",
+  "tracking_files": [
+    ".planning/current/migration-plan.md",
+    "/Users/redkey/Documents/NEXUS/RED-KEY/red-key_pm/projects/ProtektAutoDesign/ProtektAutoDesign_PLAN.md",
+    "/Users/redkey/Documents/NEXUS/RED-KEY/red-key_pm/projects/ProtektAutoDesign/ProtektAutoDesign_PROGRESS.md"
+  ],
+  "parent_track": "/Users/redkey/Documents/NEXUS/RED-KEY/red-key_pm/.planning",
+  "require_marker_file": false,
+  "description": "ProtektAutoDesign website migration from Vite + Express to Next.js + Vercel"
+}
