@@ -1,54 +1,30 @@
 import { Phone } from 'lucide-react';
+import patternLogo from '@assets/image_1764055702258.png';
 
 export default function StickyPhoneButton() {
   return (
     <div 
-      className="fixed bottom-8 left-1/2 -translate-x-1/2 z-40"
-      data-testid="sticky-phone-button-container"
+      className="fixed bottom-0 left-0 right-0 z-40 w-full bg-primary"
     >
+      {/* Pattern overlay - very subtle */}
+      <div 
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage: `url(${patternLogo})`,
+          backgroundRepeat: 'repeat',
+          backgroundSize: '60px 60px',
+          opacity: 0.12,
+        }}
+      />
+      {/* Text content on top */}
       <a
         href="tel:0286062842"
-        className="relative flex flex-col items-center justify-center w-40 h-40 rounded-full text-white font-bold transition-all duration-300 group"
-        style={{
-          background: 'radial-gradient(circle at 35% 35%, #ef4444, #b91c1c)',
-          boxShadow: '0 0 40px rgba(220, 38, 38, 0.6), inset 0 2px 8px rgba(255, 255, 255, 0.3), inset 0 -4px 12px rgba(0, 0, 0, 0.3)',
-        }}
-        data-testid="sticky-phone-button"
+        className="relative flex items-center justify-center gap-3 w-full text-black font-bold hover:bg-black/10 transition-all"
+        style={{ paddingTop: 'calc(0.75rem + 2.5px)', paddingBottom: 'calc(0.75rem + 2.5px)', fontSize: '1.344rem', margin: '-5px 0', textTransform: 'uppercase', letterSpacing: '-0.05em' }}
+        data-testid="sticky-phone-bar"
       >
-        {/* Blinking border light */}
-        <div 
-          className="absolute inset-0 rounded-full pointer-events-none"
-          style={{
-            border: '3px solid rgba(34, 197, 94, 0.8)',
-            boxShadow: '0 0 20px rgba(34, 197, 94, 0.6)',
-            animation: 'engine-blink 1.5s ease-in-out infinite',
-          }}
-        />
-        
-        {/* Glossy top highlight - like a shiny button */}
-        <div className="absolute top-4 left-12 w-16 h-16 rounded-full bg-white/25 blur-lg pointer-events-none" />
-        
-        {/* Outer ring effect */}
-        <div 
-          className="absolute inset-0 rounded-full pointer-events-none"
-          style={{
-            background: 'radial-gradient(circle at 40% 40%, rgba(255, 255, 255, 0.1), transparent 70%)',
-          }}
-        />
-        
-        {/* Content */}
-        <div className="relative z-10 flex flex-col items-center justify-center gap-2">
-          <Phone className="w-10 h-10 drop-shadow-lg" />
-          <span className="text-lg font-bold leading-tight whitespace-nowrap tracking-tight drop-shadow-md">(02) 8606 2842</span>
-        </div>
-        
-        {/* Hover glow effect */}
-        <div 
-          className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
-          style={{
-            boxShadow: 'inset 0 0 30px rgba(255, 255, 255, 0.2), 0 0 60px rgba(220, 38, 38, 0.5)',
-          }}
-        />
+        <Phone style={{ width: '2rem', height: '2rem' }} />
+        <span> (02) 8606 2842</span>
       </a>
     </div>
   );
