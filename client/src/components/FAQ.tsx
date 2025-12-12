@@ -47,10 +47,10 @@ export default function FAQ({
               data-testid={`faq-item-${index}`}
             >
               <AccordionTrigger
-                className="text-left text-base font-semibold text-foreground hover:text-primary transition-colors"
+                className="text-left text-lg font-sans font-medium text-foreground hover:text-primary transition-colors tracking-wide leading-relaxed"
                 data-testid={`faq-question-${index}`}
               >
-                {item.question}
+                {item.question.toLowerCase()}
               </AccordionTrigger>
               <AccordionContent
                 className="text-muted-foreground leading-relaxed pt-2"
