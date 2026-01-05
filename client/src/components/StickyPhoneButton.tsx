@@ -20,7 +20,7 @@ export default function StickyPhoneButton() {
       <a
         href="tel:0286062842"
         className="relative flex items-center justify-center gap-3 w-full text-black font-bold hover:bg-black/10 transition-all"
-        style={{ paddingTop: 'calc(0.73rem + 2.4px)', paddingBottom: 'calc(0.73rem + 2.4px)', fontSize: '1.344rem', margin: '-5px 0', textTransform: 'uppercase', letterSpacing: '-0.05em' }}
+        style={{ paddingTop: 'calc(0.67rem + 2.1px)', paddingBottom: 'calc(0.67rem + 2.1px)', fontSize: '1.344rem', margin: '-5px 0', textTransform: 'uppercase', letterSpacing: '-0.05em' }}
         data-testid="sticky-phone-bar"
       >
         <Phone style={{ width: '2rem', height: '2rem' }} />
