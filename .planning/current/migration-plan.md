@@ -87,16 +87,16 @@ Status: COMPLETE
 
 ## Phase 3: Core Infrastructure
 
-Status: Pending
+Status: COMPLETE
 
-- [ ] Port global styles to `src/app/globals.css`
-- [ ] Port Navigation component (replace wouter with next/link)
-- [ ] Port Footer component
-- [ ] Port TrustTicker component
-- [ ] Port StickyPhoneButton component
-- [ ] Copy shadcn/ui components to `src/components/ui/`
-- [ ] Create `src/lib/utils.ts`
-- [ ] Verify: `npm run dev`
+- [x] Port global styles to `src/app/globals.css`
+- [x] Port Navigation component (replace wouter with next/link)
+- [x] Port Footer component
+- [x] Port TrustTicker component
+- [x] Port StickyPhoneButton component
+- [x] Copy shadcn/ui components to `src/components/ui/`
+- [x] Create `src/lib/utils.ts`
+- [x] Verify: `npm run dev`
 
 ---
 

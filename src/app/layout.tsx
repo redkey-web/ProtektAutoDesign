@@ -1,5 +1,9 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import Navigation from '@/components/layout/Navigation'
+import Footer from '@/components/layout/Footer'
+import TrustTicker from '@/components/layout/TrustTicker'
+import StickyPhoneButton from '@/components/layout/StickyPhoneButton'
 
 export const metadata: Metadata = {
   title: {
@@ -43,7 +47,13 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen bg-background font-sans antialiased">
-        {children}
+        <Navigation />
+        <main className="pt-16 pb-28">
+          {children}
+        </main>
+        <TrustTicker />
+        <StickyPhoneButton />
+        <Footer />
       </body>
     </html>
   )
