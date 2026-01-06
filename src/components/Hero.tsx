@@ -21,6 +21,8 @@ interface HeroProps {
   showTrustBadges?: boolean;
   subtitlePosition?: 'above' | 'below';
   contentOffset?: string;
+  /** When true, subtitle becomes H1 (SEO-focused, small eyebrow) and title becomes visual text (big, conversion-focused) */
+  eyebrowAsH1?: boolean;
 }
 
 export default function Hero({
@@ -39,6 +41,7 @@ export default function Hero({
   showTrustBadges = false,
   subtitlePosition = 'above',
   contentOffset,
+  eyebrowAsH1 = false,
 }: HeroProps) {
   const heightClasses = {
     full: 'h-screen',
@@ -107,26 +110,53 @@ export default function Hero({
           </div>
         )}
         {subtitle && subtitlePosition === 'above' && (
-          <p
-            className="text-primary text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold tracking-widest uppercase mb-8 max-w-[80%] mx-auto"
-            data-testid="hero-subtitle"
-          >
-            {subtitle}
-          </p>
+          eyebrowAsH1 ? (
+            <h1
+              className="text-primary text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold tracking-widest uppercase mb-8 max-w-[80%] mx-auto"
+              data-testid="hero-subtitle"
+            >
+              {subtitle}
+            </h1>
+          ) : (
+            <p
+              className="text-primary text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold tracking-widest uppercase mb-8 max-w-[80%] mx-auto"
+              data-testid="hero-subtitle"
+            >
+              {subtitle}
+            </p>
+          )
         )}
-        <h1
-          className="font-display text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[8rem] font-bold text-white leading-none tracking-normal mb-8"
-          data-testid="hero-title"
-        >
-          {title}
-        </h1>
-        {subtitle && subtitlePosition === 'below' && (
+        {eyebrowAsH1 ? (
           <p
-            className="text-primary text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold tracking-widest uppercase mb-8 max-w-[80%] mx-auto"
-            data-testid="hero-subtitle"
+            className="font-display text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[8rem] font-bold text-white leading-none tracking-normal mb-8"
+            data-testid="hero-title"
           >
-            {subtitle}
+            {title}
           </p>
+        ) : (
+          <h1
+            className="font-display text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[8rem] font-bold text-white leading-none tracking-normal mb-8"
+            data-testid="hero-title"
+          >
+            {title}
+          </h1>
+        )}
+        {subtitle && subtitlePosition === 'below' && (
+          eyebrowAsH1 ? (
+            <h1
+              className="text-primary text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold tracking-widest uppercase mb-8 max-w-[80%] mx-auto"
+              data-testid="hero-subtitle"
+            >
+              {subtitle}
+            </h1>
+          ) : (
+            <p
+              className="text-primary text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold tracking-widest uppercase mb-8 max-w-[80%] mx-auto"
+              data-testid="hero-subtitle"
+            >
+              {subtitle}
+            </p>
+          )
         )}
         {description && (
           <p className="text-white/90 text-xl sm:text-2xl md:text-3xl lg:text-4xl max-w-4xl mx-auto mb-12 font-light" data-testid="hero-description">
