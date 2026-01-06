@@ -1,0 +1,11 @@
+# Protekt Auto Design - robots.txt
+# https://protektautodesign.com.au
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://protektautodesign.com.au/sitemap.xml
+
+# Disallow admin/API routes (when added)
+Disallow: /api/

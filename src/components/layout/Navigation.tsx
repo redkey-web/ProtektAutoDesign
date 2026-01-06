@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
@@ -10,6 +10,12 @@ import { Phone, Menu, X } from 'lucide-react';
 export default function Navigation() {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  // For sliding highlight effect
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [highlightStyle, setHighlightStyle] = useState({ left: 0, width: 0, opacity: 0 });
+  const navRef = useRef<HTMLDivElement>(null);
+  const itemRefs = useRef<(HTMLAnchorElement | null)[]>([]);
 
   const navLinks = [
     { path: '/new-car-protection', label: 'Ceramic Coating' },
@@ -22,9 +28,28 @@ export default function Navigation() {
     { path: '/contact', label: 'Contact' },
   ];
 
+  // Update highlight position when hovered item changes
+  useEffect(() => {
+    if (hoveredIndex !== null && itemRefs.current[hoveredIndex] && navRef.current) {
+      const item = itemRefs.current[hoveredIndex];
+      const nav = navRef.current;
+      if (item) {
+        const itemRect = item.getBoundingClientRect();
+        const navRect = nav.getBoundingClientRect();
+        setHighlightStyle({
+          left: itemRect.left - navRect.left,
+          width: itemRect.width,
+          opacity: 1,
+        });
+      }
+    } else {
+      setHighlightStyle(prev => ({ ...prev, opacity: 0 }));
+    }
+  }, [hoveredIndex]);
+
   return (
     <nav
-      className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-md backdrop-brightness-50 border-b border-white/10"
+      className="fixed top-0 left-0 right-0 z-[100] bg-black/20 backdrop-blur-md backdrop-brightness-50 border-b border-white/10"
       data-testid="navigation-header"
     >
       <div className="w-full px-4 sm:px-6 lg:px-8">
@@ -40,16 +65,35 @@ export default function Navigation() {
             />
           </Link>
 
-          <div className="hidden lg:flex items-center gap-4">
-            {navLinks.map((link) => (
+          {/* Desktop Navigation with sliding highlight */}
+          <div
+            ref={navRef}
+            className="hidden lg:flex items-center gap-1 relative"
+            onMouseLeave={() => setHoveredIndex(null)}
+          >
+            {/* Sliding highlight background */}
+            <div
+              className="absolute h-9 bg-white/10 rounded-md pointer-events-none transition-all duration-300 ease-out"
+              style={{
+                left: highlightStyle.left,
+                width: highlightStyle.width,
+                opacity: highlightStyle.opacity,
+                transform: 'translateY(-50%)',
+                top: '50%',
+              }}
+            />
+
+            {navLinks.map((link, index) => (
               <Link
                 key={link.path}
+                ref={(el) => { itemRefs.current[index] = el; }}
                 href={link.path}
-                className={`nav-link-desktop text-sm font-medium transition-all duration-200 cursor-pointer px-3 py-2 rounded-md ${
+                className={`relative z-10 text-sm font-medium cursor-pointer px-3 py-2 rounded-md transition-colors duration-200 ${
                   pathname === link.path
-                    ? 'text-primary active'
-                    : 'text-white/90 hover:text-white'
+                    ? 'text-primary'
+                    : 'text-white/80 hover:text-white'
                 }`}
+                onMouseEnter={() => setHoveredIndex(index)}
                 data-testid={`link-nav-${link.label.toLowerCase().replace(' ', '-')}`}
               >
                 {link.label}
