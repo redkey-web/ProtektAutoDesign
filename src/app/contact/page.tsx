@@ -51,7 +51,7 @@ export default function ContactPage() {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               title="Protekt Auto Location - 24 George Street, Clyde NSW 2142"
-              className="grayscale hover:grayscale-0 transition-all duration-500"
+              className=""
             />
           </div>
           <div className="text-center mt-6">

@@ -143,7 +143,7 @@ export default function Footer() {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               title="Protekt Auto Location - 24 George Street, Clyde NSW 2142"
-              className="grayscale hover:grayscale-0 transition-all duration-500"
+              className=""
             />
           </div>
           <p className="text-white/60 text-sm text-center mt-3">
@@ -158,9 +158,20 @@ export default function Footer() {
           </p>
         </div>
 
-        <div className="pt-8 border-t border-white/10 text-center text-white/60 text-sm">
+        <div className="pt-8 border-t border-white/10 text-center text-white/60 text-sm pb-28">
           <p data-testid="text-copyright">
             &copy; {currentYear} Protekt Auto. All rights reserved.
+          </p>
+          <p className="mt-2">
+            SEO &amp; Website by{' '}
+            <a
+              href="https://redkey.digital"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primary transition-colors"
+            >
+              Red Key
+            </a>
           </p>
         </div>
       </div>
