@@ -59,7 +59,7 @@ export default function ContactPage() {
               href="https://www.google.com/maps/dir/?api=1&destination=24+George+Street+Clyde+NSW+2142+Australia"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-black font-bold rounded-md hover:bg-primary/90 transition-all"
+              className="btn-spray-edge inline-flex items-center gap-2 px-6 py-3 bg-primary text-black font-bold rounded-md transition-all"
             >
               Get Directions
             </a>

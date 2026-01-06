@@ -165,7 +165,7 @@ export default function Hero({
         )}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <button
-            className="flex items-center gap-2 px-6 py-3 bg-primary text-black font-bold tracking-wide skew-x-[-8deg] hover:bg-primary/90 transition-all"
+            className="btn-spray-edge flex items-center gap-2 px-6 py-3 bg-primary text-black font-bold tracking-wide skew-x-[-8deg] transition-all"
             onClick={handleCtaClick}
             data-testid="button-hero-cta"
           >

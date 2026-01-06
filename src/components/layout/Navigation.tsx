@@ -104,7 +104,7 @@ export default function Navigation() {
           <div className="hidden lg:flex items-center gap-2">
             <Button
               asChild
-              className="hidden xl:flex items-center gap-2 px-6 py-2 bg-primary text-black font-bold text-sm tracking-wide hover:bg-primary/90 transition-all"
+              className="btn-spray-edge hidden xl:flex items-center gap-2 px-6 py-2 bg-primary text-black font-bold text-sm tracking-wide transition-all"
               data-testid="button-book-now-desktop"
             >
               <Link href="/contact">Book Now</Link>

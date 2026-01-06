@@ -5,14 +5,15 @@ import { Phone } from 'lucide-react';
 export default function StickyPhoneButton() {
   return (
     <div className="fixed bottom-0 left-0 right-0 z-40 w-full bg-primary overflow-hidden">
-      {/* Pattern overlay - fixed parallax with infinite scroll */}
+      {/* Pattern overlay - fixed to viewport on scroll */}
       <div
-        className="absolute inset-0 pointer-events-none animate-pattern-scroll"
+        className="absolute inset-0 pointer-events-none"
         style={{
           backgroundImage: 'url(/images/pattern-logo.png)',
           backgroundRepeat: 'repeat',
           backgroundSize: '60px 60px',
           backgroundAttachment: 'fixed',
+          backgroundPosition: 'center',
           opacity: 0.12,
         }}
       />

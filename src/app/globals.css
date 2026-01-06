@@ -467,3 +467,126 @@
     box-shadow: 0 0 40px rgba(34, 197, 94, 1);
   }
 }
+
+/* Spray Paint Button Effect */
+.btn-spray,
+.btn-spray-edge,
+.btn-spray-grunge {
+  /* Disable default button hover elevation to avoid conflicts */
+}
+
+.btn-spray::after,
+.btn-spray-edge::after,
+.btn-spray-grunge::after {
+  display: none !important;
+}
+
+.btn-spray {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  transition: color 0.3s ease 0.1s;
+}
+
+.btn-spray::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: white;
+  z-index: -1;
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Spray paint texture using CSS gradient noise */
+  mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='0 1 1 1'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='0 1 1 1'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  mask-size: 400px 100px;
+  -webkit-mask-size: 400px 100px;
+}
+
+.btn-spray:hover::before {
+  width: 120%;
+}
+
+.btn-spray:hover {
+  color: hsl(var(--primary)) !important;
+}
+
+/* Variant with spray splatter edge effect */
+.btn-spray-edge {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  transition: color 0.5s ease 0.25s;
+}
+
+.btn-spray-edge::before {
+  content: '';
+  position: absolute;
+  top: -15%;
+  left: -15%;
+  width: 0%;
+  height: 130%;
+  background: white;
+  z-index: -1;
+  transition: width 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+  /* Prominent jagged spray edge */
+  clip-path: polygon(
+    0% 0%,
+    88% 0%,
+    92% 8%,
+    100% 12%,
+    95% 22%,
+    100% 32%,
+    93% 42%,
+    100% 52%,
+    94% 62%,
+    100% 72%,
+    96% 82%,
+    100% 92%,
+    90% 100%,
+    0% 100%
+  );
+  box-shadow: 4px 0 12px rgba(255, 255, 255, 0.5);
+}
+
+.btn-spray-edge:hover::before {
+  width: 140%;
+}
+
+.btn-spray-edge:hover {
+  color: hsl(var(--primary)) !important;
+  text-shadow: 0 0 1px hsl(var(--primary));
+}
+
+/* Grunge spray variant with organic texture */
+.btn-spray-grunge {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  transition: color 0.4s ease 0.2s;
+}
+
+.btn-spray-grunge::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: white;
+  z-index: -1;
+  transition: width 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  /* Organic spray edge using border-radius on rotated element */
+  border-radius: 0 60% 40% 0 / 0 50% 50% 0;
+}
+
+.btn-spray-grunge:hover::before {
+  width: 120%;
+  border-radius: 0;
+}
+
+.btn-spray-grunge:hover {
+  color: hsl(var(--primary)) !important;
+}
