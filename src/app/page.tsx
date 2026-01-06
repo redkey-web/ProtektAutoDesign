@@ -52,7 +52,7 @@ const services = [
     description:
       'Ceramic coatings protect your paint against environmental contaminants with the added benefit of easier maintenance.',
     image: '/images/ceramic-coating.webp',
-    link: '/new-car-protection',
+    link: '/ceramic-coating-sydney',
   },
   {
     title: 'Paint Correction',
@@ -66,14 +66,14 @@ const services = [
     description:
       'Block out up to 99% of harmful UV rays, infrared, glare, and heat with quality carbon to ceramic grade films.',
     image: '/images/window-tinting.webp',
-    link: '/window-tinting',
+    link: '/window-tinting-sydney',
   },
   {
     title: 'Paint Protection Film',
     description:
       'Advanced transparent film that protects your paint from stone chips, bug splatter and minor abrasions.',
     image: '/images/ppf.webp',
-    link: '/stonechip-protection',
+    link: '/ppf-car-wrap-sydney',
   },
   {
     title: 'Motorcycle Protection',

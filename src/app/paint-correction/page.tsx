@@ -260,13 +260,13 @@ export default function PaintCorrection() {
                 title: 'Ceramic Coating Sydney',
                 description:
                   'Protect your freshly corrected paint with our premium ceramic or graphene coating for long-lasting shine.',
-                link: '/new-car-protection',
+                link: '/ceramic-coating-sydney',
               },
               {
                 title: 'Window Tinting',
                 description:
                   'Complement your paint correction with professional ceramic window tinting for heat rejection and UV protection.',
-                link: '/window-tinting',
+                link: '/window-tinting-sydney',
               },
               {
                 title: 'Protection Packages',

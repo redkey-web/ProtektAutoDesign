@@ -6,10 +6,10 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const services = [
-    { name: 'Ceramic Coating', path: '/new-car-protection' },
+    { name: 'Ceramic Coating', path: '/ceramic-coating-sydney' },
     { name: 'Paint Correction', path: '/paint-correction' },
-    { name: 'Window Tinting', path: '/window-tinting' },
-    { name: 'Paint Protection Film', path: '/stonechip-protection' },
+    { name: 'Window Tinting', path: '/window-tinting-sydney' },
+    { name: 'Paint Protection Film', path: '/ppf-car-wrap-sydney' },
     { name: 'Motorcycle Protection', path: '/motorcycle-protection' },
     { name: 'Packages', path: '/packages' },
     { name: 'Blog', path: '/blog' },
@@ -126,6 +126,36 @@ export default function Footer() {
               </li>
             </ul>
           </div>
+        </div>
+
+        {/* Google Maps */}
+        <div className="py-8 border-t border-white/10">
+          <h3 className="font-semibold text-white mb-4 text-center" data-testid="text-location-heading">
+            Visit Our Workshop
+          </h3>
+          <div className="rounded-lg overflow-hidden h-[250px] md:h-[300px]">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.7876548234!2d151.0147!3d-33.8367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12a4b7c9df8b05%3A0x1234567890abcdef!2s24%20George%20St%2C%20Clyde%20NSW%202142%2C%20Australia!5e0!3m2!1sen!2sau!4v1704500000000!5m2!1sen!2sau"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Protekt Auto Location - 24 George Street, Clyde NSW 2142"
+              className="grayscale hover:grayscale-0 transition-all duration-500"
+            />
+          </div>
+          <p className="text-white/60 text-sm text-center mt-3">
+            <a
+              href="https://www.google.com/maps/dir/?api=1&destination=24+George+Street+Clyde+NSW+2142+Australia"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primary transition-colors underline"
+            >
+              Get Directions to Protekt Auto
+            </a>
+          </p>
         </div>
 
         <div className="pt-8 border-t border-white/10 text-center text-white/60 text-sm">

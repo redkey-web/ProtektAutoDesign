@@ -12,17 +12,22 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Shield, Zap, Droplets, RefreshCw, LucideIcon } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Paint Protection Film Sydney | PPF Installer | Stone Chip Protection | Protekt Auto',
+  title: 'PPF Wrap Sydney | Paint Protection Film Cost | From $1,650',
   description:
-    'Expert PPF installer Sydney. Self-healing paint protection film protects against stone chips, scratches & road debris. Full body from $5,500. Call (02) 8606 2842',
+    'Expert PPF wrap Sydney. Self-healing paint protection film from $1,650. PPF cost: Partial $1,650, Full Front $2,750, Full Body $5,500. Stone chip protection specialists. Call (02) 8606 2842',
   keywords:
-    'paint protection film Sydney, PPF installer Sydney, stone chip protection, PPF Sydney, clear bra Sydney',
+    'ppf wrap sydney, ppf wrap cost, ppf sydney, ppf cost, paint protection film sydney, ppf installer sydney, stone chip protection sydney, clear bra sydney, ppf wrap price',
   alternates: {
-    canonical: 'https://protektauto.com.au/stonechip-protection',
+    canonical: 'https://protektauto.com.au/ppf-car-wrap-sydney',
   },
 };
 
 const faqItems: FAQItem[] = [
+  {
+    question: 'How much does PPF cost in Sydney?',
+    answer:
+      'PPF pricing in Sydney varies based on coverage area. At Protekt Auto, our Partial Front package (bonnet, bumper, mirrors) starts from $1,650. Full Front protection (including guards and lights) starts from $2,750. Track Pack coverage starts from $3,500, and Full Body PPF wrap starts from $5,500. Prices vary by vehicle size and complexity.',
+  },
   {
     question: 'What is Paint Protection Film (PPF)?',
     answer:
@@ -328,7 +333,7 @@ export default function StonechipProtection() {
                 title: 'Ceramic Coating Sydney',
                 description:
                   'Maximize protection by adding ceramic coating on top of your PPF for enhanced gloss and easier cleaning.',
-                link: '/new-car-protection',
+                link: '/ceramic-coating-sydney',
               },
               {
                 title: 'Paint Correction Sydney',

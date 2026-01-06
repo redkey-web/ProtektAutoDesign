@@ -6,10 +6,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Static pages
   const routes = [
     '',
-    '/new-car-protection',
+    '/ceramic-coating-sydney',
     '/paint-correction',
-    '/window-tinting',
-    '/stonechip-protection',
+    '/window-tinting-sydney',
+    '/ppf-car-wrap-sydney',
     '/motorcycle-protection',
     '/packages',
     '/gallery',
@@ -18,9 +18,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Blog posts (static for now)
   const blogPosts = [
-    '/blog/ceramic-coating-vs-wax',
-    '/blog/ppf-complete-guide',
-    '/blog/window-tinting-nsw-laws',
+    '/blog/ceramic-coating-benefits',
+    '/blog/ppf-vs-ceramic-coating',
+    '/blog/window-tinting-guide',
   ]
 
   const staticRoutes = routes.map((route) => ({

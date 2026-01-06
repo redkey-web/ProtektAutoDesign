@@ -14,17 +14,22 @@ import { Button } from '@/components/ui/button';
 import { Shield, Sun, Thermometer, Eye, Check, LucideIcon } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Window Tinting Sydney | Ceramic Tint | Legal NSW Compliant | Protekt Auto',
+  title: 'Best Window Tinting Sydney | Ceramic Tint Parramatta | Legal NSW',
   description:
-    'Premium window tinting Sydney. Block 99% UV rays with ceramic & carbon films. Legal NSW compliant tinting. Heat rejection & privacy. Free quotes (02) 8606 2842',
+    'Best car window tinting Sydney & Parramatta. Premium ceramic tints block 99% UV. Darkest legal window tint NSW compliant. Professional installation from $250. Call (02) 8606 2842',
   keywords:
-    'window tinting Sydney, ceramic window tint Sydney, legal window tint NSW, car tinting Sydney, window film Sydney',
+    'window tinting sydney, best window tinting sydney, car window tinting sydney, ceramic tint sydney, window tinting parramatta, darkest legal window tint nsw, car tinting sydney',
   alternates: {
-    canonical: 'https://protektauto.com.au/window-tinting',
+    canonical: 'https://protektauto.com.au/window-tinting-sydney',
   },
 };
 
 const faqItems: FAQItem[] = [
+  {
+    question: 'What is the darkest legal window tint in NSW?',
+    answer:
+      'In NSW, the darkest legal tint for front side windows is 35% VLT (Visible Light Transmission), meaning at least 35% of light must pass through. Rear side windows and the back windscreen can be any darkness, including 5% (limo tint). The windscreen can only have a visor strip on the top 10%. We offer 35% ceramic tint for front windows and darker options for rear windows while keeping you fully road legal.',
+  },
   {
     question: 'Is window tinting legal in NSW?',
     answer:
@@ -275,7 +280,7 @@ export default function WindowTinting() {
                 title: 'Ceramic Coating Sydney',
                 description:
                   'Protect your vehicle with our premium ceramic or graphene coating for long-lasting shine.',
-                link: '/new-car-protection',
+                link: '/ceramic-coating-sydney',
               },
               {
                 title: 'Paint Correction',

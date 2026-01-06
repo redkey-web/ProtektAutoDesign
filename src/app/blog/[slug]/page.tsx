@@ -10,13 +10,13 @@ import { Calendar, User, ArrowLeft } from 'lucide-react';
 const posts = [
   {
     id: 1,
-    slug: 'ceramic-coating-vs-wax',
-    title: 'Ceramic Coating vs Wax: Which is Better for Your Car?',
-    excerpt: 'A comprehensive guide comparing ceramic coating and traditional wax protection. Learn the pros, cons, and which option is best for your vehicle.',
+    slug: 'ceramic-coating-benefits',
+    title: 'The Benefits of Ceramic Coating for Your Vehicle',
+    excerpt: 'Discover why ceramic coating is the ultimate protection for your car\'s paint and how it can save you money in the long run. Sydney\'s guide to ceramic coating.',
     coverImage: '/images/ceramic-coating.webp',
     author: 'Protekt Auto',
-    publishedAt: '2024-12-15',
-    tags: ['Ceramic Coating', 'Car Care'],
+    publishedAt: '2025-01-15',
+    tags: ['Ceramic Coating', 'Paint Protection'],
     content: `
       <h2>Introduction</h2>
       <p>When it comes to protecting your vehicle's paintwork, two popular options stand out: ceramic coating and traditional wax. Both offer paint protection, but they work in fundamentally different ways and offer varying levels of durability.</p>
@@ -50,13 +50,13 @@ const posts = [
   },
   {
     id: 2,
-    slug: 'ppf-complete-guide',
-    title: 'The Complete Guide to Paint Protection Film (PPF)',
-    excerpt: 'Everything you need to know about PPF - from how it works to installation and maintenance tips for long-lasting protection.',
+    slug: 'ppf-vs-ceramic-coating',
+    title: 'PPF vs Ceramic Coating: Which is Right for You?',
+    excerpt: 'Understanding the differences between paint protection film and ceramic coating to make the best choice for your vehicle.',
     coverImage: '/images/ppf.webp',
     author: 'Protekt Auto',
-    publishedAt: '2024-12-10',
-    tags: ['PPF', 'Paint Protection'],
+    publishedAt: '2025-01-10',
+    tags: ['PPF', 'Ceramic Coating'],
     content: `
       <h2>What is Paint Protection Film?</h2>
       <p>Paint Protection Film (PPF) is a thermoplastic urethane film applied to painted surfaces of vehicles to protect from stone chips, bug splatter, and minor abrasions.</p>
@@ -88,13 +88,13 @@ const posts = [
   },
   {
     id: 3,
-    slug: 'window-tinting-nsw-laws',
-    title: 'Window Tinting Laws in NSW: What You Need to Know',
-    excerpt: 'Understanding the legal requirements for window tinting in New South Wales. Stay compliant while enjoying the benefits of tinted windows.',
+    slug: 'window-tinting-guide',
+    title: 'Complete Guide to Window Tinting in Sydney',
+    excerpt: 'Everything you need to know about window tinting laws, benefits, and options in New South Wales.',
     coverImage: '/images/window-tinting.webp',
     author: 'Protekt Auto',
-    publishedAt: '2024-12-05',
-    tags: ['Window Tinting', 'NSW Laws'],
+    publishedAt: '2025-01-05',
+    tags: ['Window Tinting', 'Guide'],
     content: `
       <h2>NSW Window Tinting Regulations</h2>
       <p>In New South Wales, window tinting must comply with specific regulations to ensure driver visibility and road safety. Here's what you need to know:</p>

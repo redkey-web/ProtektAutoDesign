@@ -11,15 +11,23 @@ import FeaturedWorkShowcase from '@/components/FeaturedWorkShowcase';
 import BentoImageGrid from '@/components/BentoImageGrid';
 
 export const metadata: Metadata = {
-  title: 'Ceramic Coating Sydney | Graphene Coating | New Car Protection',
-  description: "Best ceramic coating Sydney. Premium ceramic & graphene coatings for new cars with 5-7 year guarantees. Professional application from $950. Protect your new car's paint with Protekt Auto. Book now (02) 8606 2842",
-  keywords: 'ceramic coating Sydney, graphene coating Sydney, new car paint protection, ceramic coating near me, car ceramic coating Sydney',
+  title: 'Best Ceramic Coating Sydney | Graphene Coating Near Me | From $950',
+  description: "Sydney's #1 ceramic coating specialists. Premium ceramic & graphene coatings with 5-7 year guarantees. Best ceramic coating near me from $950. Professional new car paint protection. Call Protekt Auto (02) 8606 2842",
+  keywords: 'best ceramic coating sydney, ceramic coating near me, graphene coating sydney, ceramic coating sydney cost, car ceramic coating sydney, new car paint protection sydney, ceramic coating price sydney',
   alternates: {
-    canonical: 'https://protektauto.com.au/new-car-protection',
+    canonical: 'https://protektauto.com.au/ceramic-coating-sydney',
   },
 };
 
 const faqItems: FAQItem[] = [
+  {
+    question: 'What is ceramic coating for cars?',
+    answer: 'Ceramic coating is a liquid polymer applied to your vehicle\'s exterior that chemically bonds with the factory paint, creating a permanent protective layer. Unlike wax or sealants that wash away, ceramic coating provides long-term protection (5-7 years) against UV damage, oxidation, chemical stains, bird droppings, and environmental contaminants. It also creates a hydrophobic surface that repels water and makes washing much easier.',
+  },
+  {
+    question: 'How much does ceramic coating cost in Sydney?',
+    answer: 'Our ceramic coating packages in Sydney start from $950 for the Professional Ceramic Coating with a 5-year guarantee. The Premium Graphene Coating starts from $1,350 with a 7-year guarantee. Prices vary based on vehicle size and paint condition. All our packages include 2.5 hours of machine polishing to ensure a perfect surface before coating application.',
+  },
   {
     question: 'What is the difference between Ceramic and Graphene coatings?',
     answer: 'Graphene coatings contain enhanced graphene nanoparticles that make them significantly more robust and durable than traditional ceramic coatings. They offer superior corrosion resistance, an intense deeper gloss finish, and easier long-term maintenance. Graphene coatings also come with a 7-year guarantee versus the 5-year guarantee for ceramic coatings.',
@@ -247,7 +255,7 @@ export default function NewCarProtection() {
               {
                 title: 'Paint Protection Film',
                 description: 'Add self-healing PPF to high-impact areas for maximum protection against stone chips and road debris.',
-                link: '/stonechip-protection',
+                link: '/ppf-car-wrap-sydney',
               },
               {
                 title: 'Protection Packages',

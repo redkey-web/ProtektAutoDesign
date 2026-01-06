@@ -18,10 +18,10 @@ export default function Navigation() {
   const itemRefs = useRef<(HTMLAnchorElement | null)[]>([]);
 
   const navLinks = [
-    { path: '/new-car-protection', label: 'Ceramic Coating' },
+    { path: '/ceramic-coating-sydney', label: 'Ceramic Coating' },
     { path: '/paint-correction', label: 'Paint Correction' },
-    { path: '/window-tinting', label: 'Tinting' },
-    { path: '/stonechip-protection', label: 'PPF' },
+    { path: '/window-tinting-sydney', label: 'Tinting' },
+    { path: '/ppf-car-wrap-sydney', label: 'PPF' },
     { path: '/motorcycle-protection', label: 'Motorcycle' },
     { path: '/packages', label: 'Packages' },
     { path: '/gallery', label: 'Gallery' },
