@@ -182,8 +182,8 @@ export default function PaintCorrection() {
   return (
     <div className="min-h-screen">
       <Hero
-        title="Paint Correction & Enhancement"
-        subtitle="Automotive Paint Correction"
+        title="Paint Correction Sydney"
+        subtitle="Professional Swirl Removal & Gloss Restoration"
         image="/images/paint-correction.webp"
         height="large"
         ctaText="Get Quote"

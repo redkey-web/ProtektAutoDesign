@@ -107,8 +107,8 @@ export default function NewCarProtection() {
   return (
     <div className="min-h-screen">
       <Hero
-        title="Ceramic Coating Sydney"
-        subtitle="Need Paint Protection for a New Car? Nothing Protects Like Ceramic & Graphene Coatings"
+        title="Ceramic & Graphene Coating Sydney"
+        subtitle="Next-Gen Graphene Protection with 7-Year Guarantee"
         image="/images/ceramic-coating.webp"
         height="large"
         ctaText="Get Quote"
@@ -143,7 +143,7 @@ export default function NewCarProtection() {
               Premium Paint Protection Coatings
             </h2>
             <p className="text-foreground/70 text-lg leading-relaxed">
-              Keep your new car&apos;s paint in perfect condition with Protekt Auto&apos;s premium Ceramic and Graphene paint protection coatings. Our coatings provide maximum durability, a high gloss, and make ongoing care for your vehicle&apos;s paintwork much easier.
+              Protect your vehicle&apos;s paint with Protekt Auto&apos;s premium Graphene and Ceramic coatings. Our advanced graphene technology delivers superior durability, an intense deep gloss, and makes ongoing maintenance effortless—backed by up to 7 years of guaranteed protection.
             </p>
           </div>
 
