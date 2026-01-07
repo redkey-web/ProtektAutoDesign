@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import Hero from '@/components/Hero';
 import ContactSection from '@/components/ContactSection';
 import FAQ, { FAQItem } from '@/components/FAQ';
