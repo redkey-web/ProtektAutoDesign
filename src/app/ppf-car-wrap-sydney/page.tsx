@@ -9,14 +9,14 @@ import Testimonials from '@/components/Testimonials';
 import FeaturedWorkShowcase from '@/components/FeaturedWorkShowcase';
 import BentoImageGrid from '@/components/BentoImageGrid';
 import { Card, CardContent } from '@/components/ui/card';
-import { Shield, Zap, Droplets, RefreshCw, LucideIcon } from 'lucide-react';
+import { Shield, Zap, RefreshCw, LucideIcon, Star, Calendar, Car, Sparkles } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'PPF Wrap Sydney | Paint Protection Film Cost | From $1,650',
+  title: 'PPF Wrap Sydney | XPEL Paint Protection Film | From $1,750',
   description:
-    'Expert PPF wrap Sydney. Self-healing paint protection film from $1,650. PPF cost: Partial $1,650, Full Front $2,750, Full Body $5,500. Stone chip protection specialists. Call (02) 8606 2842',
+    'Expert XPEL PPF installation Sydney. Self-healing paint protection film from $1,750. Standard Front $1,750, Complete Front $2,600, Track Pack $3,500, Full Body $6,800. Call (02) 8606 2842',
   keywords:
-    'ppf wrap sydney, ppf wrap cost, ppf sydney, ppf cost, paint protection film sydney, ppf installer sydney, stone chip protection sydney, clear bra sydney, ppf wrap price',
+    'ppf wrap sydney, xpel ppf sydney, ppf wrap cost, ppf sydney, ppf cost, paint protection film sydney, ppf installer sydney, stone chip protection sydney, clear bra sydney, ppf wrap price',
   alternates: {
     canonical: 'https://protektauto.com.au/ppf-car-wrap-sydney',
   },
@@ -26,7 +26,7 @@ const faqItems: FAQItem[] = [
   {
     question: 'How much does PPF cost in Sydney?',
     answer:
-      'PPF pricing in Sydney varies based on coverage area. At Protekt Auto, our Partial Front package (bonnet, bumper, mirrors) starts from $1,650. Full Front protection (including guards and lights) starts from $2,750. Track Pack coverage starts from $3,500, and Full Body PPF wrap starts from $5,500. Prices vary by vehicle size and complexity.',
+      'PPF pricing in Sydney varies based on coverage area. At Protekt Auto, our Standard Front Kit (bumper, bonnet edge, guards, mirrors) starts from $1,750. Complete Front Kit (full bonnet, full guards) starts from $2,600. Track Pack starts from $3,500, and Full Body PPF wrap starts from $6,800. Prices vary by vehicle size and complexity.',
   },
   {
     question: 'What is Paint Protection Film (PPF)?',
@@ -65,22 +65,22 @@ const benefits: Benefit[] = [
   {
     icon: Shield,
     title: 'Stone Chip Protection',
-    description: 'Advanced protection against rock chips, road debris, and impact damage',
+    description: 'Absorbs damage from stone chips, road debris, and minor abrasions',
   },
   {
     icon: RefreshCw,
     title: 'Self-Healing',
-    description: 'Heat-activated self-healing technology removes minor scratches and swirls',
+    description: 'Advanced topcoat repairs minor scuffs and swirl marks automatically',
   },
   {
-    icon: Droplets,
-    title: 'Stain Resistant',
-    description: 'Repels bugs, bird droppings, and environmental contaminants',
+    icon: Sparkles,
+    title: 'No Yellowing',
+    description: 'Advanced technology prevents yellowing, maintaining original clarity',
   },
   {
     icon: Zap,
-    title: 'Clear & Durable',
-    description: 'Virtually invisible protection with exceptional optical clarity',
+    title: 'Long-Lasting',
+    description: 'Resistant to UV rays, discolouration, and degradation for years',
   },
 ];
 
@@ -155,7 +155,7 @@ export default function StonechipProtection() {
     <div className="min-h-screen">
       <Hero
         title="Paint Protection Film (PPF)"
-        subtitle="Stone Chip Protection"
+        subtitle="Self-Healing • No Yellowing • XPEL Certified"
         image="/images/ppf.webp"
         height="large"
         ctaText="Get Quote"
@@ -176,8 +176,8 @@ export default function StonechipProtection() {
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
           <UrgencyBanner
-            message="Premium XPEL installation."
-            highlight="Book early for high-demand models."
+            message="Popular models book 2-3 weeks out"
+            highlight="Secure your spot now."
             icon="trending"
           />
         </div>
@@ -185,14 +185,35 @@ export default function StonechipProtection() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
-              XPEL Ultimate Plus Paint Protection Film
+              Sydney&apos;s Best Paint Protection Film
             </h2>
-            <p className="text-foreground/70 text-lg leading-relaxed">
-              Paint Protection Films are an advanced transparent film that is used to protect your
-              paint from damage caused by stone chips, bug splatter and minor abrasions. Our premium
-              XPEL films feature self-healing technology and maintain the factory finish of your
-              vehicle while providing invisible, industry-leading protection.
+            <p className="text-foreground/70 text-lg leading-relaxed mb-8">
+              Our team are expert applicators of the renowned XPEL Paint Protection Film. Whether
+              you&apos;re a car enthusiast looking to preserve the flawless finish of your prized
+              possession or a daily driver seeking protection from Sydney&apos;s harsh roads, XPEL
+              PPF offers a superior paint protection solution. The film is optically clear, allowing
+              your vehicle&apos;s paint colour and vibrance to shine without distortion.
             </p>
+
+            {/* Trust Signals */}
+            <div className="flex flex-wrap justify-center gap-6 md:gap-10">
+              <div className="flex items-center gap-2 text-foreground/70">
+                <Calendar className="w-5 h-5 text-primary" />
+                <span className="font-medium">Since 2015</span>
+              </div>
+              <div className="flex items-center gap-2 text-foreground/70">
+                <Star className="w-5 h-5 text-primary fill-primary" />
+                <span className="font-medium">4.9★ Google Reviews</span>
+              </div>
+              <div className="flex items-center gap-2 text-foreground/70">
+                <Car className="w-5 h-5 text-primary" />
+                <span className="font-medium">XPEL Certified</span>
+              </div>
+              <div className="flex items-center gap-2 text-foreground/70">
+                <Shield className="w-5 h-5 text-primary" />
+                <span className="font-medium">10-Year Warranty</span>
+              </div>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
@@ -207,6 +228,82 @@ export default function StonechipProtection() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+
+          {/* XPEL Video Demo */}
+          <div className="mb-16">
+            <h3 className="font-display text-2xl font-bold text-foreground mb-6 text-center">
+              See XPEL PPF in Action
+            </h3>
+            <div className="max-w-3xl mx-auto">
+              <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg">
+                <iframe
+                  className="absolute inset-0 w-full h-full"
+                  src="https://www.youtube.com/embed/ixeEho0xSAA?si=sxWuEP56AvjJhHPO&controls=0"
+                  title="XPEL PPF self-healing demonstration"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                />
+              </div>
+              <p className="text-foreground/60 text-sm text-center mt-4 italic">
+                Watch XPEL&apos;s self-healing technology repair minor scratches
+              </p>
+            </div>
+          </div>
+
+          {/* XPEL Features Grid */}
+          <div className="grid md:grid-cols-2 gap-8 mb-16">
+            <Card className="bg-card/50">
+              <CardContent className="p-8">
+                <h3 className="font-display text-xl font-bold text-foreground mb-4">
+                  Digitally Templated Kits
+                </h3>
+                <p className="text-foreground/70 leading-relaxed">
+                  We use digitally templated professional kits to ensure a perfect fit for your
+                  vehicle&apos;s make and model. This precision-cut approach increases accuracy and
+                  cleaner fitment, resulting in a virtually invisible application and extended
+                  durability on Sydney&apos;s streets.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="bg-card/50">
+              <CardContent className="p-8">
+                <h3 className="font-display text-xl font-bold text-foreground mb-4">
+                  Complete Coverage & Protection
+                </h3>
+                <p className="text-foreground/70 leading-relaxed">
+                  XPEL PPF features excellent adhesion and edge seal technology. Our professional
+                  installers use specialised techniques to ensure the film adheres securely to the
+                  curves and contours of your car, providing maximum coverage and protection.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="bg-card/50">
+              <CardContent className="p-8">
+                <h3 className="font-display text-xl font-bold text-foreground mb-4">
+                  Long-Lasting Performance
+                </h3>
+                <p className="text-foreground/70 leading-relaxed">
+                  XPEL PPF offers long-lasting performance with proper maintenance. The film is
+                  resistant to UV rays, discolouration, and degradation, protecting against stone
+                  chips, bug splatters, bird droppings, and Sydney&apos;s harsh road conditions for
+                  years.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="bg-card/50">
+              <CardContent className="p-8">
+                <h3 className="font-display text-xl font-bold text-foreground mb-4">
+                  Easy to Maintain
+                </h3>
+                <p className="text-foreground/70 leading-relaxed">
+                  XPEL PPF is easy to maintain. The film can be washed and treated with ceramic spray
+                  sealants and waxes like your vehicle&apos;s paint. It&apos;s also resistant to most
+                  common automotive chemicals, making it compatible with regular car care products.
+                </p>
+              </CardContent>
+            </Card>
           </div>
 
           <div className="mb-12">
