@@ -11,14 +11,15 @@ import FeaturedWorkShowcase from '@/components/FeaturedWorkShowcase';
 import BentoImageGrid from '@/components/BentoImageGrid';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 import { Shield, Sun, Thermometer, Eye, Check, LucideIcon, Star, Calendar, Car } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Best Window Tinting Sydney | Ceramic Tint Parramatta | Legal NSW',
+  title: 'XPEL Window Tinting Sydney | Ceramic Tint Parramatta | From $160',
   description:
-    'Best car window tinting Sydney & Parramatta. Premium ceramic tints block 99% UV. Darkest legal window tint NSW compliant. Professional installation from $250. Call (02) 8606 2842',
+    'Authorised XPEL dealer for car window tinting in Sydney & Parramatta. PRIME CS, XR & XR PLUS ceramic films. Computer-cut precision, 99% UV block, lifetime warranty. From $160. Call (02) 8606 2842',
   keywords:
-    'window tinting sydney, best window tinting sydney, car window tinting sydney, ceramic tint sydney, window tinting parramatta, darkest legal window tint nsw, car tinting sydney',
+    'xpel window tinting sydney, window tinting sydney, ceramic tint sydney, xpel prime xr, car window tinting parramatta, darkest legal window tint nsw, xpel authorised dealer sydney',
   alternates: {
     canonical: 'https://protektauto.com.au/window-tinting-sydney',
   },
@@ -131,27 +132,14 @@ export default function WindowTinting() {
         showPhoneCta={false}
         subtitlePosition="below"
         contentOffset="-mt-[10%]"
+        overlayStyle="light"
+        titleVariant="deep-metallic"
       />
 
-      {/* Featured Window Tinting Work */}
-      <FeaturedWorkShowcase
-        title="Professional Results"
-        subtitle="Premium ceramic and carbon window tinting for all vehicle types"
-        featuredImage={featuredTintWork.featured}
-        gridImages={featuredTintWork.grid}
-      />
-
+      {/* Intro Section with Video */}
       <section className="py-20 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-          <UrgencyBanner
-            message="Summer wait times up to 2 weeks"
-            highlight="Book now to secure your spot."
-            icon="trending"
-          />
-        </div>
-
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-4xl mx-auto text-center mb-16">
+          <div className="max-w-4xl mx-auto text-center mb-12">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
               Quality Carbon to Ceramic Grade Films
             </h2>
@@ -184,7 +172,7 @@ export default function WindowTinting() {
           </div>
 
           {/* YouTube Video Demo */}
-          <div className="mb-16">
+          <div>
             <h3 className="font-display text-2xl font-bold text-foreground mb-6 text-center">
               See Window Tinting in Action
             </h3>
@@ -192,7 +180,7 @@ export default function WindowTinting() {
               <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg">
                 <iframe
                   className="absolute inset-0 w-full h-full"
-                  src="https://www.youtube.com/embed/VnLmuumbiaA?si=soch1xI664nBi_LZ&controls=0"
+                  src="https://www.youtube-nocookie.com/embed/VnLmuumbiaA?si=soch1xI664nBi_LZ&controls=1"
                   title="Window tinting demonstration"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   referrerPolicy="strict-origin-when-cross-origin"
@@ -204,7 +192,90 @@ export default function WindowTinting() {
               </p>
             </div>
           </div>
+        </div>
+      </section>
 
+      {/* Featured Window Tinting Work */}
+      <FeaturedWorkShowcase
+        title="Our Recent Work"
+        subtitle="Premium ceramic and carbon window tinting for all vehicle types"
+        featuredImage={featuredTintWork.featured}
+        gridImages={featuredTintWork.grid}
+      />
+
+      {/* XPEL Authorised Dealer Section */}
+      <section className="py-16 bg-card/50 border-b border-border">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="flex items-center gap-4 mb-6">
+                <Image
+                  src="/images/xpel-logo.webp"
+                  alt="XPEL Authorised Dealer"
+                  width={120}
+                  height={40}
+                  className="h-10 w-auto"
+                />
+                <Badge variant="outline" className="text-primary border-primary">
+                  Authorised Dealer
+                </Badge>
+              </div>
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
+                Car Window Tinting in Sydney & Parramatta
+              </h2>
+              <p className="text-foreground/70 text-lg leading-relaxed mb-6">
+                Protekt Auto is an authorised XPEL dealer and one of the few businesses in Sydney that
+                utilises a <strong>computer cut machine</strong> to digitally cut out the shape of the window tint
+                films for your car.
+              </p>
+              <p className="text-foreground/70 text-lg leading-relaxed">
+                The advantage of this is that films are cut to precision and <strong>no cuts are done on the
+                vehicle</strong> which eliminates the risk of damaging exterior trims and mouldings. Our carbon
+                graphite and ceramic films ensure colour stability while offering a high standard of UV and
+                infrared protection.
+              </p>
+            </div>
+            <div className="bg-background rounded-xl p-8 border border-border">
+              <h3 className="font-display text-xl font-bold text-foreground mb-6">
+                Why Choose XPEL Window Films?
+              </h3>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-foreground/80">Durable construction with scratch-resistant top coat</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-foreground/80">Signal safe - won&apos;t interfere with GPS or mobile</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-foreground/80">Blocks 99% of harmful UV rays</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-foreground/80">Up to 96% infrared heat rejection</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-foreground/80">Lifetime warranty on film & labour</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+          <UrgencyBanner
+            message="Summer wait times up to 2 weeks"
+            highlight="Book now to secure your spot."
+            icon="trending"
+          />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             {benefits.map((benefit) => (
               <Card key={benefit.title} className="hover-elevate active-elevate-2 transition-all">

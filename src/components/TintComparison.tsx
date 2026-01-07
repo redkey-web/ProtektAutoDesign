@@ -4,16 +4,23 @@ import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
-import { Shield, Sun, Thermometer, Eye, Zap, Award } from 'lucide-react';
+import { Shield, Zap, Award } from 'lucide-react';
+
+interface VehiclePricing {
+  type: string;
+  price: string;
+}
 
 interface TintSpec {
   name: string;
-  price: string;
+  subtitle: string;
+  description: string;
   uvRejection: number;
-  heatRejection: number;
-  glareReduction: number;
+  irRejection: number;
+  tser: number;
   warranty: string;
   features: string[];
+  pricing: VehiclePricing[];
   recommended?: boolean;
 }
 
@@ -22,48 +29,67 @@ export default function TintComparison() {
 
   const films: TintSpec[] = [
     {
-      name: 'Carbon Film',
-      price: 'From $350',
+      name: 'XPEL PRIME CS BLACK',
+      subtitle: 'Colour Stable Carbon',
+      description: 'Developed with a hybrid dyed metal construction, PRIME CS offers better heat rejection than traditional dyed films. Its enhanced reflective finish makes it a perfect blend of value and performance.',
       uvRejection: 99,
-      heatRejection: 42,
-      glareReduction: 78,
+      irRejection: 12,
+      tser: 42,
       warranty: 'Lifetime film & labour',
       features: [
-        'Non-metallic construction',
-        "Won't interfere with electronics",
-        'Fade-resistant color stability',
-        'Good heat rejection',
+        'Durable construction',
+        'Signal safe',
+        'Scratch resistant top coat',
+      ],
+      pricing: [
+        { type: '2 Front door windows', price: '$160' },
+        { type: 'Full vehicle - 3 door hatch/coupe', price: '$300' },
+        { type: 'Full vehicle - 5 door hatch/Sedans', price: '$350' },
+        { type: 'Full vehicle - Wagons/Medium SUV', price: '$390' },
+        { type: 'Full vehicle - Large SUV/4x4/People movers', price: '$420' },
       ],
     },
     {
-      name: 'Ceramic Film',
-      price: 'From $650',
+      name: 'XPEL PRIME XR BLACK',
+      subtitle: 'Ceramic IR',
+      description: 'Utilising a nano-ceramic construction, PRIME XR maintains the same flawless appearance and clarity throughout the years. It provides top-of-the-line automotive window tint performance without breaking the bank.',
       uvRejection: 99,
-      heatRejection: 65,
-      glareReduction: 78,
+      irRejection: 78,
+      tser: 64,
       warranty: 'Lifetime film & labour',
       recommended: true,
       features: [
-        'Nano-ceramic technology',
-        'Superior heat rejection',
-        'Maximum UV protection',
-        'Exceptional clarity',
-        'No signal interference',
+        'Increased solar heat rejection',
+        'Signal safe',
+        'Scratch resistant top coat',
+      ],
+      pricing: [
+        { type: '2 Front door windows', price: '$280' },
+        { type: 'Full vehicle - 3 door hatch/coupe', price: '$580' },
+        { type: 'Full vehicle - 5 door hatch/Sedans', price: '$650' },
+        { type: 'Full vehicle - Wagons/Medium SUV', price: '$730' },
+        { type: 'Full vehicle - Large SUV/4x4/People movers', price: '$790' },
       ],
     },
     {
-      name: 'Premium Ceramic',
-      price: 'From $890',
+      name: 'XPEL PRIME XR PLUS',
+      subtitle: 'Multi-Layer Technology',
+      description: 'With multi-layer nanoparticle technology, PRIME XR PLUS automotive window tint combines great aesthetics with extreme performance. Stay comfortable and protected – no matter the weather.',
       uvRejection: 99,
-      heatRejection: 71,
-      glareReduction: 78,
+      irRejection: 96,
+      tser: 71,
       warranty: 'Lifetime film & labour',
       features: [
-        'Top-tier ceramic film',
-        'Highest heat rejection',
-        'Maximum clarity',
-        'Ultimate IR rejection',
-        'Premium warranty coverage',
+        'Superior solar heat rejection',
+        'Signal safe',
+        'Scratch resistant top coat',
+      ],
+      pricing: [
+        { type: '2 Front door windows', price: '$380' },
+        { type: 'Full vehicle - 3 door hatch/coupe', price: '$790' },
+        { type: 'Full vehicle - Sedans', price: '$890' },
+        { type: 'Full vehicle - Wagons/Medium SUV', price: '$990' },
+        { type: 'Full vehicle - Large SUV/4x4/People movers', price: '$1,100' },
       ],
     },
   ];
@@ -108,33 +134,37 @@ export default function TintComparison() {
           >
             <Card className="overflow-hidden">
               <CardContent className="p-0">
-                <div className="grid md:grid-cols-2 gap-0">
-                  <div className="p-8 space-y-6">
-                    <div className="flex items-start justify-between">
+                <div className="grid lg:grid-cols-2 gap-0">
+                  <div className="p-6 md:p-8 space-y-6">
+                    <div className="flex items-start justify-between gap-4">
                       <div>
-                        <h4 className="font-display text-2xl font-bold mb-2">{film.name}</h4>
-                        <p className="text-3xl font-bold text-primary">{film.price}</p>
+                        <h4 className="font-display text-xl md:text-2xl font-bold mb-1">{film.name}</h4>
+                        <p className="text-primary font-medium">{film.subtitle}</p>
                       </div>
                       {film.recommended && (
-                        <Badge className="bg-primary" data-testid="badge-recommended">
+                        <Badge className="bg-primary flex-shrink-0" data-testid="badge-recommended">
                           <Award className="w-3 h-3 mr-1" />
                           Most Popular
                         </Badge>
                       )}
                     </div>
 
-                    <div className="space-y-4">
+                    <p className="text-foreground/70 text-sm leading-relaxed">
+                      {film.description}
+                    </p>
+
+                    <div className="space-y-3">
                       {renderStatBar(film.uvRejection, 'UV Rejection')}
-                      {renderStatBar(film.heatRejection, 'Heat Rejection')}
-                      {renderStatBar(film.glareReduction, 'Glare Reduction')}
+                      {renderStatBar(film.irRejection, 'Infrared Rejection')}
+                      {renderStatBar(film.tser, 'Total Solar Energy Rejection')}
                     </div>
 
                     <div className="pt-4 border-t border-border">
                       <div className="flex items-center gap-2 text-sm text-foreground/70 mb-4">
                         <Shield className="w-4 h-4 text-primary" />
-                        <span className="font-semibold">{film.warranty} warranty</span>
+                        <span className="font-semibold">{film.warranty}</span>
                       </div>
-                      <ul className="space-y-2">
+                      <ul className="grid grid-cols-2 gap-2">
                         {film.features.map((feature, idx) => (
                           <li key={idx} className="flex items-start gap-2 text-sm text-foreground/70">
                             <span className="text-primary mt-0.5">✓</span>
@@ -145,60 +175,27 @@ export default function TintComparison() {
                     </div>
                   </div>
 
-                  <div className="bg-card p-8 border-l border-border">
-                    <h5 className="font-semibold mb-6">Performance Highlights</h5>
-                    <div className="space-y-6">
-                      <div className="flex items-start gap-4">
-                        <div className="p-3 rounded-lg bg-primary/10">
-                          <Sun className="w-6 h-6 text-primary" />
+                  <div className="bg-card p-6 md:p-8 border-t lg:border-t-0 lg:border-l border-border">
+                    <h5 className="font-display text-lg font-bold mb-6">Pricing (from)</h5>
+                    <div className="space-y-3">
+                      {film.pricing.map((item, idx) => (
+                        <div
+                          key={idx}
+                          className="flex items-center justify-between py-3 border-b border-border last:border-0"
+                        >
+                          <span className="text-foreground/70 text-sm">{item.type}</span>
+                          <span className="font-bold text-primary text-lg">{item.price}</span>
                         </div>
-                        <div>
-                          <h6 className="font-semibold mb-1">UV Protection</h6>
-                          <p className="text-sm text-foreground/60">
-                            Blocks {film.uvRejection}% of harmful UV rays, protecting your skin and
-                            interior from sun damage.
-                          </p>
-                        </div>
-                      </div>
+                      ))}
+                    </div>
 
-                      <div className="flex items-start gap-4">
-                        <div className="p-3 rounded-lg bg-primary/10">
-                          <Thermometer className="w-6 h-6 text-primary" />
-                        </div>
+                    <div className="mt-8 p-4 bg-primary/5 rounded-lg border border-primary/20">
+                      <div className="flex items-start gap-3">
+                        <Zap className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                         <div>
-                          <h6 className="font-semibold mb-1">Solar Energy Rejection</h6>
-                          <p className="text-sm text-foreground/60">
-                            Rejects up to {film.heatRejection}% of solar energy for increased cabin comfort
-                            and reduced A/C load.
-                          </p>
-                        </div>
-                      </div>
-
-                      <div className="flex items-start gap-4">
-                        <div className="p-3 rounded-lg bg-primary/10">
-                          <Eye className="w-6 h-6 text-primary" />
-                        </div>
-                        <div>
-                          <h6 className="font-semibold mb-1">Glare Control</h6>
-                          <p className="text-sm text-foreground/60">
-                            Reduces {film.glareReduction}% of glare for safer, more comfortable driving
-                            in bright conditions.
-                          </p>
-                        </div>
-                      </div>
-
-                      <div className="flex items-start gap-4">
-                        <div className="p-3 rounded-lg bg-primary/10">
-                          <Zap className="w-6 h-6 text-primary" />
-                        </div>
-                        <div>
-                          <h6 className="font-semibold mb-1">Technology</h6>
-                          <p className="text-sm text-foreground/60">
-                            {film.name === 'Premium Ceramic'
-                              ? 'Cutting-edge nano-ceramic particles provide unmatched performance'
-                              : film.name === 'Ceramic Film'
-                              ? 'Advanced ceramic technology with no signal interference'
-                              : "Non-metallic carbon construction that won't affect electronics"}
+                          <h6 className="font-semibold text-sm mb-1">Performance Summary</h6>
+                          <p className="text-xs text-foreground/60">
+                            {film.irRejection}% infrared rejection • {film.tser}% total solar energy rejection • {film.uvRejection}% UV protection
                           </p>
                         </div>
                       </div>

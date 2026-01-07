@@ -55,7 +55,7 @@ export default function Navigation() {
     >
       <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" data-testid="link-home-logo">
+          <Link href="/" data-testid="link-home-logo" className="nav-item-animate" style={{ animationDelay: '0.1s' }}>
             <Image
               src="/images/protekt-logo.webp"
               alt="Protekt Auto"
@@ -89,11 +89,12 @@ export default function Navigation() {
                 key={link.path}
                 ref={(el) => { itemRefs.current[index] = el; }}
                 href={link.path}
-                className={`relative z-10 text-sm font-medium cursor-pointer px-3 py-2 rounded-md transition-colors duration-200 ${
+                className={`relative z-10 text-sm font-medium cursor-pointer px-3 py-2 rounded-md transition-colors duration-200 nav-item-animate nav-item-hover ${
                   pathname === link.path
                     ? 'text-primary'
                     : 'text-white/80 hover:text-white'
                 }`}
+                style={{ animationDelay: `${0.3 + index * 0.05}s` }}
                 onMouseEnter={() => setHoveredIndex(index)}
                 data-testid={`link-nav-${link.label.toLowerCase().replace(' ', '-')}`}
               >
@@ -102,7 +103,7 @@ export default function Navigation() {
             ))}
           </div>
 
-          <div className="hidden lg:flex items-center gap-2">
+          <div className="hidden lg:flex items-center gap-2 nav-item-animate" style={{ animationDelay: `${0.3 + navLinks.length * 0.05 + 0.1}s` }}>
             <Button
               asChild
               className="btn-spray-edge hidden xl:flex items-center gap-2 px-6 py-2 bg-primary text-black font-bold text-sm tracking-wide transition-all"
@@ -126,7 +127,8 @@ export default function Navigation() {
           <Button
             size="icon"
             variant="ghost"
-            className="lg:hidden text-primary hover:text-primary"
+            className="lg:hidden text-primary hover:text-primary nav-item-animate"
+            style={{ animationDelay: '0.2s' }}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             data-testid="button-mobile-menu-toggle"
           >
@@ -136,15 +138,16 @@ export default function Navigation() {
       </div>
 
       {isMobileMenuOpen && (
-        <div className="lg:hidden bg-black/5 border-b border-white/10" data-testid="mobile-menu">
+        <div className="lg:hidden bg-black/5 border-b border-white/10 mobile-menu-animate" data-testid="mobile-menu">
           <div className="px-4 py-4 space-y-3">
-            {navLinks.map((link) => (
+            {navLinks.map((link, index) => (
               <Link
                 key={link.path}
                 href={link.path}
-                className={`mobile-menu-text block py-2 px-3 rounded-md text-base font-medium cursor-pointer transition-all ${
+                className={`mobile-menu-text block py-2 px-3 rounded-md text-base font-medium cursor-pointer transition-all mobile-item-animate mobile-menu-item-hover ${
                   pathname === link.path ? 'text-primary bg-black/60' : 'text-white/90 hover:text-white hover:bg-black/60 hover:drop-shadow-[0_2px_6px_rgba(0,188,212,0.9)]'
                 }`}
+                style={{ animationDelay: `${0.05 + index * 0.04}s` }}
                 onClick={() => setIsMobileMenuOpen(false)}
                 data-testid={`link-mobile-${link.label.toLowerCase().replace(' ', '-')}`}
               >
@@ -154,7 +157,8 @@ export default function Navigation() {
             <Button
               asChild
               variant="default"
-              className="phone-button-glow w-full gap-2 mt-4"
+              className="phone-button-glow w-full gap-2 mt-4 mobile-item-animate"
+              style={{ animationDelay: `${0.05 + navLinks.length * 0.04}s` }}
               data-testid="button-call-mobile"
             >
               <a href="tel:0286062842">

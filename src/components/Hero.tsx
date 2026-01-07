@@ -26,9 +26,13 @@ interface HeroProps {
   /** Button style variant */
   buttonVariant?: 'spray' | 'metallic';
   /** Title style variant */
-  titleVariant?: 'default' | 'metallic';
+  titleVariant?: 'default' | 'metallic' | 'tinted-glass' | 'deep-metallic';
   /** Subtitle color variant */
   subtitleColor?: 'primary' | 'white';
+  /** Overlay darkness - light for dark text effects */
+  overlayStyle?: 'default' | 'light';
+  /** Special hero effects */
+  heroEffect?: 'none' | 'tinted-window';
 }
 
 export default function Hero({
@@ -51,6 +55,8 @@ export default function Hero({
   buttonVariant = 'spray',
   titleVariant = 'default',
   subtitleColor = 'primary',
+  overlayStyle = 'default',
+  heroEffect = 'none',
 }: HeroProps) {
   const heightClasses = {
     full: 'h-screen',
@@ -88,7 +94,11 @@ export default function Hero({
                 data-testid="hero-background-video"
               />
             </div>
-            <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70 z-10" />
+            <div className={`absolute inset-0 z-10 ${
+              overlayStyle === 'light'
+                ? 'bg-gradient-to-b from-black/40 via-black/20 to-black/50'
+                : 'bg-gradient-to-b from-black/70 via-black/50 to-black/70'
+            }`} />
           </>
         ) : image ? (
           <>
@@ -100,7 +110,19 @@ export default function Hero({
               priority
               data-testid="hero-background-image"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
+            <div className={`absolute inset-0 ${
+              overlayStyle === 'light'
+                ? 'bg-gradient-to-b from-black/40 via-black/20 to-black/50'
+                : 'bg-gradient-to-b from-black/70 via-black/50 to-black/70'
+            }`} />
+            {heroEffect === 'tinted-window' && (
+              <>
+                {/* Tinted glass overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-amber-900/30 via-stone-800/25 to-neutral-900/35 mix-blend-multiply" />
+                {/* Animated light reflection */}
+                <div className="hero-tint-reflection absolute inset-0 pointer-events-none" />
+              </>
+            )}
           </>
         ) : null}
       </div>
@@ -142,7 +164,9 @@ export default function Hero({
         {eyebrowAsH1 ? (
           <p
             className={`font-display text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[8rem] font-bold leading-none tracking-normal mb-8 ${
-              titleVariant === 'metallic' ? 'text-metallic-paint' : 'text-white'
+              titleVariant === 'metallic' ? 'text-metallic-paint' :
+              titleVariant === 'tinted-glass' ? 'text-tinted-glass' :
+              titleVariant === 'deep-metallic' ? 'text-deep-metallic' : 'text-white'
             }`}
             data-testid="hero-title"
           >
@@ -151,7 +175,9 @@ export default function Hero({
         ) : (
           <h1
             className={`font-display text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[8rem] font-bold leading-none tracking-normal mb-8 ${
-              titleVariant === 'metallic' ? 'text-metallic-paint' : 'text-white'
+              titleVariant === 'metallic' ? 'text-metallic-paint' :
+              titleVariant === 'tinted-glass' ? 'text-tinted-glass' :
+              titleVariant === 'deep-metallic' ? 'text-deep-metallic' : 'text-white'
             }`}
             data-testid="hero-title"
           >
