@@ -76,7 +76,8 @@ export default function FeaturedWorkShowcase({
   const trackRef = useRef<HTMLDivElement>(null);
   const firstImageRef = useRef<HTMLDivElement>(null);
   const [mousePos, setMousePos] = useState({ x: 50, y: 50 });
-  const [isPinnedActive, setIsPinnedActive] = useState(false);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [_isPinnedActive, setIsPinnedActive] = useState(false);
   const isDark = variant === 'dark';
   const isMetallic = variant === 'metallic';
   const isHorizontal = layout === 'horizontal-scroll';
