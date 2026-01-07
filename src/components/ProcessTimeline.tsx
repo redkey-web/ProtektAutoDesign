@@ -19,7 +19,6 @@ export default function ProcessTimeline({ steps, variant = 'default' }: ProcessT
   const isGold = variant === 'gold';
 
   // Color classes based on variant
-  const accentColor = isGold ? 'amber-500' : 'primary';
   const cardBg = isDark || isGold ? 'bg-black/40 border-white/10 backdrop-blur-sm' : '';
   const textColor = isDark || isGold ? 'text-white' : 'text-foreground';
   const textMuted = isDark || isGold ? 'text-white/70' : 'text-foreground/70';

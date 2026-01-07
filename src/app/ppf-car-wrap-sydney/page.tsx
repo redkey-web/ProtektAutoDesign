@@ -165,6 +165,28 @@ export default function StonechipProtection() {
         contentOffset="-mt-[10%]"
       />
 
+      {/* Video Demo Section - Right After Hero */}
+      <section className="py-16 bg-muted/30">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-6 text-center">
+            Watch PPF Protect Your Paint
+          </h3>
+          <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-xl">
+            <iframe
+              className="absolute inset-0 w-full h-full"
+              src="https://www.youtube.com/embed/ixeEho0xSAA?si=43r1ilch7GQh5KLK&controls=0"
+              title="PPF Protection Demonstration"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            />
+          </div>
+          <p className="text-foreground/60 text-sm text-center mt-4 italic">
+            See how PPF absorbs impacts and protects your vehicle&apos;s paint
+          </p>
+        </div>
+      </section>
+
       {/* Featured PPF Work - Prominent Showcase */}
       <FeaturedWorkShowcase
         title="Professional PPF Installation"
