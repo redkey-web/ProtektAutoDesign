@@ -15,6 +15,7 @@ interface BentoImageGridProps {
   title?: string;
   subtitle?: string;
   variant?: 'default' | 'dense' | 'asymmetric';
+  theme?: 'light' | 'dark';
   className?: string;
 }
 
@@ -23,26 +24,28 @@ export default function BentoImageGrid({
   title,
   subtitle,
   variant = 'default',
+  theme = 'light',
   className = '',
 }: BentoImageGridProps) {
+  const isDark = theme === 'dark';
   const [selectedImage, setSelectedImage] = useState<BentoImage | null>(null);
 
   // Ensure we have enough images
   const displayImages = images.slice(0, 6);
 
   return (
-    <section className={`py-16 bg-muted/30 ${className}`}>
+    <section className={`py-16 ${isDark ? 'bg-transparent' : 'bg-muted/30'} ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         {(title || subtitle) && (
           <div className="text-center mb-10">
             {title && (
-              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-3">
+              <h2 className={`font-display text-3xl md:text-4xl font-bold mb-3 ${isDark ? 'text-white/90' : 'text-foreground'}`}>
                 {title}
               </h2>
             )}
             {subtitle && (
-              <p className="text-foreground/70 text-lg max-w-2xl mx-auto">
+              <p className={`text-lg max-w-2xl mx-auto ${isDark ? 'text-white/60' : 'text-foreground/70'}`}>
                 {subtitle}
               </p>
             )}

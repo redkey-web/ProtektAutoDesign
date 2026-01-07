@@ -216,6 +216,7 @@ export default function PaintCorrectionContent({
                 title="More of Our Work"
                 subtitle="From everyday vehicles to exotic supercars, we deliver exceptional results"
                 images={moreWorkImages}
+                theme="dark"
               />
             </div>
           </section>
