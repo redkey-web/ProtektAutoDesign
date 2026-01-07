@@ -4,6 +4,7 @@ import PricingCard from '@/components/PricingCard';
 import ContactSection from '@/components/ContactSection';
 import QuoteCalculator from '@/components/QuoteCalculator';
 import Testimonials from '@/components/Testimonials';
+import FeaturedWorkShowcase from '@/components/FeaturedWorkShowcase';
 
 export const metadata: Metadata = {
   title: 'Car Protection Packages Sydney | Ceramic Coating & PPF Packages | Protekt Auto',
@@ -138,6 +139,43 @@ export default function Packages() {
           <QuoteCalculator />
         </div>
       </section>
+
+      <FeaturedWorkShowcase
+        title="Package Results"
+        subtitle="See the difference our complete protection packages make"
+        featuredImage={{
+          src: '/images/ram-showroom.png',
+          alt: 'RAM 1500 TRX with complete protection package in modern showroom',
+          title: 'RAM 1500 TRX',
+          subtitle: 'Complete protection package with PPF, ceramic coating & window tint',
+        }}
+        gridImages={[
+          {
+            src: '/images/tesla-white.png',
+            alt: 'White Tesla Model 3 with ceramic coating and window tinting',
+            title: 'Tesla Model 3',
+            subtitle: 'Street Package',
+          },
+          {
+            src: '/images/ppf-porsche-gt3.png',
+            alt: 'Porsche GT3 with track pack PPF protection',
+            title: 'Porsche GT3',
+            subtitle: 'Track Package',
+          },
+          {
+            src: '/images/green-amg-gtr.png',
+            alt: 'Mercedes-AMG GT R with paint correction and ceramic coating',
+            title: 'AMG GT R',
+            subtitle: 'Enthusiast Package',
+          },
+          {
+            src: '/images/white-lamborghini.png',
+            alt: 'White Lamborghini Huracan with complete PPF protection',
+            title: 'Lamborghini Huracán',
+            subtitle: 'Complete Package',
+          },
+        ]}
+      />
 
       <Testimonials />
 

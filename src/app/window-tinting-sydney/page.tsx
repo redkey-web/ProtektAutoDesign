@@ -11,7 +11,7 @@ import FeaturedWorkShowcase from '@/components/FeaturedWorkShowcase';
 import BentoImageGrid from '@/components/BentoImageGrid';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Shield, Sun, Thermometer, Eye, Check, LucideIcon } from 'lucide-react';
+import { Shield, Sun, Thermometer, Eye, Check, LucideIcon, Star, Calendar, Car } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Best Window Tinting Sydney | Ceramic Tint Parramatta | Legal NSW',
@@ -123,7 +123,7 @@ export default function WindowTinting() {
     <div className="min-h-screen">
       <Hero
         title="Premium Window Tinting"
-        subtitle="Window Tinting Solutions"
+        subtitle="Block 99% UV • Stay Cool • Stay Legal"
         image="/images/window-tinting.webp"
         height="large"
         ctaText="Get Quote"
@@ -144,8 +144,8 @@ export default function WindowTinting() {
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
           <UrgencyBanner
-            message="Beat the summer heat!"
-            highlight="Book your tinting before the rush."
+            message="Summer wait times up to 2 weeks"
+            highlight="Book now to secure your spot."
             icon="trending"
           />
         </div>
@@ -155,12 +155,32 @@ export default function WindowTinting() {
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
               Quality Carbon to Ceramic Grade Films
             </h2>
-            <p className="text-foreground/70 text-lg leading-relaxed">
+            <p className="text-foreground/70 text-lg leading-relaxed mb-8">
               Protect yourself from harmful UV rays (block out up to 99% of harmful UV rays),
               infrared, glare, and heat of the sun. Our quality carbon to ceramic grade films
               provide the perfect balance of performance, aesthetics, and protection for your
               vehicle.
             </p>
+
+            {/* Trust Signals */}
+            <div className="flex flex-wrap justify-center gap-6 md:gap-10">
+              <div className="flex items-center gap-2 text-foreground/70">
+                <Calendar className="w-5 h-5 text-primary" />
+                <span className="font-medium">Since 2015</span>
+              </div>
+              <div className="flex items-center gap-2 text-foreground/70">
+                <Star className="w-5 h-5 text-primary fill-primary" />
+                <span className="font-medium">4.9★ Google Reviews</span>
+              </div>
+              <div className="flex items-center gap-2 text-foreground/70">
+                <Car className="w-5 h-5 text-primary" />
+                <span className="font-medium">1000+ Vehicles Tinted</span>
+              </div>
+              <div className="flex items-center gap-2 text-foreground/70">
+                <Shield className="w-5 h-5 text-primary" />
+                <span className="font-medium">Lifetime Warranty</span>
+              </div>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
