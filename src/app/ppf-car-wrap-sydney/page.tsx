@@ -239,8 +239,8 @@ export default function StonechipProtection() {
               <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg">
                 <iframe
                   className="absolute inset-0 w-full h-full"
-                  src="https://www.youtube.com/embed/ixeEho0xSAA?si=sxWuEP56AvjJhHPO&controls=0"
-                  title="XPEL PPF self-healing demonstration"
+                  src="https://www.youtube.com/embed/FtnQVjDho6M?si=8vIvBaGU0u0CX6ow&controls=0"
+                  title="XPEL PPF demonstration"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   referrerPolicy="strict-origin-when-cross-origin"
                   allowFullScreen

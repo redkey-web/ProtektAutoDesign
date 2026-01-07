@@ -23,6 +23,12 @@ interface HeroProps {
   contentOffset?: string;
   /** When true, subtitle becomes H1 (SEO-focused, small eyebrow) and title becomes visual text (big, conversion-focused) */
   eyebrowAsH1?: boolean;
+  /** Button style variant */
+  buttonVariant?: 'spray' | 'metallic';
+  /** Title style variant */
+  titleVariant?: 'default' | 'metallic';
+  /** Subtitle color variant */
+  subtitleColor?: 'primary' | 'white';
 }
 
 export default function Hero({
@@ -42,6 +48,9 @@ export default function Hero({
   subtitlePosition = 'above',
   contentOffset,
   eyebrowAsH1 = false,
+  buttonVariant = 'spray',
+  titleVariant = 'default',
+  subtitleColor = 'primary',
 }: HeroProps) {
   const heightClasses = {
     full: 'h-screen',
@@ -112,14 +121,18 @@ export default function Hero({
         {subtitle && subtitlePosition === 'above' && (
           eyebrowAsH1 ? (
             <h1
-              className="text-primary text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold tracking-widest uppercase mb-8 max-w-[80%] mx-auto"
+              className={`text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold tracking-widest uppercase mb-8 max-w-[80%] mx-auto ${
+                subtitleColor === 'white' ? 'text-white' : 'text-primary'
+              }`}
               data-testid="hero-subtitle"
             >
               {subtitle}
             </h1>
           ) : (
             <p
-              className="text-primary text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold tracking-widest uppercase mb-8 max-w-[80%] mx-auto"
+              className={`text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold tracking-widest uppercase mb-8 max-w-[80%] mx-auto ${
+                subtitleColor === 'white' ? 'text-white' : 'text-primary'
+              }`}
               data-testid="hero-subtitle"
             >
               {subtitle}
@@ -128,14 +141,18 @@ export default function Hero({
         )}
         {eyebrowAsH1 ? (
           <p
-            className="font-display text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[8rem] font-bold text-white leading-none tracking-normal mb-8"
+            className={`font-display text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[8rem] font-bold leading-none tracking-normal mb-8 ${
+              titleVariant === 'metallic' ? 'text-metallic-paint' : 'text-white'
+            }`}
             data-testid="hero-title"
           >
             {title}
           </p>
         ) : (
           <h1
-            className="font-display text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[8rem] font-bold text-white leading-none tracking-normal mb-8"
+            className={`font-display text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[8rem] font-bold leading-none tracking-normal mb-8 ${
+              titleVariant === 'metallic' ? 'text-metallic-paint' : 'text-white'
+            }`}
             data-testid="hero-title"
           >
             {title}
@@ -144,14 +161,18 @@ export default function Hero({
         {subtitle && subtitlePosition === 'below' && (
           eyebrowAsH1 ? (
             <h1
-              className="text-primary text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold tracking-widest uppercase mb-8 max-w-[80%] mx-auto"
+              className={`text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold tracking-widest uppercase mb-8 max-w-[80%] mx-auto ${
+                subtitleColor === 'white' ? 'text-white' : 'text-primary'
+              }`}
               data-testid="hero-subtitle"
             >
               {subtitle}
             </h1>
           ) : (
             <p
-              className="text-primary text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold tracking-widest uppercase mb-8 max-w-[80%] mx-auto"
+              className={`text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold tracking-widest uppercase mb-8 max-w-[80%] mx-auto ${
+                subtitleColor === 'white' ? 'text-white' : 'text-primary'
+              }`}
               data-testid="hero-subtitle"
             >
               {subtitle}
@@ -165,7 +186,9 @@ export default function Hero({
         )}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <button
-            className="btn-spray-edge flex items-center gap-2 px-6 py-3 bg-primary text-black font-bold tracking-wide skew-x-[-8deg] transition-all"
+            className={`flex items-center gap-2 px-6 py-3 text-black font-bold tracking-wide skew-x-[-8deg] transition-all ${
+              buttonVariant === 'metallic' ? 'btn-metallic-paint' : 'btn-spray-edge bg-primary'
+            }`}
             onClick={handleCtaClick}
             data-testid="button-hero-cta"
           >

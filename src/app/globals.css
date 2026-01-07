@@ -590,3 +590,108 @@
 .btn-spray-grunge:hover {
   color: hsl(var(--primary)) !important;
 }
+
+/* Metallic Car Paint Text Effect */
+@keyframes metallic-shine {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
+
+.text-metallic-paint {
+  background: linear-gradient(
+    100deg,
+    hsl(187 100% 42%) 0%,
+    hsl(187 100% 52%) 20%,
+    hsl(187 100% 42%) 40%,
+    hsl(187 100% 75%) 48%,
+    hsl(187 100% 90%) 50%,
+    hsl(187 100% 75%) 52%,
+    hsl(187 100% 42%) 60%,
+    hsl(187 100% 52%) 80%,
+    hsl(187 100% 42%) 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: none;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.4))
+          drop-shadow(0 6px 20px rgba(0, 188, 212, 0.25));
+  position: relative;
+  animation: metallic-shine 8s ease-in-out infinite;
+}
+
+/* Metallic Car Paint Button Effect */
+.btn-metallic-paint {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: linear-gradient(
+    180deg,
+    hsl(187 100% 52%) 0%,
+    hsl(187 100% 42%) 50%,
+    hsl(187 100% 38%) 100%
+  );
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.btn-metallic-paint::after {
+  display: none !important;
+}
+
+/* Metallic shine overlay */
+.btn-metallic-paint::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    transparent 100%
+  );
+  z-index: 1;
+  transform: skewX(-25deg);
+  transition: left 0.6s ease;
+}
+
+.btn-metallic-paint:hover {
+  background: linear-gradient(
+    180deg,
+    hsl(187 100% 62%) 0%,
+    hsl(187 100% 50%) 30%,
+    hsl(187 100% 42%) 70%,
+    hsl(187 100% 36%) 100%
+  );
+  box-shadow:
+    0 8px 20px rgba(0, 188, 212, 0.4),
+    0 4px 8px rgba(0, 0, 0, 0.3),
+    inset 0 2px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px) skew(-8deg);
+}
+
+/* Shimmer sweep on hover */
+.btn-metallic-paint:hover::before {
+  left: 150%;
+}
+
+/* Active press state */
+.btn-metallic-paint:active {
+  transform: translateY(0) skew(-8deg);
+  box-shadow:
+    0 2px 8px rgba(0, 188, 212, 0.3),
+    0 2px 4px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.1);
+}

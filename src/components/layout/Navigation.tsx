@@ -22,6 +22,7 @@ export default function Navigation() {
     { path: '/paint-correction', label: 'Paint Correction' },
     { path: '/window-tinting-sydney', label: 'Tinting' },
     { path: '/ppf-car-wrap-sydney', label: 'PPF' },
+    { path: '/detailing', label: 'Detailing' },
     { path: '/motorcycle-protection', label: 'Motorcycle' },
     { path: '/packages', label: 'Packages' },
     { path: '/gallery', label: 'Gallery' },

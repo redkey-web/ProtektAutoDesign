@@ -10,6 +10,7 @@ export default function Footer() {
     { name: 'Paint Correction', path: '/paint-correction' },
     { name: 'Window Tinting', path: '/window-tinting-sydney' },
     { name: 'Paint Protection Film', path: '/ppf-car-wrap-sydney' },
+    { name: 'Detailing', path: '/detailing' },
     { name: 'Motorcycle Protection', path: '/motorcycle-protection' },
     { name: 'Packages', path: '/packages' },
     { name: 'Blog', path: '/blog' },

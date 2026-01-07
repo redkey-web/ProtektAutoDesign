@@ -191,6 +191,9 @@ export default function PaintCorrection() {
         showPhoneCta={false}
         subtitlePosition="below"
         contentOffset="-mt-[10%]"
+        buttonVariant="metallic"
+        titleVariant="metallic"
+        subtitleColor="white"
       />
 
       {/* Featured Work - Prominent Showcase Right After Hero */}
@@ -205,7 +208,7 @@ export default function PaintCorrection() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto mb-16">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6 text-center">
-              Professional Paint Correction Services
+              Sydney&apos;s Premier Paint Correction &amp; Enhancement Specialists
             </h2>
             <p className="text-foreground/70 text-lg leading-relaxed mb-6">
               Paint correction is the most visually impactful exterior enhancement a detailer can
@@ -213,11 +216,48 @@ export default function PaintCorrection() {
               car&apos;s paint or remove unsightly swirls and scratches, then this is achievable
               with our paint correction and enhancement (machine polishing) services.
             </p>
-            <p className="text-foreground/70 text-lg leading-relaxed">
+            <p className="text-foreground/70 text-lg leading-relaxed mb-6">
               We use different grades of abrasive polishes and pads along with our modern-day
               polishing techniques and equipment to achieve the best finish possible from the
               packages we offer below.
             </p>
+            <p className="text-foreground/70 text-lg leading-relaxed mb-6">
+              Due to the different finishes in modern paints, paint correction and enhancement
+              services are priced based on application (POA), and an inspection of the
+              vehicle&apos;s paint condition is required prior to providing a quotation.
+            </p>
+            <p className="text-foreground/70 text-lg leading-relaxed mb-6">
+              Paints that are soft (Japanese cars) tend to correct easier but take time to refine,
+              whereas some vehicles with hard ceramic clear coats (European) will take more time to
+              penetrate the clear coat. Dark or solid coloured paints require more time as more
+              refinement is needed to achieve a hologram-free finish than lighter metallic paints.
+            </p>
+            <p className="text-foreground/70 text-lg leading-relaxed">
+              Below is an approximate price guide required to carry out each paint correction
+              service based on a standard-size car with light to moderate-grade paint defects.
+            </p>
+          </div>
+
+          {/* YouTube Video Demo */}
+          <div className="mb-16">
+            <h3 className="font-display text-2xl font-bold text-foreground mb-6 text-center">
+              See Paint Correction in Action
+            </h3>
+            <div className="max-w-3xl mx-auto">
+              <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg">
+                <iframe
+                  className="absolute inset-0 w-full h-full"
+                  src="https://www.youtube.com/embed/3wLZG0JO7Vc?si=KbUdFmbIQzlwlqSy&controls=0"
+                  title="Paint correction demonstration"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                />
+              </div>
+              <p className="text-foreground/60 text-sm text-center mt-4 italic">
+                Watch our professional machine polishing technique restore paint clarity
+              </p>
+            </div>
           </div>
 
           <div className="mb-16">
@@ -227,10 +267,8 @@ export default function PaintCorrection() {
           <Card className="p-6 bg-card/50">
             <p className="text-sm text-foreground/60 italic">
               * Prices quoted above are &quot;Starting From&quot; based on small size hatch/coupes
-              and should only be used as an approximate guide. Prices/packages will vary depending
-              on the size of the vehicle and paint colour. Due to the different finishes in modern
-              paints, services are priced based on application (POA), and an inspection of the
-              vehicle&apos;s paint condition is required prior to providing a quotation.
+              and should only be used as an approximate guide. Prices will vary depending on the
+              size of the vehicle, paint colour, and condition.
             </p>
           </Card>
         </div>

@@ -183,6 +183,28 @@ export default function WindowTinting() {
             </div>
           </div>
 
+          {/* YouTube Video Demo */}
+          <div className="mb-16">
+            <h3 className="font-display text-2xl font-bold text-foreground mb-6 text-center">
+              See Window Tinting in Action
+            </h3>
+            <div className="max-w-3xl mx-auto">
+              <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg">
+                <iframe
+                  className="absolute inset-0 w-full h-full"
+                  src="https://www.youtube.com/embed/VnLmuumbiaA?si=soch1xI664nBi_LZ&controls=0"
+                  title="Window tinting demonstration"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                />
+              </div>
+              <p className="text-foreground/60 text-sm text-center mt-4 italic">
+                Watch our professional window tinting process
+              </p>
+            </div>
+          </div>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             {benefits.map((benefit) => (
               <Card key={benefit.title} className="hover-elevate active-elevate-2 transition-all">
