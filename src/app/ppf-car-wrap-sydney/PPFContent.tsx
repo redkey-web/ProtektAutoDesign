@@ -168,17 +168,6 @@ export default function PPFContent({
               <div className="w-[800px] h-[600px] bg-slate-400/12 rounded-full blur-[180px]" />
             </div>
 
-            {/* Pattern Overlay */}
-            <div
-              className="absolute inset-0 pointer-events-none opacity-[0.05]"
-              style={{
-                backgroundImage: 'url(/images/pattern-logo.png)',
-                backgroundRepeat: 'repeat',
-                backgroundSize: '60px 60px',
-                backgroundAttachment: 'fixed',
-              }}
-            />
-
             {/* Vignette */}
             <div
               className="absolute inset-0 pointer-events-none"
