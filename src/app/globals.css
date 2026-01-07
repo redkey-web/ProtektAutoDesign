@@ -1357,3 +1357,27 @@ html.lenis, html.lenis body {
 .animate-blob-pulse {
   animation: blob-pulse 15s ease-in-out infinite;
 }
+
+/* Shimmer animation for silver/metallic effect */
+@keyframes shimmer {
+  0%, 100% {
+    opacity: 0.3;
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    opacity: 0.6;
+    transform: translate(20px, -15px) scale(1.1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: translate(-10px, 10px) scale(0.95);
+  }
+  75% {
+    opacity: 0.7;
+    transform: translate(15px, 5px) scale(1.05);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 8s ease-in-out infinite;
+}
