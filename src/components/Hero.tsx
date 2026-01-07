@@ -5,6 +5,12 @@ import { ArrowRight, Play, Phone } from 'lucide-react';
 import TrustBadges from '@/components/TrustBadges';
 import Image from 'next/image';
 
+interface BrandLogo {
+  src: string;
+  alt: string;
+  treatment: 'glass' | 'carbon' | 'chrome';
+}
+
 interface HeroProps {
   title: string;
   subtitle?: string;
@@ -15,7 +21,7 @@ interface HeroProps {
   ctaLink?: string;
   secondaryCtaText?: string;
   showPhoneCta?: boolean;
-  height?: 'full' | 'large' | 'medium';
+  height?: 'full' | 'xlarge' | 'large' | 'medium';
   showPlayButton?: boolean;
   showLogo?: boolean;
   showTrustBadges?: boolean;
@@ -33,6 +39,8 @@ interface HeroProps {
   overlayStyle?: 'default' | 'light';
   /** Special hero effects */
   heroEffect?: 'none' | 'tinted-window';
+  /** Brand logos to display at bottom of hero */
+  brandLogos?: BrandLogo[];
 }
 
 export default function Hero({
@@ -57,9 +65,11 @@ export default function Hero({
   subtitleColor = 'primary',
   overlayStyle = 'default',
   heroEffect = 'none',
+  brandLogos,
 }: HeroProps) {
   const heightClasses = {
     full: 'h-screen',
+    xlarge: 'h-[85vh]',
     large: 'h-[70vh]',
     medium: 'h-[60vh]',
   };
@@ -210,6 +220,8 @@ export default function Hero({
             {description}
           </p>
         )}
+
+
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <button
             className={`flex items-center gap-2 px-6 py-3 text-black font-bold tracking-wide skew-x-[-8deg] transition-all ${
@@ -264,6 +276,27 @@ export default function Hero({
           </div>
         )}
       </div>
+
+      {/* Bottom Edge Strip - Brand Logos */}
+      {brandLogos && brandLogos.length > 0 && (
+        <div className="absolute bottom-0 left-0 right-0 z-20">
+          <div className="logo-bottom-strip py-4">
+            <div className="max-w-7xl mx-auto px-4 flex items-center justify-center gap-8 md:gap-16">
+              {brandLogos.map((logo, index) => (
+                <div key={index} className="logo-bottom-item">
+                  <Image
+                    src={logo.src}
+                    alt={logo.alt}
+                    width={100}
+                    height={35}
+                    className="h-8 md:h-10 w-auto"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

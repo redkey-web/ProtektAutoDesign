@@ -24,20 +24,25 @@ interface TintSpec {
   recommended?: boolean;
 }
 
-export default function TintComparison() {
+interface TintComparisonProps {
+  variant?: 'default' | 'dark';
+}
+
+export default function TintComparison({ variant = 'default' }: TintComparisonProps) {
   const [, setSelectedFilm] = useState<string>('ceramic');
+  const isDark = variant === 'dark';
 
   const films: TintSpec[] = [
     {
       name: 'XPEL PRIME CS BLACK',
       subtitle: 'Colour Stable Carbon',
-      description: 'Developed with a hybrid dyed metal construction, PRIME CS offers better heat rejection than traditional dyed films. Its enhanced reflective finish makes it a perfect blend of value and performance.',
+      description: 'Our entry-level film that delivers excellent aesthetics with a darker, richer black appearance. Popular choice for those wanting the tinted look while still blocking 99% of harmful UV rays. Provides solid heat rejection for everyday comfort.',
       uvRejection: 99,
-      irRejection: 12,
+      irRejection: 23,
       tser: 42,
       warranty: 'Lifetime film & labour',
       features: [
-        'Durable construction',
+        'Darker black aesthetic',
         'Signal safe',
         'Scratch resistant top coat',
       ],
@@ -52,16 +57,16 @@ export default function TintComparison() {
     {
       name: 'XPEL PRIME XR BLACK',
       subtitle: 'Ceramic IR',
-      description: 'Utilising a nano-ceramic construction, PRIME XR maintains the same flawless appearance and clarity throughout the years. It provides top-of-the-line automotive window tint performance without breaking the bank.',
+      description: 'Nano-ceramic technology delivers dramatically higher infrared rejection, eliminating that burning sensation on your skin. Keeps your cabin cooler, reduces interior fading, and improves AC efficiency in summer and heater retention in winter.',
       uvRejection: 99,
-      irRejection: 78,
+      irRejection: 83,
       tser: 64,
       warranty: 'Lifetime film & labour',
       recommended: true,
       features: [
-        'Increased solar heat rejection',
-        'Signal safe',
-        'Scratch resistant top coat',
+        'Eliminates skin burn sensation',
+        'Prevents interior fading',
+        'Better cabin insulation',
       ],
       pricing: [
         { type: '2 Front door windows', price: '$280' },
@@ -74,15 +79,15 @@ export default function TintComparison() {
     {
       name: 'XPEL PRIME XR PLUS',
       subtitle: 'Multi-Layer Technology',
-      description: 'With multi-layer nanoparticle technology, PRIME XR PLUS automotive window tint combines great aesthetics with extreme performance. Stay comfortable and protected – no matter the weather.',
+      description: 'The ultimate in window tint performance. Multi-layer nanoparticle technology delivers our highest infrared rejection for maximum comfort year-round. Premium protection that keeps you cool in summer and warm in winter.',
       uvRejection: 99,
       irRejection: 96,
       tser: 71,
       warranty: 'Lifetime film & labour',
       features: [
-        'Superior solar heat rejection',
-        'Signal safe',
-        'Scratch resistant top coat',
+        'Maximum heat rejection',
+        'Year-round cabin comfort',
+        'Premium performance',
       ],
       pricing: [
         { type: '2 Front door windows', price: '$380' },
@@ -97,10 +102,10 @@ export default function TintComparison() {
   const renderStatBar = (value: number, label: string) => (
     <div className="space-y-2">
       <div className="flex justify-between text-sm">
-        <span className="text-foreground/70">{label}</span>
+        <span className={isDark ? 'text-white/70' : 'text-foreground/70'}>{label}</span>
         <span className="font-semibold text-primary">{value}%</span>
       </div>
-      <div className="h-3 bg-muted rounded-full overflow-hidden">
+      <div className={`h-3 rounded-full overflow-hidden ${isDark ? 'bg-white/10' : 'bg-muted'}`}>
         <div
           className="h-full bg-gradient-to-r from-primary/60 to-primary transition-all duration-500"
           style={{ width: `${value}%` }}
@@ -112,18 +117,18 @@ export default function TintComparison() {
   return (
     <div className="w-full" data-testid="tint-comparison">
       <div className="text-center mb-8">
-        <h3 className="font-display text-3xl font-bold mb-3">Compare Window Tint Films</h3>
-        <p className="text-foreground/60 max-w-2xl mx-auto">
+        <h3 className={`font-display text-3xl font-bold mb-3 ${isDark ? 'text-white' : ''}`}>Compare Window Tint Films</h3>
+        <p className={`max-w-2xl mx-auto ${isDark ? 'text-white/60' : 'text-foreground/60'}`}>
           Choose the right film for your needs. Compare performance specs and features across our
           range of premium window tinting solutions.
         </p>
       </div>
 
       <Tabs defaultValue="ceramic" className="w-full" onValueChange={setSelectedFilm}>
-        <TabsList className="grid w-full grid-cols-3 mb-8" data-testid="film-tabs">
-          <TabsTrigger value="carbon" data-testid="tab-carbon">Carbon</TabsTrigger>
-          <TabsTrigger value="ceramic" data-testid="tab-ceramic">Ceramic</TabsTrigger>
-          <TabsTrigger value="premium" data-testid="tab-premium">Premium</TabsTrigger>
+        <TabsList className={`grid w-full grid-cols-3 mb-8 ${isDark ? 'bg-white/10 border border-white/20' : ''}`} data-testid="film-tabs">
+          <TabsTrigger value="carbon" className={isDark ? 'data-[state=active]:bg-primary data-[state=active]:text-black text-white/70 data-[state=active]:text-black' : ''} data-testid="tab-carbon">Carbon</TabsTrigger>
+          <TabsTrigger value="ceramic" className={isDark ? 'data-[state=active]:bg-primary data-[state=active]:text-black text-white/70 data-[state=active]:text-black' : ''} data-testid="tab-ceramic">Ceramic</TabsTrigger>
+          <TabsTrigger value="premium" className={isDark ? 'data-[state=active]:bg-primary data-[state=active]:text-black text-white/70 data-[state=active]:text-black' : ''} data-testid="tab-premium">Premium</TabsTrigger>
         </TabsList>
 
         {films.map((film, index) => (
@@ -132,13 +137,13 @@ export default function TintComparison() {
             value={['carbon', 'ceramic', 'premium'][index]}
             data-testid={`content-${['carbon', 'ceramic', 'premium'][index]}`}
           >
-            <Card className="overflow-hidden">
+            <Card className={`overflow-hidden ${isDark ? 'bg-black/40 border-white/10 backdrop-blur-sm' : ''}`}>
               <CardContent className="p-0">
                 <div className="grid lg:grid-cols-2 gap-0">
                   <div className="p-6 md:p-8 space-y-6">
                     <div className="flex items-start justify-between gap-4">
                       <div>
-                        <h4 className="font-display text-xl md:text-2xl font-bold mb-1">{film.name}</h4>
+                        <h4 className={`font-display text-xl md:text-2xl font-bold mb-1 ${isDark ? 'text-white' : ''}`}>{film.name}</h4>
                         <p className="text-primary font-medium">{film.subtitle}</p>
                       </div>
                       {film.recommended && (
@@ -149,7 +154,7 @@ export default function TintComparison() {
                       )}
                     </div>
 
-                    <p className="text-foreground/70 text-sm leading-relaxed">
+                    <p className={`text-sm leading-relaxed ${isDark ? 'text-white/70' : 'text-foreground/70'}`}>
                       {film.description}
                     </p>
 
@@ -159,14 +164,14 @@ export default function TintComparison() {
                       {renderStatBar(film.tser, 'Total Solar Energy Rejection')}
                     </div>
 
-                    <div className="pt-4 border-t border-border">
-                      <div className="flex items-center gap-2 text-sm text-foreground/70 mb-4">
+                    <div className={`pt-4 border-t ${isDark ? 'border-white/10' : 'border-border'}`}>
+                      <div className={`flex items-center gap-2 text-sm mb-4 ${isDark ? 'text-white/70' : 'text-foreground/70'}`}>
                         <Shield className="w-4 h-4 text-primary" />
                         <span className="font-semibold">{film.warranty}</span>
                       </div>
                       <ul className="grid grid-cols-2 gap-2">
                         {film.features.map((feature, idx) => (
-                          <li key={idx} className="flex items-start gap-2 text-sm text-foreground/70">
+                          <li key={idx} className={`flex items-start gap-2 text-sm ${isDark ? 'text-white/70' : 'text-foreground/70'}`}>
                             <span className="text-primary mt-0.5">✓</span>
                             <span>{feature}</span>
                           </li>
@@ -175,26 +180,26 @@ export default function TintComparison() {
                     </div>
                   </div>
 
-                  <div className="bg-card p-6 md:p-8 border-t lg:border-t-0 lg:border-l border-border">
-                    <h5 className="font-display text-lg font-bold mb-6">Pricing (from)</h5>
+                  <div className={`p-6 md:p-8 border-t lg:border-t-0 lg:border-l ${isDark ? 'bg-white/5 border-white/10' : 'bg-card border-border'}`}>
+                    <h5 className={`font-display text-lg font-bold mb-6 ${isDark ? 'text-white' : ''}`}>Pricing (from)</h5>
                     <div className="space-y-3">
                       {film.pricing.map((item, idx) => (
                         <div
                           key={idx}
-                          className="flex items-center justify-between py-3 border-b border-border last:border-0"
+                          className={`flex items-center justify-between py-3 border-b last:border-0 ${isDark ? 'border-white/10' : 'border-border'}`}
                         >
-                          <span className="text-foreground/70 text-sm">{item.type}</span>
+                          <span className={`text-sm ${isDark ? 'text-white/70' : 'text-foreground/70'}`}>{item.type}</span>
                           <span className="font-bold text-primary text-lg">{item.price}</span>
                         </div>
                       ))}
                     </div>
 
-                    <div className="mt-8 p-4 bg-primary/5 rounded-lg border border-primary/20">
+                    <div className={`mt-8 p-4 rounded-lg border ${isDark ? 'bg-primary/10 border-primary/30' : 'bg-primary/5 border-primary/20'}`}>
                       <div className="flex items-start gap-3">
                         <Zap className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                         <div>
-                          <h6 className="font-semibold text-sm mb-1">Performance Summary</h6>
-                          <p className="text-xs text-foreground/60">
+                          <h6 className={`font-semibold text-sm mb-1 ${isDark ? 'text-white' : ''}`}>Performance Summary</h6>
+                          <p className={`text-xs ${isDark ? 'text-white/60' : 'text-foreground/60'}`}>
                             {film.irRejection}% infrared rejection • {film.tser}% total solar energy rejection • {film.uvRejection}% UV protection
                           </p>
                         </div>

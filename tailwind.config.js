@@ -110,7 +110,7 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "pattern-scroll": "pattern-scroll 6s linear infinite",
+        "pattern-scroll": "pattern-scroll 12s linear infinite",
       },
     },
   },

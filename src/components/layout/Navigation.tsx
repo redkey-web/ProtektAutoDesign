@@ -55,7 +55,7 @@ export default function Navigation() {
     >
       <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" data-testid="link-home-logo" className="nav-item-animate" style={{ animationDelay: '0.1s' }}>
+          <Link href="/" data-testid="link-home-logo">
             <Image
               src="/images/protekt-logo.webp"
               alt="Protekt Auto"
@@ -89,12 +89,11 @@ export default function Navigation() {
                 key={link.path}
                 ref={(el) => { itemRefs.current[index] = el; }}
                 href={link.path}
-                className={`relative z-10 text-sm font-medium cursor-pointer px-3 py-2 rounded-md transition-colors duration-200 nav-item-animate nav-item-hover ${
+                className={`relative z-10 text-sm font-medium cursor-pointer px-3 py-2 rounded-md transition-colors duration-200 nav-item-hover ${
                   pathname === link.path
                     ? 'text-primary'
                     : 'text-white/80 hover:text-white'
                 }`}
-                style={{ animationDelay: `${0.3 + index * 0.05}s` }}
                 onMouseEnter={() => setHoveredIndex(index)}
                 data-testid={`link-nav-${link.label.toLowerCase().replace(' ', '-')}`}
               >
@@ -103,14 +102,14 @@ export default function Navigation() {
             ))}
           </div>
 
-          <div className="hidden lg:flex items-center gap-2 nav-item-animate" style={{ animationDelay: `${0.3 + navLinks.length * 0.05 + 0.1}s` }}>
-            <Button
-              asChild
-              className="btn-spray-edge hidden xl:flex items-center gap-2 px-6 py-2 bg-primary text-black font-bold text-sm tracking-wide transition-all"
+          <div className="hidden lg:flex items-center gap-2">
+            <Link
+              href="/contact"
+              className="hidden xl:flex items-center gap-2 px-5 py-2 bg-primary text-black font-bold text-sm tracking-wide skew-x-[-8deg] hover:bg-primary/90 hover:scale-105 transition-all"
               data-testid="button-book-now-desktop"
             >
-              <Link href="/contact">Book Now</Link>
-            </Button>
+              <span className="skew-x-[8deg]">Book Now</span>
+            </Link>
             <Button
               asChild
               size="icon"
@@ -127,8 +126,7 @@ export default function Navigation() {
           <Button
             size="icon"
             variant="ghost"
-            className="lg:hidden text-primary hover:text-primary nav-item-animate"
-            style={{ animationDelay: '0.2s' }}
+            className="lg:hidden text-primary hover:text-primary"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             data-testid="button-mobile-menu-toggle"
           >
