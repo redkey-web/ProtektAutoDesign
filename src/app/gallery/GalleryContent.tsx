@@ -99,6 +99,28 @@ export default function GalleryContent() {
         </div>
       </section>
 
+      {/* Video Showcase */}
+      <section className="py-16 bg-muted/30">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-6 text-center">
+            See Our Work in Action
+          </h2>
+          <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-xl">
+            <iframe
+              className="absolute inset-0 w-full h-full"
+              src="https://www.youtube.com/embed/JyqP0x17lvY?si=jWIBgsERnRwR6Np7&controls=0"
+              title="Protekt Auto Detailing Showcase"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            />
+          </div>
+          <p className="text-foreground/60 text-sm text-center mt-4 italic">
+            Premium automotive detailing and protection services in Sydney
+          </p>
+        </div>
+      </section>
+
       {/* Filter Section */}
       <section className="py-8 bg-background border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
