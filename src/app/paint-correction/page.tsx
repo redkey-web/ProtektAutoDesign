@@ -1,13 +1,6 @@
 import { Metadata } from 'next';
-import Hero from '@/components/Hero';
-import ProcessTimeline from '@/components/ProcessTimeline';
-import ContactSection from '@/components/ContactSection';
-import FAQ, { FAQItem } from '@/components/FAQ';
-import RelatedServices from '@/components/RelatedServices';
-import Testimonials from '@/components/Testimonials';
-import FeaturedWorkShowcase from '@/components/FeaturedWorkShowcase';
-import BentoImageGrid from '@/components/BentoImageGrid';
-import { Card } from '@/components/ui/card';
+import PaintCorrectionContent from './PaintCorrectionContent';
+import { FAQItem } from '@/components/FAQ';
 
 export const metadata: Metadata = {
   title: 'Paint Correction Sydney | Cut & Polish | Machine Polishing | Protekt Auto',
@@ -180,148 +173,11 @@ const moreWorkImages = [
 
 export default function PaintCorrection() {
   return (
-    <div className="min-h-screen">
-      <Hero
-        title="Paint Correction Sydney"
-        subtitle="Professional Swirl Removal & Gloss Restoration"
-        image="/images/paint-correction.webp"
-        height="large"
-        ctaText="Get Quote"
-        ctaLink="#contact"
-        showPhoneCta={false}
-        subtitlePosition="below"
-        contentOffset="-mt-[10%]"
-        buttonVariant="metallic"
-        titleVariant="metallic"
-        subtitleColor="white"
-      />
-
-      {/* Featured Work - Prominent Showcase Right After Hero */}
-      <FeaturedWorkShowcase
-        title="Premium Results"
-        subtitle="See the stunning transformations we achieve on high-end vehicles"
-        featuredImage={featuredWork.featured}
-        gridImages={featuredWork.grid}
-      />
-
-      <section className="py-20 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto mb-16">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6 text-center">
-              Sydney&apos;s Premier Paint Correction &amp; Enhancement Specialists
-            </h2>
-            <p className="text-foreground/70 text-lg leading-relaxed mb-6">
-              Paint correction is the most visually impactful exterior enhancement a detailer can
-              make to a vehicle&apos;s exterior. If you want to enhance the gloss of your
-              car&apos;s paint or remove unsightly swirls and scratches, then this is achievable
-              with our paint correction and enhancement (machine polishing) services.
-            </p>
-            <p className="text-foreground/70 text-lg leading-relaxed mb-6">
-              We use different grades of abrasive polishes and pads along with our modern-day
-              polishing techniques and equipment to achieve the best finish possible from the
-              packages we offer below.
-            </p>
-            <p className="text-foreground/70 text-lg leading-relaxed mb-6">
-              Due to the different finishes in modern paints, paint correction and enhancement
-              services are priced based on application (POA), and an inspection of the
-              vehicle&apos;s paint condition is required prior to providing a quotation.
-            </p>
-            <p className="text-foreground/70 text-lg leading-relaxed mb-6">
-              Paints that are soft (Japanese cars) tend to correct easier but take time to refine,
-              whereas some vehicles with hard ceramic clear coats (European) will take more time to
-              penetrate the clear coat. Dark or solid coloured paints require more time as more
-              refinement is needed to achieve a hologram-free finish than lighter metallic paints.
-            </p>
-            <p className="text-foreground/70 text-lg leading-relaxed">
-              Below is an approximate price guide required to carry out each paint correction
-              service based on a standard-size car with light to moderate-grade paint defects.
-            </p>
-          </div>
-
-          {/* YouTube Video Demo */}
-          <div className="mb-16">
-            <h3 className="font-display text-2xl font-bold text-foreground mb-6 text-center">
-              See Paint Correction in Action
-            </h3>
-            <div className="max-w-3xl mx-auto">
-              <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg">
-                <iframe
-                  className="absolute inset-0 w-full h-full"
-                  src="https://www.youtube.com/embed/3wLZG0JO7Vc?si=KbUdFmbIQzlwlqSy&controls=0"
-                  title="Paint correction demonstration"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerPolicy="strict-origin-when-cross-origin"
-                  allowFullScreen
-                />
-              </div>
-              <p className="text-foreground/60 text-sm text-center mt-4 italic">
-                Watch our professional machine polishing technique restore paint clarity
-              </p>
-            </div>
-          </div>
-
-          <div className="mb-16">
-            <ProcessTimeline steps={stages} />
-          </div>
-
-          <Card className="p-6 bg-card/50">
-            <p className="text-sm text-foreground/60 italic">
-              * Prices quoted above are &quot;Starting From&quot; based on small size hatch/coupes
-              and should only be used as an approximate guide. Prices will vary depending on the
-              size of the vehicle, paint colour, and condition.
-            </p>
-          </Card>
-        </div>
-      </section>
-
-      {/* More Work - Bento Grid */}
-      <BentoImageGrid
-        title="More of Our Work"
-        subtitle="From everyday vehicles to exotic supercars, we deliver exceptional results"
-        images={moreWorkImages}
-        variant="default"
-      />
-
-      <section className="relative overflow-hidden">
-        <div
-          className="absolute inset-0 pointer-events-none opacity-[0.02]"
-          style={{
-            backgroundImage: 'url(/images/pattern-logo.png)',
-            backgroundRepeat: 'repeat',
-            backgroundSize: '150px 150px',
-          }}
-        />
-        <div className="relative z-10">
-          <RelatedServices
-            services={[
-              {
-                title: 'Ceramic Coating Sydney',
-                description:
-                  'Protect your freshly corrected paint with our premium ceramic or graphene coating for long-lasting shine.',
-                link: '/ceramic-coating-sydney',
-              },
-              {
-                title: 'Window Tinting',
-                description:
-                  'Complement your paint correction with professional ceramic window tinting for heat rejection and UV protection.',
-                link: '/window-tinting-sydney',
-              },
-              {
-                title: 'Protection Packages',
-                description:
-                  'Save with our complete packages that include paint correction, ceramic coating, and PPF installation.',
-                link: '/packages',
-              },
-            ]}
-          />
-
-          <FAQ items={faqItems} title="Paint Correction FAQs" />
-        </div>
-      </section>
-
-      <Testimonials />
-
-      <ContactSection />
-    </div>
+    <PaintCorrectionContent
+      faqItems={faqItems}
+      stages={stages}
+      featuredWork={featuredWork}
+      moreWorkImages={moreWorkImages}
+    />
   );
 }
