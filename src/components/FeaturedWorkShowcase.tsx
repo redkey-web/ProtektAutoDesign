@@ -122,21 +122,21 @@ export default function FeaturedWorkShowcase({
       },
     });
 
-    // Phase 1: Zoom in on first image (RAM 1500) - first 20% of scroll
+    // Phase 1: Zoom in on first image (RAM 1500) - first 10% of scroll (faster zoom)
     if (firstImage) {
       tl.fromTo(
         firstImage,
-        { scale: 0.75, opacity: 0.9 },
-        { scale: 1, opacity: 1, duration: 0.2, ease: 'power3.out' },
+        { scale: 0.9, opacity: 0.95 },
+        { scale: 1, opacity: 1, duration: 0.1, ease: 'power3.out' },
         0
       );
     }
 
-    // Phase 2: Horizontal scroll with easing (remaining 80%)
+    // Phase 2: Horizontal scroll with easing (remaining 90%)
     tl.to(
       track,
-      { x: getScrollAmount, duration: 0.8, ease: 'power1.inOut' },
-      0.2
+      { x: getScrollAmount, duration: 0.9, ease: 'power1.inOut' },
+      0.1
     );
 
     // Parallax effect - images at different depths/speeds (no fade)
@@ -207,7 +207,7 @@ export default function FeaturedWorkShowcase({
   return (
     <section
       ref={sectionRef}
-      className={`py-16 relative overflow-hidden ${
+      className={`${isPinned ? 'py-0' : 'py-16'} relative overflow-hidden ${
         isMetallic ? 'bg-[#2a2a2a]' : isDark ? 'bg-[#0a0a0a]' : 'bg-card'
       } ${className}`}
     >
@@ -299,9 +299,9 @@ export default function FeaturedWorkShowcase({
         </>
       )}
 
-      <div className={`relative z-10 ${isHorizontal ? '' : 'max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'}`}>
-        {/* Section Header */}
-        {(title || subtitle) && (
+      <div className={`relative z-10 ${isHorizontal || isPinned ? '' : 'max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'}`}>
+        {/* Section Header - hidden for pinned layout */}
+        {(title || subtitle) && !isPinned && (
           <div className={`text-center mb-10 ${isHorizontal ? 'px-4 sm:px-6 lg:px-8' : ''}`}>
             {title && (
               <h2 className={`font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-3 ${

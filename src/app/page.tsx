@@ -106,7 +106,9 @@ export default function Home() {
         showPhoneCta={false}
         showLogo={false}
         showTrustBadges={false}
-        contentOffset="xl:mt-[13vh]"
+        contentOffset="xl:mt-[5vh]"
+        hyperSpaceIntro={true}
+        hyperSpaceIntroDuration={3500}
       />
 
       <section className="py-6 bg-background flex items-center justify-center">

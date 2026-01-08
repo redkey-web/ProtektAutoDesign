@@ -66,9 +66,6 @@ const allTintWork = {
     { src: '/images/camry-side.png', alt: 'Toyota Camry', title: 'Toyota Camry', subtitle: 'Complete Package' },
     { src: '/images/window-tint-team.webp', alt: 'Tinting team', title: 'Expert Team', subtitle: 'Professional Install' },
     { src: '/images/camry-rear.png', alt: 'Camry rear', title: 'Finished Work', subtitle: 'NSW Legal' },
-    { src: '/images/workshop-action.png', alt: 'Workshop', title: 'Expert Application', subtitle: 'Precision Work' },
-    { src: '/images/black-minivan.png', alt: 'Black minivan', title: 'Family Vehicle', subtitle: 'Privacy Tint' },
-    { src: '/images/silver-pajero.png', alt: 'Silver Pajero', title: 'Mitsubishi Pajero', subtitle: 'UV Protection' },
   ],
 };
 
@@ -92,14 +89,9 @@ export default function WindowTintingContent({ faqItems }: WindowTintingContentP
         ctaLink="#contact"
         showPhoneCta={false}
         subtitlePosition="below"
-        contentOffset="-mt-[10%]"
+        contentOffset="mt-[5%]"
         overlayStyle="light"
         titleVariant="deep-metallic"
-        brandLogos={[
-          { src: '/images/nxtzen-logo.png', alt: 'NXTZEN', treatment: 'glass' },
-          { src: '/images/xpel-logo.webp', alt: 'XPEL', treatment: 'glass' },
-          { src: '/images/ultimate-plus-logo.png', alt: 'Ultimate Plus', treatment: 'glass' },
-        ]}
       />
 
       {/* Main content wrapper - Batman atmosphere with animated blobs */}
@@ -205,11 +197,6 @@ export default function WindowTintingContent({ faqItems }: WindowTintingContentP
 
           {/* YouTube Video Demo - parallax scale */}
           <ParallaxScale speed={0.5}>
-            <ParallaxSlideIn direction="right" speed={0.8}>
-              <h3 className="font-display text-2xl font-bold text-white mb-6 text-center">
-                Choosing Your Window Tint
-              </h3>
-            </ParallaxSlideIn>
             <div className="max-w-3xl mx-auto">
               <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-2xl border border-white/10">
                 <iframe
@@ -237,6 +224,20 @@ export default function WindowTintingContent({ faqItems }: WindowTintingContentP
         gridImages={allTintWork.grid}
         variant="metallic"
         layout="pinned-horizontal"
+        testimonials={[
+          {
+            quote: "Best tint job in Sydney. The ceramic tint keeps my Tesla so much cooler, even in peak summer.",
+            author: "Michael T.",
+            vehicle: "Tesla Model 3",
+            rating: 5,
+          },
+          {
+            quote: "Professional service from start to finish. My RAM looks incredible with the 20% all round.",
+            author: "David K.",
+            vehicle: "RAM 1500",
+            rating: 5,
+          },
+        ]}
       />
 
       {/* XPEL Authorised Dealer Section */}
@@ -306,6 +307,33 @@ export default function WindowTintingContent({ faqItems }: WindowTintingContentP
 
       <section className="py-20 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+          {/* Brand Logos */}
+          <FadeUp className="mb-12">
+            <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+              <Image
+                src="/images/nxtzen-logo.png"
+                alt="NXTZEN"
+                width={120}
+                height={40}
+                className="h-8 md:h-10 w-auto opacity-70 hover:opacity-100 transition-opacity"
+              />
+              <Image
+                src="/images/xpel-logo.webp"
+                alt="XPEL"
+                width={120}
+                height={40}
+                className="h-8 md:h-10 w-auto opacity-70 hover:opacity-100 transition-opacity"
+              />
+              <Image
+                src="/images/ultimate-plus-logo.png"
+                alt="Ultimate Plus"
+                width={120}
+                height={40}
+                className="h-8 md:h-10 w-auto opacity-70 hover:opacity-100 transition-opacity"
+              />
+            </div>
+          </FadeUp>
+
           <FadeUp>
             <UrgencyBanner
               message="Summer wait times up to 2 weeks"
@@ -381,6 +409,10 @@ export default function WindowTintingContent({ faqItems }: WindowTintingContentP
         </div>
       </section>
 
+      <Testimonials />
+
+      <ContactSection />
+
       <section className="py-16 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp className="text-center">
@@ -440,11 +472,7 @@ export default function WindowTintingContent({ faqItems }: WindowTintingContentP
         </div>
       </section>
 
-      <Testimonials />
-
       </div>{/* End of pattern background wrapper */}
-
-      <ContactSection />
     </div>
     </SmoothScroll>
   );

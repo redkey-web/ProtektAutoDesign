@@ -4,6 +4,7 @@ import Navigation from '@/components/layout/Navigation'
 import Footer from '@/components/layout/Footer'
 import TrustTicker from '@/components/layout/TrustTicker'
 import StickyPhoneButton from '@/components/layout/StickyPhoneButton'
+import ScrollToTop from '@/components/ScrollToTop'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://protektautodesign.com.au'),
@@ -136,17 +137,56 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        {/* Barlow Condensed font */}
+
+        {/* DNS Prefetch & Preconnect for third-party resources */}
+        <link rel="dns-prefetch" href="https://player.vimeo.com" />
+        <link rel="preconnect" href="https://player.vimeo.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://i.vimeocdn.com" />
+        <link rel="preconnect" href="https://i.vimeocdn.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://f.vimeocdn.com" />
+        <link rel="preconnect" href="https://f.vimeocdn.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://fresnel.vimeocdn.com" />
+
+        {/* Google Fonts - preconnect */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+
+        {/* Preload critical font weights */}
+        <link
+          rel="preload"
+          href="https://fonts.gstatic.com/s/barlowcondensed/v12/HTxwL3I-JCGChYJ8VI-L6OO_au7B46r2z3bWuYMBYw.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="https://fonts.gstatic.com/s/bebasneue/v14/JTUSjIg69CK48gW7PXoo9WlhyyTh89Y.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+
+        {/* Font stylesheet with display=swap */}
         <link
           href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700&family=Bebas+Neue&display=swap"
           rel="stylesheet"
         />
+
+        {/* Preload critical images */}
+        <link
+          rel="preload"
+          href="/images/protekt-logo.webp"
+          as="image"
+          type="image/webp"
+        />
       </head>
       <body className="min-h-screen bg-background font-sans antialiased">
+        {/* Fixed black strip behind header */}
+        <div className="fixed top-0 left-0 right-0 h-20 bg-black z-0" />
+        <ScrollToTop />
         <Navigation />
-        <main className="pt-16 pb-28">
+        <main className="pt-20 pb-28">
           {children}
         </main>
         <TrustTicker />

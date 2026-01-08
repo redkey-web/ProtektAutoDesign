@@ -1,105 +1,145 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { Phone, Menu, X } from 'lucide-react';
+import { Phone, Menu, X, ChevronDown } from 'lucide-react';
 
 export default function Navigation() {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMoreOpen, setIsMoreOpen] = useState(false);
+  const moreRef = useRef<HTMLDivElement>(null);
 
-  // For sliding highlight effect
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  const [highlightStyle, setHighlightStyle] = useState({ left: 0, width: 0, opacity: 0 });
-  const navRef = useRef<HTMLDivElement>(null);
-  const itemRefs = useRef<(HTMLAnchorElement | null)[]>([]);
-
-  const navLinks = [
-    { path: '/ceramic-coating-sydney', label: 'Ceramic Coating' },
-    { path: '/paint-correction', label: 'Paint Correction' },
-    { path: '/window-tinting-sydney', label: 'Tinting' },
+  // Main nav links (DETAILING first)
+  const mainNavLinks = [
+    { path: '/detailing', label: 'DETAILING' },
+    { path: '/ceramic-coating-sydney', label: 'CERAMIC COATING' },
+    { path: '/paint-correction', label: 'PAINT CORRECTION' },
+    { path: '/window-tinting-sydney', label: 'TINTING' },
     { path: '/ppf-car-wrap-sydney', label: 'PPF' },
-    { path: '/detailing', label: 'Detailing' },
-    { path: '/motorcycle-protection', label: 'Motorcycle' },
-    { path: '/packages', label: 'Packages' },
-    { path: '/gallery', label: 'Gallery' },
-    { path: '/contact', label: 'Contact' },
+    { path: '/contact', label: 'CONTACT' },
   ];
 
-  // Update highlight position when hovered item changes
+  // More dropdown links
+  const moreLinks = [
+    { path: '/motorcycle-protection', label: 'MOTORCYCLE' },
+    { path: '/packages', label: 'PACKAGES' },
+    { path: '/gallery', label: 'GALLERY' },
+  ];
+
+  // All links for mobile menu
+  const allNavLinks = [
+    ...mainNavLinks.slice(0, -1), // All except CONTACT
+    ...moreLinks,
+    mainNavLinks[mainNavLinks.length - 1], // CONTACT last
+  ];
+
+  // Scroll listener for header expand/shrink
   useEffect(() => {
-    if (hoveredIndex !== null && itemRefs.current[hoveredIndex] && navRef.current) {
-      const item = itemRefs.current[hoveredIndex];
-      const nav = navRef.current;
-      if (item) {
-        const itemRect = item.getBoundingClientRect();
-        const navRect = nav.getBoundingClientRect();
-        setHighlightStyle({
-          left: itemRect.left - navRect.left,
-          width: itemRect.width,
-          opacity: 1,
-        });
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+
+    handleScroll(); // Check initial state
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (moreRef.current && !moreRef.current.contains(e.target as Node)) {
+        setIsMoreOpen(false);
       }
-    } else {
-      setHighlightStyle(prev => ({ ...prev, opacity: 0 }));
-    }
-  }, [hoveredIndex]);
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   return (
     <nav
-      className="fixed top-0 left-0 right-0 z-[100] bg-black/20 backdrop-blur-md backdrop-brightness-50 border-b border-white/10"
+      className={`fixed top-0 left-0 right-0 z-[100] bg-black/20 backdrop-blur-md backdrop-brightness-50 border-b border-white/10 transition-all duration-300 ${
+        isScrolled ? 'py-2' : 'py-3'
+      }`}
       data-testid="navigation-header"
     >
-      <div className="w-full px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-14">
           <Link href="/" data-testid="link-home-logo">
             <Image
               src="/images/protekt-logo.webp"
               alt="Protekt Auto"
               width={200}
               height={64}
-              className="h-14 sm:h-16 w-auto -my-2 -ml-2"
+              className={`w-auto -my-4 transition-all duration-300 ${
+                isScrolled ? 'h-12' : 'h-14'
+              }`}
               priority
             />
           </Link>
 
-          {/* Desktop Navigation with sliding highlight */}
-          <div
-            ref={navRef}
-            className="hidden lg:flex items-center gap-1 relative"
-            onMouseLeave={() => setHoveredIndex(null)}
-          >
-            {/* Sliding highlight background */}
-            <div
-              className="absolute h-9 bg-white/10 rounded-md pointer-events-none transition-all duration-300 ease-out"
-              style={{
-                left: highlightStyle.left,
-                width: highlightStyle.width,
-                opacity: highlightStyle.opacity,
-                transform: 'translateY(-50%)',
-                top: '50%',
-              }}
-            />
-
-            {navLinks.map((link, index) => (
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center gap-1">
+            {mainNavLinks.map((link) => (
               <Link
                 key={link.path}
-                ref={(el) => { itemRefs.current[index] = el; }}
                 href={link.path}
-                className={`relative z-10 text-sm font-medium cursor-pointer px-3 py-2 rounded-md transition-colors duration-200 nav-item-hover ${
+                className={`relative text-base font-medium tracking-wider px-3 py-2 transition-colors duration-200 hover:text-white group ${
                   pathname === link.path
                     ? 'text-primary'
-                    : 'text-white/80 hover:text-white'
+                    : 'text-white/80'
                 }`}
-                onMouseEnter={() => setHoveredIndex(index)}
                 data-testid={`link-nav-${link.label.toLowerCase().replace(' ', '-')}`}
               >
                 {link.label}
+                {/* Underline hover effect */}
+                <span className={`absolute bottom-1 left-3 right-3 h-0.5 bg-primary transition-transform duration-300 origin-left ${
+                  pathname === link.path ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                }`} />
               </Link>
             ))}
+
+            {/* More Dropdown */}
+            <div ref={moreRef} className="relative">
+              <button
+                onClick={() => setIsMoreOpen(!isMoreOpen)}
+                className={`relative text-base font-medium tracking-wider px-3 py-2 transition-colors duration-200 hover:text-white flex items-center gap-1 group ${
+                  moreLinks.some(l => pathname === l.path)
+                    ? 'text-primary'
+                    : 'text-white/80'
+                }`}
+              >
+                MORE
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isMoreOpen ? 'rotate-180' : ''}`} />
+                <span className={`absolute bottom-1 left-3 right-3 h-0.5 bg-primary transition-transform duration-300 origin-left ${
+                  moreLinks.some(l => pathname === l.path) ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                }`} />
+              </button>
+
+              {/* Dropdown Menu */}
+              {isMoreOpen && (
+                <div className="absolute top-full right-0 mt-2 py-2 bg-black/90 backdrop-blur-md border border-white/10 rounded-lg min-w-[160px] shadow-xl">
+                  {moreLinks.map((link) => (
+                    <Link
+                      key={link.path}
+                      href={link.path}
+                      onClick={() => setIsMoreOpen(false)}
+                      className={`block px-4 py-2 text-base font-medium tracking-wider transition-colors duration-200 hover:text-white hover:bg-white/10 ${
+                        pathname === link.path
+                          ? 'text-primary'
+                          : 'text-white/80'
+                      }`}
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
 
           <div className="hidden lg:flex items-center gap-2">
@@ -108,7 +148,7 @@ export default function Navigation() {
               className="hidden xl:flex items-center gap-2 px-5 py-2 bg-primary text-black font-bold text-sm tracking-wide skew-x-[-8deg] hover:bg-primary/90 hover:scale-105 transition-all"
               data-testid="button-book-now-desktop"
             >
-              <span className="skew-x-[8deg]">Book Now</span>
+              <span className="skew-x-[8deg]">Get a Quote</span>
             </Link>
             <Button
               asChild
@@ -135,15 +175,16 @@ export default function Navigation() {
         </div>
       </div>
 
+      {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden bg-black/5 border-b border-white/10 mobile-menu-animate" data-testid="mobile-menu">
-          <div className="px-4 py-4 space-y-3">
-            {navLinks.map((link, index) => (
+        <div className="lg:hidden bg-black/90 backdrop-blur-md border-b border-white/10 mobile-menu-animate" data-testid="mobile-menu">
+          <div className="max-w-7xl mx-auto px-4 py-4 space-y-1">
+            {allNavLinks.map((link, index) => (
               <Link
                 key={link.path}
                 href={link.path}
-                className={`mobile-menu-text block py-2 px-3 rounded-md text-base font-medium cursor-pointer transition-all mobile-item-animate mobile-menu-item-hover ${
-                  pathname === link.path ? 'text-primary bg-black/60' : 'text-white/90 hover:text-white hover:bg-black/60 hover:drop-shadow-[0_2px_6px_rgba(0,188,212,0.9)]'
+                className={`mobile-menu-text block py-3 px-3 rounded-md text-base font-medium tracking-wide transition-all mobile-item-animate ${
+                  pathname === link.path ? 'text-primary bg-white/5' : 'text-white/90 hover:text-white hover:bg-white/5'
                 }`}
                 style={{ animationDelay: `${0.05 + index * 0.04}s` }}
                 onClick={() => setIsMobileMenuOpen(false)}
@@ -156,7 +197,7 @@ export default function Navigation() {
               asChild
               variant="default"
               className="phone-button-glow w-full gap-2 mt-4 mobile-item-animate"
-              style={{ animationDelay: `${0.05 + navLinks.length * 0.04}s` }}
+              style={{ animationDelay: `${0.05 + allNavLinks.length * 0.04}s` }}
               data-testid="button-call-mobile"
             >
               <a href="tel:0286062842">

@@ -1,9 +1,11 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Play, Phone } from 'lucide-react';
 import TrustBadges from '@/components/TrustBadges';
 import Image from 'next/image';
+import HyperSpaceIntro from '@/components/HyperSpaceIntro';
 
 interface BrandLogo {
   src: string;
@@ -41,6 +43,10 @@ interface HeroProps {
   heroEffect?: 'none' | 'tinted-window';
   /** Brand logos to display at bottom of hero */
   brandLogos?: BrandLogo[];
+  /** Enable hyperspace intro animation for video loading */
+  hyperSpaceIntro?: boolean;
+  /** Duration of hyperspace intro in ms */
+  hyperSpaceIntroDuration?: number;
 }
 
 export default function Hero({
@@ -66,7 +72,28 @@ export default function Hero({
   overlayStyle = 'default',
   heroEffect = 'none',
   brandLogos,
+  hyperSpaceIntro = false,
+  hyperSpaceIntroDuration = 3500,
 }: HeroProps) {
+  const [showIntro, setShowIntro] = useState(hyperSpaceIntro && !!videoUrl);
+  const [videoReady, setVideoReady] = useState(false);
+  const [showContent, setShowContent] = useState(!hyperSpaceIntro || !videoUrl);
+
+  // When intro completes, show the content
+  const handleIntroComplete = () => {
+    setShowIntro(false);
+    setShowContent(true);
+  };
+
+  // Start loading video when intro is ~60% done
+  useEffect(() => {
+    if (hyperSpaceIntro && videoUrl) {
+      const timer = setTimeout(() => {
+        setVideoReady(true);
+      }, hyperSpaceIntroDuration * 0.5);
+      return () => clearTimeout(timer);
+    }
+  }, [hyperSpaceIntro, videoUrl, hyperSpaceIntroDuration]);
   const heightClasses = {
     full: 'h-screen',
     xlarge: 'h-[85vh]',
@@ -87,30 +114,46 @@ export default function Hero({
   };
 
   return (
-    <div
-      className={`relative ${heightClasses[height]} flex items-center justify-center overflow-hidden`}
-      data-testid="hero-section"
-    >
-      <div className="absolute inset-0 z-0 overflow-hidden bg-black">
-        {videoUrl ? (
-          <>
-            <div className="absolute inset-0 scale-[1.40] -mt-8 -mb-30">
-              <iframe
-                src={`${videoUrl}?background=1&autoplay=1&loop=1&muted=1&quality=720p`}
-                className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2"
-                frameBorder="0"
-                allow="autoplay; fullscreen"
-                title="Hero background video"
-                data-testid="hero-background-video"
-              />
-            </div>
-            <div className={`absolute inset-0 z-10 ${
-              overlayStyle === 'light'
-                ? 'bg-gradient-to-b from-black/40 via-black/20 to-black/50'
-                : 'bg-gradient-to-b from-black/70 via-black/50 to-black/70'
-            }`} />
-          </>
-        ) : image ? (
+    <>
+      {/* HyperSpace Intro Animation */}
+      {showIntro && (
+        <HyperSpaceIntro
+          logoSrc="/images/protekt-logo.webp"
+          onComplete={handleIntroComplete}
+          duration={hyperSpaceIntroDuration}
+        />
+      )}
+
+      <div
+        className={`relative ${heightClasses[height]} flex items-center justify-center overflow-hidden transition-opacity duration-500 ${
+          showContent ? 'opacity-100' : 'opacity-0'
+        }`}
+        data-testid="hero-section"
+      >
+        <div className="absolute inset-0 z-0 overflow-hidden bg-black">
+          {videoUrl ? (
+            <>
+              {/* Only render iframe when video is ready (during intro) or always if no intro */}
+              {(videoReady || !hyperSpaceIntro) && (
+                <div className="absolute inset-0 scale-[1.40] -mt-8 -mb-30">
+                  <iframe
+                    src={`${videoUrl}?background=1&autoplay=1&loop=1&muted=1&quality=720p`}
+                    className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2"
+                    frameBorder="0"
+                    allow="autoplay; fullscreen"
+                    title="Hero background video"
+                    data-testid="hero-background-video"
+                    loading="lazy"
+                  />
+                </div>
+              )}
+              <div className={`absolute inset-0 z-10 ${
+                overlayStyle === 'light'
+                  ? 'bg-gradient-to-b from-black/40 via-black/20 to-black/50'
+                  : 'bg-gradient-to-b from-black/70 via-black/50 to-black/70'
+              }`} />
+            </>
+          ) : image ? (
           <>
             <Image
               src={image}
@@ -297,6 +340,7 @@ export default function Hero({
           </div>
         </div>
       )}
-    </div>
+      </div>
+    </>
   );
 }
