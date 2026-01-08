@@ -112,7 +112,7 @@ export default function NewCarProtection() {
         title="Ceramic & Graphene Coating Sydney"
         subtitle="Next-Gen Graphene Protection with 7-Year Guarantee"
         image="/images/ceramic-coating.webp"
-        height="large"
+        height="xlarge"
         ctaText="Get Quote"
         ctaLink="#contact"
         showPhoneCta={false}
@@ -239,18 +239,32 @@ export default function NewCarProtection() {
         variant="default"
       />
 
-      <section className="relative overflow-hidden">
-        {/* Pattern Overlay */}
+      {/* Dark atmosphere section */}
+      <section className="relative overflow-hidden bg-[#0a0a0a]">
+        {/* Pattern overlay */}
         <div
-          className="absolute inset-0 pointer-events-none opacity-[0.02]"
+          className="absolute inset-0 pointer-events-none opacity-[0.04]"
           style={{
             backgroundImage: 'url(/images/pattern-logo.png)',
             backgroundRepeat: 'repeat',
-            backgroundSize: '150px 150px',
+            backgroundSize: '80px 80px',
+            backgroundAttachment: 'fixed',
+          }}
+        />
+        {/* Subtle gold glow for ceramic coating theme */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <div className="w-[600px] h-[500px] bg-amber-500/10 rounded-full blur-[180px]" />
+        </div>
+        {/* Vignette */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background: 'radial-gradient(ellipse at center, transparent 0%, transparent 50%, rgba(0,0,0,0.6) 100%)',
           }}
         />
         <div className="relative z-10">
           <RelatedServices
+            variant="dark"
             services={[
               {
                 title: 'Paint Correction Sydney',
@@ -270,7 +284,7 @@ export default function NewCarProtection() {
             ]}
           />
 
-          <FAQ items={faqItems} title="Ceramic Coating FAQs" />
+          <FAQ items={faqItems} title="Ceramic Coating FAQs" variant="dark" />
         </div>
       </section>
 

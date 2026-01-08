@@ -64,8 +64,8 @@ const allTintWork = {
   grid: [
     { src: '/images/tesla-white.png', alt: 'White Tesla', title: 'Tesla Model 3', subtitle: 'Ceramic Tint' },
     { src: '/images/camry-side.png', alt: 'Toyota Camry', title: 'Toyota Camry', subtitle: 'Complete Package' },
-    { src: '/images/window-tint-team.webp', alt: 'Tinting team', title: 'Expert Team', subtitle: 'Professional Install' },
     { src: '/images/camry-rear.png', alt: 'Camry rear', title: 'Finished Work', subtitle: 'NSW Legal' },
+    { src: '/images/window-tint-team.webp', alt: 'Tinting team', title: 'Expert Team', subtitle: 'Professional Install' },
   ],
 };
 
@@ -228,18 +228,23 @@ export default function WindowTintingContent({ faqItems }: WindowTintingContentP
         layout="pinned-horizontal"
         testimonials={[
           {
-            quote: "Best tint job in Sydney. The ceramic tint keeps my Tesla so much cooler, even in peak summer.",
-            author: "Michael T.",
-            vehicle: "Tesla Model 3",
-            rating: 5,
-          },
-          {
             quote: "Professional service from start to finish. My RAM looks incredible with the 20% all round.",
             author: "David K.",
             vehicle: "RAM 1500",
             rating: 5,
           },
+          {
+            quote: "Best tint job in Sydney. The ceramic tint keeps my Tesla so much cooler, even in peak summer.",
+            author: "Michael T.",
+            vehicle: "Tesla Model 3",
+            rating: 5,
+          },
         ]}
+        overlayTestimonialOnImage={{
+          0: { testimonialIndex: 0, position: 'top-right' },  // RAM review overlays ON the RAM image (top-right)
+          1: { testimonialIndex: 1, position: 'bottom-center' },  // Tesla review overlays below Tesla image
+        }}
+        testimonialPlacement={{}}
       />
 
       {/* XPEL Authorised Dealer Section */}

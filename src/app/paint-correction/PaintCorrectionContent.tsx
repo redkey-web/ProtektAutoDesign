@@ -53,7 +53,7 @@ export default function PaintCorrectionContent({
           title="Paint Correction Sydney"
           subtitle="Professional Swirl Removal & Gloss Restoration"
           image="/images/paint-correction.webp"
-          height="large"
+          height="xlarge"
           ctaText="Get Quote"
           ctaLink="#contact"
           showPhoneCta={false}
@@ -227,16 +227,9 @@ export default function PaintCorrectionContent({
               <div className="w-[600px] h-[400px] bg-amber-500/10 rounded-full blur-[150px]" />
             </div>
 
-            <div
-              className="absolute inset-0 pointer-events-none opacity-[0.04]"
-              style={{
-                backgroundImage: 'url(/images/pattern-logo.png)',
-                backgroundRepeat: 'repeat',
-                backgroundSize: '100px 100px',
-              }}
-            />
             <div className="relative z-10">
               <RelatedServices
+                variant="dark"
                 services={[
                   {
                     title: 'Ceramic Coating Sydney',
@@ -259,7 +252,7 @@ export default function PaintCorrectionContent({
                 ]}
               />
 
-              <FAQ items={faqItems} title="Paint Correction FAQs" />
+              <FAQ items={faqItems} title="Paint Correction FAQs" variant="dark" />
             </div>
           </section>
 

@@ -77,7 +77,7 @@ export default function PPFContent({
           title="Paint Protection Film (PPF)"
           subtitle="Self-Healing • No Yellowing • XPEL Certified"
           image="/images/ppf.webp"
-          height="large"
+          height="xlarge"
           ctaText="Get Quote"
           ctaLink="#contact"
           showPhoneCta={false}

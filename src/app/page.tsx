@@ -117,7 +117,7 @@ export default function Home() {
         </div>
       </section>
 
-      <WelcomeVideo />
+      <WelcomeVideo variant="dark" />
 
       <section id="services" className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -175,7 +175,7 @@ export default function Home() {
 
       <FeaturedArticles />
 
-      <FAQ items={faqItems} />
+      <FAQ items={faqItems} variant="dark" />
 
       <ContactSection />
     </>

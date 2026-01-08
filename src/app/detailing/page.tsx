@@ -149,7 +149,7 @@ export default function Detailing() {
         title="Maintenance Detailing"
         subtitle="Bring Back the Finish of Your Vehicle"
         image="/images/blue-subaru-polish.png"
-        height="large"
+        height="xlarge"
         ctaText="Get Quote"
         ctaLink="#contact"
         showPhoneCta={false}
@@ -304,17 +304,32 @@ export default function Detailing() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden">
+      {/* Dark atmosphere section */}
+      <section className="relative overflow-hidden bg-[#0a0a0a]">
+        {/* Pattern overlay */}
         <div
-          className="absolute inset-0 pointer-events-none opacity-[0.02]"
+          className="absolute inset-0 pointer-events-none opacity-[0.04]"
           style={{
             backgroundImage: 'url(/images/pattern-logo.png)',
             backgroundRepeat: 'repeat',
-            backgroundSize: '150px 150px',
+            backgroundSize: '80px 80px',
+            backgroundAttachment: 'fixed',
+          }}
+        />
+        {/* Subtle glow */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <div className="w-[600px] h-[500px] bg-primary/10 rounded-full blur-[180px]" />
+        </div>
+        {/* Vignette */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background: 'radial-gradient(ellipse at center, transparent 0%, transparent 50%, rgba(0,0,0,0.6) 100%)',
           }}
         />
         <div className="relative z-10">
           <RelatedServices
+            variant="dark"
             services={[
               {
                 title: 'Ceramic Coating Sydney',
@@ -337,7 +352,7 @@ export default function Detailing() {
             ]}
           />
 
-          <FAQ items={faqItems} title="Detailing FAQs" />
+          <FAQ items={faqItems} title="Detailing FAQs" variant="dark" />
         </div>
       </section>
 

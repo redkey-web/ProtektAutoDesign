@@ -29,6 +29,10 @@ interface FeaturedWorkShowcaseProps {
   variant?: 'default' | 'dark' | 'metallic';
   layout?: 'default' | 'horizontal-scroll' | 'pinned-horizontal';
   testimonials?: Testimonial[];
+  /** Map of image index to testimonial index - controls which testimonial appears before which image */
+  testimonialPlacement?: Record<number, number>;
+  /** Map of image index to testimonial config - overlays testimonial ON the image instead of beside it */
+  overlayTestimonialOnImage?: Record<number, { testimonialIndex: number; position: 'top-right' | 'bottom-center' }>;
 }
 
 // Default testimonials for the scroll section
@@ -59,6 +63,14 @@ const defaultTestimonials: Testimonial[] = [
   },
 ];
 
+// Default testimonial placement map
+const defaultTestimonialPlacement: Record<number, number> = {
+  2: 0,  // First testimonial appears before image index 2
+  4: 1,  // Second testimonial appears before image index 4
+  6: 2,  // Third testimonial appears before image index 6
+  8: 3,  // Fourth testimonial appears at the end
+};
+
 export default function FeaturedWorkShowcase({
   title = "Our Work",
   subtitle,
@@ -68,6 +80,8 @@ export default function FeaturedWorkShowcase({
   variant = 'default',
   layout = 'default',
   testimonials = defaultTestimonials,
+  testimonialPlacement = defaultTestimonialPlacement,
+  overlayTestimonialOnImage = {},
 }: FeaturedWorkShowcaseProps) {
   const [selectedImage, setSelectedImage] = useState<WorkImage | null>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -366,16 +380,9 @@ export default function FeaturedWorkShowcase({
                 const overlapMargin = index === 0 ? 'ml-0' : '-ml-8 md:-ml-16 lg:-ml-24';
 
                 // Testimonial placement - show BEFORE specific images so they layer on top
-                // Michael T before Toyota Camry (index 2), David K before Finished Work (index 4),
-                // Sarah M before Family Vehicle (index 6), James R after Pajero (index 7)
-                const testimonialMap: Record<number, number> = {
-                  2: 0,  // Michael T appears before Toyota Camry
-                  4: 1,  // David K appears before Finished Work
-                  6: 2,  // Sarah M appears before Family Vehicle
-                  8: 3,  // James R appears at the end (after all images)
-                };
-                const showTestimonialBefore = testimonialMap[index] !== undefined && testimonials[testimonialMap[index]];
-                const testimonialBefore = showTestimonialBefore ? testimonials[testimonialMap[index]] : null;
+                // Uses testimonialPlacement prop to control which testimonial appears before which image
+                const showTestimonialBefore = testimonialPlacement[index] !== undefined && testimonials[testimonialPlacement[index]];
+                const testimonialBefore = showTestimonialBefore ? testimonials[testimonialPlacement[index]] : null;
 
                 // Show James R at the end after all images
                 const showTestimonialAfter = index === allImages.length - 1 && testimonials[3];
@@ -462,7 +469,7 @@ export default function FeaturedWorkShowcase({
                 return (
                   <div key={index} className="flex items-center" style={{ zIndex }}>
                     {/* Testimonial BEFORE image - layers on top of next image */}
-                    {testimonialBefore && renderTestimonial(testimonialBefore, testimonialMap[index])}
+                    {testimonialBefore && renderTestimonial(testimonialBefore, testimonialPlacement[index])}
 
                     {/* Image Card */}
                     <div
@@ -498,6 +505,59 @@ export default function FeaturedWorkShowcase({
                             )}
                           </div>
                         )}
+
+                        {/* Overlay testimonial ON the image */}
+                        {overlayTestimonialOnImage[index] && testimonials[overlayTestimonialOnImage[index].testimonialIndex] && (() => {
+                          const overlayConfig = overlayTestimonialOnImage[index];
+                          const t = testimonials[overlayConfig.testimonialIndex];
+                          const isBottomCenter = overlayConfig.position === 'bottom-center';
+
+                          return (
+                            <div className={`absolute z-20 ${
+                              isBottomCenter
+                                ? 'bottom-0 left-1/2 -translate-x-1/2 translate-y-[30%] w-[85%] md:w-[70%] lg:w-[60%]'
+                                : 'top-4 right-4 md:top-6 md:right-6 max-w-[60%] md:max-w-[45%]'
+                            }`}>
+                              <div className={`
+                                p-4 md:p-5 lg:p-6
+                                rounded-lg md:rounded-xl
+                                backdrop-blur-xl
+                                ${isMetallic
+                                  ? 'bg-gradient-to-br from-white/15 to-white/5 border border-white/25'
+                                  : 'bg-gradient-to-br from-primary/25 to-primary/10 border border-primary/40'
+                                }
+                                shadow-2xl
+                              `}>
+                                <div className={`text-2xl md:text-3xl mb-2 ${isMetallic ? 'text-white/50' : 'text-primary/60'}`}>"</div>
+                                <p className="text-sm md:text-base font-medium leading-relaxed mb-3 text-white/95">
+                                  {t.quote}
+                                </p>
+                                {t.rating && (
+                                  <div className="flex gap-0.5 mb-2">
+                                    {Array.from({ length: t.rating }).map((_, i) => (
+                                      <svg key={i} className={`w-4 h-4 ${isMetallic ? 'text-amber-300' : 'text-primary'}`} fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                      </svg>
+                                    ))}
+                                  </div>
+                                )}
+                                <div className={`flex items-center gap-2 ${isBottomCenter ? 'justify-center' : ''}`}>
+                                  <div className={`w-7 h-7 md:w-8 md:h-8 rounded-full flex items-center justify-center text-sm font-bold ${
+                                    isMetallic ? 'bg-white/25 text-white' : 'bg-primary/40 text-white'
+                                  }`}>
+                                    {t.author.charAt(0)}
+                                  </div>
+                                  <div>
+                                    <p className="font-semibold text-white text-sm">{t.author}</p>
+                                    {t.vehicle && (
+                                      <p className="text-xs text-white/60">{t.vehicle}</p>
+                                    )}
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          );
+                        })()}
                       </div>
                     </div>
 

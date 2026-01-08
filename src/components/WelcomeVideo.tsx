@@ -4,22 +4,59 @@ import { useState } from 'react';
 import { Play } from 'lucide-react';
 import Image from 'next/image';
 
-export default function WelcomeVideo() {
+interface WelcomeVideoProps {
+  variant?: 'light' | 'dark';
+}
+
+export default function WelcomeVideo({ variant = 'light' }: WelcomeVideoProps) {
   const [isPlaying, setIsPlaying] = useState(false);
+  const isDark = variant === 'dark';
 
   const handlePlayClick = () => {
     setIsPlaying(true);
   };
 
   return (
-    <section className="py-20 bg-card" id="welcome">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section
+      className={`py-20 relative overflow-hidden ${isDark ? 'bg-[#0a0a0a]' : 'bg-card'}`}
+      id="welcome"
+    >
+      {/* Dark variant decorations */}
+      {isDark && (
+        <>
+          {/* Pattern overlay */}
+          <div
+            className="absolute inset-0 pointer-events-none opacity-[0.04]"
+            style={{
+              backgroundImage: 'url(/images/pattern-logo.png)',
+              backgroundRepeat: 'repeat',
+              backgroundSize: '80px 80px',
+              backgroundAttachment: 'fixed',
+            }}
+            aria-hidden="true"
+          />
+          {/* Subtle glow */}
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none" aria-hidden="true">
+            <div className="w-[600px] h-[400px] bg-primary/10 rounded-full blur-[150px]" />
+          </div>
+          {/* Vignette */}
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background: 'radial-gradient(ellipse at center, transparent 0%, transparent 50%, rgba(0,0,0,0.6) 100%)',
+            }}
+            aria-hidden="true"
+          />
+        </>
+      )}
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+          <h2 className={`font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6 ${isDark ? 'text-white' : 'text-foreground'}`}>
             Welcome to Protekt Auto
           </h2>
-          <p className="text-foreground/70 text-lg max-w-4xl mx-auto leading-relaxed">If you want your car to keep that fresh, new-car shine, the right protection matters. We specialise in paint protection film (PPF) and ceramic coating services that help prevent scratches, UV damage, road grime, and long-term wear.</p>
-          <p className="text-foreground/70 text-lg max-w-4xl mx-auto leading-relaxed mt-4">Already seeing swirl marks or light scratches? Our professional paint correction restores clarity and gloss before we apply your chosen protection.</p>
+          <p className={`text-lg max-w-4xl mx-auto leading-relaxed ${isDark ? 'text-white/70' : 'text-foreground/70'}`}>If you want your car to keep that fresh, new-car shine, the right protection matters. We specialise in paint protection film (PPF) and ceramic coating services that help prevent scratches, UV damage, road grime, and long-term wear.</p>
+          <p className={`text-lg max-w-4xl mx-auto leading-relaxed mt-4 ${isDark ? 'text-white/70' : 'text-foreground/70'}`}>Already seeing swirl marks or light scratches? Our professional paint correction restores clarity and gloss before we apply your chosen protection.</p>
         </div>
 
         <div className="max-w-5xl mx-auto">
@@ -57,7 +94,7 @@ export default function WelcomeVideo() {
               />
             )}
           </div>
-          <p className="text-foreground/70 text-lg max-w-4xl mx-auto leading-relaxed mt-8">Whether you're buying a new car or refreshing an older one, Protekt Auto focuses on straightforward service, quality workmanship, and results you'll be happy with long-term. Our new car protection packages give you lasting shine, stronger resale value, and a finish that actually stays cleaner.</p>
+          <p className={`text-lg max-w-4xl mx-auto leading-relaxed mt-8 ${isDark ? 'text-white/70' : 'text-foreground/70'}`}>Whether you're buying a new car or refreshing an older one, Protekt Auto focuses on straightforward service, quality workmanship, and results you'll be happy with long-term. Our new car protection packages give you lasting shine, stronger resale value, and a finish that actually stays cleaner.</p>
         </div>
       </div>
     </section>
