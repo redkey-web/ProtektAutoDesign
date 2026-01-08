@@ -145,7 +145,7 @@ export default function Navigation() {
           <div className="hidden lg:flex items-center gap-2">
             <Link
               href="/contact"
-              className="hidden xl:flex items-center gap-2 px-5 py-2 bg-primary text-black font-bold text-sm tracking-wide skew-x-[-8deg] hover:bg-primary/90 hover:scale-105 transition-all"
+              className="hidden xl:flex items-center gap-2 px-5 py-2 btn-metallic-paint text-black font-bold text-sm tracking-wide skew-x-[-8deg]"
               data-testid="button-book-now-desktop"
             >
               <span className="skew-x-[8deg]">Get a Quote</span>

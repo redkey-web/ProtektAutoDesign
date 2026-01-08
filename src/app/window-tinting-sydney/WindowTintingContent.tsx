@@ -77,8 +77,8 @@ export default function WindowTintingContent({ faqItems }: WindowTintingContentP
   return (
     <SmoothScroll>
     <div className="min-h-screen">
-      {/* Fixed black strip behind header */}
-      <div className="fixed top-0 left-0 right-0 h-20 bg-black z-0" />
+      {/* Black spacer to fill the gap above hero (covers main's pt-16 padding) */}
+      <div className="h-16 bg-black -mt-16" aria-hidden="true" />
 
       <Hero
         title="Premium Window Tinting"
@@ -91,7 +91,9 @@ export default function WindowTintingContent({ faqItems }: WindowTintingContentP
         subtitlePosition="below"
         contentOffset="mt-[5%]"
         overlayStyle="light"
-        titleVariant="deep-metallic"
+        titleVariant="metallic"
+        buttonVariant="metallic"
+        subtitleColor="white"
       />
 
       {/* Main content wrapper - Batman atmosphere with animated blobs */}

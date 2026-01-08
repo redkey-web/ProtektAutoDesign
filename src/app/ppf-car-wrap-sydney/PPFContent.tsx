@@ -70,10 +70,9 @@ export default function PPFContent({
 }: PPFContentProps) {
   return (
     <SmoothScroll>
-      <div className="min-h-screen">
-        {/* Fixed black strip behind header */}
-        <div className="fixed top-0 left-0 right-0 h-20 bg-black z-0" />
-
+      <>
+        {/* Black spacer to fill the gap above hero (covers main's pt-16 padding) */}
+        <div className="h-16 bg-black -mt-16" aria-hidden="true" />
         <Hero
           title="Paint Protection Film (PPF)"
           subtitle="Self-Healing • No Yellowing • XPEL Certified"
@@ -84,7 +83,28 @@ export default function PPFContent({
           showPhoneCta={false}
           subtitlePosition="below"
           contentOffset="-mt-[10%]"
+          buttonVariant="metallic"
+          titleVariant="metallic"
+          subtitleColor="white"
         />
+
+        {/* Benefits Bar */}
+        <section className="py-12 bg-gradient-to-b from-black to-[#0a0a0a]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {benefits.map((benefit, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col items-center text-center p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm"
+                >
+                  <benefit.icon className="w-10 h-10 text-primary mb-4" />
+                  <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
+                  <p className="text-sm text-white/60">{benefit.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* Main content wrapper - Batman atmosphere with SILVER animated effects */}
         <div className="relative bg-[#0a0a0a]">
@@ -356,7 +376,7 @@ export default function PPFContent({
 
           <ContactSection />
         </div>
-      </div>
+      </>
     </SmoothScroll>
   );
 }

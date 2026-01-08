@@ -105,7 +105,9 @@ const moreCeramicImages = [
 
 export default function NewCarProtection() {
   return (
-    <div className="min-h-screen">
+    <>
+      {/* Black spacer to fill the gap above hero (covers main's pt-16 padding) */}
+      <div className="h-16 bg-black -mt-16" aria-hidden="true" />
       <Hero
         title="Ceramic & Graphene Coating Sydney"
         subtitle="Next-Gen Graphene Protection with 7-Year Guarantee"
@@ -116,6 +118,9 @@ export default function NewCarProtection() {
         showPhoneCta={false}
         subtitlePosition="below"
         contentOffset="-mt-[10%]"
+        buttonVariant="metallic"
+        titleVariant="metallic"
+        subtitleColor="white"
       />
 
       {/* Featured Ceramic Coating Work */}
@@ -270,6 +275,6 @@ export default function NewCarProtection() {
       </section>
 
       <ContactSection />
-    </div>
+    </>
   );
 }

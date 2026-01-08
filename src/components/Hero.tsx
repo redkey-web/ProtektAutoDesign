@@ -85,12 +85,12 @@ export default function Hero({
     setShowContent(true);
   };
 
-  // Start loading video when intro is ~60% done
+  // Start loading video early (30% into intro) to ensure it's ready
   useEffect(() => {
     if (hyperSpaceIntro && videoUrl) {
       const timer = setTimeout(() => {
         setVideoReady(true);
-      }, hyperSpaceIntroDuration * 0.5);
+      }, hyperSpaceIntroDuration * 0.3);
       return () => clearTimeout(timer);
     }
   }, [hyperSpaceIntro, videoUrl, hyperSpaceIntroDuration]);
@@ -137,7 +137,7 @@ export default function Hero({
               {(videoReady || !hyperSpaceIntro) && (
                 <div className="absolute inset-0 scale-[1.40] -mt-8 -mb-30">
                   <iframe
-                    src={`${videoUrl}?background=1&autoplay=1&loop=1&muted=1&quality=720p`}
+                    src={`${videoUrl}?background=1&autoplay=1&loop=1&muted=1&quality=720p#t=4s`}
                     className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2"
                     frameBorder="0"
                     allow="autoplay; fullscreen"

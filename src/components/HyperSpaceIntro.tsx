@@ -28,12 +28,21 @@ export default function HyperSpaceIntro({
   const animationRef = useRef<number | null>(null);
   const startTimeRef = useRef<number>(0);
   const hasCompletedRef = useRef(false);
+  const hasStartedRef = useRef(false);
+  const onCompleteRef = useRef(onComplete);
+
+  // Keep onComplete ref updated without triggering re-render
+  onCompleteRef.current = onComplete;
 
   useEffect(() => {
     const canvas = canvasRef.current;
     const logoEl = logoRef.current;
     const containerEl = containerRef.current;
     if (!canvas || !logoEl || !containerEl) return;
+
+    // Prevent re-running if already started (only after refs are ready)
+    if (hasStartedRef.current) return;
+    hasStartedRef.current = true;
 
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
@@ -69,12 +78,13 @@ export default function HyperSpaceIntro({
       const elapsed = currentTime - startTimeRef.current;
       const progress = Math.min(elapsed / duration, 1);
 
-      // Star speed accelerates
-      const speed = 15 + Math.pow(progress, 2) * 150;
+      // Smooth continuous star speed - single ease curve, no phases
+      const speedMultiplier = Math.pow(progress, 2);
+      const speed = 10 + speedMultiplier * 120;
 
-      // Update logo scale directly via DOM (no re-render)
-      const scaleProgress = Math.pow(progress, 1.5);
-      const scale = 0.02 + scaleProgress * 3.5;
+      // Smooth continuous logo scale - single ease-in curve
+      const scaleProgress = Math.pow(progress, 2.5);
+      const scale = 0.03 + scaleProgress * 4;
       const opacity = progress > 0.9 ? 1 - ((progress - 0.9) / 0.1) : 1;
 
       logoEl.style.transform = `scale(${scale})`;
@@ -153,7 +163,7 @@ export default function HyperSpaceIntro({
         // Animation complete - fade out container
         hasCompletedRef.current = true;
         containerEl.style.opacity = '0';
-        setTimeout(onComplete, 300);
+        setTimeout(() => onCompleteRef.current(), 300);
       }
     };
 
@@ -165,7 +175,8 @@ export default function HyperSpaceIntro({
         cancelAnimationFrame(animationRef.current);
       }
     };
-  }, [duration, onComplete]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [duration]);
 
   return (
     <div
@@ -180,7 +191,7 @@ export default function HyperSpaceIntro({
       <div
         ref={logoRef}
         className="absolute inset-0 flex items-center justify-center pointer-events-none"
-        style={{ transform: 'scale(0.02)', opacity: 1 }}
+        style={{ transform: 'scale(0.03)', opacity: 1 }}
       >
         <div className="relative">
           <div className="absolute inset-0 blur-3xl bg-primary/40 rounded-full scale-[2]" />
@@ -188,9 +199,9 @@ export default function HyperSpaceIntro({
           <Image
             src={logoSrc}
             alt="Logo"
-            width={400}
-            height={128}
-            className="relative z-10 w-auto h-24 md:h-32 drop-shadow-[0_0_30px_rgba(0,188,212,0.8)]"
+            width={550}
+            height={173}
+            className="relative z-10 w-auto h-32 md:h-44 drop-shadow-[0_0_30px_rgba(0,188,212,0.8)]"
             priority
           />
         </div>

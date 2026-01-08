@@ -16,6 +16,15 @@ export default function StickyPhoneButton() {
         }}
         aria-hidden="true"
       />
+      {/* Shimmer sweep effect */}
+      <div
+        className="absolute inset-0 pointer-events-none animate-sticky-shimmer"
+        style={{
+          background: 'linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.4) 50%, transparent 100%)',
+          transform: 'translateX(-100%) skewX(-25deg)',
+        }}
+        aria-hidden="true"
+      />
       {/* Text content on top */}
       <a
         href="tel:0286062842"

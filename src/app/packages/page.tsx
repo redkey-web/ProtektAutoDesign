@@ -61,7 +61,9 @@ const completeFeatures = [
 
 export default function Packages() {
   return (
-    <div className="min-h-screen">
+    <>
+      {/* Black spacer to fill the gap above hero (covers main's pt-16 padding) */}
+      <div className="h-16 bg-black -mt-16" aria-hidden="true" />
       <Hero
         title="Protection Packages"
         subtitle="Complete Vehicle Protection"
@@ -72,6 +74,9 @@ export default function Packages() {
         showPhoneCta={false}
         subtitlePosition="below"
         contentOffset="-mt-[10%]"
+        buttonVariant="metallic"
+        titleVariant="metallic"
+        subtitleColor="white"
       />
 
       <section className="py-20 bg-background">
@@ -192,6 +197,6 @@ export default function Packages() {
           <ContactSection />
         </div>
       </section>
-    </div>
+    </>
   );
 }

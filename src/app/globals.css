@@ -757,7 +757,7 @@ html.lenis, html.lenis body {
   display: none !important;
 }
 
-/* Metallic shine overlay */
+/* Metallic shine overlay - auto shimmer animation */
 .btn-metallic-paint::before {
   content: '';
   position: absolute;
@@ -773,7 +773,20 @@ html.lenis, html.lenis body {
   );
   z-index: 1;
   transform: skewX(-25deg);
-  transition: left 0.6s ease;
+  animation: btn-auto-shimmer 6s ease-in-out infinite;
+  animation-delay: 0s; /* Synced with sticky phone button */
+}
+
+@keyframes btn-auto-shimmer {
+  0%, 85% {
+    left: -100%;
+  }
+  90% {
+    left: 150%;
+  }
+  100% {
+    left: 150%;
+  }
 }
 
 .btn-metallic-paint:hover {
@@ -792,11 +805,6 @@ html.lenis, html.lenis body {
   transform: translateY(-2px) skew(-8deg);
 }
 
-/* Shimmer sweep on hover */
-.btn-metallic-paint:hover::before {
-  left: 150%;
-}
-
 /* Active press state */
 .btn-metallic-paint:active {
   transform: translateY(0) skew(-8deg);
@@ -805,6 +813,24 @@ html.lenis, html.lenis body {
     0 2px 4px rgba(0, 0, 0, 0.2),
     inset 0 1px 0 rgba(255, 255, 255, 0.3),
     inset 0 -1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Sticky phone button shimmer - synced with metallic buttons, same light source */
+@keyframes sticky-shimmer {
+  0%, 85.5% {
+    transform: translateX(-100%) skewX(-25deg);
+  }
+  90.5% {
+    transform: translateX(250%) skewX(-25deg);
+  }
+  100% {
+    transform: translateX(250%) skewX(-25deg);
+  }
+}
+
+.animate-sticky-shimmer {
+  animation: sticky-shimmer 6s ease-in-out infinite;
+  animation-delay: 0.15s; /* Slight delay - light travels from header down to footer */
 }
 
 /* Navigation Slide Down Animation */

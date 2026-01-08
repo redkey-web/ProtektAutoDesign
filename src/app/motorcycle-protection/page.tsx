@@ -105,7 +105,9 @@ const moreMotoImages = [
 
 export default function MotorcycleProtection() {
   return (
-    <div className="min-h-screen">
+    <>
+      {/* Black spacer to fill the gap above hero (covers main's pt-16 padding) */}
+      <div className="h-16 bg-black -mt-16" aria-hidden="true" />
       <Hero
         title="Motorcycle Protection"
         subtitle="Premium Bike Detailing"
@@ -116,6 +118,9 @@ export default function MotorcycleProtection() {
         showPhoneCta={false}
         subtitlePosition="below"
         contentOffset="-mt-[10%]"
+        buttonVariant="metallic"
+        titleVariant="metallic"
+        subtitleColor="white"
       />
 
       {/* Featured Motorcycle Work - Prominent Showcase */}
@@ -362,6 +367,6 @@ export default function MotorcycleProtection() {
       <Testimonials />
 
       <ContactSection />
-    </div>
+    </>
   );
 }
