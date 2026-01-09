@@ -28,6 +28,9 @@ export default function SmoothScroll({ children }: SmoothScrollProps) {
 
     lenisRef.current = lenis;
 
+    // Scroll to top on page load
+    lenis.scrollTo(0, { immediate: true });
+
     // Connect Lenis to GSAP ScrollTrigger
     gsap.registerPlugin(ScrollTrigger);
 

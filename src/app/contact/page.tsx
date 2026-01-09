@@ -14,19 +14,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen">
-      {/* Header Section */}
-      <section className="pt-24 pb-12 bg-gradient-to-b from-black to-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4">
-            Contact Us
-          </h1>
-          <p className="text-white/70 text-lg md:text-xl max-w-2xl mx-auto">
-            Ready to protect your vehicle? Get in touch for a quote or to book your service.
-          </p>
-        </div>
-      </section>
-
+    <div className="min-h-screen pt-16">
       {/* Contact Form & Info */}
       <ContactSection />
 

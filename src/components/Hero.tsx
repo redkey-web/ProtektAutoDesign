@@ -77,12 +77,10 @@ export default function Hero({
 }: HeroProps) {
   const [showIntro, setShowIntro] = useState(hyperSpaceIntro && !!videoUrl);
   const [videoReady, setVideoReady] = useState(false);
-  const [showContent, setShowContent] = useState(!hyperSpaceIntro || !videoUrl);
 
-  // When intro completes, show the content
+  // When intro completes, fade it out
   const handleIntroComplete = () => {
     setShowIntro(false);
-    setShowContent(true);
   };
 
   // Start loading video early (30% into intro) to ensure it's ready
@@ -115,21 +113,19 @@ export default function Hero({
 
   return (
     <>
-      {/* HyperSpace Intro Animation */}
-      {showIntro && (
-        <HyperSpaceIntro
-          logoSrc="/images/protekt-logo.webp"
-          onComplete={handleIntroComplete}
-          duration={hyperSpaceIntroDuration}
-        />
-      )}
-
       <div
-        className={`relative ${heightClasses[height]} flex items-center justify-center overflow-hidden transition-opacity duration-500 ${
-          showContent ? 'opacity-100' : 'opacity-0'
-        }`}
+        className={`relative ${heightClasses[height]} flex items-center justify-center overflow-hidden`}
         data-testid="hero-section"
       >
+        {/* HyperSpace Intro Animation - runs behind content */}
+        {showIntro && (
+          <HyperSpaceIntro
+            logoSrc="/images/protekt-logo.webp"
+            onComplete={handleIntroComplete}
+            duration={hyperSpaceIntroDuration}
+          />
+        )}
+
         <div className="absolute inset-0 z-0 overflow-hidden bg-black">
           {videoUrl ? (
             <>

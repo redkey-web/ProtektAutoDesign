@@ -23,17 +23,17 @@ export default function ContactSection() {
   };
 
   return (
-    <div className="py-20 bg-background" id="contact" data-testid="contact-section">
+    <div className="py-24 md:py-32 bg-background" id="contact" data-testid="contact-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <div className="text-center mb-16">
           <h2
-            className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4"
+            className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6"
             data-testid="text-contact-title"
           >
-            Get In Touch
+            Book a Consultation
           </h2>
-          <p className="text-foreground/60 text-lg max-w-2xl mx-auto" data-testid="text-contact-subtitle">
-            Ready to protect your vehicle? Contact us today for a quote or to book your service.
+          <p className="text-foreground/60 text-lg md:text-xl max-w-2xl mx-auto" data-testid="text-contact-subtitle">
+            Ready to protect your vehicle? Get in touch to discuss your requirements.
           </p>
         </div>
 
@@ -98,8 +98,8 @@ export default function ContactSection() {
                 />
               </div>
 
-              <Button type="submit" variant="default" className="w-full" data-testid="button-submit">
-                Send Message
+              <Button type="submit" variant="default" className="w-full text-lg py-6" data-testid="button-submit">
+                Request Consultation
               </Button>
             </form>
           </Card>

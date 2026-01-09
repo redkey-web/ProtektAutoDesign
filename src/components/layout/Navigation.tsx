@@ -14,9 +14,8 @@ export default function Navigation() {
   const [isMoreOpen, setIsMoreOpen] = useState(false);
   const moreRef = useRef<HTMLDivElement>(null);
 
-  // Main nav links (DETAILING first)
+  // Main nav links
   const mainNavLinks = [
-    { path: '/detailing', label: 'DETAILING' },
     { path: '/ceramic-coating-sydney', label: 'CERAMIC COATING' },
     { path: '/paint-correction', label: 'PAINT CORRECTION' },
     { path: '/window-tinting-sydney', label: 'TINTING' },
@@ -26,6 +25,7 @@ export default function Navigation() {
 
   // More dropdown links
   const moreLinks = [
+    { path: '/detailing', label: 'DETAILING' },
     { path: '/motorcycle-protection', label: 'MOTORCYCLE' },
     { path: '/packages', label: 'PACKAGES' },
     { path: '/gallery', label: 'GALLERY' },

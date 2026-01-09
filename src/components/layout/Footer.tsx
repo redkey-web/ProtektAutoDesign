@@ -68,6 +68,29 @@ export default function Footer() {
             <p className="text-white/70 mb-4 max-w-md" data-testid="text-footer-description">
               Sydney&apos;s premier automotive paint protection specialists. We provide professional ceramic coatings, paint correction, and paint protection film services.
             </p>
+
+            {/* Beyond Automotive - Sister Company */}
+            <div className="mb-6 p-4 rounded-lg bg-white/90 border border-white/20">
+              <p className="text-black/70 text-sm mb-3">
+                Also offering Commercial &amp; Residential Window Tinting, Frosted Glass, and Natural Stone Protection:
+              </p>
+              <a
+                href="https://www.protektsurfacesolutions.com.au"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block hover:opacity-80 transition-opacity"
+                data-testid="link-surface-solutions"
+              >
+                <Image
+                  src="/images/protekt-surface-logo.png"
+                  alt="Protekt Surface Solutions"
+                  width={150}
+                  height={60}
+                  className="h-12 w-auto"
+                />
+              </a>
+            </div>
+
             <div className="flex gap-4">
               <a
                 href="https://instagram.com/protektauto"

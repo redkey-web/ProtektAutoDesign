@@ -53,7 +53,7 @@ export default function WelcomeVideo({ variant = 'light' }: WelcomeVideoProps) {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className={`font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6 ${isDark ? 'text-white' : 'text-foreground'}`}>
-            Welcome to Protekt Auto
+            Keep Your Car Looking Showroom Fresh
           </h2>
           <p className={`text-lg max-w-4xl mx-auto leading-relaxed ${isDark ? 'text-white/70' : 'text-foreground/70'}`}>If you want your car to keep that fresh, new-car shine, the right protection matters. We specialise in paint protection film (PPF) and ceramic coating services that help prevent scratches, UV damage, road grime, and long-term wear.</p>
           <p className={`text-lg max-w-4xl mx-auto leading-relaxed mt-4 ${isDark ? 'text-white/70' : 'text-foreground/70'}`}>Already seeing swirl marks or light scratches? Our professional paint correction restores clarity and gloss before we apply your chosen protection.</p>

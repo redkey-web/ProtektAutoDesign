@@ -181,7 +181,7 @@ export default function HyperSpaceIntro({
   return (
     <div
       ref={containerRef}
-      className="fixed inset-0 z-50 bg-black overflow-hidden transition-opacity duration-300"
+      className="absolute inset-0 z-0 bg-black overflow-hidden transition-opacity duration-500"
     >
       <canvas
         ref={canvasRef}

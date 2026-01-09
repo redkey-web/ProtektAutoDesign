@@ -82,7 +82,7 @@ export default function PPFContent({
           ctaLink="#contact"
           showPhoneCta={false}
           subtitlePosition="below"
-          contentOffset="-mt-[10%]"
+          contentOffset="mt-0"
           buttonVariant="metallic"
           titleVariant="metallic"
           subtitleColor="white"

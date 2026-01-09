@@ -3,12 +3,8 @@ import Hero from '@/components/Hero';
 import PricingCard from '@/components/PricingCard';
 import ContactSection from '@/components/ContactSection';
 import FAQ, { FAQItem } from '@/components/FAQ';
-import UrgencyBanner from '@/components/UrgencyBanner';
-import RelatedServices from '@/components/RelatedServices';
 import Testimonials from '@/components/Testimonials';
-import GoogleReviewSummary from '@/components/GoogleReviewSummary';
-import FeaturedWorkShowcase from '@/components/FeaturedWorkShowcase';
-import BentoImageGrid from '@/components/BentoImageGrid';
+import HorizontalScrollGallery from '@/components/HorizontalScrollGallery';
 
 export const metadata: Metadata = {
   title: 'Best Ceramic Coating Sydney | Graphene Coating Near Me | From $950',
@@ -22,31 +18,19 @@ export const metadata: Metadata = {
 const faqItems: FAQItem[] = [
   {
     question: 'What is ceramic coating for cars?',
-    answer: 'Ceramic coating is a liquid polymer applied to your vehicle\'s exterior that chemically bonds with the factory paint, creating a permanent protective layer. Unlike wax or sealants that wash away, ceramic coating provides long-term protection (5-7 years) against UV damage, oxidation, chemical stains, bird droppings, and environmental contaminants. It also creates a hydrophobic surface that repels water and makes washing much easier.',
+    answer: 'Ceramic coating is a liquid polymer that chemically bonds with your paint, creating a permanent protective layer. It provides 5-7 years of protection against UV damage, oxidation, and environmental contaminants, plus creates a hydrophobic surface that makes washing easier.',
   },
   {
     question: 'How much does ceramic coating cost in Sydney?',
-    answer: 'Our ceramic coating packages in Sydney start from $950 for the Professional Ceramic Coating with a 5-year guarantee. The Premium Graphene Coating starts from $1,350 with a 7-year guarantee. Prices vary based on vehicle size and paint condition. All our packages include 2.5 hours of machine polishing to ensure a perfect surface before coating application.',
+    answer: 'Our ceramic coating starts from $950 with a 5-year guarantee. The Premium Graphene Coating starts from $1,250 with a 7-year guarantee. Prices vary by vehicle size. All packages include machine polishing for a perfect surface.',
   },
   {
     question: 'What is the difference between Ceramic and Graphene coatings?',
-    answer: 'Graphene coatings contain enhanced graphene nanoparticles that make them significantly more robust and durable than traditional ceramic coatings. They offer superior corrosion resistance, an intense deeper gloss finish, and easier long-term maintenance. Graphene coatings also come with a 7-year guarantee versus the 5-year guarantee for ceramic coatings.',
-  },
-  {
-    question: 'How long does the coating last?',
-    answer: 'Our Ceramic Professional coating comes with a 5-year guarantee, while our Graphene Professional coating includes a 7-year guarantee. The actual lifespan can be even longer with proper maintenance and care.',
+    answer: 'Graphene coatings contain enhanced nanoparticles that make them more durable than traditional ceramic. They offer superior corrosion resistance, deeper gloss, and easier maintenance. Graphene comes with a 7-year guarantee versus 5 years for ceramic.',
   },
   {
     question: 'Does the coating protect against scratches?',
-    answer: 'While ceramic and graphene coatings significantly improve scratch resistance and protect against minor abrasions, they are not scratch-proof. For maximum protection against stone chips and deeper scratches, we recommend combining the coating with Paint Protection Film (PPF).',
-  },
-  {
-    question: 'How should I maintain my coated vehicle?',
-    answer: 'Coated vehicles are much easier to maintain. We recommend regular washing with pH-neutral car wash soap, avoiding automatic car washes with harsh brushes, and periodic application of a ceramic booster spray to maintain the hydrophobic properties.',
-  },
-  {
-    question: 'Can the coating be applied to any vehicle?',
-    answer: 'Yes, ceramic and graphene coatings can be applied to any vehicle regardless of age or condition. However, for optimal results and to ensure the coating bonds properly, we include paint preparation and machine polishing with every coating application.',
+    answer: 'Ceramic and graphene coatings improve scratch resistance and protect against minor abrasions, but are not scratch-proof. For maximum protection against stone chips, we recommend combining coating with Paint Protection Film (PPF).',
   },
 ];
 
@@ -77,28 +61,14 @@ const interiorFeatures = [
   'Maintains factory satin appearance',
 ];
 
-// Featured ceramic coating work
-const featuredCeramicWork = {
-  featured: {
-    src: '/images/blue-amg.png',
-    alt: 'Blue Mercedes-Benz AMG with premium ceramic coating',
-    title: 'Mercedes-Benz AMG',
-    subtitle: 'Premium Graphene Ceramic Coating - 7 Year Protection',
-  },
-  grid: [
-    { src: '/images/red-kia-stinger.png', alt: 'Red Kia Stinger', title: 'Kia Stinger', subtitle: 'Ceramic Coating' },
-    { src: '/images/blue-mazda-cx5.png', alt: 'Blue Mazda CX-5', title: 'Mazda CX-5', subtitle: 'New Car Protection' },
-    { src: '/images/blue-bmw-m3.png', alt: 'Blue BMW M3', title: 'BMW M3', subtitle: 'Premium Finish' },
-    { src: '/images/tesla-white.png', alt: 'White Tesla', title: 'Tesla', subtitle: 'EV Protection' },
-  ],
-};
-
-// More ceramic coating work
-const moreCeramicImages = [
+// Combined gallery images for horizontal scroll
+const galleryImages = [
+  { src: '/images/blue-amg.png', alt: 'Blue Mercedes-Benz AMG with premium ceramic coating', title: 'Mercedes-Benz AMG', subtitle: '7-Year Graphene Protection' },
+  { src: '/images/red-kia-stinger.png', alt: 'Red Kia Stinger', title: 'Kia Stinger', subtitle: 'Ceramic Coating' },
+  { src: '/images/blue-mazda-cx5.png', alt: 'Blue Mazda CX-5', title: 'Mazda CX-5', subtitle: 'New Car Protection' },
+  { src: '/images/blue-bmw-m3.png', alt: 'Blue BMW M3', title: 'BMW M3', subtitle: 'Premium Finish' },
+  { src: '/images/tesla-white.png', alt: 'White Tesla', title: 'Tesla', subtitle: 'EV Protection' },
   { src: '/images/silver-pajero.png', alt: 'Silver Pajero', title: 'Mitsubishi Pajero', subtitle: 'Complete Package' },
-  { src: '/images/black-minivan.png', alt: 'Black minivan', title: 'Family Vehicle', subtitle: 'Mirror Finish' },
-  { src: '/images/blue-subaru-polish.png', alt: 'Polishing Subaru', title: 'Paint Preparation', subtitle: 'Machine Polish' },
-  { src: '/images/red-car-roof-polish.png', alt: 'Roof polish', title: 'Detail Work', subtitle: 'Rupes Polish' },
   { src: '/images/coating-application.png', alt: 'Coating application', title: 'Expert Application', subtitle: 'Precision Work' },
   { src: '/images/ram-showroom.png', alt: 'RAM in showroom', title: 'RAM Truck', subtitle: 'Full Coverage' },
 ];
@@ -123,25 +93,15 @@ export default function NewCarProtection() {
         subtitleColor="white"
       />
 
-      {/* Featured Ceramic Coating Work */}
-      <FeaturedWorkShowcase
-        title="Stunning Results"
-        subtitle="Premium ceramic and graphene coatings for lasting protection and showroom shine"
-        featuredImage={featuredCeramicWork.featured}
-        gridImages={featuredCeramicWork.grid}
+      {/* Gallery - Horizontal Scroll */}
+      <HorizontalScrollGallery
+        title="Our Work"
+        subtitle="Premium ceramic and graphene coatings for lasting protection"
+        images={galleryImages}
+        variant="dark"
       />
 
-      <GoogleReviewSummary />
-
-      <section className="py-20 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-          <UrgencyBanner
-            message="Limited spots available this month."
-            highlight="Only 4 new car protection slots remaining!"
-            icon="clock"
-          />
-        </div>
-
+      <section className="py-24 md:py-32 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
@@ -231,62 +191,7 @@ export default function NewCarProtection() {
 
       <Testimonials />
 
-      {/* More Ceramic Coating Work */}
-      <BentoImageGrid
-        title="More of Our Work"
-        subtitle="From daily drivers to luxury vehicles, we deliver exceptional ceramic coating results"
-        images={moreCeramicImages}
-        variant="default"
-      />
-
-      {/* Dark atmosphere section */}
-      <section className="relative overflow-hidden bg-[#0a0a0a]">
-        {/* Pattern overlay */}
-        <div
-          className="absolute inset-0 pointer-events-none opacity-[0.04]"
-          style={{
-            backgroundImage: 'url(/images/pattern-logo.png)',
-            backgroundRepeat: 'repeat',
-            backgroundSize: '80px 80px',
-            backgroundAttachment: 'fixed',
-          }}
-        />
-        {/* Subtle gold glow for ceramic coating theme */}
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <div className="w-[600px] h-[500px] bg-amber-500/10 rounded-full blur-[180px]" />
-        </div>
-        {/* Vignette */}
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            background: 'radial-gradient(ellipse at center, transparent 0%, transparent 50%, rgba(0,0,0,0.6) 100%)',
-          }}
-        />
-        <div className="relative z-10">
-          <RelatedServices
-            variant="dark"
-            services={[
-              {
-                title: 'Paint Correction Sydney',
-                description: 'Remove swirls and scratches with our professional machine polishing service before ceramic coating application.',
-                link: '/paint-correction',
-              },
-              {
-                title: 'Paint Protection Film',
-                description: 'Add self-healing PPF to high-impact areas for maximum protection against stone chips and road debris.',
-                link: '/ppf-car-wrap-sydney',
-              },
-              {
-                title: 'Protection Packages',
-                description: 'Save with our complete protection packages combining ceramic coating, PPF, and paint correction.',
-                link: '/packages',
-              },
-            ]}
-          />
-
-          <FAQ items={faqItems} title="Ceramic Coating FAQs" variant="dark" />
-        </div>
-      </section>
+      <FAQ items={faqItems} title="Ceramic Coating FAQs" variant="dark" />
 
       <ContactSection />
     </>
